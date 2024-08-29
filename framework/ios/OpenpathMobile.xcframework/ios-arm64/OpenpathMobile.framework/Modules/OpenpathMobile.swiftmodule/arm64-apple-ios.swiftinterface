@@ -1,0 +1,342 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenpathMobile
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AWSCore
+import AWSIoT
+import AWSLogs
+import CommonCrypto
+import CoreBluetooth
+import CoreLocation
+import CoreMotion
+import DictionaryCoder
+import Dispatch
+import Foundation
+import JOSESwift
+import JWTDecode
+import LocalAuthentication
+import Network
+import OpenSSL
+@_exported import OpenpathMobile
+import Reachability
+import Security
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@usableFromInline
+internal protocol _AnyDecodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension OpenpathMobile._AnyDecodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+@usableFromInline
+internal protocol _AnyEncodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension OpenpathMobile._AnyEncodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile._AnyEncodable {
+  public init(nilLiteral _: ())
+  public init(booleanLiteral value: Swift.Bool)
+  public init(integerLiteral value: Swift.Int)
+  public init(floatLiteral value: Swift.Double)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: Any...)
+  public init(dictionaryLiteral elements: (Swift.AnyHashable, Any)...)
+}
+public enum AuthorizationStatusType : Swift.Int {
+  case notDetermined, denied, granted
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CoreLocation.CLLocationCoordinate2D : Swift.Equatable {
+  public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func _setDebugFlag(id: Swift.String, value: Swift.Bool) -> Swift.Bool
+  public func _getDebugFlag(id: Swift.String) -> Swift.Bool
+  public func _getAllDebugFlags() -> [[Swift.String : Any]]
+}
+extension Swift.String : Swift.Error {
+}
+@propertyWrapper public struct NullCodable<Wrapped> : Swift.Encodable, Swift.Hashable where Wrapped : Swift.Encodable, Wrapped : Swift.Hashable {
+  public init(wrappedValue: Wrapped?)
+  public var wrappedValue: Wrapped?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenpathMobile.NullCodable<Wrapped>, b: OpenpathMobile.NullCodable<Wrapped>) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct OpenpathError : Swift.Error, Swift.Equatable {
+  public let code: Swift.String
+  public var message: Swift.String {
+    get
+  }
+  public var englishMessage: Swift.String {
+    get
+  }
+  public static func == (a: OpenpathMobile.OpenpathError, b: OpenpathMobile.OpenpathError) -> Swift.Bool
+}
+extension OpenpathMobile.OpenpathError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class OpenpathMobileAccessCore : ObjectiveC.NSObject, Foundation.URLSessionDelegate, UserNotifications.UNUserNotificationCenterDelegate {
+  public static let shared: OpenpathMobile.OpenpathMobileAccessCore
+  weak public var delegate: (any OpenpathMobile.OpenpathMobileAccessCoreDelegate)?
+  public func provision(setupMobileToken: Swift.String, callback: ((Swift.Result<OpenpathMobile.ProvisionResult, OpenpathMobile.OpenpathError>) -> Swift.Void)? = nil)
+  public func unlock(itemType: Swift.String, itemId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func unprovision(userOpal: Swift.String?)
+  public func switchUser(userOpal: Swift.String)
+  public func syncUser()
+  public func refreshUserSettings()
+  public func softRefresh()
+  public func requestAuthorization(_ authType: Swift.String)
+  public func refreshItemState(itemType: Swift.String, itemId: Swift.Int)
+  public func _unlockByConnectionType(connectionType: Swift.String, itemType: Swift.String, itemId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func _override(itemType: Swift.String, itemId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func _triggerLockdownPlan(lockdownPlanId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func _revertLockdownPlan(lockdownPlanId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func _revertByConnectionType(connectionType: Swift.String, itemType: Swift.String, itemId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func _revert(itemType: Swift.String, itemId: Swift.Int, requestId: Swift.Int, timeout: Swift.Int)
+  public func sendFeedback(subject: Swift.String, message: Swift.String, messageJson: Swift.String? = nil)
+  public func _setTestMode(testMode: Swift.Int, testFrequency: Swift.Int)
+  public func _enableNotificationsForItem(enabled: Swift.Bool, itemType: Swift.String, itemId: Swift.Int)
+  public func enableErrorNotificationsForItem(enabled: Swift.Bool, itemType: Swift.String, itemId: Swift.Int)
+  @objc public func urlSession(_: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  @objc public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+  @objc public func urlSession(_: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc deinit
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func _getTermsOfUseStatus(identityId: Swift.Int, callback: @escaping (Swift.Result<OpenpathMobile.OpenpathTermsOfUseStatus, OpenpathMobile.OpenpathError>) -> Swift.Void)
+  public func _signTermsOfUse(identityId: Swift.Int)
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  @discardableResult
+  public func setLogLevel(logLevel: Swift.String) -> Swift.String
+  public func _logVerbose(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+  public func _logDebug(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+  public func _logInfo(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+  public func _logWarning(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+  public func _logError(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+  public func _logSevere(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func getErrors() -> [Swift.String : Any]
+  public func getSdkVersion() -> [Swift.String : Any]
+  public func getAuthorizationStatuses() -> [Swift.String : Any]
+  public func _getUserAgent() -> [Swift.String : Any]
+  public func _getAppBuild() -> [Swift.String : Any]
+  public func _getAppVersion() -> [Swift.String : Any]
+  public func _getUserApiTokens() -> [Swift.String : Any]
+  public func _getUserAwsCredentials() -> [Swift.String : Any]
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func _getIsAutoAccountSwitchingEnabled() -> [Swift.String : Any]
+  public func _setIsAutoAccountSwitchingEnabled(enabled: Swift.Bool)
+  public func getUserApiToken(userOpal: Swift.String) -> [Swift.String : Any]
+  public func _getDeviceToken() -> [Swift.String : Any]
+  public func _setDeviceToken(token: Swift.String?)
+  public func _getUserOpals() -> [Swift.String]
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func getReadersInRange(rssiThreshold: Swift.Int = 0) -> [Swift.String : Any]
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public func _setRssiThreshold(connectThreshold: Swift.Int, disconnectThreshold: Swift.Int)
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
+  public var _isStoreRelease: [Swift.String : Any] {
+    get
+    set
+  }
+}
+public protocol OpenpathAnalyticsDelegate : AnyObject {
+  func logAnalyticsEvent(name: Swift.String, parameters: [Swift.String : Swift.String]?)
+}
+public protocol OpenpathMobileAccessCoreDelegate : AnyObject {
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onProvisionResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onSwitchUserResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onSyncUserResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onItemStatesUpdated message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onUnprovisionResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onUnlockResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onBluetoothStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onInternetStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onUserSettingsSet message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onItemsSet message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onItemsUpdated message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onOverrideResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onTriggerLockdownPlanResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onRevertLockdownPlanResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onLocationStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onMotionStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onLockdownPlansSet messages: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onNotificationStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onMicrophoneStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onRevertResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onSendFeedbackResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onSendFeedbackRequest message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onDebug message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onUnlockByConnectionTypeResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onRevertByConnectionTypeResponse message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onUnlockRequest message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onCredentialConfigSet message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onInitializeUserRequest message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onProtectedDataStatusChanged message: [Swift.String : Any])
+  func openpathMobileAccessCore(_ openpathMobileAccessCore: OpenpathMobile.OpenpathMobileAccessCore, onAppUpdatePaused message: [Swift.String : Any])
+}
+extension OpenpathMobile.OpenpathMobileAccessCoreDelegate {
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onOverrideResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onTriggerLockdownPlanResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onRevertLockdownPlanResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onLocationStatusChanged _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onMotionStatusChanged _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onLockdownPlansSet _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onRevertResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onSendFeedbackResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onSendFeedbackRequest _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onDebug _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onUnlockByConnectionTypeResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onRevertByConnectionTypeResponse _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onUnlockRequest _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onCredentialConfigSet _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onInitializeUserRequest _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onProtectedDataStatusChanged _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onLogoutRequest _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onAppUpdatePaused _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onNotificationStatusChanged _: [Swift.String : Any])
+  public func openpathMobileAccessCore(_: OpenpathMobile.OpenpathMobileAccessCore, onMicrophoneStatusChanged _: [Swift.String : Any])
+}
+public struct OpenpathTermsOfUseStatus : Swift.Encodable, Swift.CustomStringConvertible, Swift.Equatable {
+  public var description: Swift.String {
+    get
+  }
+  public func toDictionary() -> [Swift.String : Any?]
+  public static func == (a: OpenpathMobile.OpenpathTermsOfUseStatus, b: OpenpathMobile.OpenpathTermsOfUseStatus) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct OpenpathUser : Swift.Encodable, Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenpathMobile.OpenpathUser, b: OpenpathMobile.OpenpathUser) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ProvisionResult : Swift.Encodable, Swift.Hashable {
+  public let userOpal: Swift.String
+  public let environment: OpenpathMobile.ProvisionResult.Environment
+  public struct Environment : Swift.Encodable, Swift.Hashable {
+    public let heliumEndpoint: Swift.String
+    public let opalEnv: Swift.String
+    public let opalRegion: Swift.String
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: OpenpathMobile.ProvisionResult.Environment, b: OpenpathMobile.ProvisionResult.Environment) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public typealias User = OpenpathMobile.OpenpathUser
+  public let user: OpenpathMobile.ProvisionResult.User
+  public let credential: OpenpathMobile.ProvisionResult.Credential
+  public struct Credential : Swift.Encodable, Swift.Hashable {
+    public let id: Swift.Int
+    public let opal: Swift.String
+    public let credentialType: OpenpathMobile.ProvisionResult.Credential.CredentialType
+    public struct CredentialType : Swift.Encodable, Swift.Hashable {
+      public func hash(into hasher: inout Swift.Hasher)
+      public static func == (a: OpenpathMobile.ProvisionResult.Credential.CredentialType, b: OpenpathMobile.ProvisionResult.Credential.CredentialType) -> Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public let mobile: OpenpathMobile.ProvisionResult.Credential.Mobile
+    public struct Mobile : Swift.Encodable, Swift.Hashable {
+      public let id: Swift.Int
+      public let name: Swift.String
+      @OpenpathMobile.NullCodable public var provisionedAt: Foundation.Date? {
+        get
+        set
+        _modify
+      }
+      @OpenpathMobile.NullCodable public var allegionMobile: OpenpathMobile.ProvisionResult.Credential.Mobile.AllegionMobileDetails? {
+        get
+        set
+        _modify
+      }
+      public struct AllegionMobileDetails : Swift.Encodable, Swift.Hashable {
+        public let userIdExt: Foundation.UUID
+        public let credentialIdExt: Foundation.UUID
+        public let cardNumber: Swift.Int
+        public func hash(into hasher: inout Swift.Hasher)
+        public static func == (a: OpenpathMobile.ProvisionResult.Credential.Mobile.AllegionMobileDetails, b: OpenpathMobile.ProvisionResult.Credential.Mobile.AllegionMobileDetails) -> Swift.Bool
+        public func encode(to encoder: any Swift.Encoder) throws
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      public func hash(into hasher: inout Swift.Hasher)
+      public static func == (a: OpenpathMobile.ProvisionResult.Credential.Mobile, b: OpenpathMobile.ProvisionResult.Credential.Mobile) -> Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: OpenpathMobile.ProvisionResult.Credential, b: OpenpathMobile.ProvisionResult.Credential) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let entryCount: Swift.Int
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenpathMobile.ProvisionResult, b: OpenpathMobile.ProvisionResult) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ResultMessage<T> {
+  case failure(mssg: Swift.String, code: Swift.String)
+  case success(name: Swift.String, result: T)
+  public var message: [Swift.String : [Swift.String : Any]] {
+    get
+  }
+  public var successResult: T? {
+    get
+  }
+  public var failureResult: (message: Swift.String, code: Swift.String)? {
+    get
+  }
+  public init?(message: [Swift.String : Any])
+}
+extension OpenpathMobile.ResultMessage : Swift.Equatable {
+  public static func == (lhs: OpenpathMobile.ResultMessage<T>, rhs: OpenpathMobile.ResultMessage<T>) -> Swift.Bool
+}
+extension OpenpathMobile.AuthorizationStatusType : Swift.Equatable {}
+extension OpenpathMobile.AuthorizationStatusType : Swift.Hashable {}
+extension OpenpathMobile.AuthorizationStatusType : Swift.RawRepresentable {}

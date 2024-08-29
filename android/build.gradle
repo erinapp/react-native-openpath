@@ -1,0 +1,63 @@
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+    compileSdkVersion safeExtGet('compileSdkVersion', 33)
+    buildToolsVersion safeExtGet('buildToolsVersion', '27.0.3')
+
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 23)
+        targetSdkVersion safeExtGet('targetSdkVersion', 33)
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.facebook.react:react-native:${safeExtGet('reactNative', '+')}"
+
+    implementation project(':openpath-mobile-access-core')
+    // Openpath Mobile Access Core SDK Dependencies
+    implementation 'com.madgag.spongycastle:core:1.54.0.0'
+    implementation 'com.madgag.spongycastle:prov:1.54.0.0'
+    implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
+    implementation 'com.madgag.spongycastle:pg:1.54.0.0'
+    implementation 'at.favre.lib:bcrypt:0.9.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+    implementation 'com.amazonaws:aws-android-sdk-core:2.33.0'
+    implementation 'com.amazonaws:aws-android-sdk-logs:2.33.0'
+    implementation 'com.auth0.android:jwtdecode:2.0.1'
+    implementation 'com.auth0:java-jwt:3.10.3'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'no.nordicsemi.android:ble:2.5.1'
+    implementation 'no.nordicsemi.android.support.v18:scanner:1.6.0'
+    implementation 'org.conscrypt:conscrypt-android:2.5.2'
+    implementation 'com.github.instacart.truetime-android:library:3.5'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.6.0-alpha02'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.14'
+    implementation 'com.google.dagger:dagger:2.28.3'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.41'
+}
+  

@@ -1,0 +1,24 @@
+{
+  "author": "Openpath",
+  "description": "React Native wrapper for Openpath",
+  "homepage": "https://openpath.com",
+  "keywords": [
+    "react-native"
+  ],
+  "license": "All rights reserved",
+  "main": "index.js",
+  "name": "react-native-openpath",
+  "peerDependencies": {
+    "react-native": "^0.67.4"
+  },
+  "version": "1.1.2",
+  "devDependencies": {
+    "@types/react-native": "^0.67.4",
+    "typedoc": "0.23.24",
+    "typescript": "4.8.4"
+  },
+  "scripts": {
+    "docs": "typedoc --readme none",
+    "clean:docs": "rm -rf docs"
+  }
+}

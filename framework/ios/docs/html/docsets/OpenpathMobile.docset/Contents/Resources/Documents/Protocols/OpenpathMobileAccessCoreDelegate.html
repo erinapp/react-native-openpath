@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OpenpathMobileAccessCoreDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/OpenpathMobileAccessCoreDelegate" class="dashAnchor"></a>
+    <a title="OpenpathMobileAccessCoreDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">OpenpathMobile Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">OpenpathMobile Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        OpenpathMobileAccessCoreDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../release-010.html">Release-0.1.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-011.html">Release-0.1.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-020.html">Release-0.2.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-021.html">Release-0.2.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-030.html">Release-0.3.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-040.html">Release-0.4.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-041.html">Release-0.4.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-042.html">Release-0.4.2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-043.html">Release-0.4.3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-044.html">Release-0.4.4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:14OpenpathMobile0A17AnalyticsDelegateP">OpenpathAnalyticsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OpenpathMobileAccessCoreDelegate.html">OpenpathMobileAccessCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:14OpenpathMobile15ProvisionResultV">ProvisionResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OpenpathMobileAccessCoreDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">OpenpathMobileAccessCoreDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            
+<ul>
+<li>Delegate class for receiving asynchronous results and events from <code><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></code>
+*</li>
+<li>Create a class that conforms to this protocol and assign it to <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC8delegateAA0abcD8Delegate_pSgvp">delegate</a></code>.
+*</li>
+<li>On successful callbacks, the second parameter in each function is a <code>Dictionary</code> called <code>message</code> with a root key of &ldquo;data&rdquo;.</li>
+<li>The value of the root entry varies and is documented for each function.
+*</li>
+<li>If the callback is reporting an error condition, <code>message</code> has the following shape:</li>
+<li><code>
+[
+&quot;err&quot;: [
+&quot;message&quot;: String,
+&quot;code&quot;: String
+]
+]
+</code></li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_19onProvisionResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onProvisionResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_19onProvisionResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onProvisionResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when <code>OpenpathMobileAccessCore/provision(setupMobileToken:)</code> is complete.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"userOpal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="s">"environment"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"heliumEndpoint"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"opalEnv"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"opalRegion"</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="p">],</span>
+    <span class="s">"user"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"pictureUrl"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+      <span class="s">"identity"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"firstName: String?,
+        "</span><span class="nv">middleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"lastName: String?,
+        "</span><span class="n">email</span><span class="s">": String,
+        "</span><span class="n">fullName</span><span class="s">": String?
+      ],
+      "</span><span class="n">org</span><span class="s">": [
+        "</span><span class="n">id</span><span class="s">": Int,
+        "</span><span class="n">opal</span><span class="s">": String,
+        "</span><span class="n">name</span><span class="s">": String,
+        "</span><span class="n">pictureUrl</span><span class="s">": String?
+      ]
+    ],
+    "</span><span class="n">credential</span><span class="s">": [
+      "</span><span class="n">id</span><span class="s">": Int,
+      "</span><span class="n">opal</span><span class="s">": String,
+      "</span><span class="n">credentialType</span><span class="s">": [
+        "</span><span class="n">modelName</span><span class="s">": String
+      ],
+      "</span><span class="n">mobile</span><span class="s">": [
+        "</span><span class="n">id</span><span class="s">": Int,
+        "</span><span class="n">name</span><span class="s">": String,
+        "</span><span class="n">provisionedAt</span><span class="s">": Date
+      ],
+      "</span><span class="n">startDate</span><span class="s">": String?,
+      "</span><span class="n">endDate</span><span class="s">": String?
+    ]
+  ]
+]
+</span></code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onProvisionResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_20onSwitchUserResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onSwitchUserResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_20onSwitchUserResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onSwitchUserResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC10switchUser8userOpalySS_tF">switchUser(userOpal:)</a></code> is complete.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"userOpal"</span><span class="p">:</span> <span class="n">userOpal</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onSwitchUserResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_18onSyncUserResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onSyncUserResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_18onSyncUserResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onSyncUserResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC8syncUseryyF">syncUser()</a></code> is complete.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">{</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"credential"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"credentialType"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"modelName"</span><span class="p">:</span> <span class="kt">String</span>
+      <span class="p">],</span>
+      <span class="s">"mobile"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"provisionedAt"</span><span class="p">:</span> <span class="kt">String</span>
+      <span class="p">],</span>
+      <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s">"user"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"pictureUrl"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+      <span class="s">"identity"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"email"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"endDate"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"firstName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"fullName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+        <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"lastName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"middleName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"startDate"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+        <span class="s">"status"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="p">],</span>
+      <span class="s">"org"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"opal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"pictureUrl"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+      <span class="p">]</span>
+    <span class="p">],</span>
+    <span class="s">"appVersion"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"latestBuild"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"latestVersion"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"deprecatedBuild"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"deprecatedVersion"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"latestSdkVersion"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"deprecatedSdkVersion"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"os"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+      <span class="s">"isUpdateRequired"</span><span class="p">:</span> <span class="kt">Bool</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onSyncUserResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_19onItemStatesUpdatedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onItemStatesUpdated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_19onItemStatesUpdatedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onItemStatesUpdated:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked in response to <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC16refreshItemState8itemType0H2IdySS_SitF">refreshItemState(itemType:itemId:)</a></code>.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"itemStates"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"entry-{entryId}"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"isScheduledRemoteUnlockAllowed"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isScheduledAvailableRevert"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">ItemType</span><span class="p">,</span>
+        <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"isScheduledNoAccess"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isScheduledTouchAllowed"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isScheduledUnlocked"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isScheduledOverrideAllowed"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+      <span class="p">]</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onItemStatesUpdated</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_21onUnprovisionResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onUnprovisionResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_21onUnprovisionResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onUnprovisionResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when a user is unprovisioned.</p>
+
+<p>The unprovision may be triggered by a call to <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC11unprovision8userOpalySSSg_tF">unprovision(userOpal:)</a></code> in the SDK, but also if the SDK detects that the active user is not allowed to be provisioned, for example if the same user using the same credential provisioned the SDK on another device.</p>
+
+<p>The <code>reasonCode</code> and the <code>reasonDescription</code> objects returned in the message payload clarify the reason for this unprovision.</p>
+
+<p>In cases where the request to unprovision was to unprovision all users on the device <code>userOpal</code> is<code>nil</code></p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"userOpal"</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+    <span class="s">"reasonCode"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="s">"reasonDescription"</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onUnprovisionResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_16onUnlockResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onUnlockResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_16onUnlockResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onUnlockResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when <code><a href="../Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC6unlock8itemType0F2Id07requestH07timeoutySS_S3itF">unlock(itemType:itemId:requestId:timeout:)</a></code> is complete.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"requestId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="s">"intCode"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"result"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"description"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"tip"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"moreInformationLink"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"localizedResult"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"localizedDescription"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="s">"localizedTip"</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onUnlockResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_24onBluetoothStatusChangedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onBluetoothStatusChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_24onBluetoothStatusChangedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onBluetoothStatusChanged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when bluetooth status has changed.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"isBluetoothOn"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="s">"bluetoothPermissionSetting"</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="s">"isBluetoothRestarting"</span><span class="p">:</span> <span class="kt">Bool</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+<p><strong>bluetoothPermissionSetting</strong> options are:</p>
+
+<ul>
+<li><em>ios_allowedAlways</em></li>
+<li><em>ios_restricted</em></li>
+<li><em>ios_notDetermined</em></li>
+<li><em>ios_denied</em>.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onBluetoothStatusChanged</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_23onInternetStatusChangedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onInternetStatusChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_23onInternetStatusChangedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onInternetStatusChanged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when internet status has changed.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"isInternetAvailable"</span><span class="p">:</span> <span class="kt">Bool</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onInternetStatusChanged</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_17onUserSettingsSetyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onUserSettingsSet:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_17onUserSettingsSetyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onUserSettingsSet:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when user settings are set.</p>
+
+<p><em>Success message:</em>:</p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"userSettings"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"hasRemoteUnlock"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+      <span class="s">"hasOverride"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+      <span class="s">"cloudKeys"</span><span class="p">:</span> <span class="p">[[</span>
+        <span class="s">"startTs"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"id"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span>
+      <span class="p">]]</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onUserSettingsSet</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_10onItemsSetyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onItemsSet:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_10onItemsSetyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onItemsSet:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when item information is set. Contains the full set of items and fields.</p>
+
+<p>This is the event that lists the entries the user has access to. It is called any time user access to entries changes (e.g., through updates in the portal).</p>
+
+<ul>
+<li><p><code>items</code> is a dictionary where the keys are <code>entry-{entryId}</code> or <code>reader-{readerId}</code>.</p></li>
+<li><p><code>itemOrdering</code> is an array that represents the ordering and hierarchy of <code>items</code>. Typically, in a non-elevator scenario, you will only see <code>entry</code> itemTypes and no subItems. In an elevator scenario however, you will see <code>reader</code> itemTypes (which normally represents the elevator), and <code>entry</code> subItems (which normally represents the floors that are tied to that reader).</p></li>
+</ul>
+
+<p><em>Success message:</em>:</p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"items"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"entry-{entryId}"</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s">"acuId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+          <span class="s">"cameraIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+          <span class="s">"color"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+          <span class="s">"isAvailableInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+          <span class="s">"isAvailableNearbyNotification"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+          <span class="s">"isAvailableOverrideUnlock"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+          <span class="s">"isInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+          <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+          <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>  <span class="c1">// "entry"</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+          <span class="s">"orgName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+          <span class="s">"readerIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s">"reader-{readerId}"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"acuId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"cameraIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+        <span class="s">"color"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"isAvailableInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isAvailableNearbyNotification"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isAvailableOverrideUnlock"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>  <span class="c1">// "reader"</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"orgName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"readerIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+    <span class="s">"itemOrdering"</span><span class="p">:</span> <span class="p">[[</span>
+      <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+      <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="c1">// "entry" or "reader"</span>
+      <span class="s">"subItems"</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">]]</span>
+    <span class="p">]]</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onItemsSet</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_14onItemsUpdatedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onItemsUpdated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_14onItemsUpdatedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onItemsUpdated:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when item information is updated. Only contains items and fields that have been updated.</p>
+
+<p>This is called for any items whose information has changed (e.g., whether it became in or out of range, whether the schedule has changed, etc.).</p>
+
+<p>This is for changes to existing items only. If new items have been discovered or any items have been removed since the last update, this is not called, but <code>onItemsSet</code> is called instead.</p>
+
+<p><em>Success message:</em>:</p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"items"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">"entry-{entryId}"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">"acuId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"cameraIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+        <span class="s">"color"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"isAvailableInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isAvailableNearbyNotification"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isAvailableOverrideUnlock"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"isInRange"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+        <span class="s">"itemId"</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="s">"itemType"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>  <span class="c1">// "entry" or "reader"</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"orgName"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="s">"readerIds"</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span>
+      <span class="p">]</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onItemsUpdated</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_23onLocationStatusChangedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onLocationStatusChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_23onLocationStatusChangedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onLocationStatusChanged:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when Location Services permission has changed.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"isLocationOn"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="s">"locationPermissionSetting"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="s">"isPreciseLocationOn"</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+<p><strong>locationPermissionSetting</strong> options are:</p>
+
+<ul>
+<li><em>ios_authorizedAlways</em></li>
+<li><em>ios_authorizedWhenInUse</em></li>
+<li><em>ios_notDetermined</em> <code>// User has not answered the popup yet</code></li>
+<li><em>ios_restricted</em> <code>// User has not answered the popup yet</code></li>
+<li><em>ios_denied</em></li>
+</ul>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onLocationStatusChanged</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_21onMotionStatusChangedyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onMotionStatusChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_21onMotionStatusChangedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onMotionStatusChanged:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when Motion permission has changed.</p>
+
+<p>For this permission, Apple does not provide any real-time notifications via its SDK. Therefore, this delegate will be called whenever the app enters the foreground.</p>
+
+<p><em>Success message:</em></p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"authorizationStatus"</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+  <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+<p><strong>authorizationStatus</strong> options are:</p>
+
+<ul>
+<li><em>ios_authorized</em></li>
+<li><em>ios_notDetermined</em> <code>// User has not answered the popup yet</code></li>
+<li><em>ios_restricted</em> <code>// User has not answered the popup yet</code></li>
+<li><em>ios_denied</em></li>
+</ul>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onMotionStatusChanged</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_22onSendFeedbackResponseyAA0abcD0C_SDySSypGtF"></a>
+                    <a name="//apple_ref/swift/Method/openpathMobileAccessCore(_:onSendFeedbackResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_22onSendFeedbackResponseyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:<wbr>onSendFeedbackResponse:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invoked when <code>OpenpathMobileAccessCore/sendFeedback(subject:message:)</code> is complete.</p>
+
+<p><em>Success message:</em>:</p>
+<pre class="highlight swift"><code><span class="p">[</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">openpathMobileAccessCore</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">openpathMobileAccessCore</span><span class="p">:</span> <span class="kt"><a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></span><span class="p">,</span>
+    <span class="n">onSendFeedbackResponse</span> <span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-05-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

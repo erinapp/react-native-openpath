@@ -1,0 +1,57 @@
+# frozen_string_literal: true
+
+platform :ios, '15'
+
+
+
+source 'https://cdn.cocoapods.org/'
+
+def get_dependencies_recursively(installer, root)
+  top_dependencies = installer.pod_targets.find { |pt| pt.name == root }.dependencies
+  dependencies = top_dependencies.to_set
+  top_dependencies.each do |dep|
+    dependencies.merge(get_dependencies_recursively(installer, dep)) if dep != root
+  end
+  dependencies.to_a
+end
+
+def openpath_postinstall(installer)
+  openpath_dependencies = get_dependencies_recursively(installer, 'OpenpathMobile')
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      next unless openpath_dependencies.include?(target.name)
+
+      puts "Target #{target} is an Openpath dependency, so setting BUILD_LIBRARY_FOR_DISTRIBUTION"
+      target.build_configurations.each do |config|
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        # Some depended-on Pods have this set too low
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+        # None of the Openpath dependencies need to be signed
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+      end
+    end
+  end
+end
+
+target 'OpenpathExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'OpenpathMobile', path: '..'
+
+
+  target 'OpenpathExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'OpenpathExampleUITests' do
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    openpath_postinstall installer
+
+    # Any other post_install scripts go here
+  end
+end

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Release-0.4.0  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Release-0.4.0  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">OpenpathMobile Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">OpenpathMobile Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        Release-0.4.0  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="release-010.html">Release-0.1.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-011.html">Release-0.1.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-020.html">Release-0.2.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-021.html">Release-0.2.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-030.html">Release-0.3.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-040.html">Release-0.4.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-041.html">Release-0.4.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-042.html">Release-0.4.2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-043.html">Release-0.4.3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-044.html">Release-0.4.4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:14OpenpathMobile0A17AnalyticsDelegateP">OpenpathAnalyticsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/OpenpathMobileAccessCoreDelegate.html">OpenpathMobileAccessCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:14OpenpathMobile15ProvisionResultV">ProvisionResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='release-v0-4-0' class='heading'>Release v0.4.0</h1>
+<h2 id='summary-release-notes' class='heading'>Summary Release Notes</h2>
+
+<ul>
+<li><a href="#acu-configurations-and-user-permissions-no-longer-pushed-to-app">ACU configurations and user permissions changes no longer pushed to app</a> (changes to your app may be required)</li>
+<li><a href="#user-settings-changes-no-longer-pushed-to-the-app">User settings changes no longer pushed to the app</a> (changes to your app may be required)</li>
+<li><a href="#state-related-item-data-has-moved">State-related item data has moved</a> (changes to your app may be required)</li>
+<li><a href="#allegion-wireless-locks">Allegion wireless locks</a></li>
+<li><a href="#internationalization">Internationalization</a></li>
+<li><a href="#eu-instance">EU instance</a></li>
+<li><a href="#new-example-app">New example app</a></li>
+<li><a href="#new-react-native-wrapper-and-example-app">New React Native wrapper and example app</a></li>
+</ul>
+<h2 id='release-notes' class='heading'>Release Notes</h2>
+<h3 id='acu-configurations-and-user-permissions-changes-no-longer-pushed-to-app' class='heading'>ACU configurations and user permissions changes no longer pushed to app</h3>
+
+<p>ACU (Access Control Unit or Controller) configurations (such as entry settings, schedules, reader settings, etc.) and user permissions changes are no longer automatically pushed to the SDK when admins make these changes in the web portal (Control Center). Any updates in the portal used to be delivered via the <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_10onItemsSetyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onItemsSet:)</a></code> and <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_14onItemsUpdatedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onItemsUpdated:)</a></code> delegate callbacks automatically, but you will no longer receive these right after changes.</p>
+
+<p>In order to get updates for ACU configurations and user permissions changes, we have added a new function <code><a href="Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC11softRefreshyyF">softRefresh()</a></code> to get new refreshed data from the cloud. Updates will then be delivered via the <code>onItemsSet</code> and <code>onItemsUpdated</code> delegate callbacks. </p>
+
+<p>Our suggestion is to use this function when users would like to refresh their data, for example, via a &ldquo;pull-down-to-refresh&rdquo; feature, or a refresh button in the app. In our new example app, we have included calling <code>softRefresh</code> when user pulls down to refresh on the list of items screen. Note that calling <code>softRefresh</code> on its own is not needed on app start because it is automatically handled once all the services are initialized.</p>
+
+<p>Please refer to the documentation for those functions and callbacks for more details.</p>
+
+<p>Background: This change was made in order to scale the system and optimize, especially for larger organizations where configuration changes are constantly being made. This change reduces the data that is sent to the app, therefore increasing the performance and speed of the app itself. Most of the time, a manual call to refresh data is not needed because the app will naturally shut down after awhile and re-open in the background around readers, thus refreshing its data when the app restarts.</p>
+<h3 id='user-settings-changes-no-longer-pushed-to-the-app' class='heading'>User settings changes no longer pushed to the app</h3>
+
+<p>In order to get updates for user settings (user cloud keys and whether user has remote or override unlock capability), we have added a new function <code><a href="Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC19refreshUserSettingsyyF">refreshUserSettings()</a></code> to get new refreshed data from the cloud. Updates will then be delivered via the <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_17onUserSettingsSetyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onUserSettingsSet:)</a></code> delegate callback. </p>
+
+<p>Please refer to the documentation for that function and callback for more details.</p>
+<h3 id='state-related-item-data-has-moved' class='heading'>State-related item data has moved</h3>
+
+<p>We have moved some of the state-related item data delivered from these delegate callbacks: \
+    - <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_10onItemsSetyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onItemsSet:)</a></code> \
+    - <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_14onItemsUpdatedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onItemsUpdated:)</a></code></p>
+
+<p>into the new callback: \
+    - <code><a href="Protocols/OpenpathMobileAccessCoreDelegate.html#/s:14OpenpathMobile0aB18AccessCoreDelegateP08openpathbcD0_19onItemStatesUpdatedyAA0abcD0C_SDySSypGtF">openpathMobileAccessCore(_:onItemStatesUpdated:)</a></code></p>
+
+<p>To trigger this new delegate callback, call the new function for a specific item: \
+    - <code><a href="Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC16refreshItemState8itemType0H2IdySS_SitF">refreshItemState(itemType:itemId:)</a></code></p>
+
+<p>These are the fields that have moved: \
+<code>isScheduledTouchAllowed</code> \
+<code>isScheduledUnlocked</code> \
+<code>isScheduledNoAccess</code> \
+<code>isScheduledRemoteUnlockAllowed</code> \
+<code>isScheduledOverrideAllowed</code> \
+<code>isScheduledAvailableRevert</code></p>
+
+<p>This state data can only be queried for a single item at a time (using the <code>itemType</code> and <code>itemId</code> parameters), so the data would be best used on an drilled-down item detail screen. This new function and delegate callback are included in our new example app and state data is displayed on the item detail screen.</p>
+
+<p>Please refer to the documentation for those functions and callbacks for more details.</p>
+<h3 id='allegion-wireless-locks' class='heading'>Allegion wireless locks</h3>
+
+<p>This version of the SDK supports unlocking Allegion wireless locks. No additional app code is needed. If the provisioned user has access to Allegion wireless locks, these locks will be available in the list of items provided in <code>onItemsSet</code>. Allegion wireless locks can be unlocked by calling the <code>unlock</code> function, similar to the way other entries are unlocked.</p>
+<h3 id='internationalization' class='heading'>Internationalization</h3>
+
+<p>The SDK now supports English, French, German, Italian, and Spanish.</p>
+
+<p>No additional app code is needed. The SDK looks at the phone&rsquo;s locale settings and returns a corresponding language string prefixed by <code>localized</code> for relevant fields that contain English strings.</p>
+
+<p>For example, the <code>onUnlockResponse</code> currently includes the following fields: \
+<code>tip</code> \
+<code>description</code> \
+<code>result</code></p>
+
+<p>and now includes 3 additional fields: \
+<code>localizedTip</code> \
+<code>localizedDescription</code> \
+<code>localizedResult</code></p>
+<h3 id='eu-instance' class='heading'>EU instance</h3>
+
+<p>Since the last SDK was released, we have added a European instance of the Control Center (<a href="https://control.eu.openpath.com">https://control.eu.openpath.com</a>) for orgs that are in Europe. This SDK supports provisioning users that are on the EU instance.</p>
+
+<p>No additional app code is needed. As long as you are using our EU instance API (<a href="https://api.eu.openpath.com">https://api.eu.openpath.com</a>), the <code>setupMobileToken</code> that you generate and send to the <code><a href="Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC9provision05setupB5Token8callbackySS_ys6ResultOyAA09ProvisionI0VAA0A5ErrorVGcSgtF">provision(setupMobileToken:callback:)</a></code> function will contain the relevant information needed for the SDK to provision the user properly.</p>
+<h3 id='new-example-app' class='heading'>New example app</h3>
+
+<p>The previous iosSampleApp has been replaced with a redesigned ExampleApp, that follows current SwiftUI best practices.</p>
+<h3 id='new-react-native-wrapper-and-example-app' class='heading'>New React Native wrapper and example app</h3>
+
+<p>We have introduced a new React Native wrapper v1.0.0 and a React Native example app. It is available to download in a separate zip file (v1.0.0-react-native.zip).</p>
+<h2 id='migration-guide' class='heading'>Migration Guide</h2>
+
+<p>This version of the SDK relies on CocoaPods to manage dependencies. So if you haven&rsquo;t already, <a href="https://guides.cocoapods.org/using/getting-started.html">install CocoaPods</a> and integrate it with your project.</p>
+
+<p>If you have an old version of the SDK installed, delete the old framework files and remove the references to them from your project in XCode.</p>
+
+<p>Note that the exported framework has been renamed from <code><a href="Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></code> to <code>OpenpathMobile</code> so you will need to update your <code>import</code> statements.</p>
+
+<p>Then follow the steps outlined in the [Adding the SDK to your project] section of this SDK documentation. </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-05-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+framework module OpenpathMobile {
+  umbrella header "OpenpathMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module OpenpathMobile.Swift {
+  header "OpenpathMobile-Swift.h"
+  requires objc
+}

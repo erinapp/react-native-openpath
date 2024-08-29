@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OpenpathMobile  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="OpenpathMobile  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">OpenpathMobile Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">OpenpathMobile Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        OpenpathMobile  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="release-010.html">Release-0.1.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-011.html">Release-0.1.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-020.html">Release-0.2.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-021.html">Release-0.2.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-030.html">Release-0.3.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-040.html">Release-0.4.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-041.html">Release-0.4.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-042.html">Release-0.4.2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-043.html">Release-0.4.3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="release-044.html">Release-0.4.4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:14OpenpathMobile0A17AnalyticsDelegateP">OpenpathAnalyticsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/OpenpathMobileAccessCoreDelegate.html">OpenpathMobileAccessCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:14OpenpathMobile15ProvisionResultV">ProvisionResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='code-openpathmobile-code' class='heading'><code>OpenpathMobile</code></h1>
+
+<p>The SDK that provides access to Openpath functionality for iOS-based mobile devices.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>If viewing this documentation in XCode, be sure to choose &ldquo;Swift&rdquo; as the language, both in the sidebar and above.</p>
+
+</div>
+
+<p><img src="select-swift.png" alt="Select Swift in two places"></p>
+<h2 id='overview' class='heading'>Overview</h2>
+<h3 id='adding-the-sdk-to-your-project' class='heading'>Adding the SDK to your project</h3>
+
+<p>The SDK is provided as a binary framework in a CocoaPods package, delivered in a <code>.zip</code> file. The package also includes binary frameworks for all closed-source dependencies of the SDK.</p>
+
+<p>To integrate the SDK:</p>
+
+<ul>
+<li>Set up CocoaPods for your app, if it is not already. Refer to CocoaPods documentation for details.</li>
+<li>Enable dynamic frameworks in your <code>Podfile</code>:
+<code>ruby
+use_frameworks!
+</code></li>
+<li>Unzip the SDK archive in a known location.</li>
+<li>Add the following to your <code>Podfile</code> in the section for your app target, filling in the correct SDK directory:
+<code>ruby
+pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
+</code></li>
+<li>Add a <code>post_install</code> hook to your Podfile as needed, as shown below and in the Example app.</li>
+<li>Ensure your app is using Swift 5.x</li>
+<li>Enable the &ldquo;Build Libraries for Distribution&rdquo; setting as needed (see below)</li>
+<li>From the terminal, run <code>pod install</code></li>
+<li>Build and run your app within Xcode</li>
+</ul>
+<h3 id='the-quot-build-libraries-for-distribution-quot-setting' class='heading'>The &ldquo;Build Libraries for Distribution&rdquo; setting.</h3>
+
+<p>Since the SDK is distributed in binary form, the SDK&rsquo;s dependencies must be built with the &ldquo;Build Libraries for Distribution&rdquo; build flag set to <strong>Yes</strong>. This tells Xcode to build those dependencies in such a way that the SDK can call into them without needing to be recompiled.</p>
+
+<p>For a simple app, this can be accomplished with the following steps:</p>
+
+<ul>
+<li>In Xcode, select the build settings for your app target, and chose <strong>Yes</strong> for &ldquo;Build Libraries for Distribution&rdquo;</li>
+<li>From the terminal run (or re-run) <code>pod install</code></li>
+<li>Cocoapods will apply that build setting to all Pod projects, including <code>OpenpathMobile</code> and all its dependencies.</li>
+</ul>
+
+<p>In a more complex app, you may not want to apply that setting to all Pod projects. For example, this can cause problems with some React Native libraries. In that case, here&rsquo;s some code you can add to your <code>Podfile</code> that will apply the setting only to OpenpathMobile&rsquo;s dependencies:</p>
+
+<ul>
+<li>Add this somewhere near the top of the Podfile:</li>
+</ul>
+<pre class="highlight ruby"><code><span class="k">def</span> <span class="nf">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
+  <span class="n">top_dependencies</span> <span class="o">=</span> <span class="n">installer</span><span class="p">.</span><span class="nf">pod_targets</span><span class="p">.</span><span class="nf">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">pt</span><span class="o">|</span> <span class="n">pt</span><span class="p">.</span><span class="nf">name</span> <span class="o">==</span> <span class="n">root</span> <span class="p">}.</span><span class="nf">dependencies</span>
+  <span class="n">dependencies</span> <span class="o">=</span> <span class="n">top_dependencies</span><span class="p">.</span><span class="nf">to_set</span>
+  <span class="n">top_dependencies</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">dep</span><span class="o">|</span>
+    <span class="n">dependencies</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="n">dep</span><span class="p">))</span> <span class="k">if</span> <span class="n">dep</span> <span class="o">!=</span> <span class="n">root</span>
+  <span class="k">end</span>
+  <span class="n">dependencies</span><span class="p">.</span><span class="nf">to_a</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">openpath_postinstall</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
+  <span class="n">openpath_dependencies</span> <span class="o">=</span> <span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="s1">'OpenpathMobile'</span><span class="p">)</span>
+  <span class="n">installer</span><span class="p">.</span><span class="nf">generated_projects</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">project</span><span class="o">|</span>
+    <span class="n">project</span><span class="p">.</span><span class="nf">targets</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+      <span class="k">next</span> <span class="k">unless</span> <span class="n">openpath_dependencies</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="nf">name</span><span class="p">)</span>
+
+      <span class="nb">puts</span> <span class="s2">"Target </span><span class="si">#{</span><span class="n">target</span><span class="si">}</span><span class="s2"> is an Openpath dependency, so setting BUILD_LIBRARY_FOR_DISTRIBUTION"</span>
+      <span class="n">target</span><span class="p">.</span><span class="nf">build_configurations</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+        <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'BUILD_LIBRARY_FOR_DISTRIBUTION'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'YES'</span>
+        <span class="c1"># Some depended-on Pods set this to an obsolete iOS version</span>
+        <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'IPHONEOS_DEPLOYMENT_TARGET'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'12.0'</span>
+        <span class="c1"># None of the Openpath dependencies need to be signed</span>
+        <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'CODE_SIGNING_ALLOWED'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'NO'</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>Add a post_install block to the Podfile, or add to your existing one:</li>
+</ul>
+<pre class="highlight ruby"><code>  <span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+    <span class="n">openpath_postinstall</span> <span class="n">installer</span>
+
+    <span class="c1"># Any other post_install scripts go here</span>
+  <span class="k">end</span>
+</code></pre>
+
+<ul>
+<li><p>Re-run <code>pod install</code></p></li>
+<li><p>Reload the app in Xcode and rebuild</p></li>
+</ul>
+<h3 id='enabling-background-modes-and-privacy-keys' class='heading'>Enabling background modes and privacy keys</h3>
+
+<p>The Openpath SDK requires the ability to access Bluetooth and location while the app is in the background. (The user will be prompted to approve these permissions interactively on first use.)</p>
+
+<p>Ensure your app&rsquo;s <code>Info.plist</code> file contains the following <strong>background modes</strong>:</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>UIBackgroundModes<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+    <span class="nt">&lt;string&gt;</span>bluetooth-central<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>location<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/array&gt;</span>
+</code></pre>
+
+<p>Openpath requires that the user has the following settings on their phone:</p>
+
+<ol>
+<li>(Global) Bluetooth -&gt; ON</li>
+<li>(Global) Location Services -&gt; ON</li>
+<li>(optional) (Global) Fitness Tracking -&gt; ON</li>
+<li>Openpath Bluetooth Permission -&gt; Enabled</li>
+<li>Openpath Location Permission</li>
+<li>ALWAYS - for Wave/Touch to unlock reliably</li>
+<li>WHEN IN USE - for unlocks only when the app is opened</li>
+<li>(optional) Openpath Motion &amp; Fitness Permission -&gt; Enabled</li>
+</ol>
+
+<p><strong>Bluetooth</strong> and <strong>Location Services</strong> are used to communicate with Openpath readers, to ensure that the app properly wakes up when near readers, and to allow the Wave feature to work reliably. Openpath never tracks or stores a user&rsquo;s location information for any other purpose. <strong>Motion &amp; Fitness</strong> is used to help save battery and reduce data usage, as Openpath will turn off unnecessary activity if the phone is stationary.</p>
+
+<p>Include the following <strong>privacy keys</strong> in your <code>Info.plist</code> so that when a user is prompted for permission, the given text is displayed. The strings below are examples, and you may re-word them as you wish.</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSBluetoothAlwaysUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>We need access to Bluetooth to discover and unlock nearby entries.<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSBluetoothPeripheralUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>We need access to Bluetooth to discover and unlock nearby entries.<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSLocationAlwaysAndWhenInUseUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+  We need "Always" location permission in order to discover nearby entries when the app is
+  closed. This allows you to unlock via "Touch" without opening your phone. We do not store,
+  log, or share your location data.
+<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSLocationAlwaysUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+  We need "Always" location permission in order to discover nearby entries when the app is
+  closed. This allows you to unlock via "Touch" without opening your phone. We do not store,
+  log, or share your location data.
+<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSLocationWhenInUseUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+  We need "While Using App" location permission in order to discover nearby entries. We do not
+  store, log, or share your location data.
+<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSMotionUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+  We use motion to turn off services when your phone is stationary in order to save battery
+  and reduce data usage.
+<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+
+<p>For iOS14, Apple added the ability for location accuracy to be reduced or approximated. In order for unlocks to be verified as &ldquo;on-site&rdquo; and near a reader according to geofence rules, the SDK needs full location accuracy, so this setting must be off. The following can be added to your <code>Info.plist</code> file, though the default value is <code>false</code> if this key is not included.</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSLocationDefaultAccuracyReduced<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;false/&gt;</span>
+</code></pre>
+<h3 id='beacon-region-monitoring' class='heading'>Beacon Region Monitoring</h3>
+
+<p>The Openpath SDK uses <strong>beacon region monitoring</strong> so the SDK can wake up and start services when the device comes within range of readers.</p>
+
+<p>Apple allows for a maximum of 20 beacons regions to be monitored per app. Openpath monitors 11 regions, so there are 9 remaining regions available for your use.</p>
+
+<p>In order to help prevent region identifier collision, Openpath regions are prefixed with <code>op-beacon</code>.</p>
+<h3 id='using-the-openpathmobileaccesscore-class' class='heading'>Using the OpenpathMobileAccessCore class</h3>
+
+<p>Once you&rsquo;ve added the framework to your project, updated <code>Info.plist</code>, and installed the CocoaPods libraries, you are ready to write some code.</p>
+
+<p>The <code><a href="Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a></code> class is a singleton, available through the <code>shared</code> static variable.</p>
+
+<p>Set your class as the SDK&rsquo;s delegate:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">OpenpathMobileAccessCoreDelegate</span> <span class="p">{</span>
+  <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">OpenpathMobileAccessCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>IMPORTANT: Always access <code><a href="Classes/OpenpathMobileAccessCore.html#/s:14OpenpathMobile0aB10AccessCoreC6sharedACvpZ">OpenpathMobileAccessCore.shared</a></code> on the main thread.</strong></p>
+<h3 id='ios-example-app' class='heading'>iOS Example App</h3>
+
+<p>The iOS example app uses the Openpath Mobile Access Core SDK to:</p>
+
+<ul>
+<li>Provision one or more user mobile credentials onto the app</li>
+<li>Switch between users on the app</li>
+<li>View the list of entries that the user has access to</li>
+<li>Unlock an entry</li>
+<li>Unprovision all the users or select one to unprovision from the list of inactive users</li>
+</ul>
+
+<p>The Example App targets iOS 15+ and uses advanced features that may not be available in previous iOS versions.</p>
+
+<p>For the purposes of this demo, we will show provisioning through two different ways.</p>
+
+<ol>
+<li><p>The app can be provisioned via email and password by allowing a user to log in and generate their own mobile setup token to use for provisioning. Usually, only a user with admin rights to the Openpath Control Center (admin portal) has a password.</p></li>
+<li><p>The app can be provisioned via mobile setup token. In practice, most users won&rsquo;t have an Openpath password. We recommend that you create a service user (super admin) in the Openpath Control Center, and use that service user in your cloud to make Openpath API calls to generate a temporary mobile setup token for a particular user&rsquo;s mobile credential. Then this token should be passed from your cloud server to the mobile app and into the &ldquo;provision&rdquo; SDK function.</p></li>
+</ol>
+
+<p>For more information on the provisioning workflow, please refer to the Openpath Mobile Access SDK README section entitled &ldquo;Provisioning Workflow&rdquo;. </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-05-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

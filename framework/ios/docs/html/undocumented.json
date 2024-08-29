@@ -1,0 +1,782 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/AnyCodable/AnyDecodable.swift",
+      "line": 50,
+      "symbol": "_AnyDecodable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/AnyCodable/AnyEncodable.swift",
+      "line": 50,
+      "symbol": "_AnyEncodable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/AnyCodable/AnyEncodable.swift",
+      "line": 218,
+      "symbol": "_AnyEncodable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/Allegion.swift",
+      "line": 143,
+      "symbol": "Allegion",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/AllegionModel.swift",
+      "line": 66,
+      "symbol": "AllegionData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/Operation/AccessPayloadsOperation.swift",
+      "line": 100,
+      "symbol": "AccessPayloadsOperation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/Operation/RequestAccessOperation.swift",
+      "line": 55,
+      "symbol": "RequestAccessOperation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/Operation/ScanOperation.swift",
+      "line": 77,
+      "symbol": "ScanOperation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 26,
+      "symbol": "OpenpathMobileAccessCore._logVerbose(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 34,
+      "symbol": "OpenpathMobileAccessCore._logDebug(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 42,
+      "symbol": "OpenpathMobileAccessCore._logInfo(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 50,
+      "symbol": "OpenpathMobileAccessCore._logWarning(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 58,
+      "symbol": "OpenpathMobileAccessCore._logError(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 66,
+      "symbol": "OpenpathMobileAccessCore._logSevere(_:functionName:fileName:lineNumber:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 149,
+      "symbol": "OpenpathMobileAccessCore._getUserAgent()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 150,
+      "symbol": "OpenpathMobileAccessCore._getAppBuild()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 151,
+      "symbol": "OpenpathMobileAccessCore._getAppVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 153,
+      "symbol": "OpenpathMobileAccessCore._getUserApiTokens()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 154,
+      "symbol": "OpenpathMobileAccessCore._getUserAwsCredentials()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 162,
+      "symbol": "OpenpathMobileAccessCore._getIsAutoAccountSwitchingEnabled()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 163,
+      "symbol": "OpenpathMobileAccessCore._setIsAutoAccountSwitchingEnabled(enabled:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 186,
+      "symbol": "OpenpathMobileAccessCore._getDeviceToken()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 190,
+      "symbol": "OpenpathMobileAccessCore._setDeviceToken(token:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 194,
+      "symbol": "OpenpathMobileAccessCore._getUserOpals()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 249,
+      "symbol": "OpenpathMobileAccessCore._setRssiThreshold(connectThreshold:disconnectThreshold:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Extensions/OpenpathMobileAccessCore+Ext.swift",
+      "line": 260,
+      "symbol": "OpenpathMobileAccessCore._isStoreRelease",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/HeliumModel.swift",
+      "line": 18,
+      "symbol": "HeliumModel.SyncMobile.Credential.Mobile.AllegionMobile",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/HeliumModel.swift",
+      "line": 143,
+      "symbol": "HeliumModel.SyncMobile.Credential.Mobile.AllegionMobile",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/OpenpathError.swift",
+      "line": 3,
+      "symbol": "OpenpathError",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/OpenpathError.swift",
+      "line": 16,
+      "symbol": "OpenpathError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/OpenpathTermsOfUseStatus.swift",
+      "line": 5,
+      "symbol": "OpenpathTermsOfUseStatus",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/OpenpathUser.swift",
+      "line": 1,
+      "symbol": "OpenpathUser",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/OzoneModel.swift",
+      "line": 37,
+      "symbol": "OzoneModel.Response",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 11,
+      "symbol": "ProvisionResult.userOpal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 13,
+      "symbol": "ProvisionResult.environment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 14,
+      "symbol": "ProvisionResult.Environment",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 20,
+      "symbol": "ProvisionResult.User",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 21,
+      "symbol": "ProvisionResult.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 23,
+      "symbol": "ProvisionResult.credential",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 24,
+      "symbol": "ProvisionResult.Credential",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ProvisionResult.swift",
+      "line": 48,
+      "symbol": "ProvisionResult.entryCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ResultMessage.swift",
+      "line": 14,
+      "symbol": "ResultMessage",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ResultMessage.swift",
+      "line": 74,
+      "symbol": "ResultMessage",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/Storage/Storage.swift",
+      "line": 11,
+      "symbol": "Storage",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/Storage/Storage.swift",
+      "line": 479,
+      "symbol": "Storage",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/UdpClient.swift",
+      "line": 25,
+      "symbol": "UdpClient",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 50,
+      "symbol": "OpenpathMobileAccessCore.analyticsDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1621,
+      "symbol": "OpenpathMobileAccessCore._unlockByConnectionType(connectionType:itemType:itemId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1744,
+      "symbol": "OpenpathMobileAccessCore._override(itemType:itemId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1802,
+      "symbol": "OpenpathMobileAccessCore._triggerLockdownPlan(lockdownPlanId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1814,
+      "symbol": "OpenpathMobileAccessCore._revertLockdownPlan(lockdownPlanId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1912,
+      "symbol": "OpenpathMobileAccessCore._revertByConnectionType(connectionType:itemType:itemId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 1949,
+      "symbol": "OpenpathMobileAccessCore._revert(itemType:itemId:requestId:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 2064,
+      "symbol": "OpenpathMobileAccessCore._setTestMode(testMode:testFrequency:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 2078,
+      "symbol": "OpenpathMobileAccessCore._enableNotificationsForItem(enabled:itemType:itemId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 5617,
+      "symbol": "OpenpathMobileAccessCore.urlSession(_:didBecomeInvalidWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 5622,
+      "symbol": "OpenpathMobileAccessCore.urlSessionDidFinishEvents(forBackgroundURLSession:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 5626,
+      "symbol": "OpenpathMobileAccessCore.urlSession(_:didReceive:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 6779,
+      "symbol": "OpenpathMobileAccessCore._getTermsOfUseStatus(identityId:callback:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 6786,
+      "symbol": "OpenpathMobileAccessCore._signTermsOfUse(identityId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreAnalyticsDelegate.swift",
+      "line": 16,
+      "symbol": "OpenpathAnalyticsDelegate.logAnalyticsEvent(name:parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 402,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onOverrideResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 406,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onTriggerLockdownPlanResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 410,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertLockdownPlanResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 465,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onLockdownPlansSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 469,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onNotificationStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 473,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onMicrophoneStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 477,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 497,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onSendFeedbackRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 501,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onDebug:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 502,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onUnlockByConnectionTypeResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 506,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertByConnectionTypeResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 510,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onUnlockRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 514,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onCredentialConfigSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 518,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onInitializeUserRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 522,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onProtectedDataStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 526,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onAppUpdatePaused:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 535,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onOverrideResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 536,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onTriggerLockdownPlanResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 537,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertLockdownPlanResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 540,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onLockdownPlansSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 541,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 543,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onSendFeedbackRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 544,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onDebug:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 545,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onUnlockByConnectionTypeResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 546,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onRevertByConnectionTypeResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 547,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onUnlockRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 548,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onCredentialConfigSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 549,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onInitializeUserRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 550,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onProtectedDataStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 551,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onLogoutRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 552,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onAppUpdatePaused:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 553,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onNotificationStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCoreDelegate.swift",
+      "line": 554,
+      "symbol": "OpenpathMobileAccessCoreDelegate.openpathMobileAccessCore(_:onMicrophoneStatusChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/BatteryMonitor.swift",
+      "line": 19,
+      "symbol": "BatteryMonitor",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/BatteryMonitor.swift",
+      "line": 36,
+      "symbol": "BatteryMonitor",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/DebugFlags.swift",
+      "line": 132,
+      "symbol": "OpenpathMobileAccessCore._setDebugFlag(id:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/DebugFlags.swift",
+      "line": 141,
+      "symbol": "OpenpathMobileAccessCore._getDebugFlag(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/DebugFlags.swift",
+      "line": 162,
+      "symbol": "OpenpathMobileAccessCore._getAllDebugFlags()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/LocationDetector.swift",
+      "line": 16,
+      "symbol": "LocationDetector",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/LocationDetector.swift",
+      "line": 33,
+      "symbol": "LocationDetector",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/MicrophoneService.swift",
+      "line": 41,
+      "symbol": "MicrophoneService",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/MotionDetector.swift",
+      "line": 17,
+      "symbol": "MotionDetector",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/MotionDetector.swift",
+      "line": 34,
+      "symbol": "MotionDetector",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Services/NotificationService.swift",
+      "line": 42,
+      "symbol": "NotificationService",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/Authorization.swift",
+      "line": 11,
+      "symbol": "AuthorizationStatusType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/NullCodable.swift",
+      "line": 5,
+      "symbol": "NullCodable",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/HeliumClient.swift",
+      "line": 20,
+      "symbol": "VoidResponse",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/HeliumClient.swift",
+      "line": 102,
+      "symbol": "ApiError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/OzoneClient.swift",
+      "line": 51,
+      "symbol": "OzoneClient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/PulsarClient.swift",
+      "line": 52,
+      "symbol": "PulsarClient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/Example"
+}
