@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'OpenpathMobile'
-  s.version = '0.4.4'
+  s.version = '0.4.6'
   s.summary = 'Openpath SDK.'
 
   s.description = <<~DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   # This "source" line is required, but does not apply:
   s.source = { git: 'https://example.org', tag: "v#{s.version}" }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '12.1'
   s.swift_versions = '5'
 
   s.subspec 'Core' do |core|
@@ -34,25 +34,16 @@ Pod::Spec.new do |s|
 
     core.public_header_files = 'OpenpathMobileAccessCore/OpenpathMobileAccessCore.h'
 
-    core.dependency 'AWSCore', '~> 2.34.2'
-    core.dependency 'AWSIoT', '~> 2.34.2'
-    core.dependency 'AWSLogs', '~> 2.34.2'
+    core.dependency 'AWSCore', '2.37.2'
+    core.dependency 'AWSIoT', '2.37.2'
+    core.dependency 'AWSLogs', '2.37.2'
 
-    core.dependency 'ReachabilitySwift', '= 5.0.0'
-    core.dependency 'OpenSSL-Universal', '~> 1.1.180'
-    core.dependency 'JOSESwift', '=2.4.0'
-    core.dependency 'JWTDecode', '~> 2.6'
-    core.dependency 'DictionaryCoder', '~> 1.0.8'
+    core.dependency 'OpenSSL-Universal', '~> 1.1.2301'
 
     core.pod_target_xcconfig = {
 
       'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
     }
-
-    core.resource_bundles = { 'OpenpathMobile' => [
-      'OpenpathMobileAccessCore/PrivacyInfo.xcprivacy',
-      'OpenpathMobileAccessCore/**/*.strings'
-    ]}
 
 
   end
