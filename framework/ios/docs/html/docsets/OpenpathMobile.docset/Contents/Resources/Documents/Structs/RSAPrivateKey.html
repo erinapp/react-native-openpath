@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RSAPrivateKey Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/RSAPrivateKey" class="dashAnchor"></a>
+    <a title="RSAPrivateKey Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">OpenpathMobile Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">OpenpathMobile Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        RSAPrivateKey Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../release-010.html">Release-0.1.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-011.html">Release-0.1.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-020.html">Release-0.2.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-021.html">Release-0.2.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-030.html">Release-0.3.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-040.html">Release-0.4.0</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-041.html">Release-0.4.1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-042.html">Release-0.4.2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-043.html">Release-0.4.3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-044.html">Release-0.4.4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-045.html">Release-0.4.5</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../release-046.html">Release-0.4.6</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OpenpathMobileAccessCore.html">OpenpathMobileAccessCore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/_JWT.html">_JWT</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile20CompressionAlgorithmO">CompressionAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContentEncryptionAlgorithm.html">ContentEncryptionAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile11DecodeErrorO">DecodeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DictionaryDataDecodingStrategy.html">DictionaryDataDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DictionaryDateDecodingStrategy.html">DictionaryDateDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DictionaryKeyDecodingStrategy.html">DictionaryKeyDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DictionaryNonConformingFloatDecodingStrategy.html">DictionaryNonConformingFloatDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile11ECCurveTypeO">ECCurveType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile11ECParameterO">ECParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile13HMACAlgorithmO">HMACAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile10JWKKeyTypeO">JWKKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile12JWKParameterO">JWKParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile22JWKThumbprintAlgorithmO">JWKThumbprintAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KeyManagementAlgorithm.html">KeyManagementAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile12RSAParameterO">RSAParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResultMessage.html">ResultMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SignatureAlgorithm.html">SignatureAlgorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:14OpenpathMobile21SymmetricKeyParameterO">SymmetricKeyParameter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SecKey.html">SecKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:14OpenpathMobile6decode3jwtAA3JWT_pSS_tKF">decode(jwt:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:14OpenpathMobile26CommonHeaderParameterSpaceP">CommonHeaderParameterSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleAsECPrivateKeyComponents.html">ExpressibleAsECPrivateKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleAsECPublicKeyComponents.html">ExpressibleAsECPublicKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleAsRSAPrivateKeyComponents.html">ExpressibleAsRSAPrivateKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleAsRSAPublicKeyComponents.html">ExpressibleAsRSAPublicKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleAsSymmetricKeyComponents.html">ExpressibleAsSymmetricKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JWK.html">JWK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JWT.html">JWT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:14OpenpathMobile0A17AnalyticsDelegateP">OpenpathAnalyticsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OpenpathMobileAccessCoreDelegate.html">OpenpathMobileAccessCoreDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Claim.html">Claim</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ECPrivateKey.html">ECPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ECPublicKey.html">ECPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/IDTokenValidation.html">IDTokenValidation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JWE.html">JWE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JWEHeader.html">JWEHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JWKSet.html">JWKSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JWS.html">JWS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JWSHeader.html">JWSHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:14OpenpathMobile15ProvisionResultV">ProvisionResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RSAPrivateKey.html">RSAPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RSAPublicKey.html">RSAPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SymmetricKey.html">SymmetricKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14OpenpathMobile22ECPrivateKeyComponentsa">ECPrivateKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14OpenpathMobile21ECPublicKeyComponentsa">ECPublicKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14OpenpathMobile23RSAPrivateKeyComponentsa">RSAPrivateKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14OpenpathMobile22RSAPublicKeyComponentsa">RSAPublicKeyComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14OpenpathMobile22SymmetricKeyComponentsa">SymmetricKeyComponents</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RSAPrivateKey</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RSAPrivateKey</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/JWK.html">JWK</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RSAPrivateKey</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RSAPrivateKey</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A JWK holding an RSA private key.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV7keyTypeAA06JWKKeyF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/keyType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV7keyTypeAA06JWKKeyF0Ovp">keyType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The JWK key type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyType</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:14OpenpathMobile10JWKKeyTypeO">JWKKeyType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV10parametersSDyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV10parametersSDyS2SGvp">parameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The JWK parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV18requiredParametersSDyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/requiredParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV18requiredParametersSDyS2SGvp">requiredParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The RSA required parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">requiredParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV7modulusSSvp"></a>
+                    <a name="//apple_ref/swift/Property/modulus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV7modulusSSvp">modulus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The modulus value for the RSA private key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">modulus</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV8exponentSSvp"></a>
+                    <a name="//apple_ref/swift/Property/exponent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV8exponentSSvp">exponent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The exponent value for the RSA private key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">exponent</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV15privateExponentSSvp"></a>
+                    <a name="//apple_ref/swift/Property/privateExponent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV15privateExponentSSvp">privateExponent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The private exponent value for the RSA private key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">privateExponent</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV7modulus8exponent15privateExponent20additionalParametersACSS_S2SSDyS2SGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(modulus:exponent:privateExponent:additionalParameters:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV7modulus8exponent15privateExponent20additionalParametersACSS_S2SSDyS2SGtcfc">init(modulus:<wbr>exponent:<wbr>privateExponent:<wbr>additionalParameters:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <pre class="highlight swift"><code>        <span class="k">as</span> <span class="n">specified</span> <span class="k">in</span> <span class="p">[</span><span class="kt">RFC</span><span class="o">-</span><span class="mi">7518</span><span class="p">,</span> <span class="kt">Section</span> <span class="mi">2</span><span class="p">](</span><span class="nv">https</span><span class="p">:</span><span class="c1">//tools.ietf.org/html/rfc7518#section-2).</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">modulus</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">exponent</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">privateExponent</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">additionalParameters</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Additional JWK parameters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV07privateD020additionalParametersAcA013ExpressibleAscD10Components_p_SDyS2SGtKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(privateKey:additionalParameters:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV07privateD020additionalParametersAcA013ExpressibleAscD10Components_p_SDyS2SGtKcfc">init(privateKey:<wbr>additionalParameters:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code>RSAPrivateKey</code> JWK with the specified private key and optional additional JWK parameters.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    A <code>JOSESwiftError</code> indicating any errors.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">privateKey</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ExpressibleAsRSAPrivateKeyComponents.html">ExpressibleAsRSAPrivateKeyComponents</a></span><span class="p">,</span> <span class="n">additionalParameters</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>privateKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The private key that the resulting JWK should represent.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any additional parameters to be contained in the JWK.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV4dataAC10Foundation4DataV_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV4dataAC10Foundation4DataV_tKcfc">init(data:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code>RSAPrivateKey</code> from the JSON representation of a private key JWK.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile13RSAPrivateKeyV9converted2toxxm_tKAA013ExpressibleAscD10ComponentsRzlF"></a>
+                    <a name="//apple_ref/swift/Method/converted(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile13RSAPrivateKeyV9converted2toxxm_tKAA013ExpressibleAscD10ComponentsRzlF">converted(to:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts the <code>RSAPrivateKey</code> JWK to the specified type.
+The specified type must conform to the <code><a href="../Protocols/ExpressibleAsRSAPrivateKeyComponents.html">ExpressibleAsRSAPrivateKeyComponents</a></code> protocol.</p>
+
+<p><strong>Example:</strong>
+<code>let keyData = try jwk.converted(to: Data.self)</code></p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    A <code>JOSESwiftError</code> indicating any errors.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">converted</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ExpressibleAsRSAPrivateKeyComponents.html">ExpressibleAsRSAPrivateKeyComponents</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to convert the JWK to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The type initialized with the key data.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14OpenpathMobile3JWKP21withThumbprintAsKeyId9algorithmxAA22JWKThumbprintAlgorithmO_tKF"></a>
+                    <a name="//apple_ref/swift/Method/withThumbprintAsKeyId(algorithm:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14OpenpathMobile3JWKP21withThumbprintAsKeyId9algorithmxAA22JWKThumbprintAlgorithmO_tKF">withThumbprintAsKeyId(algorithm:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 11.0, *)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">withThumbprintAsKeyId</span><span class="p">(</span><span class="nv">algorithm</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:14OpenpathMobile22JWKThumbprintAlgorithmO">JWKThumbprintAlgorithm</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">SHA256</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RSAPrivateKey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SE6encode2toys7Encoder_p_tKF"></a>
+                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SE6encode2toys7Encoder_p_tKF">encode(to:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-11-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

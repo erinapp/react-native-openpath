@@ -31,6 +31,7 @@ def openpath_postinstall(installer)
       end
     end
   end
+
 end
 
 target 'OpenpathExample' do

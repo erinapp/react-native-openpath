@@ -22,6 +22,734 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Decoder/DictionaryDecoder.swift",
+      "line": 3,
+      "symbol": "DictionaryDecoder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/DictionaryEncoder.swift",
+      "line": 3,
+      "symbol": "DictionaryEncoder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/Options/DictionaryDataEncodingStrategy.swift",
+      "line": 3,
+      "symbol": "DictionaryDataEncodingStrategy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/Options/DictionaryDateEncodingStrategy.swift",
+      "line": 3,
+      "symbol": "DictionaryDateEncodingStrategy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/Options/DictionaryKeyEncodingStrategy.swift",
+      "line": 3,
+      "symbol": "DictionaryKeyEncodingStrategy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/Options/DictionaryNilEncodingStrategy.swift",
+      "line": 3,
+      "symbol": "DictionaryNilEncodingStrategy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/DictionaryCoder/Sources/Encoder/Options/DictionaryNonConformingFloatEncodingStrategy.swift",
+      "line": 3,
+      "symbol": "DictionaryNonConformingFloatEncodingStrategy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/AESCBCEncryption.swift",
+      "line": 108,
+      "symbol": "AESCBCEncryption",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/AESCBCEncryption.swift",
+      "line": 117,
+      "symbol": "AESCBCEncryption",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 68,
+      "symbol": "KeyManagementAlgorithm.A128KW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 70,
+      "symbol": "KeyManagementAlgorithm.A192KW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 72,
+      "symbol": "KeyManagementAlgorithm.A256KW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 93,
+      "symbol": "HMACAlgorithm.SHA512",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 94,
+      "symbol": "HMACAlgorithm.SHA384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 95,
+      "symbol": "HMACAlgorithm.SHA256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 113,
+      "symbol": "JWKThumbprintAlgorithm.SHA256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 121,
+      "symbol": "CompressionAlgorithm.DEFLATE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 122,
+      "symbol": "CompressionAlgorithm.NONE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 128,
+      "symbol": "AsymmetricKeyAlgorithm",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Algorithms.swift",
+      "line": 131,
+      "symbol": "SymmetricKeyAlgorithm",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/EC.swift",
+      "line": 43,
+      "symbol": "ECCurveType.P256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/EC.swift",
+      "line": 44,
+      "symbol": "ECCurveType.P384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/EC.swift",
+      "line": 45,
+      "symbol": "ECCurveType.P521",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/EC.swift",
+      "line": 130,
+      "symbol": "ECCompression",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/SecureRandom.swift",
+      "line": 27,
+      "symbol": "SecureRandomError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/CryptoImplementation/SecureRandom.swift",
+      "line": 32,
+      "symbol": "SecureRandom",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/DataConvertible.swift",
+      "line": 26,
+      "symbol": "DataConvertible",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/DataExtensions.swift",
+      "line": 141,
+      "symbol": "Data.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/DataExtensions.swift",
+      "line": 145,
+      "symbol": "Data.data()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Decrypter.swift",
+      "line": 26,
+      "symbol": "Decrypter",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Decrypter.swift",
+      "line": 95,
+      "symbol": "Decrypter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Decrypter.swift",
+      "line": 108,
+      "symbol": "DecryptionContext",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Decrypter.swift",
+      "line": 117,
+      "symbol": "SymmetricDecryptionContext",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Deserializer.swift",
+      "line": 26,
+      "symbol": "CompactDeserializable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Deserializer.swift",
+      "line": 31,
+      "symbol": "CompactDeserializer",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Deserializer.swift",
+      "line": 35,
+      "symbol": "JOSEDeserializer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Deserializer.swift",
+      "line": 71,
+      "symbol": "ComponentCompactSerializedIndex",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/ECKeys.swift",
+      "line": 344,
+      "symbol": "ECKeyPair",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Encrypter.swift",
+      "line": 27,
+      "symbol": "Encrypter",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Encrypter.swift",
+      "line": 94,
+      "symbol": "Encrypter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Encrypter.swift",
+      "line": 107,
+      "symbol": "EncryptionContext",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Encrypter.swift",
+      "line": 115,
+      "symbol": "SymmetricEncryptionContext",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 45,
+      "symbol": "JOSEHeader.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 57,
+      "symbol": "JOSEHeader.data()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 65,
+      "symbol": "CommonHeaderParameterSpace.jku",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 66,
+      "symbol": "CommonHeaderParameterSpace.jwk",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 67,
+      "symbol": "CommonHeaderParameterSpace.jwkTyped",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 68,
+      "symbol": "CommonHeaderParameterSpace.kid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 69,
+      "symbol": "CommonHeaderParameterSpace.x5u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 70,
+      "symbol": "CommonHeaderParameterSpace.x5c",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 71,
+      "symbol": "CommonHeaderParameterSpace.x5t",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 72,
+      "symbol": "CommonHeaderParameterSpace.x5tS256",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 73,
+      "symbol": "CommonHeaderParameterSpace.typ",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 74,
+      "symbol": "CommonHeaderParameterSpace.cty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSEHeader.swift",
+      "line": 75,
+      "symbol": "CommonHeaderParameterSpace.crit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JOSESwiftError.swift",
+      "line": 27,
+      "symbol": "JOSESwiftError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWE.swift",
+      "line": 213,
+      "symbol": "JWE.serialize(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWE.swift",
+      "line": 224,
+      "symbol": "JWE.componentCount",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWE.swift",
+      "line": 228,
+      "symbol": "JWE.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWEHeader.swift",
+      "line": 300,
+      "symbol": "JWEHeader.init(algorithm:encryptionAlgorithm:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWK.swift",
+      "line": 44,
+      "symbol": "JWKKeyType.RSA",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWK.swift",
+      "line": 45,
+      "symbol": "JWKKeyType.OCT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWK.swift",
+      "line": 46,
+      "symbol": "JWKKeyType.EC",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWK.swift",
+      "line": 60,
+      "symbol": "JWK.requiredParameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 30,
+      "symbol": "JWKParameter.keyType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 31,
+      "symbol": "JWKParameter.keyUse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 32,
+      "symbol": "JWKParameter.keyOperations",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 33,
+      "symbol": "JWKParameter.algorithm",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 34,
+      "symbol": "JWKParameter.keyIdentifier",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 35,
+      "symbol": "JWKParameter.X509URL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 36,
+      "symbol": "JWKParameter.X509CertificateChain",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 37,
+      "symbol": "JWKParameter.X509CertificateSHA1Thumbprint",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 38,
+      "symbol": "JWKParameter.X509CertificateSHA256Thumbprint",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 49,
+      "symbol": "RSAParameter.modulus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 50,
+      "symbol": "RSAParameter.exponent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 51,
+      "symbol": "RSAParameter.privateExponent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 57,
+      "symbol": "SymmetricKeyParameter.key",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 63,
+      "symbol": "ECParameter.curve",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 64,
+      "symbol": "ECParameter.x",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 65,
+      "symbol": "ECParameter.y",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKParameters.swift",
+      "line": 66,
+      "symbol": "ECParameter.privateKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWKSet.swift",
+      "line": 69,
+      "symbol": "JWKSet.ArrayType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 34,
+      "symbol": "JWS.header",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 35,
+      "symbol": "JWS.payload",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 36,
+      "symbol": "JWS.signature",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 208,
+      "symbol": "JWS.serialize(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 216,
+      "symbol": "JWS.componentCount",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/JWS.swift",
+      "line": 220,
+      "symbol": "JWS.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Payload.swift",
+      "line": 26,
+      "symbol": "Payload",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/RSAKeyEncryptionMode.swift",
+      "line": 64,
+      "symbol": "RSAKeyEncryption.EncryptionMode",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/RSAKeyEncryptionMode.swift",
+      "line": 73,
+      "symbol": "RSAKeyEncryption.DecryptionMode",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/RSAKeys.swift",
+      "line": 314,
+      "symbol": "RSAKeyPair",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Serializer.swift",
+      "line": 26,
+      "symbol": "CompactSerializable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Serializer.swift",
+      "line": 30,
+      "symbol": "CompactSerializer",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Serializer.swift",
+      "line": 35,
+      "symbol": "JOSESerializer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Signer.swift",
+      "line": 38,
+      "symbol": "Signer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Signer.swift",
+      "line": 100,
+      "symbol": "Signer",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Verifier.swift",
+      "line": 40,
+      "symbol": "Verifier",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JOSESwift/JOSESwift/Sources/Verifier.swift",
+      "line": 91,
+      "symbol": "Verifier",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JWTDecode/JWTDecode/Errors.swift",
+      "line": 33,
+      "symbol": "DecodeError.invalidBase64Url(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JWTDecode/JWTDecode/Errors.swift",
+      "line": 34,
+      "symbol": "DecodeError.invalidJSON(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JWTDecode/JWTDecode/Errors.swift",
+      "line": 35,
+      "symbol": "DecodeError.invalidPartCount(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JWTDecode/JWTDecode/Errors.swift",
+      "line": 37,
+      "symbol": "DecodeError.localizedDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/3rdParty/JWTDecode/JWTDecode/ValidationError.swift",
+      "line": 11,
+      "symbol": "ValidationError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Allegion/Allegion.swift",
       "line": 143,
       "symbol": "Allegion",
@@ -289,16 +1017,16 @@
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ResultMessage.swift",
-      "line": 14,
-      "symbol": "ResultMessage",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "line": 7,
+      "symbol": "ResultMessage.failure(mssg:code:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Model/ResultMessage.swift",
-      "line": 74,
-      "symbol": "ResultMessage",
-      "symbol_kind": "source.lang.swift.decl.extension",
+      "line": 8,
+      "symbol": "ResultMessage.success(name:result:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
@@ -324,99 +1052,106 @@
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "OpenpathMobileAccessCore.analyticsDelegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1621,
+      "line": 1617,
       "symbol": "OpenpathMobileAccessCore._unlockByConnectionType(connectionType:itemType:itemId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1744,
+      "line": 1740,
       "symbol": "OpenpathMobileAccessCore._override(itemType:itemId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1802,
+      "line": 1798,
       "symbol": "OpenpathMobileAccessCore._triggerLockdownPlan(lockdownPlanId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1814,
+      "line": 1810,
       "symbol": "OpenpathMobileAccessCore._revertLockdownPlan(lockdownPlanId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1912,
+      "line": 1908,
       "symbol": "OpenpathMobileAccessCore._revertByConnectionType(connectionType:itemType:itemId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 1949,
+      "line": 1945,
       "symbol": "OpenpathMobileAccessCore._revert(itemType:itemId:requestId:timeout:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 2064,
+      "line": 2060,
       "symbol": "OpenpathMobileAccessCore._setTestMode(testMode:testFrequency:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 2078,
+      "line": 2074,
       "symbol": "OpenpathMobileAccessCore._enableNotificationsForItem(enabled:itemType:itemId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 5617,
+      "line": 5634,
       "symbol": "OpenpathMobileAccessCore.urlSession(_:didBecomeInvalidWithError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 5622,
+      "line": 5639,
       "symbol": "OpenpathMobileAccessCore.urlSessionDidFinishEvents(forBackgroundURLSession:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 5626,
+      "line": 5643,
       "symbol": "OpenpathMobileAccessCore.urlSession(_:didReceive:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 6779,
+      "line": 6796,
       "symbol": "OpenpathMobileAccessCore._getTermsOfUseStatus(identityId:callback:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
-      "line": 6786,
+      "line": 6803,
       "symbol": "OpenpathMobileAccessCore._signTermsOfUse(identityId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/OpenpathMobileAccessCore.swift",
+      "line": 6807,
+      "symbol": "OpenpathMobileAccessCore._unsignTermsOfUse(identityId:callback:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -758,7 +1493,7 @@
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/HeliumClient.swift",
-      "line": 102,
+      "line": 106,
       "symbol": "ApiError",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -772,7 +1507,7 @@
     },
     {
       "file": "/Users/runner/work/Titanium/Titanium/OpenpathMobileAccessCore/ios/OpenpathMobileAccessCore/Utils/WebUtils/PulsarClient.swift",
-      "line": 52,
+      "line": 51,
       "symbol": "PulsarClient",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
