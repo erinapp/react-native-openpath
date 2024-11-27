@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "JOSESwift.h"
 #import "ObjcExceptionBridging.h"
 
 FOUNDATION_EXPORT double OpenpathMobileVersionNumber;

@@ -1,25 +1,22 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenpathMobile
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name OpenpathMobile
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AWSCore
 import AWSIoT
 import AWSLogs
 import CommonCrypto
+import Compression
 import CoreBluetooth
 import CoreLocation
 import CoreMotion
-import DictionaryCoder
 import Dispatch
 import Foundation
-import JOSESwift
-import JWTDecode
 import LocalAuthentication
 import Network
 import OpenSSL
 @_exported import OpenpathMobile
-import Reachability
 import Security
 import Swift
 import SystemConfiguration
@@ -28,6 +25,105 @@ import UserNotifications
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers @objc(A0JWT) public class _JWT : ObjectiveC.NSObject {
+  @objc public var header: [Swift.String : Any] {
+    @objc get
+  }
+  @objc public var body: [Swift.String : Any] {
+    @objc get
+  }
+  @objc public var signature: Swift.String? {
+    @objc get
+  }
+  @objc public var expiresAt: Foundation.Date? {
+    @objc get
+  }
+  @objc public var expired: Swift.Bool {
+    @objc get
+  }
+  @objc public class func decode(jwt jwtValue: Swift.String) throws -> OpenpathMobile._JWT
+  @objc deinit
+}
+public enum SignatureAlgorithm : Swift.String {
+  case HS256
+  case HS384
+  case HS512
+  case RS256
+  case RS384
+  case RS512
+  @available(iOS 11, *)
+  case PS256
+  @available(iOS 11, *)
+  case PS384
+  @available(iOS 11, *)
+  case PS512
+  case ES256
+  case ES384
+  case ES512
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum KeyManagementAlgorithm : Swift.String, Swift.CaseIterable {
+  case RSA1_5
+  case RSAOAEP
+  case RSAOAEP256
+  case A128KW
+  case A192KW
+  case A256KW
+  case direct
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [OpenpathMobile.KeyManagementAlgorithm]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [OpenpathMobile.KeyManagementAlgorithm] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ContentEncryptionAlgorithm : Swift.String {
+  case A256CBCHS512
+  case A128CBCHS256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HMACAlgorithm : Swift.String {
+  case SHA512
+  case SHA384
+  case SHA256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum JWKThumbprintAlgorithm : Swift.String {
+  case SHA256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CompressionAlgorithm : Swift.String {
+  case DEFLATE
+  case NONE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(*, deprecated, message: "Use `KeyManagementAlgorithm` instead")
+public typealias AsymmetricKeyAlgorithm = OpenpathMobile.KeyManagementAlgorithm
+@available(*, deprecated, message: "Use `ContentEncryptionAlgorithm` instead")
+public typealias SymmetricKeyAlgorithm = OpenpathMobile.ContentEncryptionAlgorithm
 @usableFromInline
 internal protocol _AnyDecodable {
   var value: Any { get }
@@ -62,15 +158,685 @@ public enum AuthorizationStatusType : Swift.Int {
     get
   }
 }
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension CoreLocation.CLLocationCoordinate2D : @retroactive Swift.Equatable {
+  public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
+}
+#else
 extension CoreLocation.CLLocationCoordinate2D : Swift.Equatable {
   public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
+}
+#endif
+public protocol DataConvertible {
+  init?(_ data: Foundation.Data)
+  func data() -> Foundation.Data
+}
+extension Foundation.Data : OpenpathMobile.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: OpenpathMobile.ECPrivateKeyComponents) throws -> Foundation.Data
+  public func ecPrivateKeyComponents() throws -> OpenpathMobile.ECPrivateKeyComponents
+}
+extension Foundation.Data : OpenpathMobile.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: OpenpathMobile.ECPublicKeyComponents) throws -> Foundation.Data
+  public func ecPublicKeyComponents() throws -> OpenpathMobile.ECPublicKeyComponents
+}
+extension Foundation.Data {
+  public init?(base64URLEncoded base64URLString: Swift.String)
+  public init?(base64URLEncoded base64URLData: Foundation.Data)
+  public func base64URLEncodedString() -> Swift.String
+  public func base64URLEncodedData() -> Foundation.Data
+}
+extension Foundation.Data : OpenpathMobile.DataConvertible {
+  public init(_ data: Foundation.Data)
+  public func data() -> Foundation.Data
+}
+extension Foundation.Data : OpenpathMobile.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: OpenpathMobile.RSAPublicKeyComponents) throws -> Foundation.Data
+  public func rsaPublicKeyComponents() throws -> OpenpathMobile.RSAPublicKeyComponents
+}
+extension Foundation.Data : OpenpathMobile.ExpressibleAsSymmetricKeyComponents {
+  public static func representing(symmetricKeyComponents components: OpenpathMobile.SymmetricKeyComponents) throws -> Foundation.Data
+  public func symmetricKeyComponents() throws -> OpenpathMobile.SymmetricKeyComponents
 }
 extension OpenpathMobile.OpenpathMobileAccessCore {
   public func _setDebugFlag(id: Swift.String, value: Swift.Bool) -> Swift.Bool
   public func _getDebugFlag(id: Swift.String) -> Swift.Bool
   public func _getAllDebugFlags() -> [[Swift.String : Any]]
 }
+public struct Decrypter {
+  public init?<KeyType>(keyManagementAlgorithm: OpenpathMobile.KeyManagementAlgorithm, contentEncryptionAlgorithm: OpenpathMobile.ContentEncryptionAlgorithm, decryptionKey: KeyType)
+}
+extension OpenpathMobile.Decrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: OpenpathMobile.AsymmetricKeyAlgorithm, decryptionKey key: KeyType, contentDecryptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: OpenpathMobile.AsymmetricKeyAlgorithm, keyDecryptionKey kdk: KeyType, contentDecryptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm)
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct DecryptionContext {
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricDecryptionContext {
+}
+public protocol CompactDeserializable {
+  static var componentCount: Swift.Int { get }
+  init(from deserializer: any OpenpathMobile.CompactDeserializer) throws
+}
+public protocol CompactDeserializer {
+  func deserialize<T>(_ type: T.Type, at index: Swift.Int) throws -> T where T : OpenpathMobile.DataConvertible
+}
+public struct JOSEDeserializer {
+  public init()
+  public func deserialize<T>(_ type: T.Type, fromCompactSerialization compactSerialization: Swift.String) throws -> T where T : OpenpathMobile.CompactDeserializable
+}
+public enum ComponentCompactSerializedIndex {
+}
+public enum DictionaryDataDecodingStrategy {
+  case deferredToData
+  case base64
+  case custom((_ decoder: any Swift.Decoder) throws -> Foundation.Data)
+}
+public enum DictionaryDataEncodingStrategy {
+  case deferredToData
+  case base64
+  case custom((_ data: Foundation.Data, _ encoder: any Swift.Encoder) throws -> Swift.Void)
+}
+public enum DictionaryDateDecodingStrategy {
+  case deferredToDate
+  case secondsSince1970
+  case millisecondsSince1970
+  @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+  case iso8601
+  case formatted(Foundation.DateFormatter)
+  case custom((_ decoder: any Swift.Decoder) throws -> Foundation.Date)
+}
+public enum DictionaryDateEncodingStrategy {
+  case deferredToDate
+  case millisecondsSince1970
+  case secondsSince1970
+  @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+  case iso8601
+  case formatted(Foundation.DateFormatter)
+  case custom((_ date: Foundation.Date, _ encoder: any Swift.Encoder) throws -> Swift.Void)
+}
+final public class DictionaryDecoder {
+  public static let `default`: OpenpathMobile.DictionaryDecoder
+  final public var dateDecodingStrategy: OpenpathMobile.DictionaryDateDecodingStrategy
+  final public var dataDecodingStrategy: OpenpathMobile.DictionaryDataDecodingStrategy
+  final public var nonConformingFloatDecodingStrategy: OpenpathMobile.DictionaryNonConformingFloatDecodingStrategy
+  final public var keyDecodingStrategy: OpenpathMobile.DictionaryKeyDecodingStrategy
+  final public var userInfo: [Swift.CodingUserInfoKey : Any]
+  public init(dateDecodingStrategy: OpenpathMobile.DictionaryDateDecodingStrategy = .deferredToDate, dataDecodingStrategy: OpenpathMobile.DictionaryDataDecodingStrategy = .base64, nonConformingFloatDecodingStrategy: OpenpathMobile.DictionaryNonConformingFloatDecodingStrategy = .throw, keyDecodingStrategy: OpenpathMobile.DictionaryKeyDecodingStrategy = .useDefaultKeys, userInfo: [Swift.CodingUserInfoKey : Any] = [:])
+  final public func decode<T>(_ type: T.Type, from dictionary: [Swift.String : Any]) throws -> T where T : Swift.Decodable
+  final public func decode<T>(from dictionary: [Swift.String : Any]) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
+final public class DictionaryEncoder {
+  public static let `default`: OpenpathMobile.DictionaryEncoder
+  final public var dateEncodingStrategy: OpenpathMobile.DictionaryDateEncodingStrategy
+  final public var dataEncodingStrategy: OpenpathMobile.DictionaryDataEncodingStrategy
+  final public var nonConformingFloatEncodingStrategy: OpenpathMobile.DictionaryNonConformingFloatEncodingStrategy
+  final public var nilEncodingStrategy: OpenpathMobile.DictionaryNilEncodingStrategy
+  final public var keyEncodingStrategy: OpenpathMobile.DictionaryKeyEncodingStrategy
+  final public var userInfo: [Swift.CodingUserInfoKey : Any]
+  public init(dateEncodingStrategy: OpenpathMobile.DictionaryDateEncodingStrategy = .deferredToDate, dataEncodingStrategy: OpenpathMobile.DictionaryDataEncodingStrategy = .base64, nonConformingFloatEncodingStrategy: OpenpathMobile.DictionaryNonConformingFloatEncodingStrategy = .throw, nilEncodingStrategy: OpenpathMobile.DictionaryNilEncodingStrategy = .useNil, keyEncodingStrategy: OpenpathMobile.DictionaryKeyEncodingStrategy = .useDefaultKeys, userInfo: [Swift.CodingUserInfoKey : Any] = [:])
+  final public func encode<T>(_ value: T) throws -> [Swift.String : Any] where T : Swift.Encodable
+  @objc deinit
+}
+public enum DictionaryKeyDecodingStrategy {
+  case useDefaultKeys
+  case custom((_ codingPath: [any Swift.CodingKey]) -> any Swift.CodingKey)
+}
+public enum DictionaryKeyEncodingStrategy {
+  case useDefaultKeys
+  case custom((_ codingPath: [any Swift.CodingKey]) -> any Swift.CodingKey)
+}
+public enum DictionaryNilEncodingStrategy {
+  case useNil
+  case useNSNull
+  public static func == (a: OpenpathMobile.DictionaryNilEncodingStrategy, b: OpenpathMobile.DictionaryNilEncodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum DictionaryNonConformingFloatDecodingStrategy {
+  case `throw`
+  case convertFromString(positiveInfinity: Swift.String, negativeInfinity: Swift.String, nan: Swift.String)
+}
+public enum DictionaryNonConformingFloatEncodingStrategy {
+  case `throw`
+  case convertToString(positiveInfinity: Swift.String, negativeInfinity: Swift.String, nan: Swift.String)
+}
+public enum ECCurveType : Swift.String, Swift.Codable {
+  case P256
+  case P384
+  case P521
+  public static func == (a: OpenpathMobile.ECCurveType, b: OpenpathMobile.ECCurveType) -> Swift.Bool
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ECCompression : Swift.UInt8 {
+  case CompressedYEven
+  case CompressedYOdd
+  case Uncompressed
+  case HybridYEven
+  case HybridYOdd
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+extension OpenpathMobile.ECPublicKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.ECPublicKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenpathMobile.ECPrivateKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.ECPrivateKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias ECPublicKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data)
+public typealias ECPrivateKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data, d: Foundation.Data)
+public protocol ExpressibleAsECPublicKeyComponents {
+  static func representing(ecPublicKeyComponents components: OpenpathMobile.ECPublicKeyComponents) throws -> Self
+  func ecPublicKeyComponents() throws -> OpenpathMobile.ECPublicKeyComponents
+}
+public protocol ExpressibleAsECPrivateKeyComponents {
+  static func representing(ecPrivateKeyComponents components: OpenpathMobile.ECPrivateKeyComponents) throws -> Self
+  func ecPrivateKeyComponents() throws -> OpenpathMobile.ECPrivateKeyComponents
+}
+public struct ECPublicKey : OpenpathMobile.JWK {
+  public let keyType: OpenpathMobile.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let crv: OpenpathMobile.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public init(crv: OpenpathMobile.ECCurveType, x: Swift.String, y: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: any OpenpathMobile.ExpressibleAsECPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : OpenpathMobile.ExpressibleAsECPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> OpenpathMobile.ECPublicKey
+}
+public struct ECPrivateKey : OpenpathMobile.JWK {
+  public let keyType: OpenpathMobile.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let crv: OpenpathMobile.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public let privateKey: Swift.String
+  public init(crv: Swift.String, x: Swift.String, y: Swift.String, privateKey: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(privateKey: any OpenpathMobile.ExpressibleAsECPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : OpenpathMobile.ExpressibleAsECPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> OpenpathMobile.ECPrivateKey
+}
+public typealias ECKeyPair = OpenpathMobile.ECPrivateKey
+public struct Encrypter<KeyType> {
+  public init?(keyManagementAlgorithm: OpenpathMobile.KeyManagementAlgorithm, contentEncryptionAlgorithm: OpenpathMobile.ContentEncryptionAlgorithm, encryptionKey: KeyType)
+}
+extension OpenpathMobile.Encrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: OpenpathMobile.AsymmetricKeyAlgorithm, encryptionKey key: KeyType, contentEncyptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: OpenpathMobile.AsymmetricKeyAlgorithm, keyEncryptionKey kek: KeyType, contentEncyptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm)
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct EncryptionContext {
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricEncryptionContext {
+}
+public enum DecodeError : Foundation.LocalizedError {
+  case invalidBase64Url(Swift.String)
+  case invalidJSON(Swift.String)
+  case invalidPartCount(Swift.String, Swift.Int)
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension Swift.String : @retroactive Swift.Error {
+}
+#else
 extension Swift.String : Swift.Error {
+}
+#endif
+public protocol CommonHeaderParameterSpace {
+  var jku: Foundation.URL? { get set }
+  var jwk: Swift.String? { get set }
+  var jwkTyped: (any OpenpathMobile.JWK)? { get set }
+  var kid: Swift.String? { get set }
+  var x5u: Foundation.URL? { get set }
+  var x5c: [Swift.String]? { get set }
+  var x5t: Swift.String? { get set }
+  var x5tS256: Swift.String? { get set }
+  var typ: Swift.String? { get set }
+  var cty: Swift.String? { get set }
+  var crit: [Swift.String]? { get set }
+}
+public enum JOSESwiftError : Swift.Error {
+  case signingFailed(description: Swift.String)
+  case verifyingFailed(description: Swift.String)
+  case signatureInvalid
+  case encryptingFailed(description: Swift.String)
+  case decryptingFailed(description: Swift.String)
+  case wrongDataEncoding(data: Foundation.Data)
+  case invalidCompactSerializationComponentCount(count: Swift.Int)
+  case componentNotValidBase64URL(component: Swift.String)
+  case componentCouldNotBeInitializedFromData(data: Foundation.Data)
+  case couldNotConstructJWK
+  case modulusNotBase64URLUIntEncoded
+  case exponentNotBase64URLUIntEncoded
+  case privateExponentNotBase64URLUIntEncoded
+  case symmetricKeyNotBase64URLEncoded
+  case xNotBase64URLUIntEncoded
+  case yNotBase64URLUIntEncoded
+  case privateKeyNotBase64URLUIntEncoded
+  case invalidCurveType
+  case compressedCurvePointsUnsupported
+  case invalidCurvePointOctetLength
+  case localAuthenticationFailed(errorCode: Swift.Int)
+  case compressionFailed
+  case decompressionFailed
+  case compressionAlgorithmNotSupported
+  case rawDataMustBeGreaterThanZero
+  case compressedDataMustBeGreaterThanZero
+  case thumbprintSerialization
+}
+public struct JWE {
+  public let header: OpenpathMobile.JWEHeader
+  public let encryptedKey: Foundation.Data
+  public let initializationVector: Foundation.Data
+  public let ciphertext: Foundation.Data
+  public let authenticationTag: Foundation.Data
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: OpenpathMobile.JWEHeader, payload: OpenpathMobile.Payload, encrypter: OpenpathMobile.Encrypter<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `decrypt(using decrypter:)` instead")
+  public func decrypt<KeyType>(with key: KeyType) throws -> OpenpathMobile.Payload
+  public func decrypt(using decrypter: OpenpathMobile.Decrypter) throws -> OpenpathMobile.Payload
+}
+extension OpenpathMobile.JWE : OpenpathMobile.CompactSerializable {
+  public func serialize(to serializer: inout any OpenpathMobile.CompactSerializer)
+}
+extension OpenpathMobile.JWE : OpenpathMobile.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: any OpenpathMobile.CompactDeserializer) throws
+}
+public struct JWEHeader {
+  public init(keyManagementAlgorithm: OpenpathMobile.KeyManagementAlgorithm, contentEncryptionAlgorithm: OpenpathMobile.ContentEncryptionAlgorithm)
+  public init(parameters: [Swift.String : Any]) throws
+}
+extension OpenpathMobile.JWEHeader {
+  public var keyManagementAlgorithm: OpenpathMobile.KeyManagementAlgorithm? {
+    get
+  }
+  public var contentEncryptionAlgorithm: OpenpathMobile.ContentEncryptionAlgorithm? {
+    get
+  }
+  public var compressionAlgorithm: OpenpathMobile.CompressionAlgorithm? {
+    get
+  }
+  public var zip: Swift.String? {
+    get
+    set
+  }
+}
+extension OpenpathMobile.JWEHeader : OpenpathMobile.CommonHeaderParameterSpace {
+  public var jku: Foundation.URL? {
+    get
+    set
+  }
+  public var jwk: Swift.String? {
+    get
+    set
+  }
+  public var jwkTyped: (any OpenpathMobile.JWK)? {
+    get
+    set
+  }
+  public var kid: Swift.String? {
+    get
+    set
+  }
+  public var x5u: Foundation.URL? {
+    get
+    set
+  }
+  public var x5c: [Swift.String]? {
+    get
+    set
+  }
+  public var x5t: Swift.String? {
+    get
+    set
+  }
+  public var x5tS256: Swift.String? {
+    get
+    set
+  }
+  public var typ: Swift.String? {
+    get
+    set
+  }
+  public var cty: Swift.String? {
+    get
+    set
+  }
+  public var crit: [Swift.String]? {
+    get
+    set
+  }
+}
+extension OpenpathMobile.JWEHeader {
+  @available(*, deprecated, message: "Use `JWEHeader.keyManagementAlgorithm` instead")
+  public var algorithm: OpenpathMobile.AsymmetricKeyAlgorithm? {
+    get
+  }
+  @available(*, deprecated, message: "Use `JWEHeader.contentEncryptionAlgorithm` instead")
+  public var encryptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm? {
+    get
+  }
+  @available(*, deprecated, message: "Use `init(keyManagementAlgorithm:contentEncryptionAlgorithm` instead")
+  public init(algorithm: OpenpathMobile.AsymmetricKeyAlgorithm, encryptionAlgorithm: OpenpathMobile.SymmetricKeyAlgorithm)
+}
+public enum JWKKeyType : Swift.String, Swift.Codable {
+  case RSA
+  case OCT
+  case EC
+  public static func == (a: OpenpathMobile.JWKKeyType, b: OpenpathMobile.JWKKeyType) -> Swift.Bool
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol JWK : Swift.Decodable, Swift.Encodable {
+  var keyType: OpenpathMobile.JWKKeyType { get }
+  var parameters: [Swift.String : Swift.String] { get }
+  var requiredParameters: [Swift.String : Swift.String] { get }
+  subscript(parameter: Swift.String) -> Swift.String? { get }
+  init(data: Foundation.Data) throws
+  func jsonString() -> Swift.String?
+  func jsonData() -> Foundation.Data?
+  @available(iOS 11.0, *)
+  func thumbprint(algorithm: OpenpathMobile.JWKThumbprintAlgorithm) throws -> Swift.String
+  @available(iOS 11.0, *)
+  func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm) throws -> Self
+}
+extension OpenpathMobile.JWK {
+  @available(iOS 11.0, *)
+  public func thumbprint(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> Swift.String
+}
+extension OpenpathMobile.JWK {
+  public subscript(parameter: Swift.String) -> Swift.String? {
+    get
+  }
+}
+extension OpenpathMobile.JWK {
+  public func jsonString() -> Swift.String?
+  public func jsonData() -> Foundation.Data?
+}
+public enum JWKParameter : Swift.String, Swift.CodingKey {
+  case keyType
+  case keyUse
+  case keyOperations
+  case algorithm
+  case keyIdentifier
+  case X509URL
+  case X509CertificateChain
+  case X509CertificateSHA1Thumbprint
+  case X509CertificateSHA256Thumbprint
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum RSAParameter : Swift.String, Swift.CodingKey {
+  case modulus
+  case exponent
+  case privateExponent
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum SymmetricKeyParameter : Swift.String, Swift.CodingKey {
+  case key
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum ECParameter : Swift.String, Swift.CodingKey {
+  case curve
+  case x
+  case y
+  case privateKey
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public struct JWKSet {
+  public let keys: [any OpenpathMobile.JWK]
+  public init(keys: [any OpenpathMobile.JWK])
+  public init(data: Foundation.Data) throws
+  public func jsonString() -> Swift.String?
+  public func jsonData() -> Foundation.Data?
+}
+extension OpenpathMobile.JWKSet : Swift.Collection {
+  public typealias ArrayType = [any OpenpathMobile.JWK]
+  public typealias Element = OpenpathMobile.JWKSet.ArrayType.Element
+  public typealias Index = OpenpathMobile.JWKSet.ArrayType.Index
+  public typealias Iterator = OpenpathMobile.JWKSet.ArrayType.Iterator
+  public var startIndex: OpenpathMobile.JWKSet.Index {
+    get
+  }
+  public var endIndex: OpenpathMobile.JWKSet.Index {
+    get
+  }
+  public subscript(index: OpenpathMobile.JWKSet.Index) -> OpenpathMobile.JWKSet.Element {
+    get
+  }
+  public func index(after index: OpenpathMobile.JWKSet.Index) -> OpenpathMobile.JWKSet.Index
+  public func makeIterator() -> Swift.IndexingIterator<OpenpathMobile.JWKSet.ArrayType>
+  public typealias Indices = Swift.DefaultIndices<OpenpathMobile.JWKSet>
+  public typealias SubSequence = Swift.Slice<OpenpathMobile.JWKSet>
+}
+extension OpenpathMobile.JWKSet : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = OpenpathMobile.JWKSet.Element
+  public init(arrayLiteral elements: OpenpathMobile.JWKSet.ArrayLiteralElement...)
+}
+extension OpenpathMobile.JWKSet : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.JWKSet : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct JWS {
+  public let header: OpenpathMobile.JWSHeader
+  public let payload: OpenpathMobile.Payload
+  public let signature: Foundation.Data
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: OpenpathMobile.JWSHeader, payload: OpenpathMobile.Payload, signer: OpenpathMobile.Signer<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `isValid(for verifier:)` instead")
+  public func isValid<KeyType>(for publicKey: KeyType) -> Swift.Bool
+  @available(*, deprecated, message: "Use `validate(using verifier:)` instead")
+  public func validate<KeyType>(with publicKey: KeyType) throws -> OpenpathMobile.JWS
+  public func validate(using verifier: OpenpathMobile.Verifier) throws -> OpenpathMobile.JWS
+  public func isValid(for verifier: OpenpathMobile.Verifier) -> Swift.Bool
+}
+extension OpenpathMobile.JWS : OpenpathMobile.CompactSerializable {
+  public func serialize(to serializer: inout any OpenpathMobile.CompactSerializer)
+}
+extension OpenpathMobile.JWS : OpenpathMobile.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: any OpenpathMobile.CompactDeserializer) throws
+}
+public struct JWSHeader {
+  public init(algorithm: OpenpathMobile.SignatureAlgorithm)
+  public init(parameters: [Swift.String : Any]) throws
+}
+extension OpenpathMobile.JWSHeader {
+  public var algorithm: OpenpathMobile.SignatureAlgorithm? {
+    get
+  }
+}
+extension OpenpathMobile.JWSHeader : OpenpathMobile.CommonHeaderParameterSpace {
+  public var jku: Foundation.URL? {
+    get
+    set
+  }
+  public var jwk: Swift.String? {
+    get
+    set
+  }
+  public var jwkTyped: (any OpenpathMobile.JWK)? {
+    get
+    set
+  }
+  public var kid: Swift.String? {
+    get
+    set
+  }
+  public var x5u: Foundation.URL? {
+    get
+    set
+  }
+  public var x5c: [Swift.String]? {
+    get
+    set
+  }
+  public var x5t: Swift.String? {
+    get
+    set
+  }
+  public var x5tS256: Swift.String? {
+    get
+    set
+  }
+  public var typ: Swift.String? {
+    get
+    set
+  }
+  public var cty: Swift.String? {
+    get
+    set
+  }
+  public var crit: [Swift.String]? {
+    get
+    set
+  }
+}
+public protocol JWT {
+  var header: [Swift.String : Any] { get }
+  var body: [Swift.String : Any] { get }
+  var signature: Swift.String? { get }
+  var string: Swift.String { get }
+  var expiresAt: Foundation.Date? { get }
+  var issuer: Swift.String? { get }
+  var subject: Swift.String? { get }
+  var audience: [Swift.String]? { get }
+  var issuedAt: Foundation.Date? { get }
+  var notBefore: Foundation.Date? { get }
+  var identifier: Swift.String? { get }
+  var expired: Swift.Bool { get }
+}
+extension OpenpathMobile.JWT {
+  public func claim(name: Swift.String) -> OpenpathMobile.Claim
+}
+public func decode(jwt: Swift.String) throws -> any OpenpathMobile.JWT
+public struct Claim {
+  public var rawValue: Any? {
+    get
+  }
+  public var string: Swift.String? {
+    get
+  }
+  public var boolean: Swift.Bool? {
+    get
+  }
+  public var double: Swift.Double? {
+    get
+  }
+  public var integer: Swift.Int? {
+    get
+  }
+  public var date: Foundation.Date? {
+    get
+  }
+  public var array: [Swift.String]? {
+    get
+  }
 }
 @propertyWrapper public struct NullCodable<Wrapped> : Swift.Encodable, Swift.Hashable where Wrapped : Swift.Encodable, Wrapped : Swift.Hashable {
   public init(wrappedValue: Wrapped?)
@@ -130,6 +896,7 @@ extension OpenpathMobile.OpenpathError : Foundation.LocalizedError {
 extension OpenpathMobile.OpenpathMobileAccessCore {
   public func _getTermsOfUseStatus(identityId: Swift.Int, callback: @escaping (Swift.Result<OpenpathMobile.OpenpathTermsOfUseStatus, OpenpathMobile.OpenpathError>) -> Swift.Void)
   public func _signTermsOfUse(identityId: Swift.Int)
+  public func _unsignTermsOfUse(identityId: Swift.Int, callback: @escaping (Swift.Result<Swift.Void, OpenpathMobile.OpenpathError>) -> Swift.Void)
 }
 extension OpenpathMobile.OpenpathMobileAccessCore {
   @discardableResult
@@ -244,6 +1011,10 @@ public struct OpenpathUser : Swift.Encodable, Swift.Hashable {
     get
   }
 }
+public struct Payload : OpenpathMobile.DataConvertible {
+  public init(_ payload: Foundation.Data)
+  public func data() -> Foundation.Data
+}
 public struct ProvisionResult : Swift.Encodable, Swift.Hashable {
   public let userOpal: Swift.String
   public let environment: OpenpathMobile.ProvisionResult.Environment
@@ -337,6 +1108,182 @@ public enum ResultMessage<T> {
 extension OpenpathMobile.ResultMessage : Swift.Equatable {
   public static func == (lhs: OpenpathMobile.ResultMessage<T>, rhs: OpenpathMobile.ResultMessage<T>) -> Swift.Bool
 }
+extension OpenpathMobile.RSAPublicKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.RSAPublicKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenpathMobile.RSAPrivateKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.RSAPrivateKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias RSAPublicKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data)
+public typealias RSAPrivateKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data, privateExponent: Foundation.Data)
+public protocol ExpressibleAsRSAPublicKeyComponents {
+  static func representing(rsaPublicKeyComponents components: OpenpathMobile.RSAPublicKeyComponents) throws -> Self
+  func rsaPublicKeyComponents() throws -> OpenpathMobile.RSAPublicKeyComponents
+}
+public protocol ExpressibleAsRSAPrivateKeyComponents {
+  static func representing(rsaPrivateKeyComponents components: OpenpathMobile.RSAPrivateKeyComponents) throws -> Self
+  func rsaPrivateKeyComponents() throws -> OpenpathMobile.RSAPrivateKeyComponents
+}
+public struct RSAPublicKey : OpenpathMobile.JWK {
+  public let keyType: OpenpathMobile.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: any OpenpathMobile.ExpressibleAsRSAPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : OpenpathMobile.ExpressibleAsRSAPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> OpenpathMobile.RSAPublicKey
+}
+public struct RSAPrivateKey : OpenpathMobile.JWK {
+  public let keyType: OpenpathMobile.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public let privateExponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, privateExponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(privateKey: any OpenpathMobile.ExpressibleAsRSAPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : OpenpathMobile.ExpressibleAsRSAPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> OpenpathMobile.RSAPrivateKey
+}
+public typealias RSAKeyPair = OpenpathMobile.RSAPrivateKey
+extension Security.SecKey : OpenpathMobile.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: OpenpathMobile.ECPrivateKeyComponents) throws -> Self
+  public func ecPrivateKeyComponents() throws -> OpenpathMobile.ECPrivateKeyComponents
+}
+extension Security.SecKey : OpenpathMobile.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: OpenpathMobile.ECPublicKeyComponents) throws -> Self
+  public func ecPublicKeyComponents() throws -> OpenpathMobile.ECPublicKeyComponents
+}
+extension Security.SecKey : OpenpathMobile.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: OpenpathMobile.RSAPublicKeyComponents) throws -> Self
+  public func rsaPublicKeyComponents() throws -> OpenpathMobile.RSAPublicKeyComponents
+}
+public enum SecureRandomError : Swift.Error {
+  case failed(status: Darwin.OSStatus)
+  case countMustBeGreaterThanZero
+}
+public struct SecureRandom {
+  public static func generate(count: Swift.Int) throws -> Foundation.Data
+}
+public protocol CompactSerializable {
+  func serialize(to serializer: inout any OpenpathMobile.CompactSerializer)
+}
+public protocol CompactSerializer {
+  var components: [any OpenpathMobile.DataConvertible] { get }
+  mutating func serialize<T>(_ object: T) where T : OpenpathMobile.DataConvertible
+}
+public struct JOSESerializer {
+  public func serialize<T>(compact object: T) -> Swift.String where T : OpenpathMobile.CompactSerializable
+}
+public struct Signer<KeyType> {
+  public init?(signingAlgorithm: OpenpathMobile.SignatureAlgorithm, key: KeyType)
+}
+extension OpenpathMobile.Signer {
+  @available(*, deprecated, message: "Use `init?(signingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?(signingAlgorithm: OpenpathMobile.SignatureAlgorithm, privateKey: KeyType)
+}
+extension OpenpathMobile.SymmetricKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension OpenpathMobile.SymmetricKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias SymmetricKeyComponents = (Foundation.Data)
+public protocol ExpressibleAsSymmetricKeyComponents {
+  static func representing(symmetricKeyComponents components: OpenpathMobile.SymmetricKeyComponents) throws -> Self
+  func symmetricKeyComponents() throws -> OpenpathMobile.SymmetricKeyComponents
+}
+public struct SymmetricKey : OpenpathMobile.JWK {
+  public let keyType: OpenpathMobile.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let key: Swift.String
+  public init(key: Foundation.Data, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(key: any OpenpathMobile.ExpressibleAsSymmetricKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : OpenpathMobile.ExpressibleAsSymmetricKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: OpenpathMobile.JWKThumbprintAlgorithm = .SHA256) throws -> OpenpathMobile.SymmetricKey
+}
+public struct IDTokenValidation {
+  public let issuer: Swift.String
+  public let audience: Swift.String
+  public init(issuer: Swift.String, audience: Swift.String)
+  public func validate(_ jwt: any OpenpathMobile.JWT, nonce: Swift.String? = nil) -> OpenpathMobile.ValidationError?
+}
+public enum ValidationError : Swift.Error {
+  case invalidClaim(Swift.String)
+  case expired
+  case nonce
+}
+public struct Verifier {
+  public init?<KeyType>(verifyingAlgorithm: OpenpathMobile.SignatureAlgorithm, key: KeyType)
+}
+extension OpenpathMobile.Verifier {
+  @available(*, deprecated, message: "Use `init?(verifyingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?<KeyType>(verifyingAlgorithm: OpenpathMobile.SignatureAlgorithm, publicKey: KeyType)
+}
+extension OpenpathMobile.ContentEncryptionAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.ContentEncryptionAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.ContentEncryptionAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.KeyManagementAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.KeyManagementAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.KeyManagementAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.SignatureAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.SignatureAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.SignatureAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.HMACAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.HMACAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.HMACAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.JWKThumbprintAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.JWKThumbprintAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.JWKThumbprintAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.CompressionAlgorithm : Swift.Equatable {}
+extension OpenpathMobile.CompressionAlgorithm : Swift.Hashable {}
+extension OpenpathMobile.CompressionAlgorithm : Swift.RawRepresentable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.Equatable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.Hashable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.RawRepresentable {}
+extension OpenpathMobile.DictionaryNilEncodingStrategy : Swift.Equatable {}
+extension OpenpathMobile.DictionaryNilEncodingStrategy : Swift.Hashable {}
+extension OpenpathMobile.ECCurveType : Swift.Equatable {}
+extension OpenpathMobile.ECCurveType : Swift.Hashable {}
+extension OpenpathMobile.ECCurveType : Swift.RawRepresentable {}
+extension OpenpathMobile.ECCompression : Swift.Equatable {}
+extension OpenpathMobile.ECCompression : Swift.Hashable {}
+extension OpenpathMobile.ECCompression : Swift.RawRepresentable {}
+extension OpenpathMobile.JWEHeader : OpenpathMobile.DataConvertible {}
+extension OpenpathMobile.JWKKeyType : Swift.Equatable {}
+extension OpenpathMobile.JWKKeyType : Swift.Hashable {}
+extension OpenpathMobile.JWKKeyType : Swift.RawRepresentable {}
+extension OpenpathMobile.JWKParameter : Swift.Equatable {}
+extension OpenpathMobile.JWKParameter : Swift.Hashable {}
+extension OpenpathMobile.JWKParameter : Swift.RawRepresentable {}
+extension OpenpathMobile.RSAParameter : Swift.Equatable {}
+extension OpenpathMobile.RSAParameter : Swift.Hashable {}
+extension OpenpathMobile.RSAParameter : Swift.RawRepresentable {}
+extension OpenpathMobile.SymmetricKeyParameter : Swift.Equatable {}
+extension OpenpathMobile.SymmetricKeyParameter : Swift.Hashable {}
+extension OpenpathMobile.SymmetricKeyParameter : Swift.RawRepresentable {}
+extension OpenpathMobile.ECParameter : Swift.Equatable {}
+extension OpenpathMobile.ECParameter : Swift.Hashable {}
+extension OpenpathMobile.ECParameter : Swift.RawRepresentable {}
+extension OpenpathMobile.JWSHeader : OpenpathMobile.DataConvertible {}
