@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-logs:2.33.0'
     implementation 'com.auth0.android:jwtdecode:2.0.1'
     implementation 'com.auth0:java-jwt:3.10.3'
-    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'no.nordicsemi.android:ble:2.5.1'
     implementation 'no.nordicsemi.android.support.v18:scanner:1.6.0'
