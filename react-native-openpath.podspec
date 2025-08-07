@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.authors      = package['author']
   s.homepage     = package['homepage']
 
-  s.platform     = :ios, '11.2'
+  s.platform     = :ios, '14.8.1'
 
   s.source       = { git: 'https://github.com/author/OpenpathReactNative.git', tag: 'master' }
 

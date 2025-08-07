@@ -1,6 +1,6 @@
 # Openpath Mobile App Example
 
-This app demonstrates how the use of the Openpath Mobile SDK in a SwiftUI-based iOS app.
+This app demonstrates the use of the Openpath Mobile SDK in a SwiftUI-based iOS app.
 
 Many parts of this app can be used in a newly developed app as-is or with small modifications:
 

@@ -1,0 +1,11 @@
+framework module AllegionSecurity {
+  umbrella header "AllegionSecurity-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionSecurity.Swift {
+  header "AllegionSecurity-Swift.h"
+  requires objc
+}

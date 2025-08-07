@@ -1,0 +1,11 @@
+framework module AllegionAccessHub {
+  umbrella header "AllegionAccessHub-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionAccessHub.Swift {
+  header "AllegionAccessHub-Swift.h"
+  requires objc
+}

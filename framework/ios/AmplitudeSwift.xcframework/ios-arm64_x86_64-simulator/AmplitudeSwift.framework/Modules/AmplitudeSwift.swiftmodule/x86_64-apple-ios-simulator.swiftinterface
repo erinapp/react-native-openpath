@@ -1,0 +1,1552 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AmplitudeSwift
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AmplitudeCore
+@_exported import AmplitudeSwift
+import AnalyticsConnector
+import Darwin.C
+import Combine
+import CoreTelephony
+import Darwin
+import Foundation
+import Network
+import ObjectiveC
+import SQLite3
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+import ObjectiveC.runtime
+public class Amplitude {
+  public var configuration: AmplitudeSwift.Configuration {
+    get
+  }
+  public var sessionId: Swift.Int64 {
+    get
+  }
+  public var identity: AmplitudeSwift.Identity {
+    get
+    set
+  }
+  final public let amplitudeContext: AmplitudeCore.AmplitudeContext
+  public var logger: (any AmplitudeSwift.Logger)? {
+    get
+    set
+  }
+  public init(configuration: AmplitudeSwift.Configuration)
+  @discardableResult
+  public func track(event: AmplitudeSwift.BaseEvent, options: AmplitudeSwift.EventOptions? = nil, callback: AmplitudeSwift.EventCallback? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func track(eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  @available(*, deprecated, message: "use 'track' instead")
+  public func logEvent(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func identify(userProperties: [Swift.String : Any]?, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func identify(identify: AmplitudeSwift.Identify, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func groupIdentify(groupType: Swift.String, groupName: Swift.String, groupProperties: [Swift.String : Any]?, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func groupIdentify(groupType: Swift.String, groupName: Swift.String, identify: AmplitudeSwift.Identify, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func setGroup(groupType: Swift.String, groupName: Swift.String, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func setGroup(groupType: Swift.String, groupName: [Swift.String], options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  @available(*, deprecated, message: "use 'revenue' instead")
+  public func logRevenue() -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func revenue(revenue: AmplitudeSwift.Revenue, options: AmplitudeSwift.EventOptions? = nil) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func revenue(event: AmplitudeSwift.RevenueEvent) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func add(plugin: any AmplitudeCore.UniversalPlugin) -> Self
+  @discardableResult
+  public func remove(plugin: any AmplitudeCore.UniversalPlugin) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func flush() -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func setUserId(userId: Swift.String?) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func setDeviceId(deviceId: Swift.String?) -> AmplitudeSwift.Amplitude
+  public func getUserId() -> Swift.String?
+  public func getDeviceId() -> Swift.String?
+  public func getSessionId() -> Swift.Int64
+  @discardableResult
+  public func setSessionId(timestamp: Swift.Int64) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func setSessionId(date: Foundation.Date) -> AmplitudeSwift.Amplitude
+  @discardableResult
+  public func reset() -> AmplitudeSwift.Amplitude
+  public func apply(closure: (any AmplitudeSwift.Plugin) -> Swift.Void)
+  @objc deinit
+}
+extension AmplitudeSwift.Amplitude : AmplitudeCore.PluginHost {
+  public func plugin(name: Swift.String) -> (any AmplitudeCore.UniversalPlugin)?
+  public func plugins<PluginType>(type: PluginType.Type) -> [PluginType] where PluginType : AmplitudeCore.UniversalPlugin
+}
+extension AmplitudeSwift.Amplitude : AmplitudeCore.AnalyticsClient {
+  public func track(eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil)
+  public var optOut: Swift.Bool {
+    get
+    set
+  }
+  public typealias Identity = AmplitudeSwift.Identity
+}
+@_inheritsConvenienceInitializers public class AmplitudeDestinationPlugin : AmplitudeSwift.DestinationPlugin {
+  override public func track(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  override public func identify(event: AmplitudeSwift.IdentifyEvent) -> AmplitudeSwift.IdentifyEvent?
+  override public func groupIdentify(event: AmplitudeSwift.GroupIdentifyEvent) -> AmplitudeSwift.GroupIdentifyEvent?
+  override public func revenue(event: AmplitudeSwift.RevenueEvent) -> AmplitudeSwift.RevenueEvent?
+  override public func flush()
+  override public func setup(amplitude: AmplitudeSwift.Amplitude)
+  override public init()
+  @objc deinit
+}
+@propertyWrapper public struct Atomic<T> {
+  public init(wrappedValue value: T)
+  public var wrappedValue: T {
+    get
+    set
+  }
+}
+public struct AutocaptureOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let sessions: AmplitudeSwift.AutocaptureOptions
+  public static let appLifecycles: AmplitudeSwift.AutocaptureOptions
+  public static let screenViews: AmplitudeSwift.AutocaptureOptions
+  public static let elementInteractions: AmplitudeSwift.AutocaptureOptions
+  public static let networkTracking: AmplitudeSwift.AutocaptureOptions
+  public static let all: AmplitudeSwift.AutocaptureOptions
+  public typealias ArrayLiteralElement = AmplitudeSwift.AutocaptureOptions
+  public typealias Element = AmplitudeSwift.AutocaptureOptions
+  public typealias RawValue = Swift.Int
+}
+open class BaseEvent : AmplitudeSwift.EventOptions, AmplitudeCore.AnalyticsEvent, Swift.Codable {
+  public var eventType: Swift.String
+  public var eventProperties: [Swift.String : Any]?
+  public var userProperties: [Swift.String : Any]?
+  public var groups: [Swift.String : Any]?
+  public var groupProperties: [Swift.String : Any]?
+  public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+open class BasePlugin {
+  weak public var amplitude: AmplitudeSwift.Amplitude? {
+    get
+  }
+  public init()
+  open func setup(amplitude: AmplitudeSwift.Amplitude)
+  open func execute(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  public func teardown()
+  open func onUserIdChanged(_ userId: Swift.String?)
+  open func onDeviceIdChanged(_ deviceId: Swift.String?)
+  open func onSessionIdChanged(_ sessionId: Swift.Int64)
+  open func onOptOutChanged(_ optOut: Swift.Bool)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class BeforePlugin : AmplitudeSwift.BasePlugin, AmplitudeSwift.Plugin {
+  final public let type: AmplitudeSwift.PluginType
+  override public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class EnrichmentPlugin : AmplitudeSwift.BasePlugin, AmplitudeSwift.Plugin {
+  final public let type: AmplitudeSwift.PluginType
+  override public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class UtilityPlugin : AmplitudeSwift.BasePlugin, AmplitudeSwift.Plugin {
+  final public let type: AmplitudeSwift.PluginType
+  override public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class ObservePlugin : AmplitudeSwift.BasePlugin, AmplitudeSwift.Plugin {
+  final public let type: AmplitudeSwift.PluginType
+  override public init()
+  @objc deinit
+}
+public class Configuration {
+  public struct Defaults {
+    public static let instanceName: Swift.String
+    public static let flushQueueSize: Swift.Int
+    public static let flushIntervalMillis: Swift.Int
+    public static let flushMaxRetries: Swift.Int
+    public static let logLevel: AmplitudeSwift.LogLevelEnum
+    public static let minTimeBetweenSessionsMillis: Swift.Int
+    public static let identifyBatchIntervalMillis: Swift.Int
+    public static let serverZone: AmplitudeCore.ServerZone
+    public static let optOut: Swift.Bool
+    public static let useBatch: Swift.Bool
+    public static let enableCoppaControl: Swift.Bool
+    public static let flushEventsOnClose: Swift.Bool
+    public static let maxQueuedEventCount: Swift.Int
+    public static let autocaptureOptions: AmplitudeSwift.AutocaptureOptions
+    public static let migrateLegacyData: Swift.Bool
+    public static let enableAutoCaptureRemoteConfig: Swift.Bool
+    public static let trackingOptions: AmplitudeSwift.TrackingOptions
+    public static let networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions
+  }
+  public var apiKey: Swift.String {
+    get
+  }
+  public var flushQueueSize: Swift.Int
+  public var flushIntervalMillis: Swift.Int
+  public var instanceName: Swift.String {
+    get
+  }
+  public var optOut: Swift.Bool {
+    get
+    set
+  }
+  final public let storageProvider: any AmplitudeSwift.Storage
+  final public let identifyStorageProvider: any AmplitudeSwift.Storage
+  public var logLevel: AmplitudeSwift.LogLevelEnum
+  public var loggerProvider: any AmplitudeSwift.Logger
+  public var minIdLength: Swift.Int?
+  public var partnerId: Swift.String?
+  public var callback: AmplitudeSwift.EventCallback?
+  public var flushMaxRetries: Swift.Int
+  public var useBatch: Swift.Bool
+  public var serverZone: AmplitudeCore.ServerZone
+  public var serverUrl: Swift.String?
+  public var plan: AmplitudeSwift.Plan?
+  public var ingestionMetadata: AmplitudeSwift.IngestionMetadata?
+  public var trackingOptions: AmplitudeSwift.TrackingOptions
+  public var enableCoppaControl: Swift.Bool
+  public var flushEventsOnClose: Swift.Bool
+  public var minTimeBetweenSessionsMillis: Swift.Int
+  public var identifyBatchIntervalMillis: Swift.Int
+  public var migrateLegacyData: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, renamed: "autocapture", message: "Please use `autocapture` instead.")
+  public var defaultTracking: AmplitudeSwift.DefaultTrackingOptions {
+    get
+    set
+  }
+  public var autocapture: AmplitudeSwift.AutocaptureOptions {
+    get
+  }
+  public var networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions {
+    get
+  }
+  public var offline: Swift.Bool?
+  public var maxQueuedEventCount: Swift.Int
+  final public let enableAutoCaptureRemoteConfig: Swift.Bool
+  @available(*, deprecated, message: "Please use the `autocapture` parameter instead.")
+  convenience public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, defaultTracking: AmplitudeSwift.DefaultTrackingOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions)
+  convenience public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, autocapture: AmplitudeSwift.AutocaptureOptions = Defaults.autocaptureOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, maxQueuedEventCount: Swift.Int = Defaults.maxQueuedEventCount, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions, enableAutoCaptureRemoteConfig: Swift.Bool = Defaults.enableAutoCaptureRemoteConfig)
+  @objc deinit
+}
+@preconcurrency public class ConsoleLogger : AmplitudeSwift.Logger, @unchecked Swift.Sendable {
+  public typealias LogLevel = AmplitudeSwift.LogLevelEnum
+  public var logLevel: Swift.Int
+  public init(logLevel: Swift.Int = LogLevelEnum.OFF.rawValue)
+  @objc public func error(message: Swift.String)
+  @objc public func warn(message: Swift.String)
+  @objc public func log(message: Swift.String)
+  @objc public func debug(message: Swift.String)
+  @objc deinit
+}
+@objc(AMPLogLevel) public enum LogLevelEnum : Swift.Int, Swift.Sendable {
+  case OFF
+  case ERROR
+  case WARN
+  case LOG
+  case DEBUG
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct Constants {
+  public static let DEFAULT_API_HOST: Swift.String
+  public static let EU_DEFAULT_API_HOST: Swift.String
+  public static let MIN_IDENTIFY_BATCH_INTERVAL_MILLIS: Swift.Int
+  public struct Configuration {
+    public static let FLUSH_QUEUE_SIZE: Swift.Int
+    public static let FLUSH_INTERVAL_MILLIS: Swift.Int
+    public static let DEFAULT_INSTANCE: Swift.String
+    public static let FLUSH_MAX_RETRIES: Swift.Int
+    public static let MIN_TIME_BETWEEN_SESSIONS_MILLIS: Swift.Int
+    public static let IDENTIFY_BATCH_INTERVAL_MILLIS: Swift.Int
+  }
+  public struct Storage {
+    public static let STORAGE_PREFIX: Swift.String
+  }
+}
+public class DeepLinkOpenedEvent : AmplitudeSwift.BaseEvent {
+  override public var eventType: Swift.String {
+    get
+    set
+  }
+  convenience public init(url: Foundation.URL)
+  convenience public init(url: Foundation.NSURL)
+  convenience public init(activity: Foundation.NSUserActivity)
+  public init(url: Swift.String?, referrer: Swift.String? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+public class DefaultEventUtils {
+  public init(amplitude: AmplitudeSwift.Amplitude)
+  public func trackAppUpdatedInstalledEvent()
+  @objc deinit
+}
+@available(*, deprecated, renamed: "AutocaptureOptions", message: "Please use `AutocaptureOptions` instead")
+public class DefaultTrackingOptions {
+  public static var ALL: AmplitudeSwift.DefaultTrackingOptions {
+    get
+  }
+  public static var NONE: AmplitudeSwift.DefaultTrackingOptions {
+    get
+  }
+  public var sessions: Swift.Bool {
+    get
+    set
+  }
+  public var appLifecycles: Swift.Bool {
+    get
+    set
+  }
+  public var screenViews: Swift.Bool {
+    get
+    set
+  }
+  public init(sessions: Swift.Bool = true, appLifecycles: Swift.Bool = false, screenViews: Swift.Bool = false)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class DestinationPlugin : AmplitudeSwift.BasePlugin, AmplitudeSwift.EventPlugin {
+  final public let type: AmplitudeSwift.PluginType
+  open func track(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  open func identify(event: AmplitudeSwift.IdentifyEvent) -> AmplitudeSwift.IdentifyEvent?
+  open func groupIdentify(event: AmplitudeSwift.GroupIdentifyEvent) -> AmplitudeSwift.GroupIdentifyEvent?
+  open func revenue(event: AmplitudeSwift.RevenueEvent) -> AmplitudeSwift.RevenueEvent?
+  open func flush()
+  override open func execute(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  override public init()
+  @objc deinit
+}
+extension AmplitudeSwift.DestinationPlugin {
+  public func apply(closure: (any AmplitudeSwift.Plugin) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class Diagnostics {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ElementInteractionEvent : AmplitudeSwift.BaseEvent {
+  override public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+open class EventOptions {
+  public var userId: Swift.String?
+  public var deviceId: Swift.String?
+  public var timestamp: Swift.Int64?
+  public var eventId: Swift.Int64?
+  public var sessionId: Swift.Int64?
+  public var insertId: Swift.String?
+  public var locationLat: Swift.Double?
+  public var locationLng: Swift.Double?
+  public var appVersion: Swift.String?
+  public var versionName: Swift.String?
+  public var platform: Swift.String?
+  public var osName: Swift.String?
+  public var osVersion: Swift.String?
+  public var deviceBrand: Swift.String?
+  public var deviceManufacturer: Swift.String?
+  public var deviceModel: Swift.String?
+  public var carrier: Swift.String?
+  public var country: Swift.String?
+  public var region: Swift.String?
+  public var city: Swift.String?
+  public var dma: Swift.String?
+  public var idfa: Swift.String?
+  public var idfv: Swift.String?
+  public var adid: Swift.String?
+  public var language: Swift.String?
+  public var library: Swift.String?
+  public var ip: Swift.String?
+  public var plan: AmplitudeSwift.Plan?
+  public var ingestionMetadata: AmplitudeSwift.IngestionMetadata?
+  public var revenue: Swift.Double?
+  public var price: Swift.Double?
+  public var quantity: Swift.Int?
+  public var productId: Swift.String?
+  public var revenueType: Swift.String?
+  public var currency: Swift.String?
+  public var extra: [Swift.String : Any]?
+  public var callback: AmplitudeSwift.EventCallback?
+  public var partnerId: Swift.String?
+  public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, attempts: Swift.Int = 0)
+  public func mergeEventOptions(eventOptions: AmplitudeSwift.EventOptions)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class EventPipeline {
+  @objc deinit
+}
+extension UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func amp_ignoreInteractionEvent(rageClick: Swift.Bool = true, deadClick: Swift.Bool = true)
+}
+@_inheritsConvenienceInitializers public class GroupIdentifyEvent : AmplitudeSwift.BaseEvent {
+  override public var eventType: Swift.String {
+    get
+    set
+  }
+  override public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+open class Identify {
+  public init()
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func set(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func setOnce(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func prepend(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func append(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func postInsert(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func preInsert(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.Bool) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: Any?) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.String : Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Any]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.Bool]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.Int]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.Float]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.Double]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.Int64]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func remove(property: Swift.String, value: [Swift.String]) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func add(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func add(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func add(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func add(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func unset(property: Swift.String) -> AmplitudeSwift.Identify
+  @discardableResult
+  public func clearAll() -> AmplitudeSwift.Identify
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class IdentifyEvent : AmplitudeSwift.BaseEvent {
+  override public var eventType: Swift.String {
+    get
+    set
+  }
+  override public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class IdentifyInterceptor {
+  public func intercept(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  public func getIdentifyBatchInterval() -> Foundation.TimeInterval
+  @objc deinit
+}
+public struct Identity : AmplitudeCore.AnalyticsIdentity {
+  public var userId: Swift.String?
+  public var deviceId: Swift.String?
+  public var userProperties: [Swift.String : Any]
+}
+public struct NetworkPath {
+  public var status: Network.NWPath.Status
+  public init(status: Network.NWPath.Status)
+}
+@_hasMissingDesignatedInitializers open class NetworkConnectivityCheckerPlugin : AmplitudeSwift.BeforePlugin {
+  public static let Disabled: Swift.Bool?
+  override open func setup(amplitude: AmplitudeSwift.Amplitude)
+  override open func teardown()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class NetworkRequestEvent : AmplitudeSwift.BaseEvent {
+  override public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+public protocol NetworkTaskListener : AnyObject {
+  func onTaskResume(_ task: Foundation.URLSessionTask)
+  func onTask(_ task: Foundation.URLSessionTask, setState state: Foundation.URLSessionTask.State)
+}
+public struct NetworkTrackingOptions {
+  public struct CaptureRule {
+    public var hosts: [Swift.String]
+    public var statusCodeRange: Swift.String
+    public init(hosts: [Swift.String], statusCodeRange: Swift.String = "500-599")
+  }
+  public var captureRules: [AmplitudeSwift.NetworkTrackingOptions.CaptureRule]
+  public var ignoreHosts: [Swift.String]
+  public var ignoreAmplitudeRequests: Swift.Bool
+  public init(captureRules: [AmplitudeSwift.NetworkTrackingOptions.CaptureRule], ignoreHosts: [Swift.String] = [], ignoreAmplitudeRequests: Swift.Bool = true)
+  public static var `default`: AmplitudeSwift.NetworkTrackingOptions {
+    get
+  }
+}
+@objc(Amplitude) public class ObjCAmplitude : ObjectiveC.NSObject {
+  @objc(initWithConfiguration:) public static func initWithConfiguration(configuration: AmplitudeSwift.ObjCConfiguration) -> AmplitudeSwift.ObjCAmplitude
+  @objc(initWithConfiguration:) public init(configuration: AmplitudeSwift.ObjCConfiguration)
+  @objc public var configuration: AmplitudeSwift.ObjCConfiguration {
+    @objc get
+  }
+  @objc public var storage: AmplitudeSwift.ObjCStorage {
+    @objc get
+  }
+  @discardableResult
+  @objc(track:) public func track(event: AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(track:callback:) public func track(event: AmplitudeSwift.ObjCBaseEvent, callback: AmplitudeSwift.ObjCEventCallback?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(track:options:) public func track(event: AmplitudeSwift.ObjCBaseEvent, options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(track:options:callback:) public func track(event: AmplitudeSwift.ObjCBaseEvent, options: AmplitudeSwift.ObjCEventOptions?, callback: AmplitudeSwift.ObjCEventCallback?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(track:eventProperties:) public func track(eventType: Swift.String, eventProperties: [Swift.String : Any]?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(track:eventProperties:options:) public func track(eventType: Swift.String, eventProperties: [Swift.String : Any]?, options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(identify:) public func identify(identify: AmplitudeSwift.ObjCIdentify) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(identify:options:) public func identify(identify: AmplitudeSwift.ObjCIdentify, options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(groupIdentify:groupName:identify:) public func groupIdentify(groupType: Swift.String, groupName: Swift.String, identify: AmplitudeSwift.ObjCIdentify) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(groupIdentify:groupName:identify:options:) public func groupIdentify(groupType: Swift.String, groupName: Swift.String, identify: AmplitudeSwift.ObjCIdentify, options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setGroup:groupName:) public func setGroup(groupType: Swift.String, groupName: Swift.String) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setGroup:groupName:options:) public func setGroup(groupType: Swift.String, groupName: Swift.String, options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setGroup:groupNames:) public func setGroup(groupType: Swift.String, groupNames: [Swift.String]) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setGroup:groupNames:options:) public func setGroup(groupType: Swift.String, groupNames: [Swift.String], options: AmplitudeSwift.ObjCEventOptions?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(revenue:) public func revenue(revenue: AmplitudeSwift.ObjCRevenue) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(revenue:options:) public func revenue(revenue: AmplitudeSwift.ObjCRevenue, options: AmplitudeSwift.ObjCEventOptions? = nil) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(add:) public func add(plugin: Swift.AnyObject) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(remove:) public func remove(plugin: AmplitudeSwift.ObjCPlugin) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc public func flush() -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setUserId:) public func setUserId(userId: Swift.String?) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setDeviceId:) public func setDeviceId(deviceId: Swift.String?) -> AmplitudeSwift.ObjCAmplitude
+  @objc public func getUserId() -> Swift.String?
+  @objc public func getDeviceId() -> Swift.String?
+  @objc public func getSessionId() -> Swift.Int64
+  @discardableResult
+  @objc(setSessionIdWithTimestamp:) public func setSessionId(timestamp: Swift.Int64) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc(setSessionIdWithDate:) public func setSessionId(date: Foundation.Date) -> AmplitudeSwift.ObjCAmplitude
+  @discardableResult
+  @objc public func reset() -> AmplitudeSwift.ObjCAmplitude
+  @objc deinit
+}
+extension AmplitudeSwift.ObjCAmplitude : AmplitudeCore.PluginHost {
+  public func plugin(name: Swift.String) -> (any AmplitudeCore.UniversalPlugin)?
+  public func plugins<PluginType>(type: PluginType.Type) -> [PluginType] where PluginType : AmplitudeCore.UniversalPlugin
+}
+@_inheritsConvenienceInitializers @objc(AMPAutocaptureOptions) final public class ObjCAutocaptureOptions : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc override dynamic public init()
+  @objc convenience public init(optionsToUnion: [AmplitudeSwift.ObjCAutocaptureOptions])
+  @objc public static let sessions: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let appLifecycles: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let screenViews: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let elementInteractions: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let networkTracking: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let all: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static var `default`: AmplitudeSwift.ObjCAutocaptureOptions {
+    @objc get
+  }
+  @objc override final public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc final public func formUnion(_ other: AmplitudeSwift.ObjCAutocaptureOptions)
+  @objc final public func formIntersection(_ other: AmplitudeSwift.ObjCAutocaptureOptions)
+  @objc final public func formSymmetricDifference(_ other: AmplitudeSwift.ObjCAutocaptureOptions)
+  @objc final public func contains(_ option: AmplitudeSwift.ObjCAutocaptureOptions) -> Swift.Bool
+  @objc final public func union(_ option: AmplitudeSwift.ObjCAutocaptureOptions) -> AmplitudeSwift.ObjCAutocaptureOptions
+  @objc final public func intersect(_ option: AmplitudeSwift.ObjCAutocaptureOptions) -> AmplitudeSwift.ObjCAutocaptureOptions
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPBaseEvent) public class ObjCBaseEvent : AmplitudeSwift.ObjCEventOptions {
+  @objc(initWithEventType:) public static func initWithEventType(eventType: Swift.String) -> AmplitudeSwift.ObjCBaseEvent
+  @objc(initWithEventType:eventProperties:) public static func initWithEventType(eventType: Swift.String, eventProperties: [Swift.String : Any]?) -> AmplitudeSwift.ObjCBaseEvent
+  @objc(initWithEventType:) convenience public init(eventType: Swift.String)
+  @objc(initWithEventType:eventProperties:) convenience public init(eventType: Swift.String, eventProperties: [Swift.String : Any]?)
+  @objc public var eventType: Swift.String {
+    @objc get
+  }
+  @objc public var eventProperties: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @objc public var userProperties: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @objc public var groups: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @objc public var groupProperties: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPConfiguration) public class ObjCConfiguration : ObjectiveC.NSObject {
+  @objc(initWithApiKey:) public static func initWithApiKey(apiKey: Swift.String) -> AmplitudeSwift.ObjCConfiguration
+  @objc(initWithApiKey:instanceName:) public static func initWithApiKey(apiKey: Swift.String, instanceName: Swift.String) -> AmplitudeSwift.ObjCConfiguration
+  @objc(initWithApiKey:) convenience public init(apiKey: Swift.String)
+  @objc(initWithApiKey:instanceName:) convenience public init(apiKey: Swift.String, instanceName: Swift.String)
+  @objc(initWithApiKey:instanceName:enableAutocaptureRemoteConfig:) convenience public init(apiKey: Swift.String, instanceName: Swift.String, enableAutoCaptureRemoteConfig: Swift.Bool)
+  @objc public var apiKey: Swift.String {
+    @objc get
+  }
+  @objc public var flushQueueSize: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var flushIntervalMillis: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var instanceName: Swift.String {
+    @objc get
+  }
+  @objc public var optOut: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var logLevel: AmplitudeSwift.LogLevelEnum {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var loggerProvider: AmplitudeSwift.ObjCLoggerProvider? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var minIdLength: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var callback: AmplitudeSwift.ObjCEventCallback? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var partnerId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var flushMaxRetries: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var useBatch: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var serverZone: AmplitudeCore.ServerZone {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var serverUrl: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var plan: AmplitudeSwift.ObjCPlan? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var ingestionMetadata: AmplitudeSwift.ObjCIngestionMetadata? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var enableCoppaControl: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var trackingOptions: AmplitudeSwift.ObjCTrackingOptions {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var flushEventsOnClose: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var minTimeBetweenSessionsMillis: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @available(*, deprecated, renamed: "autocapture", message: "Please use `autocapture` instead.")
+  @objc public var defaultTracking: AmplitudeSwift.ObjCDefaultTrackingOptions {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var autocapture: AmplitudeSwift.ObjCAutocaptureOptions {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var identifyBatchIntervalMillis: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var migrateLegacyData: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var offline: Foundation.NSNumber? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var networkTrackingOptions: AmplitudeSwift.ObjCNetworkTrackingOptions {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var enableAutoCaptureRemoteConfig: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPDeepLinkOpenedEvent) public class ObjCDeepLinkOpenedEvent : AmplitudeSwift.ObjCBaseEvent {
+  @objc(initWithActivity:) public static func initWithActivity(activity: Foundation.NSUserActivity) -> AmplitudeSwift.ObjCDeepLinkOpenedEvent
+  @objc(initWithUrl:) public static func initWithUrl(url: Swift.String?) -> AmplitudeSwift.ObjCDeepLinkOpenedEvent
+  @objc(initWithUrl:referrer:) public static func initWithUrl(url: Swift.String?, referrer: Swift.String?) -> AmplitudeSwift.ObjCDeepLinkOpenedEvent
+  @objc(initWithActivity:) convenience public init(activity: Foundation.NSUserActivity)
+  @objc(initWihUrl:) convenience public init(url: Swift.String?)
+  @objc(initWihUrl:referrer:) convenience public init(url: Swift.String?, referrer: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AMPAutocaptureOptions", message: "Please use `AMPAutocaptureOptions` instead")
+@objc(AMPDefaultTrackingOptions) public class ObjCDefaultTrackingOptions : ObjectiveC.NSObject {
+  @objc convenience override dynamic public init()
+  @objc public static var ALL: AmplitudeSwift.ObjCDefaultTrackingOptions {
+    @objc get
+  }
+  @objc public static var NONE: AmplitudeSwift.ObjCDefaultTrackingOptions {
+    @objc get
+  }
+  @objc public var sessions: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var appLifecycles: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var screenViews: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc deinit
+}
+public typealias ObjCEventCallback = (AmplitudeSwift.ObjCBaseEvent, Swift.Int, Swift.String) -> Swift.Void
+@_inheritsConvenienceInitializers @objc(AMPEventOptions) public class ObjCEventOptions : ObjectiveC.NSObject {
+  @objc public var userId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var deviceId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var eventId: Swift.Int64 {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var sessionId: Swift.Int64 {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var insertId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var locationLat: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var locationLng: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var appVersion: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var versionName: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var platform: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var osName: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var osVersion: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var deviceBrand: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var deviceManufacturer: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var deviceModel: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var carrier: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var country: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var region: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var city: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var dma: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var idfa: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var idfv: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var adid: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var language: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var library: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var ip: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var plan: AmplitudeSwift.ObjCPlan? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var ingestionMetadata: AmplitudeSwift.ObjCIngestionMetadata? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var revenue: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var price: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var quantity: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var productId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var revenueType: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var currency: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var extra: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @objc public var callback: AmplitudeSwift.ObjCEventCallback? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var partnerId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc(mergeEventOptions:) public func mergeEventOptions(other: AmplitudeSwift.ObjCEventOptions)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(AMPIdentify) public class ObjCIdentify : ObjectiveC.NSObject {
+  @discardableResult
+  @objc(set:value:) public func set(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(setOnce:value:) public func setOnce(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(prepend:value:) public func prepend(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(append:value:) public func append(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(postInsert:value:) public func postInsert(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(preInsert:value:) public func preInsert(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(remove:value:) public func remove(property: Swift.String, value: Any?) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(add:valueInt:) public func add(property: Swift.String, value: Swift.Int) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(add:valueInt64:) public func add(property: Swift.String, value: Swift.Int64) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(add:valueDouble:) public func add(property: Swift.String, value: Swift.Double) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(add:valueFloat:) public func add(property: Swift.String, value: Swift.Float) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc(unset:) public func unset(property: Swift.String) -> AmplitudeSwift.ObjCIdentify
+  @discardableResult
+  @objc public func clearAll() -> AmplitudeSwift.ObjCIdentify
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(AMPIngestionMetadata) public class ObjCIngestionMetadata : ObjectiveC.NSObject {
+  @objc convenience override dynamic public init()
+  @objc public var sourceName: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var sourceVersion: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc deinit
+}
+public typealias ObjCLoggerProvider = (Swift.Int, Swift.String) -> Swift.Void
+@_inheritsConvenienceInitializers @objc(AMPNetworkConnectivityCheckerPlugin) public class ObjCNetworkConnectivityCheckerPlugin : ObjectiveC.NSObject {
+  @objc public static let Disabled: Foundation.NSNumber?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPNetworkTrackingCaptureRule) public class ObjCCaptureRule : ObjectiveC.NSObject {
+  @objc public var hosts: [Swift.String] {
+    @objc get
+    @objc set
+  }
+  @objc public var statusCodeRange: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(hosts: [Swift.String], statusCodeRange: Swift.String = "500-599")
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPNetworkTrackingOptions) public class ObjCNetworkTrackingOptions : ObjectiveC.NSObject {
+  @objc convenience public init(captureRules: [AmplitudeSwift.ObjCCaptureRule], ignoreHosts: [Swift.String] = [], ignoreAmplitudeRequests: Swift.Bool = true)
+  @objc public var captureRules: [AmplitudeSwift.ObjCCaptureRule] {
+    @objc get
+    @objc set
+  }
+  @objc public var ignoreHosts: [Swift.String] {
+    @objc get
+    @objc set
+  }
+  @objc public var ignoreAmplitudeRequests: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public static func defaultOptions() -> AmplitudeSwift.ObjCNetworkTrackingOptions
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(AMPPlan) public class ObjCPlan : ObjectiveC.NSObject {
+  @objc convenience override dynamic public init()
+  @objc public var branch: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var source: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var version: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var versionId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc deinit
+}
+@objc(AMPPlugin) public class ObjCPlugin : ObjectiveC.NSObject {
+  @objc(initWithType:setup:execute:) public static func initWithType(type: AmplitudeSwift.PluginType, setup: @escaping (AmplitudeSwift.ObjCAmplitude) -> Swift.Void, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?) -> AmplitudeSwift.ObjCPlugin
+  @objc(initWithType:execute:) public static func initWithType(type: AmplitudeSwift.PluginType, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?) -> AmplitudeSwift.ObjCPlugin
+  @objc(initWithType:setup:execute:flush:) public static func initWithType(type: AmplitudeSwift.PluginType, setup: @escaping (AmplitudeSwift.ObjCAmplitude) -> Swift.Void, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?, flush: @escaping () -> Swift.Void) -> AmplitudeSwift.ObjCPlugin
+  @objc(initWithType:execute:flush:) public static func initWithType(type: AmplitudeSwift.PluginType, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?, flush: @escaping () -> Swift.Void) -> AmplitudeSwift.ObjCPlugin
+  @objc(initWithType:setup:execute:) public init(type: AmplitudeSwift.PluginType, setup: @escaping (AmplitudeSwift.ObjCAmplitude) -> Swift.Void, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?)
+  @objc(initWithType:execute:) public init(type: AmplitudeSwift.PluginType, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?)
+  @objc(initWithType:setup:execute:flush:) public init(type: AmplitudeSwift.PluginType, setup: @escaping (AmplitudeSwift.ObjCAmplitude) -> Swift.Void, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?, flush: @escaping () -> Swift.Void)
+  @objc(initWithType:execute:flush:) public init(type: AmplitudeSwift.PluginType, execute: @escaping (AmplitudeSwift.ObjCBaseEvent) -> AmplitudeSwift.ObjCBaseEvent?, flush: @escaping () -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPProperties) public class ObjCProperties : ObjectiveC.NSObject {
+  @objc(get:) public func get(key: Swift.String) -> Any?
+  @discardableResult
+  @objc(set:value:) public func set(key: Swift.String, value: Any) -> AmplitudeSwift.ObjCProperties
+  @discardableResult
+  @objc(remove:) public func remove(key: Swift.String) -> AmplitudeSwift.ObjCProperties
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(AMPRevenue) public class ObjCRevenue : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var quantity: Swift.Int {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var price: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var revenue: Swift.Double {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var revenueType: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var currency: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var receipt: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var receiptSig: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var properties: AmplitudeSwift.ObjCProperties {
+    @objc get
+  }
+  @discardableResult
+  @objc(setReceipt:receiptSignature:) public func setReceipt(receipt: Swift.String, receiptSignature: Swift.String) -> AmplitudeSwift.ObjCRevenue
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(AMPScreenViewedEvent) public class ObjCScreenViewedEvent : AmplitudeSwift.ObjCBaseEvent {
+  @objc(initWithScreenName:) public static func initWithScreenName(screenName: Swift.String) -> AmplitudeSwift.ObjCScreenViewedEvent
+  @objc(initWithScreenName:) convenience public init(screenName: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPStorage) public class ObjCStorage : ObjectiveC.NSObject {
+  @objc public func getEventsStrings() -> [Swift.String]
+  @objc public func getInterceptedIdentifiesStrings() -> [Swift.String]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(AMPTrackingOptions) public class ObjCTrackingOptions : ObjectiveC.NSObject {
+  @objc convenience override dynamic public init()
+  @objc public func shouldTrackVersionName() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackVersionName() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackOsName() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackOsName() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackOsVersion() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackOsVersion() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackDeviceManufacturer() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackDeviceManufacturer() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackDeviceModel() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackDeviceModel() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackCarrier() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackCarrier() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackIpAddress() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackIpAddress() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackCountry() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackCountry() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackCity() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackCity() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackDMA() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackDMA() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackIDFV() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackIDFV() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackLanguage() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackLanguage() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackRegion() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackRegion() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc public func shouldTrackPlatform() -> Swift.Bool
+  @discardableResult
+  @objc public func disableTrackPlatform() -> AmplitudeSwift.ObjCTrackingOptions
+  @objc deinit
+}
+public class Revenue {
+  public init()
+  public var productId: Swift.String? {
+    get
+    set(value)
+  }
+  public var quantity: Swift.Int {
+    get
+    set(value)
+  }
+  public var price: Swift.Double? {
+    get
+    set(value)
+  }
+  public var revenue: Swift.Double? {
+    get
+    set(value)
+  }
+  public var revenueType: Swift.String?
+  public var currency: Swift.String?
+  public var receipt: Swift.String?
+  public var receiptSig: Swift.String?
+  public var properties: [Swift.String : Any]?
+  @discardableResult
+  public func setReceipt(receipt: Swift.String, receiptSignature: Swift.String) -> AmplitudeSwift.Revenue
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class RevenueEvent : AmplitudeSwift.BaseEvent {
+  override public var eventType: Swift.String {
+    get
+    set
+  }
+  override public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, timestamp: Swift.Int64? = nil, eventId: Swift.Int64? = nil, sessionId: Swift.Int64? = nil, insertId: Swift.String? = nil, locationLat: Swift.Double? = nil, locationLng: Swift.Double? = nil, appVersion: Swift.String? = nil, versionName: Swift.String? = nil, platform: Swift.String? = nil, osName: Swift.String? = nil, osVersion: Swift.String? = nil, deviceBrand: Swift.String? = nil, deviceManufacturer: Swift.String? = nil, deviceModel: Swift.String? = nil, carrier: Swift.String? = nil, country: Swift.String? = nil, region: Swift.String? = nil, city: Swift.String? = nil, dma: Swift.String? = nil, idfa: Swift.String? = nil, idfv: Swift.String? = nil, adid: Swift.String? = nil, language: Swift.String? = nil, library: Swift.String? = nil, ip: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, revenue: Swift.Double? = nil, price: Swift.Double? = nil, quantity: Swift.Int? = nil, productId: Swift.String? = nil, revenueType: Swift.String? = nil, currency: Swift.String? = nil, extra: [Swift.String : Any]? = nil, callback: AmplitudeSwift.EventCallback? = nil, partnerId: Swift.String? = nil, eventType: Swift.String, eventProperties: [Swift.String : Any]? = nil, userProperties: [Swift.String : Any]? = nil, groups: [Swift.String : Any]? = nil, groupProperties: [Swift.String : Any]? = nil)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SandboxHelper {
+  public func isSandboxEnabled() -> Swift.Bool
+  @objc deinit
+}
+public class ScreenViewedEvent : AmplitudeSwift.BaseEvent {
+  override public var eventType: Swift.String {
+    get
+    set
+  }
+  public init(screenName: Swift.String)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Sessions {
+  public func startNewSessionIfNeeded(timestamp: Swift.Int64, inForeground: Swift.Bool) -> [AmplitudeSwift.BaseEvent]?
+  public func startNewSession(timestamp: Swift.Int64) -> [AmplitudeSwift.BaseEvent]
+  public func endCurrentSession() -> [AmplitudeSwift.BaseEvent]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Timeline {
+  @objc deinit
+}
+public class TrackingOptions {
+  public init()
+  public func shouldTrackVersionName() -> Swift.Bool
+  @discardableResult
+  public func disableTrackVersionName() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackOsName() -> Swift.Bool
+  @discardableResult
+  public func disableTrackOsName() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackOsVersion() -> Swift.Bool
+  @discardableResult
+  public func disableTrackOsVersion() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackDeviceManufacturer() -> Swift.Bool
+  @discardableResult
+  public func disableTrackDeviceManufacturer() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackDeviceModel() -> Swift.Bool
+  @discardableResult
+  public func disableTrackDeviceModel() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackCarrier() -> Swift.Bool
+  @discardableResult
+  public func disableTrackCarrier() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackIpAddress() -> Swift.Bool
+  @discardableResult
+  public func disableTrackIpAddress() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackCountry() -> Swift.Bool
+  @discardableResult
+  public func disableTrackCountry() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackCity() -> Swift.Bool
+  @discardableResult
+  public func disableTrackCity() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackDMA() -> Swift.Bool
+  @discardableResult
+  public func disableTrackDMA() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackIDFV() -> Swift.Bool
+  @discardableResult
+  public func disableTrackIDFV() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackLanguage() -> Swift.Bool
+  @discardableResult
+  public func disableTrackLanguage() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackRegion() -> Swift.Bool
+  @discardableResult
+  public func disableTrackRegion() -> AmplitudeSwift.TrackingOptions
+  public func shouldTrackPlatform() -> Swift.Bool
+  @discardableResult
+  public func disableTrackPlatform() -> AmplitudeSwift.TrackingOptions
+  @objc deinit
+}
+public struct Plan : Swift.Codable {
+  public var branch: Swift.String?
+  public var source: Swift.String?
+  public var version: Swift.String?
+  public var versionId: Swift.String?
+  public init(branch: Swift.String? = nil, source: Swift.String? = nil, version: Swift.String? = nil, versionId: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IngestionMetadata : Swift.Codable {
+  public var sourceName: Swift.String?
+  public var sourceVersion: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public init(sourceName: Swift.String? = nil, sourceVersion: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public typealias EventCallback = (AmplitudeSwift.BaseEvent, Swift.Int, Swift.String) -> Swift.Void
+public protocol Storage {
+  func write(key: AmplitudeSwift.StorageKey, value: Any?) throws
+  func read<T>(key: AmplitudeSwift.StorageKey) -> T?
+  func getEventsString(eventBlock: Foundation.URL) -> Swift.String?
+  func remove(eventBlock: Foundation.URL)
+  func splitBlock(eventBlock: Foundation.URL, events: [AmplitudeSwift.BaseEvent])
+  func rollover()
+  func reset()
+  func getResponseHandler(configuration: AmplitudeSwift.Configuration, eventPipeline: AmplitudeSwift.EventPipeline, eventBlock: Foundation.URL, eventsString: Swift.String) -> any AmplitudeSwift.ResponseHandler
+}
+public enum StorageKey : Swift.String, Swift.CaseIterable {
+  case LAST_EVENT_ID
+  case PREVIOUS_SESSION_ID
+  case LAST_EVENT_TIME
+  case OPT_OUT
+  case EVENTS
+  case USER_ID
+  case DEVICE_ID
+  case APP_BUILD
+  case APP_VERSION
+  case STORAGE_VERSION
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AmplitudeSwift.StorageKey]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AmplitudeSwift.StorageKey] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PersistentStorageVersion : Swift.Int, Swift.Comparable {
+  public static func < (lhs: AmplitudeSwift.PersistentStorageVersion, rhs: AmplitudeSwift.PersistentStorageVersion) -> Swift.Bool
+  case NO_VERSION
+  case API_KEY
+  case INSTANCE_NAME
+  case API_KEY_AND_INSTANCE_NAME
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol Logger : AmplitudeCore.CoreLogger {
+  associatedtype LogLevel : Swift.RawRepresentable
+  var logLevel: Swift.Int { get set }
+}
+@objc(AMPPluginType) public enum PluginType : Swift.Int, Swift.CaseIterable {
+  case before
+  case enrichment
+  case destination
+  case utility
+  case observe
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [AmplitudeSwift.PluginType]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [AmplitudeSwift.PluginType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol Plugin : AmplitudeCore.UniversalPlugin {
+  var type: AmplitudeSwift.PluginType { get }
+  func setup(amplitude: AmplitudeSwift.Amplitude)
+  func execute(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  func onUserIdChanged(_ userId: Swift.String?)
+  func onDeviceIdChanged(_ deviceId: Swift.String?)
+  func onSessionIdChanged(_ sessionId: Swift.Int64)
+  func onOptOutChanged(_ optOut: Swift.Bool)
+}
+public protocol EventPlugin : AmplitudeSwift.Plugin {
+  func track(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  func identify(event: AmplitudeSwift.IdentifyEvent) -> AmplitudeSwift.IdentifyEvent?
+  func groupIdentify(event: AmplitudeSwift.GroupIdentifyEvent) -> AmplitudeSwift.GroupIdentifyEvent?
+  func revenue(event: AmplitudeSwift.RevenueEvent) -> AmplitudeSwift.RevenueEvent?
+  func flush()
+}
+extension AmplitudeSwift.Plugin {
+  public var name: Swift.String? {
+    get
+  }
+  public func execute(event: AmplitudeSwift.BaseEvent) -> AmplitudeSwift.BaseEvent?
+  public func execute<Event>(_ event: inout Event) where Event : AmplitudeCore.AnalyticsEvent
+  public func setup(amplitude: AmplitudeSwift.Amplitude)
+  public func setup(analyticsClient: any AmplitudeCore.AnalyticsClient, amplitudeContext: AmplitudeCore.AmplitudeContext)
+  public func onUserIdChanged(_ userId: Swift.String?)
+  public func onDeviceIdChanged(_ deviceId: Swift.String?)
+  public func onSessionIdChanged(_ sessionId: Swift.Int64)
+  public func onOptOutChanged(_ optOut: Swift.Bool)
+  public func teardown()
+}
+public protocol ResponseHandler {
+  func handle(result: Swift.Result<Swift.Int, any Swift.Error>)
+  func handleSuccessResponse(code: Swift.Int)
+  func handleBadRequestResponse(data: [Swift.String : Any])
+  func handlePayloadTooLargeResponse(data: [Swift.String : Any])
+  func handleTooManyRequestsResponse(data: [Swift.String : Any])
+  func handleTimeoutResponse(data: [Swift.String : Any])
+  func handleFailedResponse(data: [Swift.String : Any])
+  func handle(result: Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Bool
+}
+extension AmplitudeSwift.ResponseHandler {
+  public func handle(result: Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Bool
+}
+extension AmplitudeSwift.LogLevelEnum : Swift.Equatable {}
+extension AmplitudeSwift.LogLevelEnum : Swift.Hashable {}
+extension AmplitudeSwift.LogLevelEnum : Swift.RawRepresentable {}
+extension AmplitudeSwift.StorageKey : Swift.Equatable {}
+extension AmplitudeSwift.StorageKey : Swift.Hashable {}
+extension AmplitudeSwift.StorageKey : Swift.RawRepresentable {}
+extension AmplitudeSwift.PersistentStorageVersion : Swift.Hashable {}
+extension AmplitudeSwift.PersistentStorageVersion : Swift.RawRepresentable {}
+extension AmplitudeSwift.PluginType : Swift.Equatable {}
+extension AmplitudeSwift.PluginType : Swift.Hashable {}
+extension AmplitudeSwift.PluginType : Swift.RawRepresentable {}

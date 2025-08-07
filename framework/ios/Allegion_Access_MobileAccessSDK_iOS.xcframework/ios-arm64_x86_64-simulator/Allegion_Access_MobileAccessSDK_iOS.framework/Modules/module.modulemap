@@ -1,0 +1,11 @@
+framework module Allegion_Access_MobileAccessSDK_iOS {
+  umbrella header "Allegion.Access.MobileAccessSDK.iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Allegion_Access_MobileAccessSDK_iOS.Swift {
+  header "Allegion_Access_MobileAccessSDK_iOS-Swift.h"
+  requires objc
+}

@@ -1,0 +1,11 @@
+framework module AllegionAnalytics {
+  umbrella header "AllegionAnalytics-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionAnalytics.Swift {
+  header "AllegionAnalytics-Swift.h"
+  requires objc
+}
