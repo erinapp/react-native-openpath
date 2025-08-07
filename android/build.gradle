@@ -36,7 +36,7 @@ repositories {
 dependencies {
     implementation "com.facebook.react:react-native:${safeExtGet('reactNative', '+')}"
 
-    implementation project(':openpath-mobile-access-core')
+    implementation project(':openpath-sdk:openpath-mobile-access-core')
     // Openpath Mobile Access Core SDK Dependencies
     implementation 'com.madgag.spongycastle:core:1.54.0.0'
     implementation 'com.madgag.spongycastle:prov:1.54.0.0'

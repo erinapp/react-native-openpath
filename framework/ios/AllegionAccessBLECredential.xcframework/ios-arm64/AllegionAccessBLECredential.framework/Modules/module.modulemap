@@ -1,0 +1,11 @@
+framework module AllegionAccessBLECredential {
+  umbrella header "AllegionAccessBLECredential-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionAccessBLECredential.Swift {
+  header "AllegionAccessBLECredential-Swift.h"
+  requires objc
+}

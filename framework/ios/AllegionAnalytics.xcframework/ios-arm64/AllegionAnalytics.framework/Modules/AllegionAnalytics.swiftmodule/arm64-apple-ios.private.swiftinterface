@@ -1,0 +1,62 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionAnalytics
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AllegionAnalytics
+import AllegionLogging
+import AmplitudeSwift
+import Foundation
+import Segment
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AmplitudeConfiguration {
+  public init(logLevel: Swift.Int = 4, flushInterval: Swift.Int = 30, flushThreshold: Swift.Int = 30, autoCaputure: AmplitudeSwift.AutocaptureOptions = [.sessions])
+}
+public protocol AnalyticsManageable {
+  func initializeAppCenter(appSecretKey: Swift.String)
+  func initializeSegment(appSecretKey: Swift.String, config: AllegionAnalytics.SegmentConfiguration)
+  func initializeAmplitude(appSecretKey: Swift.String, config: AllegionAnalytics.AmplitudeConfiguration, sampling: any AllegionAnalytics.SamplingStrategy)
+  func addAnalyticsProvider(analyticsProviders: [any AllegionAnalytics.AnalyticsProvider])
+  func enableLogger(enable: Swift.Bool)
+}
+@_hasMissingDesignatedInitializers public class AnalyticsManager : AllegionAnalytics.AnalyticsManageable {
+  public static let shared: AllegionAnalytics.AnalyticsManager
+  public func initializeAppCenter(appSecretKey: Swift.String)
+  public func initializeSegment(appSecretKey: Swift.String, config: AllegionAnalytics.SegmentConfiguration = SegmentConfiguration())
+  public func initializeAmplitude(appSecretKey: Swift.String, config: AllegionAnalytics.AmplitudeConfiguration = AmplitudeConfiguration(), sampling: any AllegionAnalytics.SamplingStrategy = RandomSamplingStrategy(sampleRate: 1.0))
+  public func addAnalyticsProvider(analyticsProviders: [any AllegionAnalytics.AnalyticsProvider])
+  public func enableLogger(enable: Swift.Bool)
+  @objc deinit
+}
+extension AllegionAnalytics.AnalyticsManager : AllegionAnalytics.AnalyticsProvider {
+  public func trackScreenName(_ screenName: Swift.String, category: Swift.String? = nil, params: [Swift.String : Any]? = nil)
+  public func trackSuccessEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+  public func trackFailureEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+  public func trackEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+}
+public protocol AnalyticsProvider {
+  func trackScreenName(_ screenName: Swift.String, category: Swift.String?, params: [Swift.String : Any]?)
+  func trackSuccessEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+  func trackFailureEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+  func trackEvent(category: Swift.String, action: Swift.String, params: [Swift.String : Any]?)
+}
+public class RandomSamplingStrategy : AllegionAnalytics.SamplingStrategy {
+  public var shouldTrackSession: Swift.Bool {
+    get
+  }
+  public init(sampleRate: Swift.Double, randomNumber: Swift.Double = Double.random(in: 0...1))
+  @objc deinit
+}
+public protocol SamplingStrategy {
+  var shouldTrackSession: Swift.Bool { get }
+}
+public struct SegmentConfiguration {
+  public init(lifecycleEventsEnabled: Swift.Bool = true, pushNotificationsEnabled: Swift.Bool = true, deepLinksEnabled: Swift.Bool = true, flushThreshold: Swift.UInt = 20, flushTimeInterval: Swift.Double = 30, isDebugEnabled: Swift.Bool = false)
+}
+extension Segment.Analytics {
+  public func trackEvent(name: Swift.String, category: Swift.String?, properties: [Swift.String : Any]?)
+  public func trackscreen(name: Swift.String, category: Swift.String?, properties: [Swift.String : Any]?)
+}

@@ -1,0 +1,577 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionAccessHub
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AllegionAccessHub
+import AllegionExtensions
+import AllegionLogging
+import AllegionSecurity
+import AllegionTranslation
+import CommonCrypto
+import Foundation
+import PromiseKit
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol APIDispatchable {
+  init(config: any AllegionAccessHub.MAHConfigurable)
+  func execute<RequestType>(request: RequestType) -> AllegionAccessHub.WebCall<RequestType> where RequestType : AllegionAccessHub.WebRequest
+}
+public struct AuthenticationRequest : AllegionAccessHub.WebRequest {
+  public var subscriptionKey: Foundation.UUID?
+  public typealias ResponseType = AllegionAccessHub.AuthenticationResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let inviteId: Swift.String
+  public let inviteSecret: Swift.String
+  public init(subscriptionKey: Foundation.UUID, inviteId: Swift.String, inviteSecret: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public struct AuthenticationResponse : Swift.Codable {
+  public var tokenID: Swift.String
+  public var accessTokenID: Swift.String
+  public var integrationID: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CommissionRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.CommissionResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<AllegionAccessHub.CommissionRequest.RequestType?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accessToken: Swift.String
+  public let siteID: Swift.String
+  public let duid: Swift.String
+  public let payload: Swift.String
+  public let serialNumber: Swift.String
+  public let zone: Swift.String
+  public init(accessToken: Swift.String, siteID: Swift.String, duid: Swift.String, payload: Swift.String, serialNumber: Swift.String, zone: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public struct CommissionResponse : Swift.Codable, Swift.Equatable {
+  public var payload: Swift.String
+  public static func == (a: AllegionAccessHub.CommissionResponse, b: AllegionAccessHub.CommissionResponse) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ConnectAccountMAHResponse : Swift.Codable, Swift.Hashable, Swift.Equatable {
+  public var id: Foundation.UUID
+  public var integrationDisplayName: Swift.String
+  public var integrationID: Foundation.UUID
+  public var assignmentIdentity: Swift.String
+  public static func == (a: AllegionAccessHub.ConnectAccountMAHResponse, b: AllegionAccessHub.ConnectAccountMAHResponse) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ConnectAccountMAHWebRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.ConnectAccountMAHResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accountID: Foundation.UUID
+  public let integrationID: Foundation.UUID
+  public let idToken: Swift.String
+  public init(accountID: Foundation.UUID, integrationID: Foundation.UUID, idToken: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public struct CreateAccountMAHResponse : Swift.Codable {
+  public var id: Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CreateAccountMAHWebRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.CreateAccountMAHResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public init()
+  public typealias ErrorType = Swift.String
+}
+public struct DecommissionRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.DecommissionResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<AllegionAccessHub.DecommissionRequest.RequestType?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accessToken: Swift.String
+  public let siteID: Swift.String
+  public let serialNumber: Swift.String
+  public init(accessToken: Swift.String, siteID: Swift.String, serialNumber: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public struct DecommissionResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DeleteIsNoTourUpdateAvailableRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.DeleteIsNoTourUpdateAvailableResponse
+  public typealias RequestBodyType = AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequestBody
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequest.RequestBodyType?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let requestBody: AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequest.RequestBodyType
+  public init(accessRightIds: [Foundation.UUID])
+  public typealias ErrorType = Swift.String
+  public typealias RequestType = AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequest.RequestBodyType
+}
+public struct DeleteIsNoTourUpdateAvailableRequestBody : Swift.Codable, Swift.Equatable {
+  public let accessRightIds: [Swift.String]
+  public init(accessRightIds: [Swift.String])
+  public static func == (a: AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequestBody, b: AllegionAccessHub.DeleteIsNoTourUpdateAvailableRequestBody) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DeleteIsNoTourUpdateAvailableResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Environment : Swift.String {
+  case dev
+  case test
+  case beta
+  case pilot
+  case production
+  case devKeyRolling
+  case testKeyRolling
+  case integrationKeyRolling
+  case stagingKeyRolling
+  case prodKeyRolling
+  case devAPIManagement
+  case productionAPIManagement
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct GetRightsRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = [AllegionAccessHub.GetRightsResponse]
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accountID: Foundation.UUID
+  public init(accountID: Foundation.UUID)
+  public typealias ErrorType = Swift.String
+}
+public struct GetRightsResponse : Swift.Codable {
+  public var id: Foundation.UUID
+  public var connectedAccountId: Foundation.UUID
+  public var payloadTypes: [Swift.String]
+  public var attributes: [Swift.String : Swift.String]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Header : Swift.String {
+  case contentTypeJson
+  case subcriptionKey
+  case deviceSig
+  case auth
+  case authKeyRolling
+  case automatedTest
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case post
+  case put
+  case get
+  case delete
+  case patch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class KeyRollRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.KeyRollResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public var keyID: Swift.String
+  public var targetTenantID: Foundation.UUID
+  public var serialNumber: Swift.String
+  public var currentTenantID: Foundation.UUID?
+  public var currentVersionID: Foundation.UUID?
+  public var currentOrigin0TenantID: Foundation.UUID?
+  public var currentOrigin0VersionID: Foundation.UUID?
+  public var currentOrigin1TenantID: Foundation.UUID?
+  public var currentOrigin1VersionID: Foundation.UUID?
+  public init(keyID: Swift.String, targetTenantID: Foundation.UUID, serialNumber: Swift.String, currentTenantID: Foundation.UUID, currentVersionID: Foundation.UUID)
+  public init(keyID: Swift.String, targetTenantID: Foundation.UUID, serialNumber: Swift.String, currentTenantID: Foundation.UUID, currentVersionID: Foundation.UUID, currentOrigin0TenantID: Foundation.UUID, currentOrigin0VersionID: Foundation.UUID, currentOrigin1TenantID: Foundation.UUID, currentOrigin1VersionID: Foundation.UUID)
+  public typealias ErrorType = Swift.String
+  @objc deinit
+}
+public struct KeyRollResponse : Swift.Codable {
+  public var payload: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class MAHAPIDispatchable : AllegionAccessHub.APIDispatchable {
+  required public init(config: any AllegionAccessHub.MAHConfigurable)
+  public func execute<RequestType>(request: RequestType) -> AllegionAccessHub.WebCall<RequestType> where RequestType : AllegionAccessHub.WebRequest
+  @objc deinit
+}
+public protocol MAHConfigurable {
+  var subscriptionKey: Foundation.UUID { get }
+  var deviceKeyReference: Swift.String { get }
+  var deviceID: Foundation.UUID! { get }
+  var keyManager: any AllegionSecurity.KeyManagerDelegate { get }
+  var environment: AllegionAccessHub.Environment { get set }
+  var pinSetDictionary: [Swift.String : Swift.String]? { get }
+}
+public class MAHError : Swift.Error, Swift.Codable {
+  final public let errorCode: Swift.String
+  final public let details: [Swift.String : [Swift.String]]
+  final public let message: Swift.String
+  public init(errorCode: Swift.String, details: [Swift.String : [Swift.String]], message: Swift.String)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum NetworkError : Swift.Error, Swift.Equatable {
+  case badInput
+  case certificatePinFailed
+  case dataFormatError
+  case deserializationError
+  case deviceIDMissing
+  case encryptionKeysMissing
+  case genericError
+  case headerArrayEmpty
+  case invalidSignature
+  case invalidSubscriptionKey
+  case noData
+  case signatureGeneration
+  case signatureSetup
+  case signatureValidation
+  public static func == (a: AllegionAccessHub.NetworkError, b: AllegionAccessHub.NetworkError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionAccessHub.NetworkError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public struct PhoneVerificationRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.PhoneVerificationResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let phoneNumber: Swift.String
+  public init(phoneNumber: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public struct PhoneVerificationResponse : Swift.Codable {
+  public var phoneNumber: Swift.String?
+  public var id: Swift.String?
+  public var createdTime: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PostPayloadsBody : Swift.Codable, Swift.Equatable {
+  public let accessToken: Swift.String
+  public let payloadRequests: [AllegionAccessHub.PostPayloadsRequestData]?
+  public init(token: Swift.String, data: [AllegionAccessHub.PostPayloadsRequestData]?)
+  public static func == (a: AllegionAccessHub.PostPayloadsBody, b: AllegionAccessHub.PostPayloadsBody) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PostPayloadsRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.PostPayloadsResponse
+  public typealias RequestType = AllegionAccessHub.PostPayloadsBody
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<AllegionAccessHub.PostPayloadsRequest.RequestType?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accountID: Foundation.UUID
+  public let accessRightID: Foundation.UUID
+  public let accessToken: Swift.String
+  public let payloadBody: AllegionAccessHub.PostPayloadsBody
+  public init(accountID: Foundation.UUID, accessRightID: Foundation.UUID, accessToken: Swift.String, payloadRequests: [AllegionAccessHub.PostPayloadsRequestData])
+  public typealias ErrorType = Swift.String
+}
+public struct PostPayloadsRequestData : Swift.Codable, Swift.Equatable {
+  public var payloadType: Swift.String
+  public var mobileDevicePropertyBag: Swift.String?
+  public var payloadArgs: [Swift.String : Swift.String]?
+  public init(payloadType: Swift.String, mobileDevicePropertyBag: Swift.String?, payloadArgs: [Swift.String : Swift.String]?)
+  public static func == (a: AllegionAccessHub.PostPayloadsRequestData, b: AllegionAccessHub.PostPayloadsRequestData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PostPayloadsResponse : Swift.Codable {
+  public var accessRightID: Swift.String
+  public var payloads: [AllegionAccessHub.PostPayloadsResponseData]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PostPayloadsResponseData : Swift.Codable {
+  public var payloadType: Swift.String
+  public var payload: Swift.String
+  public var deviceId: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PostPreparePushProvisioning : AllegionAccessHub.WebRequest, Swift.Hashable, Swift.Equatable {
+  public typealias ResponseType = AllegionAccessHub.PostPreparePushProvisioningResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accessRightId: Foundation.UUID
+  public let accessToken: Swift.String
+  public init(accessRightId: Foundation.UUID, accessToken: Swift.String)
+  public static func == (a: AllegionAccessHub.PostPreparePushProvisioning, b: AllegionAccessHub.PostPreparePushProvisioning) -> Swift.Bool
+  public typealias ErrorType = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionAccessHub.PostPreparePushProvisioning : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct PostPreparePushProvisioningResponse : Swift.Codable, Swift.Hashable, Swift.Equatable {
+  public var cardConfigurationIdentifier: Swift.String
+  public var provisioningCredentialIdentifier: Swift.String
+  public var sharingInstanceIdentifier: Swift.String
+  public var referenceIdentifier: Swift.String
+  public var localizedDescription: Swift.String
+  public var ownerDisplayName: Swift.String
+  public var passThumbnailImage: Swift.String
+  public static func == (a: AllegionAccessHub.PostPreparePushProvisioningResponse, b: AllegionAccessHub.PostPreparePushProvisioningResponse) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterDeviceMAHResponse : Swift.Codable {
+  public var id: Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterDeviceMAHWebRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.RegisterDeviceMAHResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let devicePublicKey: Swift.String
+  public init(devicePublicKey: Swift.String)
+  public typealias ErrorType = Swift.String
+}
+public enum RequestParams<T> where T : Swift.Decodable, T : Swift.Encodable {
+  case body(T)
+  case url([Swift.String : any Swift.Decodable & Swift.Encodable])
+}
+public enum ResponseDataType {
+  case JSON
+  case Data
+  public static func == (a: AllegionAccessHub.ResponseDataType, b: AllegionAccessHub.ResponseDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct RetrieveConnectedAccountMAHResponse : Swift.Codable {
+  public var id: Foundation.UUID
+  public var integrationDisplayName: Swift.String
+  public var integrationID: Foundation.UUID
+  public var assignmentIdentity: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RetrieveConnectedAccountMAHWebRequest : AllegionAccessHub.WebRequest {
+  public typealias ResponseType = AllegionAccessHub.RetrieveConnectedAccountMAHResponse
+  public typealias RequestType = [Swift.String : Swift.String]
+  public var path: Swift.String {
+    get
+  }
+  public var method: AllegionAccessHub.HTTPMethod {
+    get
+  }
+  public var parameters: AllegionAccessHub.RequestParams<[Swift.String : Swift.String]?> {
+    get
+  }
+  public var headers: [AllegionAccessHub.Header] {
+    get
+  }
+  public let accountID: Foundation.UUID
+  public let connectedAccountID: Foundation.UUID
+  public init(accountID: Foundation.UUID, connectedAccountID: Foundation.UUID)
+  public typealias ErrorType = Swift.String
+}
+@objc @_hasMissingDesignatedInitializers public class URLSessionProvidable : ObjectiveC.NSObject, Foundation.URLSessionDelegate {
+  @objc public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class WebCall<RequestType> where RequestType : AllegionAccessHub.WebRequest {
+  public func success(_ onSuccess: @escaping (Swift.Int, RequestType.ResponseType) throws -> Swift.Void) -> AllegionAccessHub.WebCall<RequestType>
+  public func failure(_ onFailure: @escaping (Swift.Int, RequestType.ErrorType) throws -> Swift.Void) -> AllegionAccessHub.WebCall<RequestType>
+  public func error(_ onError: @escaping (any Swift.Error) -> Swift.Void) -> AllegionAccessHub.WebCall<RequestType>
+  @discardableResult
+  public func finally(_ onFinally: @escaping () -> Swift.Void) -> AllegionAccessHub.WebCall<RequestType>
+  @objc deinit
+}
+public protocol WebRequest {
+  associatedtype ResponseType : Swift.Decodable
+  associatedtype RequestType : Swift.Decodable, Swift.Encodable = [Swift.String : Swift.String]?
+  associatedtype ErrorType : Swift.Decodable = Swift.String
+  var path: Swift.String { get }
+  var method: AllegionAccessHub.HTTPMethod { get }
+  var parameters: AllegionAccessHub.RequestParams<Self.RequestType?> { get }
+  var headers: [AllegionAccessHub.Header] { get }
+  var subscriptionKey: Foundation.UUID? { get }
+}
+extension AllegionAccessHub.WebRequest {
+  public var subscriptionKey: Foundation.UUID? {
+    get
+  }
+}
+public enum WebResponse<RequestType> where RequestType : AllegionAccessHub.WebRequest {
+  case success(Swift.Int, RequestType.ResponseType)
+  case failure(Swift.Int, RequestType.ErrorType)
+  case error(any Swift.Error)
+}
+extension AllegionAccessHub.Environment : Swift.Equatable {}
+extension AllegionAccessHub.Environment : Swift.Hashable {}
+extension AllegionAccessHub.Environment : Swift.RawRepresentable {}
+extension AllegionAccessHub.Header : Swift.Equatable {}
+extension AllegionAccessHub.Header : Swift.Hashable {}
+extension AllegionAccessHub.Header : Swift.RawRepresentable {}
+extension AllegionAccessHub.HTTPMethod : Swift.Equatable {}
+extension AllegionAccessHub.HTTPMethod : Swift.Hashable {}
+extension AllegionAccessHub.HTTPMethod : Swift.RawRepresentable {}
+extension AllegionAccessHub.NetworkError : Swift.Hashable {}
+extension AllegionAccessHub.ResponseDataType : Swift.Equatable {}
+extension AllegionAccessHub.ResponseDataType : Swift.Hashable {}

@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
-platform :ios, '15'
 
 
+$ios_target_version = '15.0'
+
+platform :ios, $ios_target_version
 
 source 'https://cdn.cocoapods.org/'
 
 def get_dependencies_recursively(installer, root)
-  top_dependencies = installer.pod_targets.find { |pt| pt.name == root }.dependencies
+  top_dependencies = installer.pod_targets.find { |pt| pt.name == root }&.dependencies or return []
   dependencies = top_dependencies.to_set
   top_dependencies.each do |dep|
     dependencies.merge(get_dependencies_recursively(installer, dep)) if dep != root
@@ -16,7 +18,8 @@ def get_dependencies_recursively(installer, root)
 end
 
 def openpath_postinstall(installer)
-  openpath_dependencies = get_dependencies_recursively(installer, 'OpenpathMobile')
+  op_allegion_dependencies = get_dependencies_recursively(installer, 'OpenpathMobileAllegion')
+  openpath_dependencies = get_dependencies_recursively(installer, 'OpenpathMobile') + op_allegion_dependencies
   installer.generated_projects.each do |project|
     project.targets.each do |target|
       next unless openpath_dependencies.include?(target.name)
@@ -24,10 +27,12 @@ def openpath_postinstall(installer)
       puts "Target #{target} is an Openpath dependency, so setting BUILD_LIBRARY_FOR_DISTRIBUTION"
       target.build_configurations.each do |config|
         config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        # Some depended-on Pods have this set too low
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
         # None of the Openpath dependencies need to be signed
         config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        # Some depended-on Pods have this set too low
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = $ios_target_version
+
+
       end
     end
   end
@@ -39,6 +44,7 @@ target 'OpenpathExample' do
   use_frameworks!
 
   pod 'OpenpathMobile', path: '..'
+  pod 'OpenpathMobileAllegion', path: '..'
 
 
   target 'OpenpathExampleTests' do

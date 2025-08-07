@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('openpath-mobile-access-core-v0.4.5.aar'))

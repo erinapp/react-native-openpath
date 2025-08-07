@@ -34,17 +34,17 @@ private struct ItemDetailViewInternal: View {
                     DetailLine(title: "itemId",
                                value: itemState.itemId)
                     DetailLine(title: "isScheduledRemoteUnlockAllowed",
-                               value: itemState.isScheduledRemoteUnlockAllowed)
+                               value: itemState.isScheduledRemoteUnlockAllowed ?? false)
                     DetailLine(title: "isScheduledAvailableRevert",
-                               value: itemState.isScheduledAvailableRevert)
+                               value: itemState.isScheduledAvailableRevert ?? false)
                     DetailLine(title: "isScheduledNoAccess",
-                               value: itemState.isScheduledNoAccess)
+                               value: itemState.isScheduledNoAccess ?? false)
                     DetailLine(title: "isScheduledTouchAllowed",
-                               value: itemState.isScheduledTouchAllowed)
+                               value: itemState.isScheduledTouchAllowed ?? false)
                     DetailLine(title: "isScheduledUnlocked",
-                               value: itemState.isScheduledUnlocked)
+                               value: itemState.isScheduledUnlocked ?? false)
                     DetailLine(title: "isScheduledOverrideAllowed",
-                               value: itemState.isScheduledOverrideAllowed)
+                               value: itemState.isScheduledOverrideAllowed ?? false)
                     Button {
                         Task {
                             try? await OpenpathWrapper.shared._unlockSpecial(itemType: item.itemType,

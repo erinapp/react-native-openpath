@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AnalyticsConnector
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AnalyticsConnector
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers @objc public class AnalyticsConnector : ObjectiveC.NSObject {
+  @objc public static func getInstance(_ instanceName: Swift.String) -> AnalyticsConnector.AnalyticsConnector
+  @objc final public let eventBridge: any AnalyticsConnector.EventBridge
+  @objc final public let identityStore: any AnalyticsConnector.IdentityStore
+  @objc deinit
+}
+@objc public class AnalyticsEvent : ObjectiveC.NSObject {
+  @objc final public let eventType: Swift.String
+  @objc final public let eventProperties: Foundation.NSDictionary?
+  @objc final public let userProperties: Foundation.NSDictionary?
+  @objc public init(eventType: Swift.String, eventProperties: Foundation.NSDictionary?, userProperties: Foundation.NSDictionary?)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc public protocol EventBridge {
+  @objc func setEventReceiver(_ eventReceiver: @escaping (AnalyticsConnector.AnalyticsEvent) -> ())
+  @objc func logEvent(event: AnalyticsConnector.AnalyticsEvent)
+}
+@objc public class Identity : ObjectiveC.NSObject {
+  @objc final public let userId: Swift.String?
+  @objc final public let deviceId: Swift.String?
+  @objc final public let userProperties: Foundation.NSDictionary
+  @objc public init(userId: Swift.String? = nil, deviceId: Swift.String? = nil, userProperties: Foundation.NSDictionary? = nil)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc public protocol IdentityStore {
+  @objc func getIdentity() -> AnalyticsConnector.Identity
+  @objc func setIdentity(_ identity: AnalyticsConnector.Identity)
+  @objc func editIdentity() -> any AnalyticsConnector.IdentityStoreEditor
+  @objc func addIdentityListener(key: Swift.String, _ listener: @escaping (AnalyticsConnector.Identity) -> ())
+  @objc func removeIdentityListener(key: Swift.String)
+}
+@objc public protocol IdentityStoreEditor {
+  @objc func setUserId(_ userId: Swift.String?) -> any AnalyticsConnector.IdentityStoreEditor
+  @objc func setDeviceId(_ deviceId: Swift.String?) -> any AnalyticsConnector.IdentityStoreEditor
+  @objc func setUserProperties(_ userProperties: Foundation.NSDictionary) -> any AnalyticsConnector.IdentityStoreEditor
+  @objc func updateUserProperties(_ userPropertyActions: Foundation.NSDictionary) -> any AnalyticsConnector.IdentityStoreEditor
+  @objc func commit()
+}

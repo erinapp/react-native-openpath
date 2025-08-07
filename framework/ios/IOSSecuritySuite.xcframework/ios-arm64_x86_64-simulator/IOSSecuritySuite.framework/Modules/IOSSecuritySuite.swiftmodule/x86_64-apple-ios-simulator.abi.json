@@ -1,0 +1,1719 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "IOSSecuritySuite",
+    "printedName": "IOSSecuritySuite",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FailedCheck",
+        "printedName": "FailedCheck",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "urlSchemes",
+            "printedName": "urlSchemes",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO10urlSchemesyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO10urlSchemesyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "existenceOfSuspiciousFiles",
+            "printedName": "existenceOfSuspiciousFiles",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO26existenceOfSuspiciousFilesyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO26existenceOfSuspiciousFilesyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "suspiciousFilesCanBeOpened",
+            "printedName": "suspiciousFilesCanBeOpened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO26suspiciousFilesCanBeOpenedyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO26suspiciousFilesCanBeOpenedyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "restrictedDirectoriesWriteable",
+            "printedName": "restrictedDirectoriesWriteable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO30restrictedDirectoriesWriteableyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO30restrictedDirectoriesWriteableyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "fork",
+            "printedName": "fork",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO4forkyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO4forkyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "symbolicLinks",
+            "printedName": "symbolicLinks",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO13symbolicLinksyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO13symbolicLinksyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "dyld",
+            "printedName": "dyld",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO4dyldyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO4dyldyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "openedPorts",
+            "printedName": "openedPorts",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO11openedPortsyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO11openedPortsyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "pSelectFlag",
+            "printedName": "pSelectFlag",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO11pSelectFlagyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO11pSelectFlagyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Var",
+            "name": "suspiciousObjCClasses",
+            "printedName": "suspiciousObjCClasses",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FailedCheck.Type) -> IOSSecuritySuite.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO21suspiciousObjCClassesyA2CmF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO21suspiciousObjCClassesyA2CmF",
+            "moduleName": "IOSSecuritySuite"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FailedCheck",
+                "printedName": "IOSSecuritySuite.FailedCheck",
+                "usr": "s:16IOSSecuritySuite11FailedCheckO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FailedCheck",
+                "printedName": "IOSSecuritySuite.FailedCheck",
+                "usr": "s:16IOSSecuritySuite11FailedCheckO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO2eeoiySbAC_ACtFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO9hashValueSivp",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO9hashValueSivp",
+            "moduleName": "IOSSecuritySuite",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IOSSecuritySuite11FailedCheckO9hashValueSivg",
+                "mangledName": "$s16IOSSecuritySuite11FailedCheckO9hashValueSivg",
+                "moduleName": "IOSSecuritySuite",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO4hash4intoys6HasherVz_tF",
+            "moduleName": "IOSSecuritySuite",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[IOSSecuritySuite.FailedCheck]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "IOSSecuritySuite.FailedCheck",
+                    "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IOSSecuritySuite11FailedCheckO8allCasesSayACGvpZ",
+            "mangledName": "$s16IOSSecuritySuite11FailedCheckO8allCasesSayACGvpZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[IOSSecuritySuite.FailedCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IOSSecuritySuite11FailedCheckO8allCasesSayACGvgZ",
+                "mangledName": "$s16IOSSecuritySuite11FailedCheckO8allCasesSayACGvgZ",
+                "moduleName": "IOSSecuritySuite",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16IOSSecuritySuite11FailedCheckO",
+        "mangledName": "$s16IOSSecuritySuite11FailedCheckO",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[IOSSecuritySuite.FailedCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "IOSSecuritySuite.FailedCheck",
+                        "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileIntegrityCheck",
+        "printedName": "FileIntegrityCheck",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "bundleID",
+            "printedName": "bundleID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FileIntegrityCheck.Type) -> (Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO8bundleIDyACSScACmF",
+            "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO8bundleIDyACSScACmF",
+            "moduleName": "IOSSecuritySuite",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mobileProvision",
+            "printedName": "mobileProvision",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FileIntegrityCheck.Type) -> (Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO15mobileProvisionyACSScACmF",
+            "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO15mobileProvisionyACSScACmF",
+            "moduleName": "IOSSecuritySuite",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "machO",
+            "printedName": "machO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(IOSSecuritySuite.FileIntegrityCheck.Type) -> (Swift.String, Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> IOSSecuritySuite.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "IOSSecuritySuite.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO5machOyACSS_SStcACmF",
+            "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO5machOyACSS_SStcACmF",
+            "moduleName": "IOSSecuritySuite",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO11descriptionSSvp",
+            "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO11descriptionSSvp",
+            "moduleName": "IOSSecuritySuite",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO11descriptionSSvg",
+                "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO11descriptionSSvg",
+                "moduleName": "IOSSecuritySuite",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO",
+        "mangledName": "$s16IOSSecuritySuite18FileIntegrityCheckO",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IOSSecuritySuite",
+        "printedName": "IOSSecuritySuite",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "amIJailbroken",
+            "printedName": "amIJailbroken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC13amIJailbrokenSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC13amIJailbrokenSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIJailbrokenWithFailMessage",
+            "printedName": "amIJailbrokenWithFailMessage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(jailbroken: Swift.Bool, failMessage: Swift.String)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC28amIJailbrokenWithFailMessageSb10jailbroken_SS04failG0tyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC28amIJailbrokenWithFailMessageSb10jailbroken_SS04failG0tyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIJailbrokenWithFailedChecks",
+            "printedName": "amIJailbrokenWithFailedChecks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(jailbroken: Swift.Bool, failedChecks: [(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FailedCheck",
+                            "printedName": "IOSSecuritySuite.FailedCheck",
+                            "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC29amIJailbrokenWithFailedChecksSb10jailbroken_SayAA0F5CheckO5check_SS11failMessagetG06failedG0tyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC29amIJailbrokenWithFailedChecksSb10jailbroken_SayAA0F5CheckO5check_SS11failMessagetG06failedG0tyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRunInEmulator",
+            "printedName": "amIRunInEmulator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC16amIRunInEmulatorSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC16amIRunInEmulatorSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIDebugged",
+            "printedName": "amIDebugged()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC11amIDebuggedSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC11amIDebuggedSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "denyDebugger",
+            "printedName": "denyDebugger()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC12denyDebuggeryyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC12denyDebuggeryyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isParentPidUnexpected",
+            "printedName": "isParentPidUnexpected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC21isParentPidUnexpectedSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC21isParentPidUnexpectedSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amITampered",
+            "printedName": "amITampered(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(result: Swift.Bool, hitChecks: [IOSSecuritySuite.FileIntegrityCheck])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[IOSSecuritySuite.FileIntegrityCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                        "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[IOSSecuritySuite.FileIntegrityCheck]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileIntegrityCheck",
+                    "printedName": "IOSSecuritySuite.FileIntegrityCheck",
+                    "usr": "s:16IOSSecuritySuite18FileIntegrityCheckO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC11amITamperedySb6result_SayAA18FileIntegrityCheckOG9hitCheckstAGFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC11amITamperedySb6result_SayAA18FileIntegrityCheckOG9hitCheckstAGFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIReverseEngineered",
+            "printedName": "amIReverseEngineered()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC20amIReverseEngineeredSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC20amIReverseEngineeredSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIReverseEngineeredWithFailedChecks",
+            "printedName": "amIReverseEngineeredWithFailedChecks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(reverseEngineered: Swift.Bool, failedChecks: [(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(check: IOSSecuritySuite.FailedCheck, failMessage: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FailedCheck",
+                            "printedName": "IOSSecuritySuite.FailedCheck",
+                            "usr": "s:16IOSSecuritySuite11FailedCheckO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC36amIReverseEngineeredWithFailedChecksSb07reverseE0_SayAA0G5CheckO5check_SS11failMessagetG06failedH0tyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC36amIReverseEngineeredWithFailedChecksSb07reverseE0_SayAA0G5CheckO5check_SS11failMessagetG06failedH0tyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRuntimeHooked",
+            "printedName": "amIRuntimeHooked(dyldWhiteList:detectionClass:selector:isClassMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any AnyObject.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC16amIRuntimeHooked13dyldWhiteList14detectionClass8selector02isJ6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC16amIRuntimeHooked13dyldWhiteList14detectionClass8selector02isJ6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRuntimeHooked",
+            "printedName": "amIRuntimeHooked(dyldAllowList:detectionClass:selector:isClassMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any AnyObject.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC16amIRuntimeHooked13dyldAllowList14detectionClass8selector02isJ6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC16amIRuntimeHooked13dyldAllowList14detectionClass8selector02isJ6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIProxied",
+            "printedName": "amIProxied()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC10amIProxiedSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC10amIProxiedSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIInLockdownMode",
+            "printedName": "amIInLockdownMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IOSSecuritySuiteAAC17amIInLockdownModeSbyFZ",
+            "mangledName": "$s16IOSSecuritySuiteAAC17amIInLockdownModeSbyFZ",
+            "moduleName": "IOSSecuritySuite",
+            "static": true,
+            "intro_iOS": "16",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16IOSSecuritySuiteAAC",
+        "mangledName": "$s16IOSSecuritySuiteAAC",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "IOSSecuritySuite"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 831,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 878,
+      "length": 8,
+      "value": "\"ptrace\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1087,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1091,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1094,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1097,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1125,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 1141,
+      "length": 75,
+      "value": "\"Error occured when calling ptrace(). Denying debugger may not be reliable\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9958,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 10001,
+      "length": 6,
+      "value": "\"fork\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10172,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10198,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/IOSSecuritySuite\/IOSSecuritySuite\/ProxyChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 266,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

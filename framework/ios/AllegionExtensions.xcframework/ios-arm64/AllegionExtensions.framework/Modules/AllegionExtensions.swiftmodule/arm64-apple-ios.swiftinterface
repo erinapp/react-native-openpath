@@ -1,0 +1,221 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionExtensions
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AllegionExtensions
+import CoreBluetooth
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Swift.Bool : AllegionExtensions.DataConvertible {
+  public var data: Foundation.Data {
+    get
+  }
+  public init?(data: Foundation.Data)
+}
+extension CoreBluetooth.CBManagerState : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Character : AllegionExtensions.DataConvertible {
+  public var data: Foundation.Data {
+    get
+  }
+  public init?(data: Foundation.Data)
+}
+extension Swift.Encodable {
+  public var data: Foundation.Data? {
+    get
+  }
+}
+public protocol DataConvertible {
+  init?(data: Foundation.Data)
+  var data: Foundation.Data { get }
+}
+extension AllegionExtensions.DataConvertible where Self : Swift.ExpressibleByIntegerLiteral {
+  public init?(data: Foundation.Data)
+  public var data: Foundation.Data {
+    get
+  }
+}
+extension Foundation.Data {
+  public var hexDescription: Swift.String {
+    get
+  }
+  public var hexString: Swift.String {
+    get
+  }
+  public var byteArray: [Swift.UInt8] {
+    get
+  }
+  public var uuid: Foundation.UUID? {
+    get
+  }
+  public var macAddress: Swift.String? {
+    get
+  }
+  public var stringUTF8: Swift.String? {
+    get
+  }
+  public var stringASCII: Swift.String? {
+    get
+  }
+  public init?(hexString: Swift.String)
+  public init(uuid: Foundation.UUID)
+  public func chunked(_ size: Swift.Int) -> [Foundation.Data]?
+}
+extension Foundation.Date {
+  public var ISO8601TimestampFormat: Swift.String {
+    get
+  }
+  public var ISO8601TimestampFormatWithTimeZone: Swift.String {
+    get
+  }
+  public func parseFromISO8601FormatWithTimezone(_ src: Swift.String) -> Foundation.Date?
+}
+extension Swift.Double : AllegionExtensions.DataConvertible {
+}
+extension Swift.Float : AllegionExtensions.DataConvertible {
+}
+@available(iOS 14, *)
+extension Swift.Float16 : AllegionExtensions.DataConvertible {
+}
+extension Swift.Int : AllegionExtensions.DataConvertible {
+}
+extension Swift.Int16 : AllegionExtensions.DataConvertible {
+}
+extension Swift.Int32 : AllegionExtensions.DataConvertible {
+}
+extension Swift.Int64 : AllegionExtensions.DataConvertible {
+}
+extension Swift.Int8 : AllegionExtensions.DataConvertible {
+}
+public class Queue<T> {
+  public var next: T? {
+    get
+  }
+  public var removed: T?
+  public var count: Swift.Int {
+    get
+  }
+  public init(_ array: [T])
+  public func add(_ newItem: T)
+  public func removeNext() -> T?
+  public func clear()
+  @objc deinit
+}
+extension Swift.String : AllegionExtensions.DataConvertible {
+  public var data: Foundation.Data {
+    get
+  }
+  public var hexData: Foundation.Data? {
+    get
+  }
+  public var strip: Swift.String {
+    get
+  }
+  public var isValidURL: Swift.Bool {
+    get
+  }
+  public var bool: Swift.Bool? {
+    get
+  }
+  public var humanReadableTitle: Swift.String {
+    get
+  }
+  public var jsonSafeEmptyObject: Swift.String {
+    get
+  }
+  public init?(data: Foundation.Data)
+  public func separate(every stride: Swift.Int, with separator: Swift.Character) -> Swift.String
+}
+extension UIKit.UIColor {
+  public var engageOrange: UIKit.UIColor {
+    get
+  }
+  public var engageWhite: UIKit.UIColor {
+    get
+  }
+  public var engageDarkGray: UIKit.UIColor {
+    get
+  }
+  public var engageMediumGray: UIKit.UIColor {
+    get
+  }
+  public var engageLightGray: UIKit.UIColor {
+    get
+  }
+  public var engageVeryLightGray: UIKit.UIColor {
+    get
+  }
+  public var engageGold: UIKit.UIColor {
+    get
+  }
+  public var engageLightOrange: UIKit.UIColor {
+    get
+  }
+  public var engageRust: UIKit.UIColor {
+    get
+  }
+  public var engageGreen: UIKit.UIColor {
+    get
+  }
+  public var engageBlue: UIKit.UIColor {
+    get
+  }
+  public var engageTeal: UIKit.UIColor {
+    get
+  }
+  public var engagePurple: UIKit.UIColor {
+    get
+  }
+  public var translucentGray: UIKit.UIColor {
+    get
+  }
+  public var defaultGray: UIKit.UIColor {
+    get
+  }
+  public var disabledGray: UIKit.UIColor {
+    get
+  }
+  public var tableHeaderGray: UIKit.UIColor {
+    get
+  }
+  public var primaryTextGray: UIKit.UIColor {
+    get
+  }
+  public var wizardGray: UIKit.UIColor {
+    get
+  }
+  public var engageMutedOrange: UIKit.UIColor {
+    get
+  }
+  public var siteSurveyGreen: UIKit.UIColor {
+    get
+  }
+  public var siteSurveyYellow: UIKit.UIColor {
+    get
+  }
+  public var siteSurveyRed: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor @preconcurrency public var isSimulator: Swift.Bool {
+    get
+  }
+}
+extension Swift.UInt : AllegionExtensions.DataConvertible {
+}
+extension Swift.UInt16 : AllegionExtensions.DataConvertible {
+}
+extension Swift.UInt32 : AllegionExtensions.DataConvertible {
+}
+extension Swift.UInt64 : AllegionExtensions.DataConvertible {
+}
+extension Swift.UInt8 : AllegionExtensions.DataConvertible {
+}

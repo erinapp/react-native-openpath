@@ -1,0 +1,4469 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AllegionSecurity",
+    "printedName": "AllegionSecurity",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoSwift",
+        "printedName": "CryptoSwift",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AES",
+        "printedName": "AES",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AES",
+                "printedName": "AllegionSecurity.AES",
+                "usr": "s:16AllegionSecurity3AESC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity3AESCACycfc",
+            "mangledName": "$s16AllegionSecurity3AESCACycfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(_:data:paddingType:iv:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3AESC7encrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "mangledName": "$s16AllegionSecurity3AESC7encrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(_:data:paddingType:iv:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3AESC7decrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "mangledName": "$s16AllegionSecurity3AESC7decrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity3AESC",
+        "mangledName": "$s16AllegionSecurity3AESC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AESProtocol",
+            "printedName": "AESProtocol",
+            "usr": "s:16AllegionSecurity11AESProtocolP",
+            "mangledName": "$s16AllegionSecurity11AESProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AESProtocol",
+        "printedName": "AESProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(_:data:paddingType:iv:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11AESProtocolP7encrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "mangledName": "$s16AllegionSecurity11AESProtocolP7encrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.AESProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.AESProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(_:data:paddingType:iv:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11AESProtocolP7decrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "mangledName": "$s16AllegionSecurity11AESProtocolP7decrypt_4data11paddingType2iv10Foundation4DataVAJ_AjA07PaddingG0OAJSgtKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.AESProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.AESProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16AllegionSecurity11AESProtocolP",
+        "mangledName": "$s16AllegionSecurity11AESProtocolP",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CRC",
+        "printedName": "CRC",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "crc16XMODEM",
+            "printedName": "crc16XMODEM(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3CRCC11crc16XMODEMy10Foundation4DataVAGFZ",
+            "mangledName": "$s16AllegionSecurity3CRCC11crc16XMODEMy10Foundation4DataVAGFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity3CRCC",
+        "mangledName": "$s16AllegionSecurity3CRCC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionLogging",
+        "printedName": "AllegionLogging",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ECC",
+        "printedName": "ECC",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ECC",
+                "printedName": "AllegionSecurity.ECC",
+                "usr": "s:16AllegionSecurity3ECCC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity3ECCCACycfc",
+            "mangledName": "$s16AllegionSecurity3ECCCACycfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3ECCC7encrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity3ECCC7encrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3ECCC7decrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity3ECCC7decrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3ECCC4sign3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity3ECCC4sign3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verify",
+            "printedName": "verify(key:data:signature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3ECCC6verify3key4data9signatureSbSo9SecKeyRefa_10Foundation4DataVALtKFZ",
+            "mangledName": "$s16AllegionSecurity3ECCC6verify3key4data9signatureSbSo9SecKeyRefa_10Foundation4DataVALtKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createSharedSecret",
+            "printedName": "createSharedSecret(privateKey:publicKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity3ECCC18createSharedSecret10privateKey06publicH010Foundation4DataVSgSo03SecH3Refa_ALtKFZ",
+            "mangledName": "$s16AllegionSecurity3ECCC18createSharedSecret10privateKey06publicH010Foundation4DataVSgSo03SecH3Refa_ALtKFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity3ECCC",
+        "mangledName": "$s16AllegionSecurity3ECCC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ECCProtocol",
+            "printedName": "ECCProtocol",
+            "usr": "s:16AllegionSecurity11ECCProtocolP",
+            "mangledName": "$s16AllegionSecurity11ECCProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ECCProtocol",
+        "printedName": "ECCProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11ECCProtocolP7encrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity11ECCProtocolP7encrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.ECCProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.ECCProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11ECCProtocolP7decrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity11ECCProtocolP7decrypt3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.ECCProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.ECCProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(key:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11ECCProtocolP4sign3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "mangledName": "$s16AllegionSecurity11ECCProtocolP4sign3key4data10Foundation4DataVSo9SecKeyRefa_AItKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.ECCProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.ECCProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verify",
+            "printedName": "verify(key:data:signature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11ECCProtocolP6verify3key4data9signatureSbSo9SecKeyRefa_10Foundation4DataVALtKFZ",
+            "mangledName": "$s16AllegionSecurity11ECCProtocolP6verify3key4data9signatureSbSo9SecKeyRefa_10Foundation4DataVALtKFZ",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.ECCProtocol>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.ECCProtocol>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16AllegionSecurity11ECCProtocolP",
+        "mangledName": "$s16AllegionSecurity11ECCProtocolP",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ECCType",
+        "printedName": "ECCType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "spec256R1",
+            "printedName": "spec256R1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.ECCType.Type) -> AllegionSecurity.ECCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ECCType",
+                    "printedName": "AllegionSecurity.ECCType",
+                    "usr": "s:16AllegionSecurity7ECCTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.ECCType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ECCType",
+                        "printedName": "AllegionSecurity.ECCType",
+                        "usr": "s:16AllegionSecurity7ECCTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7ECCTypeO9spec256R1yA2CmF",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO9spec256R1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "spec192R1",
+            "printedName": "spec192R1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.ECCType.Type) -> AllegionSecurity.ECCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ECCType",
+                    "printedName": "AllegionSecurity.ECCType",
+                    "usr": "s:16AllegionSecurity7ECCTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.ECCType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ECCType",
+                        "printedName": "AllegionSecurity.ECCType",
+                        "usr": "s:16AllegionSecurity7ECCTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7ECCTypeO9spec192R1yA2CmF",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO9spec192R1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "spec128R1",
+            "printedName": "spec128R1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.ECCType.Type) -> AllegionSecurity.ECCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ECCType",
+                    "printedName": "AllegionSecurity.ECCType",
+                    "usr": "s:16AllegionSecurity7ECCTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.ECCType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ECCType",
+                        "printedName": "AllegionSecurity.ECCType",
+                        "usr": "s:16AllegionSecurity7ECCTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7ECCTypeO9spec128R1yA2CmF",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO9spec128R1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ECCType",
+                "printedName": "AllegionSecurity.ECCType",
+                "usr": "s:16AllegionSecurity7ECCTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ECCType",
+                "printedName": "AllegionSecurity.ECCType",
+                "usr": "s:16AllegionSecurity7ECCTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity7ECCTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity7ECCTypeO9hashValueSivp",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO9hashValueSivp",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity7ECCTypeO9hashValueSivg",
+                "mangledName": "$s16AllegionSecurity7ECCTypeO9hashValueSivg",
+                "moduleName": "AllegionSecurity",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity7ECCTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16AllegionSecurity7ECCTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity7ECCTypeO",
+        "mangledName": "$s16AllegionSecurity7ECCTypeO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HKDF",
+        "printedName": "HKDF",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HKDF",
+                "printedName": "AllegionSecurity.HKDF",
+                "usr": "s:16AllegionSecurity4HKDFC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity4HKDFCACycfc",
+            "mangledName": "$s16AllegionSecurity4HKDFCACycfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "expand",
+            "printedName": "expand(algorithm:key:info:outputSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HMACAlgorithm",
+                "printedName": "AllegionSecurity.HMACAlgorithm",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity4HKDFC6expand9algorithm3key4info10outputSize10Foundation4DataVAA13HMACAlgorithmO_A2KSitF",
+            "mangledName": "$s16AllegionSecurity4HKDFC6expand9algorithm3key4info10outputSize10Foundation4DataVAA13HMACAlgorithmO_A2KSitF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity4HKDFC",
+        "mangledName": "$s16AllegionSecurity4HKDFC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HMAC",
+        "printedName": "HMAC",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(algorithm:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HMAC",
+                "printedName": "AllegionSecurity.HMAC",
+                "usr": "s:16AllegionSecurity4HMACC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HMACAlgorithm",
+                "printedName": "AllegionSecurity.HMACAlgorithm",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity4HMACC9algorithm3keyAcA13HMACAlgorithmO_10Foundation4DataVtcfc",
+            "mangledName": "$s16AllegionSecurity4HMACC9algorithm3keyAcA13HMACAlgorithmO_10Foundation4DataVtcfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "processHmacData",
+            "printedName": "processHmacData(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity4HMACC15processHmacData4data10Foundation0F0VAH_tF",
+            "mangledName": "$s16AllegionSecurity4HMACC15processHmacData4data10Foundation0F0VAH_tF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity4HMACC",
+        "mangledName": "$s16AllegionSecurity4HMACC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HMACAlgorithm",
+        "printedName": "HMACAlgorithm",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "SHA1",
+            "printedName": "SHA1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.HMACAlgorithm.Type) -> AllegionSecurity.HMACAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HMACAlgorithm",
+                    "printedName": "AllegionSecurity.HMACAlgorithm",
+                    "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.HMACAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HMACAlgorithm",
+                        "printedName": "AllegionSecurity.HMACAlgorithm",
+                        "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO4SHA1yA2CmF",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO4SHA1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "SHA256",
+            "printedName": "SHA256",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.HMACAlgorithm.Type) -> AllegionSecurity.HMACAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HMACAlgorithm",
+                    "printedName": "AllegionSecurity.HMACAlgorithm",
+                    "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.HMACAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HMACAlgorithm",
+                        "printedName": "AllegionSecurity.HMACAlgorithm",
+                        "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO6SHA256yA2CmF",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO6SHA256yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "SHA384",
+            "printedName": "SHA384",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.HMACAlgorithm.Type) -> AllegionSecurity.HMACAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HMACAlgorithm",
+                    "printedName": "AllegionSecurity.HMACAlgorithm",
+                    "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.HMACAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HMACAlgorithm",
+                        "printedName": "AllegionSecurity.HMACAlgorithm",
+                        "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO6SHA384yA2CmF",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO6SHA384yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "SHA512",
+            "printedName": "SHA512",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.HMACAlgorithm.Type) -> AllegionSecurity.HMACAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HMACAlgorithm",
+                    "printedName": "AllegionSecurity.HMACAlgorithm",
+                    "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.HMACAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HMACAlgorithm",
+                        "printedName": "AllegionSecurity.HMACAlgorithm",
+                        "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO6SHA512yA2CmF",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO6SHA512yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "digestLength",
+            "printedName": "digestLength",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO12digestLengthSivp",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO12digestLengthSivp",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO12digestLengthSivg",
+                "mangledName": "$s16AllegionSecurity13HMACAlgorithmO12digestLengthSivg",
+                "moduleName": "AllegionSecurity",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HMACAlgorithm",
+                "printedName": "AllegionSecurity.HMACAlgorithm",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HMACAlgorithm",
+                "printedName": "AllegionSecurity.HMACAlgorithm",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO2eeoiySbAC_ACtFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO9hashValueSivp",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO9hashValueSivp",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity13HMACAlgorithmO9hashValueSivg",
+                "mangledName": "$s16AllegionSecurity13HMACAlgorithmO9hashValueSivg",
+                "moduleName": "AllegionSecurity",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13HMACAlgorithmO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16AllegionSecurity13HMACAlgorithmO4hash4intoys6HasherVz_tF",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity13HMACAlgorithmO",
+        "mangledName": "$s16AllegionSecurity13HMACAlgorithmO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "IOSSecuritySuite",
+        "printedName": "IOSSecuritySuite",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JailBreakProtection",
+        "printedName": "JailBreakProtection",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "isDeviceJailBroken",
+            "printedName": "isDeviceJailBroken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity19JailBreakProtectionC08isDeviceC6BrokenSbyFZ",
+            "mangledName": "$s16AllegionSecurity19JailBreakProtectionC08isDeviceC6BrokenSbyFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity19JailBreakProtectionC",
+        "mangledName": "$s16AllegionSecurity19JailBreakProtectionC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Key",
+        "printedName": "Key",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.Key.Type) -> (Foundation.Data) -> AllegionSecurity.Key",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Data) -> AllegionSecurity.Key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Key",
+                        "printedName": "AllegionSecurity.Key",
+                        "usr": "s:16AllegionSecurity3KeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Key",
+                        "printedName": "AllegionSecurity.Key",
+                        "usr": "s:16AllegionSecurity3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity3KeyO4datayAC10Foundation4DataVcACmF",
+            "mangledName": "$s16AllegionSecurity3KeyO4datayAC10Foundation4DataVcACmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "secKey",
+            "printedName": "secKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.Key.Type) -> (Security.SecKey) -> AllegionSecurity.Key",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Security.SecKey) -> AllegionSecurity.Key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Key",
+                        "printedName": "AllegionSecurity.Key",
+                        "usr": "s:16AllegionSecurity3KeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Key",
+                        "printedName": "AllegionSecurity.Key",
+                        "usr": "s:16AllegionSecurity3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity3KeyO03secC0yACSo03SecC3RefacACmF",
+            "mangledName": "$s16AllegionSecurity3KeyO03secC0yACSo03SecC3RefacACmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "dataValue",
+            "printedName": "dataValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity3KeyO9dataValue10Foundation4DataVSgvp",
+            "mangledName": "$s16AllegionSecurity3KeyO9dataValue10Foundation4DataVSgvp",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity3KeyO9dataValue10Foundation4DataVSgvg",
+                "mangledName": "$s16AllegionSecurity3KeyO9dataValue10Foundation4DataVSgvg",
+                "moduleName": "AllegionSecurity",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secKeyValue",
+            "printedName": "secKeyValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecKey",
+                    "printedName": "Security.SecKey",
+                    "usr": "c:@T@SecKeyRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity3KeyO03secC5ValueSo03SecC3RefaSgvp",
+            "mangledName": "$s16AllegionSecurity3KeyO03secC5ValueSo03SecC3RefaSgvp",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Security.SecKey?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity3KeyO03secC5ValueSo03SecC3RefaSgvg",
+                "mangledName": "$s16AllegionSecurity3KeyO03secC5ValueSo03SecC3RefaSgvg",
+                "moduleName": "AllegionSecurity",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity3KeyO",
+        "mangledName": "$s16AllegionSecurity3KeyO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionLogging",
+        "printedName": "AllegionLogging",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionExtensions",
+        "printedName": "AllegionExtensions",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyManager",
+        "printedName": "KeyManager",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyManager",
+                "printedName": "AllegionSecurity.KeyManager",
+                "usr": "s:16AllegionSecurity10KeyManagerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity10KeyManagerCACycfc",
+            "mangledName": "$s16AllegionSecurity10KeyManagerCACycfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKeyPairSecure",
+            "printedName": "generateKeyPairSecure(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC08generateC10PairSecure4type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC08generateC10PairSecure4type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKeyPair",
+            "printedName": "generateKeyPair(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC08generateC4Pair4type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC08generateC4Pair4type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKey",
+            "printedName": "generateKey(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC08generateC04type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC08generateC04type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeKey",
+            "printedName": "removeKey(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC06removeC03tagSbSS_tKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC06removeC03tagSbSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "storeKey",
+            "printedName": "storeKey(key:type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC05storeC03key4type3tagSb10Foundation4DataV_AA0C4TypeOSStKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC05storeC03key4type3tagSb10Foundation4DataV_AA0C4TypeOSStKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKey",
+            "printedName": "getKey(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AllegionSecurity.Key?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Key",
+                    "printedName": "AllegionSecurity.Key",
+                    "usr": "s:16AllegionSecurity3KeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC03getC03tagAA0C0OSgSS_tKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC03getC03tagAA0C0OSgSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKeyPair",
+            "printedName": "getKeyPair(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(publicKey: Security.SecKey, privateKey: Security.SecKey)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(publicKey: Security.SecKey, privateKey: Security.SecKey)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC03getC4Pair3tagSo03SecC3Refa06publicC0_AG07privateC0tSgSS_tKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC03getC4Pair3tagSo03SecC3Refa06publicC0_AG07privateC0tSgSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportEcPublicKeyUncompressedFormat",
+            "printedName": "exportEcPublicKeyUncompressedFormat(publicKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC014exportEcPublicC18UncompressedFormat06publicC010Foundation4DataVSgSo03SecC3Refa_tF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC014exportEcPublicC18UncompressedFormat06publicC010Foundation4DataVSgSo03SecC3Refa_tF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "compressPublicKey",
+            "printedName": "compressPublicKey(rawUncompressedPublicKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity10KeyManagerC014compressPublicC0015rawUncompressedfC010Foundation4DataVSgAH_tKF",
+            "mangledName": "$s16AllegionSecurity10KeyManagerC014compressPublicC0015rawUncompressedfC010Foundation4DataVSgAH_tKF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity10KeyManagerC",
+        "mangledName": "$s16AllegionSecurity10KeyManagerC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KeyManagerDelegate",
+            "printedName": "KeyManagerDelegate",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyManagerDelegate",
+        "printedName": "KeyManagerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "generateKeyPairSecure",
+            "printedName": "generateKeyPairSecure(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP08generateC10PairSecure4type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP08generateC10PairSecure4type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKeyPair",
+            "printedName": "generateKeyPair(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP08generateC4Pair4type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP08generateC4Pair4type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKey",
+            "printedName": "generateKey(type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP08generateC04type3tagSbAA0C4TypeO_SStKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP08generateC04type3tagSbAA0C4TypeO_SStKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeKey",
+            "printedName": "removeKey(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP06removeC03tagSbSS_tKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP06removeC03tagSbSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "storeKey",
+            "printedName": "storeKey(key:type:tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyType",
+                "printedName": "AllegionSecurity.KeyType",
+                "usr": "s:16AllegionSecurity7KeyTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP05storeC03key4type3tagSb10Foundation4DataV_AA0C4TypeOSStKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP05storeC03key4type3tagSb10Foundation4DataV_AA0C4TypeOSStKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKey",
+            "printedName": "getKey(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AllegionSecurity.Key?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Key",
+                    "printedName": "AllegionSecurity.Key",
+                    "usr": "s:16AllegionSecurity3KeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP03getC03tagAA0C0OSgSS_tKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP03getC03tagAA0C0OSgSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKeyPair",
+            "printedName": "getKeyPair(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(publicKey: Security.SecKey, privateKey: Security.SecKey)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(publicKey: Security.SecKey, privateKey: Security.SecKey)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecKey",
+                        "printedName": "Security.SecKey",
+                        "usr": "c:@T@SecKeyRef"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP03getC4Pair3tagSo03SecC3Refa06publicC0_AG07privateC0tSgSS_tKF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP03getC4Pair3tagSo03SecC3Refa06publicC0_AG07privateC0tSgSS_tKF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportEcPublicKeyUncompressedFormat",
+            "printedName": "exportEcPublicKeyUncompressedFormat(publicKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity18KeyManagerDelegateP014exportEcPublicC18UncompressedFormat06publicC010Foundation4DataVSgSo03SecC3Refa_tF",
+            "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP014exportEcPublicC18UncompressedFormat06publicC010Foundation4DataVSgSo03SecC3Refa_tF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.KeyManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.KeyManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16AllegionSecurity18KeyManagerDelegateP",
+        "mangledName": "$s16AllegionSecurity18KeyManagerDelegateP",
+        "moduleName": "AllegionSecurity",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyType",
+        "printedName": "KeyType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "aesCBC256NoPadding",
+            "printedName": "aesCBC256NoPadding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.KeyType.Type) -> AllegionSecurity.KeyType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyType",
+                    "printedName": "AllegionSecurity.KeyType",
+                    "usr": "s:16AllegionSecurity7KeyTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.KeyType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyType",
+                        "printedName": "AllegionSecurity.KeyType",
+                        "usr": "s:16AllegionSecurity7KeyTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7KeyTypeO18aesCBC256NoPaddingyA2CmF",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO18aesCBC256NoPaddingyA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "aesCBC256PKCS7Padding",
+            "printedName": "aesCBC256PKCS7Padding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.KeyType.Type) -> AllegionSecurity.KeyType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyType",
+                    "printedName": "AllegionSecurity.KeyType",
+                    "usr": "s:16AllegionSecurity7KeyTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.KeyType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyType",
+                        "printedName": "AllegionSecurity.KeyType",
+                        "usr": "s:16AllegionSecurity7KeyTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7KeyTypeO21aesCBC256PKCS7PaddingyA2CmF",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO21aesCBC256PKCS7PaddingyA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "eccECDSASpec256r1",
+            "printedName": "eccECDSASpec256r1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.KeyType.Type) -> AllegionSecurity.KeyType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyType",
+                    "printedName": "AllegionSecurity.KeyType",
+                    "usr": "s:16AllegionSecurity7KeyTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.KeyType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyType",
+                        "printedName": "AllegionSecurity.KeyType",
+                        "usr": "s:16AllegionSecurity7KeyTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7KeyTypeO17eccECDSASpec256r1yA2CmF",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO17eccECDSASpec256r1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "eccECDHSpec256r1",
+            "printedName": "eccECDHSpec256r1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.KeyType.Type) -> AllegionSecurity.KeyType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyType",
+                    "printedName": "AllegionSecurity.KeyType",
+                    "usr": "s:16AllegionSecurity7KeyTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.KeyType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyType",
+                        "printedName": "AllegionSecurity.KeyType",
+                        "usr": "s:16AllegionSecurity7KeyTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity7KeyTypeO16eccECDHSpec256r1yA2CmF",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO16eccECDHSpec256r1yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AllegionSecurity.KeyType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyType",
+                    "printedName": "AllegionSecurity.KeyType",
+                    "usr": "s:16AllegionSecurity7KeyTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity7KeyTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity7KeyTypeO8rawValueSSvp",
+            "mangledName": "$s16AllegionSecurity7KeyTypeO8rawValueSSvp",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity7KeyTypeO8rawValueSSvg",
+                "mangledName": "$s16AllegionSecurity7KeyTypeO8rawValueSSvg",
+                "moduleName": "AllegionSecurity",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity7KeyTypeO",
+        "mangledName": "$s16AllegionSecurity7KeyTypeO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PaddingType",
+        "printedName": "PaddingType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "noPadding",
+            "printedName": "noPadding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.PaddingType.Type) -> AllegionSecurity.PaddingType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaddingType",
+                    "printedName": "AllegionSecurity.PaddingType",
+                    "usr": "s:16AllegionSecurity11PaddingTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.PaddingType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaddingType",
+                        "printedName": "AllegionSecurity.PaddingType",
+                        "usr": "s:16AllegionSecurity11PaddingTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity11PaddingTypeO02noC0yA2CmF",
+            "mangledName": "$s16AllegionSecurity11PaddingTypeO02noC0yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Var",
+            "name": "pkcs7Padding",
+            "printedName": "pkcs7Padding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.PaddingType.Type) -> AllegionSecurity.PaddingType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaddingType",
+                    "printedName": "AllegionSecurity.PaddingType",
+                    "usr": "s:16AllegionSecurity11PaddingTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.PaddingType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaddingType",
+                        "printedName": "AllegionSecurity.PaddingType",
+                        "usr": "s:16AllegionSecurity11PaddingTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity11PaddingTypeO05pkcs7C0yA2CmF",
+            "mangledName": "$s16AllegionSecurity11PaddingTypeO05pkcs7C0yA2CmF",
+            "moduleName": "AllegionSecurity"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaddingType",
+                "printedName": "AllegionSecurity.PaddingType",
+                "usr": "s:16AllegionSecurity11PaddingTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11PaddingTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16AllegionSecurity11PaddingTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "AllegionSecurity",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity11PaddingTypeO9hashValueSivp",
+            "mangledName": "$s16AllegionSecurity11PaddingTypeO9hashValueSivp",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity11PaddingTypeO9hashValueSivg",
+                "mangledName": "$s16AllegionSecurity11PaddingTypeO9hashValueSivg",
+                "moduleName": "AllegionSecurity",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity11PaddingTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16AllegionSecurity11PaddingTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity11PaddingTypeO",
+        "mangledName": "$s16AllegionSecurity11PaddingTypeO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorage",
+        "printedName": "SecureStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorage",
+                "printedName": "AllegionSecurity.SecureStorage",
+                "usr": "s:16AllegionSecurity13SecureStorageC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity13SecureStorageCACycfc",
+            "mangledName": "$s16AllegionSecurity13SecureStorageCACycfc",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(tag:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStorageC5store3tag4dataSbSS_10Foundation4DataVtF",
+            "mangledName": "$s16AllegionSecurity13SecureStorageC5store3tag4dataSbSS_10Foundation4DataVtF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "retrieve",
+            "printedName": "retrieve(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStorageC8retrieve3tag10Foundation4DataVSgSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStorageC8retrieve3tag10Foundation4DataVSgSS_tF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "contains",
+            "printedName": "contains(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStorageC8contains3tagSbSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStorageC8contains3tagSbSS_tF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStorageC6remove3tagSbSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStorageC6remove3tagSbSS_tF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity13SecureStorageC",
+        "mangledName": "$s16AllegionSecurity13SecureStorageC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SecureStoring",
+            "printedName": "SecureStoring",
+            "usr": "s:16AllegionSecurity13SecureStoringP",
+            "mangledName": "$s16AllegionSecurity13SecureStoringP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStoring",
+        "printedName": "SecureStoring",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(tag:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStoringP5store3tag4dataSbSS_10Foundation4DataVtF",
+            "mangledName": "$s16AllegionSecurity13SecureStoringP5store3tag4dataSbSS_10Foundation4DataVtF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.SecureStoring>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.SecureStoring>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "retrieve",
+            "printedName": "retrieve(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStoringP8retrieve3tag10Foundation4DataVSgSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStoringP8retrieve3tag10Foundation4DataVSgSS_tF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.SecureStoring>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.SecureStoring>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "contains",
+            "printedName": "contains(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStoringP8contains3tagSbSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStoringP8contains3tagSbSS_tF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.SecureStoring>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.SecureStoring>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16AllegionSecurity13SecureStoringP6remove3tagSbSS_tF",
+            "mangledName": "$s16AllegionSecurity13SecureStoringP6remove3tagSbSS_tF",
+            "moduleName": "AllegionSecurity",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionSecurity.SecureStoring>",
+            "sugared_genericSig": "<Self where Self : AllegionSecurity.SecureStoring>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16AllegionSecurity13SecureStoringP",
+        "mangledName": "$s16AllegionSecurity13SecureStoringP",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecurityError",
+        "printedName": "SecurityError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "encryption",
+            "printedName": "encryption",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO10encryptionyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO10encryptionyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iv",
+            "printedName": "iv",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO2ivyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO2ivyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyGeneration",
+            "printedName": "keyGeneration",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO13keyGenerationyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO13keyGenerationyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyLength",
+            "printedName": "keyLength",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO9keyLengthyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO9keyLengthyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyRetrieval",
+            "printedName": "keyRetrieval",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO12keyRetrievalyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO12keyRetrievalyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyStorage",
+            "printedName": "keyStorage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO10keyStorageyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO10keyStorageyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyType",
+            "printedName": "keyType",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO7keyTypeyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO7keyTypeyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signing",
+            "printedName": "signing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionSecurity.SecurityError.Type) -> AllegionSecurity.SecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionSecurity.SecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecurityError",
+                        "printedName": "AllegionSecurity.SecurityError",
+                        "usr": "s:16AllegionSecurity0B5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16AllegionSecurity0B5ErrorO7signingyA2CmF",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO7signingyA2CmF",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AllegionSecurity.SecurityError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityError",
+                    "printedName": "AllegionSecurity.SecurityError",
+                    "usr": "s:16AllegionSecurity0B5ErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16AllegionSecurity0B5ErrorO8rawValueACSgSu_tcfc",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO8rawValueACSgSu_tcfc",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity0B5ErrorO8rawValueSuvp",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO8rawValueSuvp",
+            "moduleName": "AllegionSecurity",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity0B5ErrorO8rawValueSuvg",
+                "mangledName": "$s16AllegionSecurity0B5ErrorO8rawValueSuvg",
+                "moduleName": "AllegionSecurity",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16AllegionSecurity0B5ErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s16AllegionSecurity0B5ErrorO16errorDescriptionSSSgvp",
+            "moduleName": "AllegionSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16AllegionSecurity0B5ErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s16AllegionSecurity0B5ErrorO16errorDescriptionSSSgvg",
+                "moduleName": "AllegionSecurity",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16AllegionSecurity0B5ErrorO",
+        "mangledName": "$s16AllegionSecurity0B5ErrorO",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "UInt",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "AllegionSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SHA",
+        "printedName": "SHA",
+        "declKind": "Class",
+        "usr": "s:16AllegionSecurity3SHAC",
+        "mangledName": "$s16AllegionSecurity3SHAC",
+        "moduleName": "AllegionSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Algorithms\/HKDF.swift",
+      "kind": "IntegerLiteral",
+      "offset": 220,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Key Management\/KeyManager.swift",
+      "kind": "StringLiteral",
+      "offset": 294,
+      "length": 8,
+      "value": "\"public\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Key Management\/KeyManager.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 9,
+      "value": "\"private\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Enums\/KeyType.swift",
+      "kind": "StringLiteral",
+      "offset": 222,
+      "length": 19,
+      "value": "\"AES\/CBC\/NoPadding\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Enums\/KeyType.swift",
+      "kind": "StringLiteral",
+      "offset": 276,
+      "length": 22,
+      "value": "\"AES\/CBC\/PKCS7Padding\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Enums\/KeyType.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 21,
+      "value": "\"ECC\/ECDSA\/spec256r1\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Enums\/KeyType.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 20,
+      "value": "\"ECC\/ECDH\/spec256r1\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 957,
+      "length": 2,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1009,
+      "length": 13,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1060,
+      "length": 9,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1115,
+      "length": 12,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1170,
+      "length": 10,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1251,
+      "length": 7,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionSecurity\/Sources\/AllegionSecurity\/Errors\/SecurityError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1297,
+      "length": 7,
+      "value": "7"
+    }
+  ]
+}

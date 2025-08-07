@@ -65,6 +65,9 @@
               <li class="nav-group-task">
                 <a href="release-046.html">Release-0.4.6</a>
               </li>
+              <li class="nav-group-task">
+                <a href="release-050.html">Release-0.5.0</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -88,7 +91,7 @@
                 <a href="Enums/ContentEncryptionAlgorithm.html">ContentEncryptionAlgorithm</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums.html#/s:14OpenpathMobile11DecodeErrorO">DecodeError</a>
+                <a href="Enums/DecodeError.html">DecodeError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/DictionaryDataDecodingStrategy.html">DictionaryDataDecodingStrategy</a>
@@ -151,6 +154,9 @@
           <li class="nav-group-name">
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:14OpenpathMobile2eeoiySbAA12AllegionDataV_ADtF">==(_:_:)</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:14OpenpathMobile6decode3jwtAA3JWT_pSS_tKF">decode(jwt:)</a>
               </li>
@@ -274,23 +280,27 @@
 <h2 id='overview' class='heading'>Overview</h2>
 <h3 id='adding-the-sdk-to-your-project' class='heading'>Adding the SDK to your project</h3>
 
-<p>The SDK is provided as a binary framework in a CocoaPods package, delivered in a <code>.zip</code> file. The package also includes binary frameworks for all closed-source dependencies of the SDK.</p>
+<p>The SDK is provided as a binary framework in a CocoaPods package, delivered in a <code>.zip</code> file. The package also includes binary frameworks for all dependencies of the SDK.</p>
 
 <p>To integrate the SDK:</p>
 
 <ul>
 <li>Set up CocoaPods for your app, if it is not already. Refer to CocoaPods documentation for details.</li>
 <li>Enable dynamic frameworks in your <code>Podfile</code>:
-<code>ruby
+<code>
 use_frameworks!
 </code></li>
 <li>Unzip the SDK archive in a known location.</li>
 <li>Add the following to your <code>Podfile</code> in the section for your app target, filling in the correct SDK directory:
-<code>ruby
+<code>
 pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 </code></li>
+<li>If you want to use our Allegion support, add the following line as well, filling in the correct SDK directory:
+<code>
+pod &#39;OpenpathMobileAllegion&#39;, path: &#39;/sdk/directory&#39;
+</code></li>
 <li>Add a <code>post_install</code> hook to your Podfile as needed, as shown below and in the Example app.</li>
-<li>Ensure your app is using Swift 5.x</li>
+<li>Ensure your app is using Swift 5.x or later</li>
 <li>Enable the &ldquo;Build Libraries for Distribution&rdquo; setting as needed (see below)</li>
 <li>From the terminal, run <code>pod install</code></li>
 <li>Build and run your app within Xcode</li>
@@ -313,7 +323,7 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 <li>Add this somewhere near the top of the Podfile:</li>
 </ul>
 <pre class="highlight ruby"><code><span class="k">def</span> <span class="nf">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
-  <span class="n">top_dependencies</span> <span class="o">=</span> <span class="n">installer</span><span class="p">.</span><span class="nf">pod_targets</span><span class="p">.</span><span class="nf">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">pt</span><span class="o">|</span> <span class="n">pt</span><span class="p">.</span><span class="nf">name</span> <span class="o">==</span> <span class="n">root</span> <span class="p">}.</span><span class="nf">dependencies</span>
+  <span class="n">top_dependencies</span> <span class="o">=</span> <span class="n">installer</span><span class="p">.</span><span class="nf">pod_targets</span><span class="p">.</span><span class="nf">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">pt</span><span class="o">|</span> <span class="n">pt</span><span class="p">.</span><span class="nf">name</span> <span class="o">==</span> <span class="n">root</span> <span class="p">}</span><span class="o">&amp;</span><span class="p">.</span><span class="nf">dependencies</span> <span class="n">or</span> <span class="k">return</span> <span class="p">[]</span>
   <span class="n">dependencies</span> <span class="o">=</span> <span class="n">top_dependencies</span><span class="p">.</span><span class="nf">to_set</span>
   <span class="n">top_dependencies</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">dep</span><span class="o">|</span>
     <span class="n">dependencies</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="n">dep</span><span class="p">))</span> <span class="k">if</span> <span class="n">dep</span> <span class="o">!=</span> <span class="n">root</span>
@@ -322,7 +332,8 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">openpath_postinstall</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
-  <span class="n">openpath_dependencies</span> <span class="o">=</span> <span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="s1">'OpenpathMobile'</span><span class="p">)</span>
+  <span class="n">op_allegion_dependencies</span> <span class="o">=</span> <span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="s1">'OpenpathMobileAllegion'</span><span class="p">)</span>
+  <span class="n">openpath_dependencies</span> <span class="o">=</span> <span class="n">get_dependencies_recursively</span><span class="p">(</span><span class="n">installer</span><span class="p">,</span> <span class="s1">'OpenpathMobile'</span><span class="p">)</span> <span class="o">+</span> <span class="n">op_allegion_dependencies</span>
   <span class="n">installer</span><span class="p">.</span><span class="nf">generated_projects</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">project</span><span class="o">|</span>
     <span class="n">project</span><span class="p">.</span><span class="nf">targets</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
       <span class="k">next</span> <span class="k">unless</span> <span class="n">openpath_dependencies</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="nf">name</span><span class="p">)</span>
@@ -331,7 +342,7 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
       <span class="n">target</span><span class="p">.</span><span class="nf">build_configurations</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
         <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'BUILD_LIBRARY_FOR_DISTRIBUTION'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'YES'</span>
         <span class="c1"># Some depended-on Pods set this to an obsolete iOS version</span>
-        <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'IPHONEOS_DEPLOYMENT_TARGET'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'12.0'</span>
+        <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'IPHONEOS_DEPLOYMENT_TARGET'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'13.0'</span> <span class="c1"># Or choose a higher version</span>
         <span class="c1"># None of the Openpath dependencies need to be signed</span>
         <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'CODE_SIGNING_ALLOWED'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'NO'</span>
       <span class="k">end</span>
@@ -354,6 +365,26 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 <li><p>Re-run <code>pod install</code></p></li>
 <li><p>Reload the app in Xcode and rebuild</p></li>
 </ul>
+<h3 id='dependency-versioning' class='heading'>Dependency versioning</h3>
+
+<p>We use explicit versions in the <code>.podspec</code> files for all third-party Cocoapod dependencies. Theoretically it should be possible to increase the patch-version for any of these dependencies, following standard semantic versioning rules. In reality, not all libraries follow semantic versioning perfectly, so we can&rsquo;t guarantee the SDK will work correctly with all future versions of dependencies. (Feel free to try. The typical failure is an instant crash at runtime, so it&rsquo;s easy to test, at least.)</p>
+<h3 id='an-alternative-way-to-incorporate-dependencies-for-troubleshooting-only' class='heading'>An alternative way to incorporate dependencies (for troubleshooting only)</h3>
+
+<p>In the past, new Xcode releases or Swift language changes have caused the SDK to be unable to find its third-party dependencies, resulting in runtime crashes at startup with an error message like &ldquo;symbol not found&rdquo;.</p>
+
+<p>If you encounter this, you may have better luck specifying binary dependencies, which you can do by modifying the <code>.podspec</code> files. We include <code>.xcframework</code> files with pre-built binaries for each dependency. These are not used by default but are available for troubleshooting. To use them, modify the SDK&rsquo;s <code>.podspec</code> files by removing the <code>dependency</code> lines and adding the frameworks to <code>vendored_frameworks</code>. For example:</p>
+<pre class="highlight ruby"><code><span class="n">s</span><span class="p">.</span><span class="nf">vendored_frameworks</span> <span class="o">=</span> <span class="s1">'OpenpathMobile.xcframework'</span>
+
+<span class="n">s</span><span class="p">.</span><span class="nf">dependency</span> <span class="s1">'AWSCore'</span><span class="p">,</span> <span class="s1">'2.37.2'</span>
+<span class="n">s</span><span class="p">.</span><span class="nf">dependency</span> <span class="s1">'AWSIoT'</span><span class="p">,</span> <span class="s1">'2.37.2'</span>
+<span class="n">s</span><span class="p">.</span><span class="nf">dependency</span> <span class="s1">'AWSLogs'</span><span class="p">,</span> <span class="s1">'2.37.2'</span>
+</code></pre>
+
+<p>would change to:</p>
+<pre class="highlight ruby"><code><span class="n">s</span><span class="p">.</span><span class="nf">vendored_frameworks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'OpenpathMobile.xcframework'</span><span class="p">,</span> <span class="s1">'AWSCore.xcframework'</span><span class="p">,</span> <span class="s1">'AWSIoT.xcframework'</span><span class="p">,</span> <span class="s1">'AWSLogs.xcframework'</span><span class="p">]</span>
+</code></pre>
+
+<p>NOTE: We do not distribute an <code>xcframework</code> for OpenSSL, as that is already published in binary form on Cocoapods.</p>
 <h3 id='enabling-background-modes-and-privacy-keys' class='heading'>Enabling background modes and privacy keys</h3>
 
 <p>The Openpath SDK requires the ability to access Bluetooth and location while the app is in the background. (The user will be prompted to approve these permissions interactively on first use.)</p>
@@ -381,7 +412,7 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 
 <p><strong>Bluetooth</strong> and <strong>Location Services</strong> are used to communicate with Openpath readers, to ensure that the app properly wakes up when near readers, and to allow the Wave feature to work reliably. Openpath never tracks or stores a user&rsquo;s location information for any other purpose. <strong>Motion &amp; Fitness</strong> is used to help save battery and reduce data usage, as Openpath will turn off unnecessary activity if the phone is stationary.</p>
 
-<p>Include the following <strong>privacy keys</strong> in your <code>Info.plist</code> so that when a user is prompted for permission, the given text is displayed. The strings below are examples, and you may re-word them as you wish.</p>
+<p>Include the following <strong>privacy keys</strong> in your <code>Info.plist</code> so that when a user is prompted for permission, the given text is displayed. The strings below are examples, and you may re-word them as you wish. Note that the SDK has intercom support compiled in but it is not enabled, so while the key is required in Info.plist it will never be displayed to the user and the SDK will never access the microphone. </p>
 <pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSBluetoothAlwaysUsageDescription<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;string&gt;</span>We need access to Bluetooth to discover and unlock nearby entries.<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;key&gt;</span>NSBluetoothPeripheralUsageDescription<span class="nt">&lt;/key&gt;</span>
@@ -407,6 +438,10 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
 <span class="nt">&lt;string&gt;</span>
   We use motion to turn off services when your phone is stationary in order to save battery
   and reduce data usage.
+<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>NSMicrophoneUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+    We use the microphone to connect to intercoms, if applicable.
 <span class="nt">&lt;/string&gt;</span>
 </code></pre>
 
@@ -462,7 +497,7 @@ pod &#39;OpenpathMobile&#39;, path: &#39;/sdk/directory&#39;
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-11-19)</p>
+          <p>&copy; 2025 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2025-07-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
