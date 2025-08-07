@@ -11,7 +11,7 @@
   "peerDependencies": {
     "react-native": "^0.67.4"
   },
-  "version": "1.1.4",
+  "version": "1.2.0",
   "devDependencies": {
     "@types/react-native": "^0.67.4",
     "typedoc": "0.23.24",
