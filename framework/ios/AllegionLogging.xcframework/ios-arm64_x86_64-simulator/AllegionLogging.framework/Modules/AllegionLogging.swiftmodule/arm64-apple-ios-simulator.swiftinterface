@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionLogging
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AllegionLogging
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct ConsoleLogger : AllegionLogging.Logger {
+  public init()
+  public func log(_ logLevel: AllegionLogging.LogLevel, message: Swift.String, file: Swift.StaticString, function: Swift.StaticString, line: Swift.UInt)
+}
+public protocol Logger {
+  func log(_ logLevel: AllegionLogging.LogLevel, message: Swift.String, file: Swift.StaticString, function: Swift.StaticString, line: Swift.UInt)
+  func getLogFilePaths() -> [Foundation.URL]?
+}
+extension AllegionLogging.Logger {
+  public func getLogFilePaths() -> [Foundation.URL]?
+}
+public enum LogLevel {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  public static func == (a: AllegionLogging.LogLevel, b: AllegionLogging.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionLogging.LogLevel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct LogManager {
+  public static var currentLogger: (any AllegionLogging.Logger)?
+  public static func log(_ logLevel: AllegionLogging.LogLevel, message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public static func logDebug(_ message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public static func logVerbose(_ message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public static func logInfo(_ message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public static func logWarning(_ message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public static func logError(_ message: Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+}
+extension AllegionLogging.LogLevel : Swift.Equatable {}
+extension AllegionLogging.LogLevel : Swift.Hashable {}

@@ -1,0 +1,11 @@
+framework module OpenpathMobileAllegion {
+  umbrella header "OpenpathMobileAllegion-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module OpenpathMobileAllegion.Swift {
+  header "OpenpathMobileAllegion-Swift.h"
+  requires objc
+}

@@ -1,0 +1,326 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Allegion_Access_MobileAccessSDK_iOS
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AllegionAccessBLECredential
+import AllegionAccessHub
+import AllegionAnalytics
+import AllegionBLECore
+import AllegionExtensions
+import AllegionLogging
+import AllegionSecurity
+import AllegionTranslation
+@_exported import Allegion_Access_MobileAccessSDK_iOS
+import CoreBluetooth
+import Foundation
+import PromiseKit
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers public class AccessPayload : Allegion_Access_MobileAccessSDK_iOS.Payload {
+  public init(rightID: Foundation.UUID, content: Foundation.Data)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+public class AccessResponse {
+  public init(device: any Allegion_Access_MobileAccessSDK_iOS.DeviceAccessible, state: Allegion_Access_MobileAccessSDK_iOS.PayloadState = .idle)
+  final public let state: Allegion_Access_MobileAccessSDK_iOS.PayloadState
+  final public let device: any Allegion_Access_MobileAccessSDK_iOS.DeviceAccessible
+  @objc deinit
+}
+@objc public protocol AuthenticateDelegate {
+  @objc func authenticate(stateUpdated: Allegion_Access_MobileAccessSDK_iOS.AuthenticationState)
+  @objc func authenticate(failed: any Swift.Error)
+}
+@objc public class AuthenticateRequest : ObjectiveC.NSObject {
+  @objc final public let idToken: Swift.String
+  @objc final public let accessToken: Swift.String
+  public init(idToken: Swift.String, accessToken: Swift.String)
+  @objc deinit
+}
+extension Allegion_Access_MobileAccessSDK_iOS.AuthenticateRequest {
+  @objc override dynamic public var debugDescription: Swift.String {
+    @objc get
+  }
+}
+public protocol AuthenticationManagement {
+  var isAuthenticated: Swift.Bool { get }
+  func authenticate(request: Allegion_Access_MobileAccessSDK_iOS.AuthenticateRequest, completion: any Allegion_Access_MobileAccessSDK_iOS.AuthenticateDelegate) throws
+  func updateConnectedAccountAccessToken(accessToken: Swift.String) throws
+}
+@objc public enum AuthenticationState : Swift.Int {
+  case enrolling
+  case creatingConnectedAccount
+  case selectingConnectedAccount
+  case completed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Allegion_Access_MobileAccessSDK_iOS.AuthenticationState : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class BLERight : Swift.Codable, Swift.Equatable, Swift.Hashable {
+  final public let id: Foundation.UUID
+  final public let attributes: [Swift.String : Swift.String]?
+  final public let iso8601DownloadTimestamp: Swift.String
+  required public init(from decoder: any Swift.Decoder) throws
+  public static func == (lhs: Allegion_Access_MobileAccessSDK_iOS.BLERight, rhs: Allegion_Access_MobileAccessSDK_iOS.BLERight) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CacheBehavior {
+  case retrieveFromCache
+  case retrieveFromNetwork
+  case retrieveFromNetworkOnEmptyCache
+  public static func == (a: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior, b: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Allegion_Access_MobileAccessSDK_iOS.CacheBehavior : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public protocol DeviceAccessible {
+  var delegate: (any Allegion_Access_MobileAccessSDK_iOS.DeviceAccessibleDelegate)? { get set }
+  func sendPayload(_ payload: Allegion_Access_MobileAccessSDK_iOS.AccessPayload) throws
+}
+public protocol DeviceAccessibleDelegate : AnyObject {
+  func onPayloadStateChange(_ response: Allegion_Access_MobileAccessSDK_iOS.AccessResponse)
+  func onPayloadError(error: Allegion_Access_MobileAccessSDK_iOS.MobileAccessError)
+}
+public protocol DeviceSearchDelegate : AnyObject {
+  func onAccessDeviceFound(device: any Allegion_Access_MobileAccessSDK_iOS.DeviceAccessible)
+  func onScanStateChange(isScanning: Swift.Bool)
+}
+public protocol DeviceSearchManagement {
+  func searchForDevices(request: Allegion_Access_MobileAccessSDK_iOS.DeviceSearchRequest, completion: any Allegion_Access_MobileAccessSDK_iOS.DeviceSearchDelegate) throws
+  func cancelSearch() throws
+}
+public class DeviceSearchRequest {
+  public var searchDurationSeconds: Swift.Int
+  public init(searchDurationSeconds: Swift.Int = 3)
+  @objc deinit
+}
+extension Allegion_Access_MobileAccessSDK_iOS.DeviceSearchRequest : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public class ExtendedAuthenticateRequest : Allegion_Access_MobileAccessSDK_iOS.AuthenticateRequest {
+  @objc final public let integrationID: Foundation.UUID
+  public init(idToken: Swift.String, accessToken: Swift.String, integrationID: Foundation.UUID)
+  @objc deinit
+}
+extension Allegion_Access_MobileAccessSDK_iOS.ExtendedAuthenticateRequest {
+  @objc override dynamic public var debugDescription: Swift.String {
+    @objc get
+  }
+}
+public protocol InitializationManagement {
+  var isInitialized: Swift.Bool { get }
+  func initialize(configuration: Allegion_Access_MobileAccessSDK_iOS.MobileAccessConfiguration) throws
+  func uninitialize() throws
+}
+@objc public class MobileAccessConfiguration : ObjectiveC.NSObject {
+  @objc final public let subscriptionKey: Foundation.UUID
+  @objc final public let pinSet: [Swift.String : Swift.String]?
+  @objc final public let removeLegacyData: Swift.Bool
+  @objc public init(subscriptionKey: Foundation.UUID, pinSet: [Swift.String : Swift.String]?, removeLegacyData: Swift.Bool = true)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override dynamic public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override dynamic public var debugDescription: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class MobileAccessError : ObjectiveC.NSObject, Foundation.LocalizedError {
+  @objc public static let MobileAccessSDKDomain: Swift.String
+  @objc final public let domain: Swift.String
+  @objc final public let errorCode: Swift.Int
+  @objc public var source: Allegion_Access_MobileAccessSDK_iOS.MobileAccessError? {
+    get
+  }
+  @objc public var errorDescription: Swift.String? {
+    get
+  }
+  @objc public var failureReason: Swift.String? {
+    get
+  }
+  @objc public var recoverySuggestion: Swift.String? {
+    get
+  }
+  @objc public var helpAnchor: Swift.String? {
+    get
+  }
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override dynamic public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MobileAccessSDKManagerFactory {
+  public static let shared: Allegion_Access_MobileAccessSDK_iOS.MobileAccessSDKManagerFactory
+  public var initializationManager: any Allegion_Access_MobileAccessSDK_iOS.InitializationManagement {
+    get
+  }
+  public var authenticationManager: any Allegion_Access_MobileAccessSDK_iOS.AuthenticationManagement {
+    get throws
+  }
+  public var deviceSearchManager: any Allegion_Access_MobileAccessSDK_iOS.DeviceSearchManagement {
+    get throws
+  }
+  public var rightsManager: any Allegion_Access_MobileAccessSDK_iOS.RightsManagement {
+    get throws
+  }
+  public var payloadManager: any Allegion_Access_MobileAccessSDK_iOS.PayloadManagement {
+    get throws
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Payload : Swift.Codable, Swift.Equatable, Swift.Hashable {
+  public var rightID: Foundation.UUID
+  public var content: Foundation.Data
+  required public init(from decoder: any Swift.Decoder) throws
+  public static func == (lhs: Allegion_Access_MobileAccessSDK_iOS.Payload, rhs: Allegion_Access_MobileAccessSDK_iOS.Payload) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PayloadManagement {
+  func retrievePayloads(request: Allegion_Access_MobileAccessSDK_iOS.RetrievePayloadsRequest, completion: any Allegion_Access_MobileAccessSDK_iOS.RetrievePayloadsDelegate) throws
+}
+@objc public class PayloadRequestMetadata : ObjectiveC.NSObject {
+  @objc public var payloadType: Swift.String
+  @objc public var propertyBag: Swift.String
+  @objc public var payloadArgs: [Swift.String : Swift.String]
+  @objc public init(payloadType: Swift.String = "", propertyBag: Swift.String = "", payloadArgs: [Swift.String : Swift.String] = [:])
+  @objc deinit
+}
+public enum PayloadState : Swift.UInt {
+  case accessFail
+  case accessSuccess
+  case connecting
+  case connected
+  case dataFail
+  case dataSuccess
+  case idle
+  case sending
+  case sessionStarted
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class PlatinumDevice : Allegion_Access_MobileAccessSDK_iOS.DeviceAccessible, AllegionAccessBLECredential.PlatinumTracking {
+  public var peripheral: CoreBluetooth.CBPeripheral {
+    get
+  }
+  weak public var delegate: (any Allegion_Access_MobileAccessSDK_iOS.DeviceAccessibleDelegate)?
+  public var deviceTypeModel: Swift.String? {
+    get
+  }
+  public var deviceTypeName: Swift.String? {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var advertisementName: Swift.String {
+    get
+  }
+  public var serialNumber: Swift.String {
+    get
+  }
+  public var services: [CoreBluetooth.CBService]? {
+    get
+  }
+  public var RSSI: Foundation.NSNumber? {
+    get
+  }
+  public var UUID: Foundation.UUID {
+    get
+  }
+  public var isShortRange: Swift.Bool {
+    get
+  }
+  public func connect() throws
+  public func disconnect() throws
+  public func clearDeviceCache() throws
+  public func sendPayload(_ payload: Allegion_Access_MobileAccessSDK_iOS.AccessPayload) throws
+  public func didConnectDevice(device: AllegionAccessBLECredential.MobileAccessDevice, connectionTime: Swift.Double)
+  public func didStartSession(device: AllegionAccessBLECredential.MobileAccessDevice, sessionStartTime: Swift.Double)
+  public func didDisconnectDevice(device: AllegionAccessBLECredential.MobileAccessDevice)
+  public func didSendPayload(device: AllegionAccessBLECredential.MobileAccessDevice)
+  public func didAccessSucceed(device: AllegionAccessBLECredential.MobileAccessDevice, connectionTime: Swift.Double, unlockTime: Swift.Double)
+  public func didAccessFail(device: AllegionAccessBLECredential.MobileAccessDevice, error: (any Swift.Error)?)
+  public func didDataSucceed(device: AllegionAccessBLECredential.MobileAccessDevice)
+  public func didDataFail(device: AllegionAccessBLECredential.MobileAccessDevice, error: (any Swift.Error)?)
+  @objc deinit
+}
+public protocol RetrievePayloadsDelegate {
+  func retrievePayloads(succeeded: Allegion_Access_MobileAccessSDK_iOS.RetrievePayloadsResponse)
+  func retrievePayloads(failed: any Swift.Error)
+}
+public struct RetrievePayloadsRequest {
+  public let bleRight: Allegion_Access_MobileAccessSDK_iOS.BLERight
+  public let payloadRequestMetadata: [Allegion_Access_MobileAccessSDK_iOS.PayloadRequestMetadata]
+  public let cacheBehavior: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior
+  public init(bleRight: Allegion_Access_MobileAccessSDK_iOS.BLERight, payloadRequestMetadata: [Allegion_Access_MobileAccessSDK_iOS.PayloadRequestMetadata], cacheBehavior: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior)
+}
+extension Allegion_Access_MobileAccessSDK_iOS.RetrievePayloadsRequest : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct RetrievePayloadsResponse {
+  public let accessPayloads: [Allegion_Access_MobileAccessSDK_iOS.AccessPayload]
+}
+public protocol RetrieveRightsDelegate {
+  func retrieveRights(succeeded: Allegion_Access_MobileAccessSDK_iOS.RetrieveRightsResponse)
+  func retrieveRights(failed: any Swift.Error)
+}
+public struct RetrieveRightsRequest {
+  public let cacheBehavior: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior
+  public init(cacheBehavior: Allegion_Access_MobileAccessSDK_iOS.CacheBehavior)
+}
+extension Allegion_Access_MobileAccessSDK_iOS.RetrieveRightsRequest : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct RetrieveRightsResponse {
+  public let bleRights: [Allegion_Access_MobileAccessSDK_iOS.BLERight]
+}
+public protocol RightsManagement {
+  func retrieveRights(request: Allegion_Access_MobileAccessSDK_iOS.RetrieveRightsRequest, completion: any Allegion_Access_MobileAccessSDK_iOS.RetrieveRightsDelegate) throws
+}
+extension Allegion_Access_MobileAccessSDK_iOS.AuthenticationState : Swift.Equatable {}
+extension Allegion_Access_MobileAccessSDK_iOS.AuthenticationState : Swift.Hashable {}
+extension Allegion_Access_MobileAccessSDK_iOS.AuthenticationState : Swift.RawRepresentable {}
+extension Allegion_Access_MobileAccessSDK_iOS.CacheBehavior : Swift.Equatable {}
+extension Allegion_Access_MobileAccessSDK_iOS.CacheBehavior : Swift.Hashable {}
+extension Allegion_Access_MobileAccessSDK_iOS.PayloadState : Swift.Equatable {}
+extension Allegion_Access_MobileAccessSDK_iOS.PayloadState : Swift.Hashable {}
+extension Allegion_Access_MobileAccessSDK_iOS.PayloadState : Swift.RawRepresentable {}

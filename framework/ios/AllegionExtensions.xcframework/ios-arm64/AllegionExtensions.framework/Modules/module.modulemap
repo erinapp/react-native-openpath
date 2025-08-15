@@ -1,0 +1,11 @@
+framework module AllegionExtensions {
+  umbrella header "AllegionExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionExtensions.Swift {
+  header "AllegionExtensions-Swift.h"
+  requires objc
+}

@@ -1,0 +1,106 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionTranslation
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AllegionLogging
+@_exported import AllegionTranslation
+import Foundation
+import Swift
+import SwiftCBOR
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+indirect public enum Cbor {
+  case unsignedInt(Swift.UInt)
+  case negativeInt(Swift.UInt)
+  case byteString([Swift.UInt8])
+  case utf8String(Swift.String)
+  case array([AllegionTranslation.Cbor])
+  case map([AllegionTranslation.Cbor : AllegionTranslation.Cbor])
+  case tagged(Swift.UInt8, AllegionTranslation.Cbor)
+  case simple(Swift.UInt8)
+  case boolean(Swift.Bool)
+  case null
+  case undefined
+  case half(Swift.Float32)
+  case float(Swift.Float32)
+  case double(Swift.Float64)
+  case `break`
+  case date(Foundation.Date)
+}
+extension AllegionTranslation.Cbor : Swift.ExpressibleByNilLiteral, Swift.ExpressibleByIntegerLiteral, Swift.ExpressibleByStringLiteral, Swift.ExpressibleByArrayLiteral, Swift.ExpressibleByDictionaryLiteral, Swift.ExpressibleByBooleanLiteral, Swift.ExpressibleByFloatLiteral {
+  public init(nilLiteral: ())
+  public init(integerLiteral value: Swift.Int)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: AllegionTranslation.Cbor...)
+  public init(dictionaryLiteral elements: (AllegionTranslation.Cbor, AllegionTranslation.Cbor)...)
+  public init(booleanLiteral value: Swift.Bool)
+  public init(floatLiteral value: Swift.Float32)
+  public init(dateLiteral value: Foundation.Date)
+  public typealias ArrayLiteralElement = AllegionTranslation.Cbor
+  public typealias BooleanLiteralType = Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias FloatLiteralType = Swift.Float32
+  public typealias IntegerLiteralType = Swift.Int
+  public typealias Key = AllegionTranslation.Cbor
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+  public typealias Value = AllegionTranslation.Cbor
+}
+extension AllegionTranslation.Cbor {
+  public subscript(position: AllegionTranslation.Cbor) -> AllegionTranslation.Cbor? {
+    get
+    set
+  }
+}
+extension AllegionTranslation.Cbor : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: AllegionTranslation.Cbor, b: AllegionTranslation.Cbor) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionTranslation.Cbor : SwiftCBOR.CBOREncodable {
+  public func encode(options: SwiftCBOR.CBOROptions = CBOROptions()) -> [Swift.UInt8]
+  public static func toCBOR<T>(_ value: T) -> [Swift.UInt8] where T : SwiftCBOR.CBOREncodable
+  public static func toCBOR<T>(_ array: [T], asByteString: Swift.Bool = false) -> [Swift.UInt8] where T : SwiftCBOR.CBOREncodable
+  public static func toCBOR<A, B>(_ dict: [A : B]) -> [Swift.UInt8] where A : Swift.Hashable, A : SwiftCBOR.CBOREncodable, B : SwiftCBOR.CBOREncodable
+  public static func toCBOR<A>(_ dict: [A : Any]) throws -> [Swift.UInt8] where A : Swift.Hashable, A : SwiftCBOR.CBOREncodable
+  public static func fromCBOR(_ input: [Swift.UInt8]) throws -> AllegionTranslation.Cbor?
+}
+public protocol CborProtocol {
+  func encode() -> [Swift.UInt8]
+  static func toCBOR<T>(_ value: T) -> [Swift.UInt8] where T : SwiftCBOR.CBOREncodable
+  static func toCBOR<T>(_ array: [T], asByteString: Swift.Bool) -> [Swift.UInt8] where T : SwiftCBOR.CBOREncodable
+  static func toCBOR<A, B>(_ dict: [A : B]) -> [Swift.UInt8] where A : Swift.Hashable, A : SwiftCBOR.CBOREncodable, B : SwiftCBOR.CBOREncodable
+  static func toCBOR<A>(_ dict: [A : Any]) throws -> [Swift.UInt8] where A : Swift.Hashable, A : SwiftCBOR.CBOREncodable
+  static func fromCBOR(_ input: [Swift.UInt8]) throws -> AllegionTranslation.Cbor?
+}
+@_hasMissingDesignatedInitializers public class JSON : AllegionTranslation.JSONProtocol {
+  public static func toJSON<T>(_ object: T) throws -> Swift.String where T : Swift.Encodable
+  public static func fromJSON<T>(_ json: Swift.String) throws -> T where T : Swift.Decodable
+  public static func toData<T>(_ object: T) throws -> Foundation.Data where T : Swift.Encodable
+  @objc deinit
+}
+public protocol JSONProtocol {
+  static func toJSON<T>(_ object: T) throws -> Swift.String where T : Swift.Encodable
+  static func fromJSON<T>(_ json: Swift.String) throws -> T where T : Swift.Decodable
+}
+public enum TranslationError : Swift.UInt, Swift.Error, Swift.Equatable {
+  case decodeError
+  case encodeError
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+extension AllegionTranslation.TranslationError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension AllegionTranslation.TranslationError : Swift.Hashable {}
+extension AllegionTranslation.TranslationError : Swift.RawRepresentable {}

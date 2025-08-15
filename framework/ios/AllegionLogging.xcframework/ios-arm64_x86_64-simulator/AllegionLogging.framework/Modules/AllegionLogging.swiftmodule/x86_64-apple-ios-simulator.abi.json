@@ -1,0 +1,1165 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AllegionLogging",
+    "printedName": "AllegionLogging",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConsoleLogger",
+        "printedName": "ConsoleLogger",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsoleLogger",
+                "printedName": "AllegionLogging.ConsoleLogger",
+                "usr": "s:15AllegionLogging13ConsoleLoggerV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15AllegionLogging13ConsoleLoggerVACycfc",
+            "mangledName": "$s15AllegionLogging13ConsoleLoggerVACycfc",
+            "moduleName": "AllegionLogging",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(_:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AllegionLogging.LogLevel",
+                "usr": "s:15AllegionLogging8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging13ConsoleLoggerV3log_7message4file8function4lineyAA8LogLevelO_SSs12StaticStringVALSutF",
+            "mangledName": "$s15AllegionLogging13ConsoleLoggerV3log_7message4file8function4lineyAA8LogLevelO_SSs12StaticStringVALSutF",
+            "moduleName": "AllegionLogging",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AllegionLogging13ConsoleLoggerV",
+        "mangledName": "$s15AllegionLogging13ConsoleLoggerV",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Logger",
+            "printedName": "Logger",
+            "usr": "s:15AllegionLogging6LoggerP",
+            "mangledName": "$s15AllegionLogging6LoggerP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(_:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AllegionLogging.LogLevel",
+                "usr": "s:15AllegionLogging8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging6LoggerP3log_7message4file8function4lineyAA8LogLevelO_SSs12StaticStringVALSutF",
+            "mangledName": "$s15AllegionLogging6LoggerP3log_7message4file8function4lineyAA8LogLevelO_SSs12StaticStringVALSutF",
+            "moduleName": "AllegionLogging",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionLogging.Logger>",
+            "sugared_genericSig": "<Self where Self : AllegionLogging.Logger>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLogFilePaths",
+            "printedName": "getLogFilePaths()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.URL]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.URL]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging6LoggerP15getLogFilePathsSay10Foundation3URLVGSgyF",
+            "mangledName": "$s15AllegionLogging6LoggerP15getLogFilePathsSay10Foundation3URLVGSgyF",
+            "moduleName": "AllegionLogging",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionLogging.Logger>",
+            "sugared_genericSig": "<Self where Self : AllegionLogging.Logger>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLogFilePaths",
+            "printedName": "getLogFilePaths()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.URL]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.URL]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging6LoggerPAAE15getLogFilePathsSay10Foundation3URLVGSgyF",
+            "mangledName": "$s15AllegionLogging6LoggerPAAE15getLogFilePathsSay10Foundation3URLVGSgyF",
+            "moduleName": "AllegionLogging",
+            "genericSig": "<τ_0_0 where τ_0_0 : AllegionLogging.Logger>",
+            "sugared_genericSig": "<Self where Self : AllegionLogging.Logger>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15AllegionLogging6LoggerP",
+        "mangledName": "$s15AllegionLogging6LoggerP",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogLevel",
+        "printedName": "LogLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "verbose",
+            "printedName": "verbose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionLogging.LogLevel.Type) -> AllegionLogging.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "AllegionLogging.LogLevel",
+                    "usr": "s:15AllegionLogging8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionLogging.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "AllegionLogging.LogLevel",
+                        "usr": "s:15AllegionLogging8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionLogging8LogLevelO7verboseyA2CmF",
+            "mangledName": "$s15AllegionLogging8LogLevelO7verboseyA2CmF",
+            "moduleName": "AllegionLogging"
+          },
+          {
+            "kind": "Var",
+            "name": "debug",
+            "printedName": "debug",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionLogging.LogLevel.Type) -> AllegionLogging.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "AllegionLogging.LogLevel",
+                    "usr": "s:15AllegionLogging8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionLogging.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "AllegionLogging.LogLevel",
+                        "usr": "s:15AllegionLogging8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionLogging8LogLevelO5debugyA2CmF",
+            "mangledName": "$s15AllegionLogging8LogLevelO5debugyA2CmF",
+            "moduleName": "AllegionLogging"
+          },
+          {
+            "kind": "Var",
+            "name": "info",
+            "printedName": "info",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionLogging.LogLevel.Type) -> AllegionLogging.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "AllegionLogging.LogLevel",
+                    "usr": "s:15AllegionLogging8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionLogging.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "AllegionLogging.LogLevel",
+                        "usr": "s:15AllegionLogging8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionLogging8LogLevelO4infoyA2CmF",
+            "mangledName": "$s15AllegionLogging8LogLevelO4infoyA2CmF",
+            "moduleName": "AllegionLogging"
+          },
+          {
+            "kind": "Var",
+            "name": "warning",
+            "printedName": "warning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionLogging.LogLevel.Type) -> AllegionLogging.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "AllegionLogging.LogLevel",
+                    "usr": "s:15AllegionLogging8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionLogging.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "AllegionLogging.LogLevel",
+                        "usr": "s:15AllegionLogging8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionLogging8LogLevelO7warningyA2CmF",
+            "mangledName": "$s15AllegionLogging8LogLevelO7warningyA2CmF",
+            "moduleName": "AllegionLogging"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionLogging.LogLevel.Type) -> AllegionLogging.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "AllegionLogging.LogLevel",
+                    "usr": "s:15AllegionLogging8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionLogging.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "AllegionLogging.LogLevel",
+                        "usr": "s:15AllegionLogging8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionLogging8LogLevelO5erroryA2CmF",
+            "mangledName": "$s15AllegionLogging8LogLevelO5erroryA2CmF",
+            "moduleName": "AllegionLogging"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AllegionLogging.LogLevel",
+                "usr": "s:15AllegionLogging8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AllegionLogging.LogLevel",
+                "usr": "s:15AllegionLogging8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging8LogLevelO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s15AllegionLogging8LogLevelO2eeoiySbAC_ACtFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AllegionLogging8LogLevelO9hashValueSivp",
+            "mangledName": "$s15AllegionLogging8LogLevelO9hashValueSivp",
+            "moduleName": "AllegionLogging",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AllegionLogging8LogLevelO9hashValueSivg",
+                "mangledName": "$s15AllegionLogging8LogLevelO9hashValueSivg",
+                "moduleName": "AllegionLogging",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging8LogLevelO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s15AllegionLogging8LogLevelO4hash4intoys6HasherVz_tF",
+            "moduleName": "AllegionLogging",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AllegionLogging8LogLevelO11descriptionSSvp",
+            "mangledName": "$s15AllegionLogging8LogLevelO11descriptionSSvp",
+            "moduleName": "AllegionLogging",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AllegionLogging8LogLevelO11descriptionSSvg",
+                "mangledName": "$s15AllegionLogging8LogLevelO11descriptionSSvg",
+                "moduleName": "AllegionLogging",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15AllegionLogging8LogLevelO",
+        "mangledName": "$s15AllegionLogging8LogLevelO",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogManager",
+        "printedName": "LogManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "currentLogger",
+            "printedName": "currentLogger",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AllegionLogging.Logger)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Logger",
+                    "printedName": "any AllegionLogging.Logger",
+                    "usr": "s:15AllegionLogging6LoggerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvpZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvpZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AllegionLogging.Logger)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Logger",
+                        "printedName": "any AllegionLogging.Logger",
+                        "usr": "s:15AllegionLogging6LoggerP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvgZ",
+                "mangledName": "$s15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvgZ",
+                "moduleName": "AllegionLogging",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AllegionLogging.Logger)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Logger",
+                        "printedName": "any AllegionLogging.Logger",
+                        "usr": "s:15AllegionLogging6LoggerP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvsZ",
+                "mangledName": "$s15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvsZ",
+                "moduleName": "AllegionLogging",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvMZ",
+                "mangledName": "$s15AllegionLogging10LogManagerV13currentLoggerAA0F0_pSgvMZ",
+                "moduleName": "AllegionLogging",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(_:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "AllegionLogging.LogLevel",
+                "usr": "s:15AllegionLogging8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV3log_7message4file8function4lineyAA0C5LevelO_SSs12StaticStringVALSutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV3log_7message4file8function4lineyAA0C5LevelO_SSs12StaticStringVALSutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logDebug",
+            "printedName": "logDebug(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV8logDebug_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV8logDebug_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logVerbose",
+            "printedName": "logVerbose(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV10logVerbose_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV10logVerbose_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logInfo",
+            "printedName": "logInfo(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV7logInfo_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV7logInfo_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logWarning",
+            "printedName": "logWarning(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV10logWarning_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV10logWarning_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logError",
+            "printedName": "logError(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AllegionLogging10LogManagerV8logError_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "mangledName": "$s15AllegionLogging10LogManagerV8logError_4file8function4lineySS_s12StaticStringVAISutFZ",
+            "moduleName": "AllegionLogging",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AllegionLogging10LogManagerV",
+        "mangledName": "$s15AllegionLogging10LogManagerV",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AllegionLogging",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionLogging\/Sources\/AllegionLoggingLite\/ConsoleLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 14,
+      "value": "\"HH:mm:ss.SSS\""
+    }
+  ]
+}

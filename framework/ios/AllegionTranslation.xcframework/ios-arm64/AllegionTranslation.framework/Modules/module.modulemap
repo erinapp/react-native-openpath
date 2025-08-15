@@ -1,0 +1,11 @@
+framework module AllegionTranslation {
+  umbrella header "AllegionTranslation-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionTranslation.Swift {
+  header "AllegionTranslation-Swift.h"
+  requires objc
+}
