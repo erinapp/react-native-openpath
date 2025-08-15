@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name OpenpathMobile
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OpenpathMobile
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 import AWSCore
 import AWSIoT
@@ -15,6 +15,7 @@ import Dispatch
 import Foundation
 import LocalAuthentication
 import Network
+import OSLog
 import OpenSSL
 @_exported import OpenpathMobile
 import Security
@@ -124,6 +125,105 @@ public enum CompressionAlgorithm : Swift.String {
 public typealias AsymmetricKeyAlgorithm = OpenpathMobile.KeyManagementAlgorithm
 @available(*, deprecated, message: "Use `ContentEncryptionAlgorithm` instead")
 public typealias SymmetricKeyAlgorithm = OpenpathMobile.ContentEncryptionAlgorithm
+public struct AllegionData : Swift.Equatable, Swift.CustomDebugStringConvertible {
+  public let userIdExt: Foundation.UUID
+  public let credentialIdExt: Foundation.UUID
+  public let cardNumber: Swift.Int
+  public let idToken: Swift.String
+  public let accessRightsToken: Swift.String
+  public let integrationId: Foundation.UUID
+  public let subscriptionKey: Foundation.UUID
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case userIdExt
+    case credentialIdExt
+    case cardNumber
+    case idToken
+    case accessRightsToken
+    case integrationId
+    case subscriptionKey
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public func == (a: OpenpathMobile.AllegionData, b: OpenpathMobile.AllegionData) -> Swift.Bool
+extension OpenpathMobile.AllegionData : Swift.Decodable, Swift.Encodable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum AllegionError : Swift.String, Swift.Error, Foundation.LocalizedError {
+  case cancelled
+  case scanDeviceOutOfRange
+  case scanTimeout
+  case scanFailedToStart
+  case unlockTimeout
+  case unlockDeviceOutOfRange
+  case unlockNoPayloads
+  case unlockAccessFailed
+  case unlockFailedToSend
+  case unlockNoSuccess
+  case unlockSendPayloadException
+  case unlockConnectException
+  case accessPayloadsTimeout
+  case validateAccessRightsTimeout
+  case validateAccessRightsRequestError
+  case enrollmentTimeout
+  case enrollmentError
+  case retrieveRightsTimeout
+  case retrieveRightsRequestError
+  case retrieveRightsExceptionCallingRetrieve
+  case retrievePayloadsNoRightIds
+  case retrievePayloadsRequestError
+  case retrievePayloadsExceptionCallingRetrieve
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol AllegionProxy : AnyObject {
+  func setDebugLoggingEnabled(enabled: Swift.Bool)
+  func requestUnlock(allegionRequest: OpenpathMobile.AllegionRequest)
+  func startScan()
+  func stopScan()
+  func refreshRightsAndPayloads()
+  var isReady: Swift.Bool { get }
+  var userIdExt: Foundation.UUID { get }
+}
+public protocol AllegionProxyDelegate : AnyObject {
+  func onAllegionGotPayloads(payloadsString: Swift.String)
+  func onAllegionUnlockUpdate(allegionRequest: OpenpathMobile.AllegionRequest, error: OpenpathMobile.AllegionError?)
+  func onAllegionDeviceDiscovered(serialNumber: Swift.String)
+  func onAllegionDevicesOutOfRange(serialNumbers: [Swift.String])
+  func onAllegionSdkIsReady()
+}
+public struct AllegionRequest {
+  public let requestId: Swift.Int
+  public let timeout: Foundation.TimeInterval
+  public let acuId: Swift.Int
+  public let entryId: Swift.Int
+  public let location: CoreLocation.CLLocation?
+  public let payload: [Swift.String : Any]
+  public let lockSerialNumber: Swift.String
+  public let expiration: Foundation.Date
+  public let isNoTour: Swift.Bool
+}
 @usableFromInline
 internal protocol _AnyDecodable {
   var value: Any { get }
@@ -158,15 +258,9 @@ public enum AuthorizationStatusType : Swift.Int {
     get
   }
 }
-#if compiler(>=5.3) && $RetroactiveAttribute
 extension CoreLocation.CLLocationCoordinate2D : @retroactive Swift.Equatable {
   public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
 }
-#else
-extension CoreLocation.CLLocationCoordinate2D : Swift.Equatable {
-  public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
-}
-#endif
 public protocol DataConvertible {
   init?(_ data: Foundation.Data)
   func data() -> Foundation.Data
@@ -311,8 +405,8 @@ public enum ECCurveType : Swift.String, Swift.Codable {
   case P256
   case P384
   case P521
-  public static func == (a: OpenpathMobile.ECCurveType, b: OpenpathMobile.ECCurveType) -> Swift.Bool
   public init?(rawValue: Swift.String)
+  public static func == (a: OpenpathMobile.ECCurveType, b: OpenpathMobile.ECCurveType) -> Swift.Bool
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -409,13 +503,8 @@ public enum DecodeError : Foundation.LocalizedError {
     get
   }
 }
-#if compiler(>=5.3) && $RetroactiveAttribute
 extension Swift.String : @retroactive Swift.Error {
 }
-#else
-extension Swift.String : Swift.Error {
-}
-#endif
 public protocol CommonHeaderParameterSpace {
   var jku: Foundation.URL? { get set }
   var jwk: Swift.String? { get set }
@@ -567,8 +656,8 @@ public enum JWKKeyType : Swift.String, Swift.Codable {
   case RSA
   case OCT
   case EC
-  public static func == (a: OpenpathMobile.JWKKeyType, b: OpenpathMobile.JWKKeyType) -> Swift.Bool
   public init?(rawValue: Swift.String)
+  public static func == (a: OpenpathMobile.JWKKeyType, b: OpenpathMobile.JWKKeyType) -> Swift.Bool
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -842,8 +931,8 @@ public struct Claim {
   public init(wrappedValue: Wrapped?)
   public var wrappedValue: Wrapped?
   public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: OpenpathMobile.NullCodable<Wrapped>, b: OpenpathMobile.NullCodable<Wrapped>) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -894,13 +983,37 @@ extension OpenpathMobile.OpenpathError : Foundation.LocalizedError {
   @objc deinit
 }
 extension OpenpathMobile.OpenpathMobileAccessCore {
+  public struct AllegionFactoryParameters {
+    public let allegionData: OpenpathMobile.AllegionData
+    public let payloads: Swift.String
+    public let delegate: any OpenpathMobile.AllegionProxyDelegate
+    public let activeUserOpal: Swift.String
+    public let appVersion: Swift.String
+  }
+  public static var allegionProxyFactory: ((OpenpathMobile.OpenpathMobileAccessCore.AllegionFactoryParameters) -> any OpenpathMobile.AllegionProxy)?
+}
+extension OpenpathMobile.OpenpathMobileAccessCore {
   public func _getTermsOfUseStatus(identityId: Swift.Int, callback: @escaping (Swift.Result<OpenpathMobile.OpenpathTermsOfUseStatus, OpenpathMobile.OpenpathError>) -> Swift.Void)
   public func _signTermsOfUse(identityId: Swift.Int)
   public func _unsignTermsOfUse(identityId: Swift.Int, callback: @escaping (Swift.Result<Swift.Void, OpenpathMobile.OpenpathError>) -> Swift.Void)
 }
 extension OpenpathMobile.OpenpathMobileAccessCore {
-  @discardableResult
-  public func setLogLevel(logLevel: Swift.String) -> Swift.String
+  public enum LogLevel : Swift.Int {
+    case off
+    case verbose
+    case debug
+    case info
+    case warning
+    case error
+    case severe
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public func setLogLevel(logLevel: Swift.String)
+  public func _log(_ closure: @autoclosure () -> Any?, level: OpenpathMobile.OpenpathMobileAccessCore.LogLevel, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, tag: Swift.String? = nil)
   public func _logVerbose(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
   public func _logDebug(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
   public func _logInfo(_ closure: @autoclosure () -> Any?, functionName: Swift.StaticString = #function, fileName: Swift.StaticString = #file, lineNumber: Swift.Int = #line, userInfo _: [Swift.String : Any] = [:])
@@ -924,6 +1037,8 @@ extension OpenpathMobile.OpenpathMobileAccessCore {
   public func getUserApiToken(userOpal: Swift.String) -> [Swift.String : Any]
   public func _getDeviceToken() -> [Swift.String : Any]
   public func _setDeviceToken(token: Swift.String?)
+  public func _getDevicePushKitToken() -> [Swift.String : Any]
+  public func _setDevicePushKitToken(token: Swift.String?)
   public func _getUserOpals() -> [Swift.String]
 }
 extension OpenpathMobile.OpenpathMobileAccessCore {
@@ -1004,9 +1119,9 @@ public struct OpenpathTermsOfUseStatus : Swift.Encodable, Swift.CustomStringConv
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct OpenpathUser : Swift.Encodable, Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: OpenpathMobile.OpenpathUser, b: OpenpathMobile.OpenpathUser) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1022,9 +1137,9 @@ public struct ProvisionResult : Swift.Encodable, Swift.Hashable {
     public let heliumEndpoint: Swift.String
     public let opalEnv: Swift.String
     public let opalRegion: Swift.String
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: OpenpathMobile.ProvisionResult.Environment, b: OpenpathMobile.ProvisionResult.Environment) -> Swift.Bool
     public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -1037,9 +1152,9 @@ public struct ProvisionResult : Swift.Encodable, Swift.Hashable {
     public let opal: Swift.String
     public let credentialType: OpenpathMobile.ProvisionResult.Credential.CredentialType
     public struct CredentialType : Swift.Encodable, Swift.Hashable {
-      public func hash(into hasher: inout Swift.Hasher)
       public static func == (a: OpenpathMobile.ProvisionResult.Credential.CredentialType, b: OpenpathMobile.ProvisionResult.Credential.CredentialType) -> Swift.Bool
       public func encode(to encoder: any Swift.Encoder) throws
+      public func hash(into hasher: inout Swift.Hasher)
       public var hashValue: Swift.Int {
         get
       }
@@ -1062,31 +1177,31 @@ public struct ProvisionResult : Swift.Encodable, Swift.Hashable {
         public let userIdExt: Foundation.UUID
         public let credentialIdExt: Foundation.UUID
         public let cardNumber: Swift.Int
-        public func hash(into hasher: inout Swift.Hasher)
         public static func == (a: OpenpathMobile.ProvisionResult.Credential.Mobile.AllegionMobileDetails, b: OpenpathMobile.ProvisionResult.Credential.Mobile.AllegionMobileDetails) -> Swift.Bool
         public func encode(to encoder: any Swift.Encoder) throws
+        public func hash(into hasher: inout Swift.Hasher)
         public var hashValue: Swift.Int {
           get
         }
       }
-      public func hash(into hasher: inout Swift.Hasher)
       public static func == (a: OpenpathMobile.ProvisionResult.Credential.Mobile, b: OpenpathMobile.ProvisionResult.Credential.Mobile) -> Swift.Bool
       public func encode(to encoder: any Swift.Encoder) throws
+      public func hash(into hasher: inout Swift.Hasher)
       public var hashValue: Swift.Int {
         get
       }
     }
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: OpenpathMobile.ProvisionResult.Credential, b: OpenpathMobile.ProvisionResult.Credential) -> Swift.Bool
     public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
   }
   public let entryCount: Swift.Int
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: OpenpathMobile.ProvisionResult, b: OpenpathMobile.ProvisionResult) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1204,7 +1319,7 @@ extension OpenpathMobile.SymmetricKey : Swift.Encodable {
 extension OpenpathMobile.SymmetricKey : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
-public typealias SymmetricKeyComponents = (Foundation.Data)
+public typealias SymmetricKeyComponents = Foundation.Data
 public protocol ExpressibleAsSymmetricKeyComponents {
   static func representing(symmetricKeyComponents components: OpenpathMobile.SymmetricKeyComponents) throws -> Self
   func symmetricKeyComponents() throws -> OpenpathMobile.SymmetricKeyComponents
@@ -1259,6 +1374,12 @@ extension OpenpathMobile.JWKThumbprintAlgorithm : Swift.RawRepresentable {}
 extension OpenpathMobile.CompressionAlgorithm : Swift.Equatable {}
 extension OpenpathMobile.CompressionAlgorithm : Swift.Hashable {}
 extension OpenpathMobile.CompressionAlgorithm : Swift.RawRepresentable {}
+extension OpenpathMobile.AllegionData.CodingKeys : Swift.Equatable {}
+extension OpenpathMobile.AllegionData.CodingKeys : Swift.Hashable {}
+extension OpenpathMobile.AllegionData.CodingKeys : Swift.RawRepresentable {}
+extension OpenpathMobile.AllegionError : Swift.Equatable {}
+extension OpenpathMobile.AllegionError : Swift.Hashable {}
+extension OpenpathMobile.AllegionError : Swift.RawRepresentable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.Equatable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.Hashable {}
 extension OpenpathMobile.AuthorizationStatusType : Swift.RawRepresentable {}
@@ -1287,3 +1408,6 @@ extension OpenpathMobile.ECParameter : Swift.Equatable {}
 extension OpenpathMobile.ECParameter : Swift.Hashable {}
 extension OpenpathMobile.ECParameter : Swift.RawRepresentable {}
 extension OpenpathMobile.JWSHeader : OpenpathMobile.DataConvertible {}
+extension OpenpathMobile.OpenpathMobileAccessCore.LogLevel : Swift.Equatable {}
+extension OpenpathMobile.OpenpathMobileAccessCore.LogLevel : Swift.Hashable {}
+extension OpenpathMobile.OpenpathMobileAccessCore.LogLevel : Swift.RawRepresentable {}

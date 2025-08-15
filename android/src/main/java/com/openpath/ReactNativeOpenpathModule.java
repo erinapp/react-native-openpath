@@ -35,6 +35,7 @@ import com.openpath.mobileaccesscore.OpenpathProvisionResponse;
 import com.openpath.mobileaccesscore.OpenpathReader;
 import com.openpath.mobileaccesscore.OpenpathRequestResponse;
 import com.openpath.mobileaccesscore.OpenpathResponse;
+import com.openpath.mobileaccesscore.OpenpathServiceException;
 import com.openpath.mobileaccesscore.OpenpathSoundStatus;
 import com.openpath.mobileaccesscore.OpenpathSwitchUserResponse;
 import com.openpath.mobileaccesscore.OpenpathSyncUserResponse;
@@ -136,7 +137,7 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
     public void getUserApiToken(String userOpal, Promise promise) {
         try {
             promise.resolve(OpenpathMobileAccessCore.getInstance().getUserApiToken(userOpal));
-        } catch (BadPaddingException | IllegalBlockSizeException | CertificateException | NoSuchAlgorithmException | NoSuchProviderException | KeyStoreException | IOException | UnrecoverableKeyException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException e) {
+        } catch (BadPaddingException | IllegalBlockSizeException | CertificateException | NoSuchAlgorithmException | NoSuchProviderException | KeyStoreException | IOException | UnrecoverableKeyException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | OpenpathServiceException e) {
             promise.reject("error loading user api token", e);
         }
     }

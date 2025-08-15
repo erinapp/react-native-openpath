@@ -1,0 +1,425 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "OpenpathMobileAllegion",
+    "printedName": "OpenpathMobileAllegion",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionLogging",
+        "printedName": "AllegionLogging",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionSecurity",
+        "printedName": "AllegionSecurity",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "AllegionLogging",
+        "printedName": "AllegionLogging",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "Allegion_Access_MobileAccessSDK_iOS",
+        "printedName": "Allegion_Access_MobileAccessSDK_iOS",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenpathMobile",
+        "printedName": "OpenpathMobile",
+        "declKind": "Import",
+        "moduleName": "OpenpathMobileAllegion"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "FloatLiteral",
+      "offset": 317,
+      "length": 3,
+      "value": "5.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "FloatLiteral",
+      "offset": 2979,
+      "length": 4,
+      "value": "12.5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "FloatLiteral",
+      "offset": 3127,
+      "length": 3,
+      "value": "2.5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4155,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 4289,
+      "length": 14,
+      "value": "\"Serial Queue\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4334,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 4853,
+      "length": 35,
+      "value": "\"AllegionProxy.userIdAndAppVersion\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4936,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/AllegionProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 11918,
+      "length": 11,
+      "value": "\"operation\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AsyncOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 224,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AsyncOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1751,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AsyncOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 3292,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AsyncOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 3742,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AsyncOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 4195,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AuthenticationOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 264,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/AuthenticationOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 311,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/LoggedOperationQueue.swift",
+      "kind": "Array",
+      "offset": 215,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/LoggedOperationQueue.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 11,
+      "value": "\"operation\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrievePayloadsOperation.swift",
+      "kind": "FloatLiteral",
+      "offset": 299,
+      "length": 4,
+      "value": "30.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrievePayloadsOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 327,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrievePayloadsOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 541,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrieveRightsOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 221,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrieveRightsOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 266,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/RetrieveRightsOperation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 313,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/ScanOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 363,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeItem.swift",
+      "kind": "StringLiteral",
+      "offset": 627,
+      "length": 41,
+      "value": "\"thread safe queue: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeItem.swift",
+      "kind": "StringLiteral",
+      "offset": 667,
+      "length": 27,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeItem.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1644,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeItem.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1972,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/UnlockOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1485,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAllegion\/Operation\/UnlockOperation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1527,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PromiseKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Combine
+import CoreFoundation
+import Dispatch
+import Foundation
+import Foundation/*.Thread*/
+import Foundation/*.TimeInterval*/
+@_exported import PromiseKit
+import Swift
+import UIKit
+import UIKit.UIView
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public func after(seconds: Foundation.TimeInterval) -> PromiseKit.Guarantee<Swift.Void>
+public func after(_ interval: Dispatch.DispatchTimeInterval) -> PromiseKit.Guarantee<Swift.Void>
+public func after(life object: ObjectiveC.NSObject) -> PromiseKit.Guarantee<Swift.Void>
+@objc(__AnyPromise) public class __AnyPromise : ObjectiveC.NSObject {
+  @objc public init(resolver body: (@escaping (Any?) -> Swift.Void) -> Swift.Void)
+  @objc public func __thenOn(_ q: Dispatch.DispatchQueue, execute: @escaping (Any?) -> Any?) -> PromiseKit.AnyPromise
+  @objc public func __catchOn(_ q: Dispatch.DispatchQueue, execute: @escaping (Any?) -> Any?) -> PromiseKit.AnyPromise
+  @objc public func __ensureOn(_ q: Dispatch.DispatchQueue, execute: @escaping () -> Swift.Void) -> PromiseKit.AnyPromise
+  @objc public func __wait() -> Any?
+  @objc public func __pipe(_ to: @escaping (Any?) -> Swift.Void)
+  @objc public var __value: Any? {
+    @objc get
+  }
+  @objc public var __pending: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+extension PromiseKit.AnyPromise : PromiseKit.Thenable, PromiseKit.CatchMixin {
+  convenience public init<U>(_ bridge: U) where U : PromiseKit.Thenable
+  public func pipe(to body: @escaping (PromiseKit.Result<Any?>) -> Swift.Void)
+  public var result: PromiseKit.Result<Any?>? {
+    get
+  }
+  public typealias T = Any?
+}
+extension PromiseKit.Promise where T == Any? {
+  convenience public init(_ anyPromise: PromiseKit.AnyPromise)
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension PromiseKit.Guarantee {
+  final public func async() async -> T
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension PromiseKit.Promise {
+  final public func async() async throws -> T
+}
+public protocol CatchMixin : PromiseKit.Thenable {
+}
+extension PromiseKit.CatchMixin {
+  @discardableResult
+  public func `catch`(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: PromiseKit.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) -> Swift.Void) -> PromiseKit.PMKFinalizer
+}
+@_hasMissingDesignatedInitializers public class PMKFinalizer {
+  public func finally(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension PromiseKit.CatchMixin {
+  public func recover<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: PromiseKit.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> U) -> PromiseKit.Promise<Self.T> where U : PromiseKit.Thenable, Self.T == U.T
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> PromiseKit.Guarantee<Self.T>) -> PromiseKit.Guarantee<Self.T>
+  public func ensure(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void) -> PromiseKit.Promise<Self.T>
+  public func ensureThen(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> PromiseKit.Guarantee<Swift.Void>) -> PromiseKit.Promise<Self.T>
+  @discardableResult
+  public func cauterize() -> PromiseKit.PMKFinalizer
+}
+extension PromiseKit.CatchMixin where Self.T == () {
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> Swift.Void) -> PromiseKit.Guarantee<Swift.Void>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: PromiseKit.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> Swift.Void) -> PromiseKit.Promise<Swift.Void>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension PromiseKit.Guarantee {
+  final public func future() -> Combine.Future<T, Swift.Never>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension PromiseKit.Promise {
+  final public func future() -> Combine.Future<T, any Swift.Error>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future {
+  final public func promise() -> PromiseKit.Promise<Output>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future where Failure == Swift.Never {
+  final public func guarantee() -> PromiseKit.Guarantee<Output>
+}
+public struct PMKConfiguration {
+  public var Q: (map: Dispatch.DispatchQueue?, return: Dispatch.DispatchQueue?)
+  public var catchPolicy: PromiseKit.CatchPolicy
+  public var logHandler: (_ event: PromiseKit.LogEvent) -> Swift.Void
+}
+public var conf: PromiseKit.PMKConfiguration
+extension PromiseKit.Promise : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension PromiseKit.Promise : Swift.CustomDebugStringConvertible {
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+extension PromiseKit.AnyPromise {
+  @objc override dynamic open var description: Swift.String {
+    @objc get
+  }
+}
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T?, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> PromiseKit.Promise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> PromiseKit.Promise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping ((any Swift.Error)?, T?) -> Swift.Void) throws -> Swift.Void) -> PromiseKit.Promise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap(_ body: (@escaping ((any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> PromiseKit.Promise<Swift.Void>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T) -> Swift.Void) throws -> Swift.Void) -> PromiseKit.Promise<T>
+extension PromiseKit.Promise {
+  @available(*, deprecated, message: "See `ensure`")
+  final public func always(on q: Dispatch.DispatchQueue = .main, execute body: @escaping () -> Swift.Void) -> PromiseKit.Promise<T>
+}
+extension PromiseKit.Thenable where Self.T : Swift.Sequence {
+  @available(*, deprecated, message: "See: `filterValues`")
+  public func filter(on: Dispatch.DispatchQueue? = conf.Q.map, test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> PromiseKit.Promise<[Self.T.Iterator.Element]>
+}
+extension PromiseKit.Thenable where Self.T : Swift.Collection {
+  @available(*, deprecated, message: "See: `firstValue`")
+  public var first: PromiseKit.Promise<Self.T.Element> {
+    get
+  }
+  @available(*, deprecated, message: "See: `lastValue`")
+  public var last: PromiseKit.Promise<Self.T.Element> {
+    get
+  }
+}
+extension PromiseKit.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  @available(*, deprecated, message: "See: `sortedValues`")
+  public func sorted(on: Dispatch.DispatchQueue? = conf.Q.map) -> PromiseKit.Promise<[Self.T.Iterator.Element]>
+}
+public enum PMKError : Swift.Error {
+  case invalidCallingConvention
+  case returnedSelf
+  case badInput
+  case cancelled
+  @available(*, deprecated, message: "See: `compactMap`")
+  case flatMap(Any, any Any.Type)
+  case compactMap(Any, any Any.Type)
+  case emptySequence
+  case noWinner
+}
+extension PromiseKit.PMKError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension PromiseKit.PMKError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public protocol CancellableError : Swift.Error {
+  var isCancelled: Swift.Bool { get }
+}
+extension Swift.Error {
+  public var isCancelled: Swift.Bool {
+    get
+  }
+}
+public enum CatchPolicy {
+  case allErrors
+  case allErrorsExceptCancellation
+  public static func == (a: PromiseKit.CatchPolicy, b: PromiseKit.CatchPolicy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public func firstly<U>(execute body: () throws -> U) -> PromiseKit.Promise<U.T> where U : PromiseKit.Thenable
+public func firstly<T>(execute body: () -> PromiseKit.Guarantee<T>) -> PromiseKit.Guarantee<T>
+@_hasMissingDesignatedInitializers final public class Guarantee<T> : PromiseKit.Thenable {
+  public static func value(_ value: T) -> PromiseKit.Guarantee<T>
+  public init(resolver body: (@escaping (T) -> Swift.Void) -> Swift.Void)
+  final public func pipe(to: @escaping (PromiseKit.Result<T>) -> Swift.Void)
+  final public var result: PromiseKit.Result<T>? {
+    get
+  }
+  final public class func pending() -> (guarantee: PromiseKit.Guarantee<T>, resolve: (T) -> Swift.Void)
+  @objc deinit
+}
+extension PromiseKit.Guarantee {
+  @discardableResult
+  final public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> PromiseKit.Guarantee<Swift.Void>
+  final public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> PromiseKit.Guarantee<T>
+  final public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> U) -> PromiseKit.Guarantee<U>
+  @discardableResult
+  final public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> PromiseKit.Guarantee<U>) -> PromiseKit.Guarantee<U>
+  final public func asVoid() -> PromiseKit.Guarantee<Swift.Void>
+  final public func wait() -> T
+}
+extension PromiseKit.Guarantee where T : Swift.Sequence {
+  final public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> PromiseKit.Guarantee<[U]>
+  final public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> PromiseKit.Guarantee<[U.Iterator.Element]> where U : Swift.Sequence
+  final public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U?) -> PromiseKit.Guarantee<[U]>
+  final public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> PromiseKit.Guarantee<U>) -> PromiseKit.Guarantee<[U]>
+  final public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> PromiseKit.Guarantee<[U.T.Iterator.Element]> where U : PromiseKit.Thenable, U.T : Swift.Sequence
+  final public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (T.Iterator.Element) -> Swift.Bool) -> PromiseKit.Guarantee<[T.Iterator.Element]>
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ areInIncreasingOrder: @escaping (T.Iterator.Element, T.Iterator.Element) -> Swift.Bool) -> PromiseKit.Guarantee<[T.Iterator.Element]>
+}
+extension PromiseKit.Guarantee where T : Swift.Sequence, T.Element : Swift.Comparable {
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> PromiseKit.Guarantee<[T.Iterator.Element]>
+}
+extension PromiseKit.Guarantee where T == () {
+  convenience public init()
+  public static var value: PromiseKit.Guarantee<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 2.0, tvOS 10.0, watchOS 2.0, *)
+  final public func async<T>(_: PromiseKit.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () -> T) -> PromiseKit.Guarantee<T>
+}
+public func hang<T>(_ promise: PromiseKit.Promise<T>) throws -> T
+public enum LogEvent {
+  case waitOnMainThread
+  case pendingPromiseDeallocated
+  case pendingGuaranteeDeallocated
+  case cauterized(any Swift.Error)
+}
+extension Foundation.NotificationCenter {
+  public func observe(once name: Foundation.Notification.Name, object: Any? = nil) -> PromiseKit.Guarantee<Foundation.Notification>
+}
+extension ObjectiveC.NSObject {
+  public func observe(_: PromiseKit.PMKNamespacer, keyPath: Swift.String) -> PromiseKit.Guarantee<Any?>
+}
+extension Foundation.URLSession {
+  public func dataTask(_: PromiseKit.PMKNamespacer, with convertible: any PromiseKit.URLRequestConvertible) -> PromiseKit.Promise<(data: Foundation.Data, response: Foundation.URLResponse)>
+  public func uploadTask(_: PromiseKit.PMKNamespacer, with convertible: any PromiseKit.URLRequestConvertible, from data: Foundation.Data) -> PromiseKit.Promise<(data: Foundation.Data, response: Foundation.URLResponse)>
+  public func uploadTask(_: PromiseKit.PMKNamespacer, with convertible: any PromiseKit.URLRequestConvertible, fromFile file: Foundation.URL) -> PromiseKit.Promise<(data: Foundation.Data, response: Foundation.URLResponse)>
+  public func downloadTask(_: PromiseKit.PMKNamespacer, with convertible: any PromiseKit.URLRequestConvertible, to saveLocation: Foundation.URL) -> PromiseKit.Promise<(saveLocation: Foundation.URL, response: Foundation.URLResponse)>
+}
+public protocol URLRequestConvertible {
+  var pmkRequest: Foundation.URLRequest { get }
+}
+extension Foundation.URLRequest : PromiseKit.URLRequestConvertible {
+  public var pmkRequest: Foundation.URLRequest {
+    get
+  }
+}
+extension Foundation.URL : PromiseKit.URLRequestConvertible {
+  public var pmkRequest: Foundation.URLRequest {
+    get
+  }
+}
+extension Swift.String {
+  public init?(data: Foundation.Data, urlResponse: Foundation.URLResponse)
+}
+public enum PMKHTTPError : Swift.Error, Foundation.LocalizedError, Swift.CustomStringConvertible {
+  case badStatusCode(Swift.Int, Foundation.Data, Foundation.HTTPURLResponse)
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public func decodeResponse<T>(_ t: T.Type, decoder: Foundation.JSONDecoder = JSONDecoder()) -> T? where T : Swift.Decodable
+  public var jsonDictionary: Any? {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+extension PromiseKit.Promise where T == (data: Foundation.Data, response: Foundation.URLResponse) {
+  final public func validate() -> PromiseKit.Promise<T>
+}
+@_hasMissingDesignatedInitializers final public class Promise<T> : PromiseKit.Thenable, PromiseKit.CatchMixin {
+  public static func value(_ value: T) -> PromiseKit.Promise<T>
+  public init(error: any Swift.Error)
+  public init<U>(_ bridge: U) where T == U.T, U : PromiseKit.Thenable
+  public init(resolver body: (PromiseKit.Resolver<T>) throws -> Swift.Void)
+  final public class func pending() -> (promise: PromiseKit.Promise<T>, resolver: PromiseKit.Resolver<T>)
+  final public func pipe(to: @escaping (PromiseKit.Result<T>) -> Swift.Void)
+  final public var result: PromiseKit.Result<T>? {
+    get
+  }
+  @objc deinit
+}
+extension PromiseKit.Promise {
+  final public func wait() throws -> T
+}
+extension PromiseKit.Promise where T == () {
+  convenience public init()
+  public static var value: PromiseKit.Promise<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 8.0, tvOS 9.0, watchOS 2.0, *)
+  final public func async<T>(_: PromiseKit.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () throws -> T) -> PromiseKit.Promise<T>
+}
+public enum PMKNamespacer {
+  case promise
+  public static func == (a: PromiseKit.PMKNamespacer, b: PromiseKit.PMKNamespacer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public func race<U>(_ thenables: U...) -> PromiseKit.Promise<U.T> where U : PromiseKit.Thenable
+public func race<U>(_ thenables: [U]) -> PromiseKit.Promise<U.T> where U : PromiseKit.Thenable
+public func race<T>(_ guarantees: PromiseKit.Guarantee<T>...) -> PromiseKit.Guarantee<T>
+public func race<U>(fulfilled thenables: [U]) -> PromiseKit.Promise<U.T> where U : PromiseKit.Thenable
+@_hasMissingDesignatedInitializers final public class Resolver<T> {
+  @objc deinit
+}
+extension PromiseKit.Resolver {
+  final public func fulfill(_ value: T)
+  final public func reject(_ error: any Swift.Error)
+  final public func resolve(_ result: PromiseKit.Result<T>)
+  final public func resolve(_ obj: T?, _ error: (any Swift.Error)?)
+  final public func resolve(_ obj: T, _ error: (any Swift.Error)?)
+  final public func resolve(_ error: (any Swift.Error)?, _ obj: T?)
+}
+extension PromiseKit.Resolver where T == () {
+  final public func resolve(_ error: (any Swift.Error)?)
+  final public func fulfill_()
+}
+extension PromiseKit.Resolver {
+  final public func resolve<E>(_ result: Swift.Result<T, E>) where E : Swift.Error
+}
+public enum Result<T> {
+  case fulfilled(T)
+  case rejected(any Swift.Error)
+}
+extension PromiseKit.Result {
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+}
+public protocol Thenable : AnyObject {
+  associatedtype T
+  func pipe(to: @escaping (PromiseKit.Result<Self.T>) -> Swift.Void)
+  var result: PromiseKit.Result<Self.T>? { get }
+}
+extension PromiseKit.Thenable {
+  public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> U) -> PromiseKit.Promise<U.T> where U : PromiseKit.Thenable
+  public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U) -> PromiseKit.Promise<U>
+  public func compactMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U?) -> PromiseKit.Promise<U>
+  public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> PromiseKit.Promise<Swift.Void>
+  public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> PromiseKit.Promise<Self.T>
+  public func tap(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (PromiseKit.Result<Self.T>) -> Swift.Void) -> PromiseKit.Promise<Self.T>
+  public func asVoid() -> PromiseKit.Promise<Swift.Void>
+}
+extension PromiseKit.Thenable {
+  public var error: (any Swift.Error)? {
+    get
+  }
+  public var isPending: Swift.Bool {
+    get
+  }
+  public var isResolved: Swift.Bool {
+    get
+  }
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+  public var isRejected: Swift.Bool {
+    get
+  }
+  public var value: Self.T? {
+    get
+  }
+}
+extension PromiseKit.Thenable where Self.T : Swift.Sequence {
+  public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> PromiseKit.Promise<[U]>
+  public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> PromiseKit.Promise<[U.Iterator.Element]> where U : Swift.Sequence
+  public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U?) -> PromiseKit.Promise<[U]>
+  public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> PromiseKit.Promise<[U.T]> where U : PromiseKit.Thenable
+  public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> PromiseKit.Promise<[U.T.Iterator.Element]> where U : PromiseKit.Thenable, U.T : Swift.Sequence
+  public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> PromiseKit.Promise<[Self.T.Iterator.Element]>
+}
+extension PromiseKit.Thenable where Self.T : Swift.Collection {
+  public var firstValue: PromiseKit.Promise<Self.T.Element> {
+    get
+  }
+  public func firstValue(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, where test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> PromiseKit.Promise<Self.T.Iterator.Element>
+  public var lastValue: PromiseKit.Promise<Self.T.Element> {
+    get
+  }
+}
+extension PromiseKit.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> PromiseKit.Promise<[Self.T.Iterator.Element]>
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public static func animate(_: PromiseKit.PMKNamespacer, duration: Foundation.TimeInterval, delay: Foundation.TimeInterval = 0, options: UIKit.UIView.AnimationOptions = [], animations: @escaping () -> Swift.Void) -> PromiseKit.Guarantee<Swift.Bool>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public static func animate(_: PromiseKit.PMKNamespacer, duration: Foundation.TimeInterval, delay: Foundation.TimeInterval, usingSpringWithDamping damping: CoreFoundation.CGFloat, initialSpringVelocity: CoreFoundation.CGFloat, options: UIKit.UIView.AnimationOptions = [], animations: @escaping () -> Swift.Void) -> PromiseKit.Guarantee<Swift.Bool>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public static func transition(_: PromiseKit.PMKNamespacer, with view: UIKit.UIView, duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions = [], animations: (() -> Swift.Void)?) -> PromiseKit.Guarantee<Swift.Bool>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public static func transition(_: PromiseKit.PMKNamespacer, from: UIKit.UIView, to: UIKit.UIView, duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions = []) -> PromiseKit.Guarantee<Swift.Bool>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public static func perform(_: PromiseKit.PMKNamespacer, animation: UIKit.UIView.SystemAnimation, on views: [UIKit.UIView], options: UIKit.UIView.AnimationOptions = [], animations: (() -> Swift.Void)?) -> PromiseKit.Guarantee<Swift.Bool>
+}
+@available(iOS 10, tvOS 10, *)
+extension UIKit.UIViewPropertyAnimator {
+  @_Concurrency.MainActor @preconcurrency public func startAnimation(_: PromiseKit.PMKNamespacer) -> PromiseKit.Guarantee<UIKit.UIViewAnimatingPosition>
+}
+public func when<U>(fulfilled thenables: [U]) -> PromiseKit.Promise<[U.T]> where U : PromiseKit.Thenable
+public func when(fulfilled thenables: [any PromiseKit.Thenable]) -> PromiseKit.Promise<[Any]>
+public func when<U>(fulfilled promises: U...) -> PromiseKit.Promise<Swift.Void> where U : PromiseKit.Thenable, U.T == ()
+public func when<U>(fulfilled promises: [U]) -> PromiseKit.Promise<Swift.Void> where U : PromiseKit.Thenable, U.T == ()
+public func when<U, V>(fulfilled pu: U, _ pv: V) -> PromiseKit.Promise<(U.T, V.T)> where U : PromiseKit.Thenable, V : PromiseKit.Thenable
+public func when<U, V, W>(fulfilled pu: U, _ pv: V, _ pw: W) -> PromiseKit.Promise<(U.T, V.T, W.T)> where U : PromiseKit.Thenable, V : PromiseKit.Thenable, W : PromiseKit.Thenable
+public func when<U, V, W, X>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X) -> PromiseKit.Promise<(U.T, V.T, W.T, X.T)> where U : PromiseKit.Thenable, V : PromiseKit.Thenable, W : PromiseKit.Thenable, X : PromiseKit.Thenable
+public func when<U, V, W, X, Y>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X, _ py: Y) -> PromiseKit.Promise<(U.T, V.T, W.T, X.T, Y.T)> where U : PromiseKit.Thenable, V : PromiseKit.Thenable, W : PromiseKit.Thenable, X : PromiseKit.Thenable, Y : PromiseKit.Thenable
+public func when<It>(fulfilled promiseIterator: It, concurrently: Swift.Int) -> PromiseKit.Promise<[It.Element.T]> where It : Swift.IteratorProtocol, It.Element : PromiseKit.Thenable
+public func when<T>(resolved promises: PromiseKit.Promise<T>...) -> PromiseKit.Guarantee<[PromiseKit.Result<T>]>
+public func when<T>(resolved promises: [PromiseKit.Promise<T>]) -> PromiseKit.Guarantee<[PromiseKit.Result<T>]>
+public func when<It>(resolved promiseIterator: It, concurrently: Swift.Int) -> PromiseKit.Guarantee<[PromiseKit.Result<It.Element.T>]> where It : Swift.IteratorProtocol, It.Element : PromiseKit.Thenable
+public func when(_ guarantees: PromiseKit.Guarantee<Swift.Void>...) -> PromiseKit.Guarantee<Swift.Void>
+public func when<T>(_ guarantees: PromiseKit.Guarantee<T>...) -> PromiseKit.Guarantee<[T]>
+public func when(guarantees: [PromiseKit.Guarantee<Swift.Void>]) -> PromiseKit.Guarantee<Swift.Void>
+public func when<T>(guarantees: [PromiseKit.Guarantee<T>]) -> PromiseKit.Guarantee<[T]>
+public func when<U, V>(guarantees gu: PromiseKit.Guarantee<U>, _ gv: PromiseKit.Guarantee<V>) -> PromiseKit.Guarantee<(U, V)>
+public func when<U, V, W>(guarantees gu: PromiseKit.Guarantee<U>, _ gv: PromiseKit.Guarantee<V>, _ gw: PromiseKit.Guarantee<W>) -> PromiseKit.Guarantee<(U, V, W)>
+public func when<U, V, W, X>(guarantees gu: PromiseKit.Guarantee<U>, _ gv: PromiseKit.Guarantee<V>, _ gw: PromiseKit.Guarantee<W>, _ gx: PromiseKit.Guarantee<X>) -> PromiseKit.Guarantee<(U, V, W, X)>
+public func when<U, V, W, X, Y>(guarantees gu: PromiseKit.Guarantee<U>, _ gv: PromiseKit.Guarantee<V>, _ gw: PromiseKit.Guarantee<W>, _ gx: PromiseKit.Guarantee<X>, _ gy: PromiseKit.Guarantee<Y>) -> PromiseKit.Guarantee<(U, V, W, X, Y)>
+extension PromiseKit.CatchPolicy : Swift.Equatable {}
+extension PromiseKit.CatchPolicy : Swift.Hashable {}
+extension PromiseKit.PMKNamespacer : Swift.Equatable {}
+extension PromiseKit.PMKNamespacer : Swift.Hashable {}

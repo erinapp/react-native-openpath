@@ -1,0 +1,11 @@
+framework module AllegionBLECore {
+  umbrella header "AllegionBLECore-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionBLECore.Swift {
+  header "AllegionBLECore-Swift.h"
+  requires objc
+}

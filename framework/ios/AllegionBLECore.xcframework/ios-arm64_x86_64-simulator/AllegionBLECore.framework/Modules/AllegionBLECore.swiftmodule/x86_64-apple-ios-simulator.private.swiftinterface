@@ -1,0 +1,449 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AllegionBLECore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AllegionBLECore
+import AllegionExtensions
+import AllegionLogging
+import CoreBluetooth
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct Advertisement {
+  public var deviceType: AllegionBLECore.BLEDeviceType?
+  public var serialNumber: Foundation.Data?
+  public var name: Swift.String?
+  public var engageSupported: Swift.Bool
+  public var homeSupported: Swift.Bool
+  public var sapphireSupported: Swift.Bool
+  public var iotNativeSupported: Swift.Bool
+  public var dynamicMTUSupported: Swift.Bool
+  public var engageSecurityVersion: AllegionBLECore.EngageSecurityVersion?
+  public var homeSecurityVersion: AllegionBLECore.HomeSecurityVersion?
+  public var sapphireSecurityVersion: AllegionBLECore.SapphireSecurityVersion?
+  public var iotNativeSecurityVersion: AllegionBLECore.IoTNativeSecurityVersion?
+  public var engageStatus: AllegionBLECore.EngageStatus?
+  public var homeStatus: AllegionBLECore.HomeStatus?
+  public var sapphireStatus: AllegionBLECore.SapphireStatus?
+  public var iotNativeStatus: AllegionBLECore.IoTNativeStatus?
+  public var statusCounter: Foundation.Data?
+  public var macAddress: Swift.String?
+  public var nzrv: Swift.UInt8?
+  public var reserved: Foundation.Data?
+  public var modelCode: Swift.UInt16?
+}
+extension AllegionBLECore.Advertisement : Swift.Equatable {
+  public static func == (lhs: AllegionBLECore.Advertisement, rhs: AllegionBLECore.Advertisement) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class AdvertisementParser {
+  public static func parseAdvertisement(data: [Swift.String : Any], subParsers: [any AllegionBLECore.Parsing]) throws -> AllegionBLECore.Advertisement?
+  @objc deinit
+}
+public enum BLEDeviceType : Swift.Equatable {
+  case swordfish, jaguar, krill, trident, gateway, oem, marlin, leopard, denali, argos, barracuda, wifi
+  case ghiTrilock, ghiGateway, topaz, coLock, switchback, eSignoLock, eSignoReader, jackalope, denaliLever
+  case eSignoLockOutdoor, eSignoReaderOutdoor, eSignoReaderPlastic, eSignoSmartLocker, eSignoECylinder
+  case eSignoSmartHandle, cisaReserved, uwe, ghiJackalope, ghiJackalopeLever, ghihWifiTrilock, interflexReader
+  case interflexLock, wifiKeypadDeadbolt, walton
+  case zion(AllegionBLECore.Zion.Variant)
+  case helios(AllegionBLECore.Helios.Variant)
+  case orion(AllegionBLECore.Orion.Variant)
+  case unknown
+  public static func fromModelBytes(_ bytes: Swift.UInt16) -> AllegionBLECore.BLEDeviceType
+  public var deviceType: Swift.String {
+    get
+  }
+  public var model: Swift.String {
+    get
+  }
+  public static func == (a: AllegionBLECore.BLEDeviceType, b: AllegionBLECore.BLEDeviceType) -> Swift.Bool
+}
+public enum Helios {
+  public enum Variant : Swift.CustomStringConvertible {
+    case readerCylinder
+    case lecteurCylinder
+    case lecteurUSB
+    case eCylinder
+    case keypadCylinder1, keypadCylinder2
+    case internalUSB
+    case interneUSB
+    public var description: Swift.String {
+      get
+    }
+    public var model: Swift.String {
+      get
+    }
+    public static func == (a: AllegionBLECore.Helios.Variant, b: AllegionBLECore.Helios.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public enum Zion {
+  public enum Variant : Swift.CustomStringConvertible {
+    case mTDeadbolt
+    case aTDeadbolt
+    public var description: Swift.String {
+      get
+    }
+    public var model: Swift.String {
+      get
+    }
+    public static func == (a: AllegionBLECore.Zion.Variant, b: AllegionBLECore.Zion.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public enum Orion {
+  public enum Variant : Swift.CustomStringConvertible {
+    case lcnSeniorSwing9500IQ
+    case lcnReliaSwing9200IQ
+    case falconFreestyle8100IQ
+    public var description: Swift.String {
+      get
+    }
+    public var model: Swift.String {
+      get
+    }
+    public static func == (a: AllegionBLECore.Orion.Variant, b: AllegionBLECore.Orion.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public protocol BLEError : Swift.Error {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CentralManager : ObjectiveC.NSObject {
+  public static let shared: AllegionBLECore.CentralManager
+  public typealias ConnectCompletionHandler = (AllegionBLECore.ConnectionResult) -> Swift.Void
+  public typealias ScanProgressHandler = (_ newDiscoveries: [AllegionBLECore.ScanResponse]) -> Swift.Void
+  public typealias ScanCompletionHandler = (_ result: AllegionBLECore.ScanResult) -> Swift.Void
+  public var advertisementParsers: [any AllegionBLECore.Parsing]
+  public var state: AllegionBLECore.CentralManagerState
+  public var stateDelegate: (any AllegionBLECore.CentralStateTrackable)?
+  public var disconnectTrackable: (any AllegionBLECore.DisconnectionTrackable)!
+  public func startScanWithDuration(_ duration: Foundation.TimeInterval = 3, updateDuplicates: Swift.Bool = false, progressHandler: AllegionBLECore.CentralManager.ScanProgressHandler? = nil, completionHandler: AllegionBLECore.CentralManager.ScanCompletionHandler? = nil) throws
+  public func stopScan(_ error: AllegionBLECore.ScanError?)
+  public func connect(timeout: Foundation.TimeInterval = 5.0, peripheral: AllegionBLECore.Peripheral, completionHandler: @escaping (AllegionBLECore.ConnectionResult) -> Swift.Void)
+  public func disconnect(peripheral: AllegionBLECore.Peripheral)
+  public func retrievePeripheralWithUUID(remoteUUID: Foundation.UUID) -> CoreBluetooth.CBPeripheral?
+  @objc deinit
+}
+public enum CentralManagerState {
+  case unknown
+  case resetting
+  case unsupported
+  case unauthorized
+  case poweredOff
+  case scanning
+  case notScanning
+  public static func == (a: AllegionBLECore.CentralManagerState, b: AllegionBLECore.CentralManagerState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionBLECore.CentralManagerState : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol CentralStateTrackable {
+  func stateChanged(state: AllegionBLECore.CentralManagerState)
+}
+public struct Characteristic {
+  public let name: Swift.String?
+  public let uuid: Foundation.UUID
+}
+extension AllegionBLECore.Characteristic : Swift.Equatable {
+  public static func == (lhs: AllegionBLECore.Characteristic, rhs: AllegionBLECore.Characteristic) -> Swift.Bool
+}
+public enum ConnectionError : AllegionBLECore.BLEError, Swift.Error {
+  case connectionTimeoutError
+  case genericError
+  case peripheralNotFoundError
+  public static func == (a: AllegionBLECore.ConnectionError, b: AllegionBLECore.ConnectionError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionBLECore.ConnectionError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum ConnectionResult {
+  case success(peripheral: CoreBluetooth.CBPeripheral)
+  case error(error: any Swift.Error)
+}
+public protocol DisconnectionTrackable {
+  func didDisconnect(peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+}
+public enum EngageSecurityVersion : Swift.UInt8 {
+  case normal
+  case sequenceNumbers
+  case generalEncrypted
+  case fragmented1KB
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum EngageStatus : Swift.UInt8 {
+  case fdr
+  case commissioned
+  case unconnectable
+  case linkRequestToGateway
+  case connectionRequestToGateway
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public class EngageVersion1Parser : AllegionBLECore.Parsing {
+  public init()
+  public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  public func matchFingerprint(_ data: Foundation.Data) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class EngageVersion2Parser : AllegionBLECore.Version2Parser {
+  override public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  override public init()
+  @objc deinit
+}
+public enum HomeSecurityVersion : Swift.UInt8 {
+  case normal
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum HomeStatus : Swift.UInt8 {
+  case unknown
+  case unpaired
+  case paired
+  case unified
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public class HomeVersion1Parser : AllegionBLECore.Parsing {
+  public init()
+  public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  public func matchFingerprint(_ data: Foundation.Data) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class HomeVersion2Parser : AllegionBLECore.Version2Parser {
+  override public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  override public init()
+  @objc deinit
+}
+public enum IoTNativeSecurityVersion : Swift.UInt8 {
+  case version1
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum IoTNativeStatus : Swift.UInt8 {
+  case fdr
+  case commissioned
+  case unconnectable
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class IoTNativeVersion16Parser : AllegionBLECore.Version16Parser {
+  override public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  override public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NoOpPeripheralTrackable : AllegionBLECore.PeripheralTrackable {
+  public func didDiscoverServices(peripheral: AllegionBLECore.Peripheral, error: (any Swift.Error)?)
+  public func didDiscoverCharacteristics(peripheral: AllegionBLECore.Peripheral, for service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  public func didWriteValue(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  public func didUpdateValue(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  public func didUpdateNotificationState(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc deinit
+}
+public protocol Parsing {
+  func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  func matchFingerprint(_ data: Foundation.Data) -> Swift.Bool
+  func parseSerialNumber(_ advertisementData: [Swift.String : Any]) -> Foundation.Data?
+  func parseName(_ advertisementData: [Swift.String : Any]) -> Swift.String?
+}
+extension AllegionBLECore.Parsing {
+  public func parseSerialNumber(_ advertisementData: [Swift.String : Any]) -> Foundation.Data?
+  public func parseName(_ advertisementData: [Swift.String : Any]) -> Swift.String?
+}
+public class Peripheral {
+  public var peripheral: CoreBluetooth.CBPeripheral
+  public var services: [CoreBluetooth.CBService]? {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var uuid: Foundation.UUID {
+    get
+  }
+  public var peripheralTrackable: any AllegionBLECore.PeripheralTrackable
+  public var state: CoreBluetooth.CBPeripheralState {
+    get
+  }
+  @available(iOS 13.0, macOS 10.15, *)
+  public var progress: Foundation.Progress {
+    get
+  }
+  public init(peripheral: CoreBluetooth.CBPeripheral)
+  public func discoverServices(serviceUUIDs: [CoreBluetooth.CBUUID]?)
+  public func discoverCharacteristics(characteristicUUIDs: [CoreBluetooth.CBUUID]?, for service: CoreBluetooth.CBService)
+  public func writeDataWithoutResponse(data: Foundation.Data, for characteristic: CoreBluetooth.CBCharacteristic)
+  public func writeDataWithResponse(data: Foundation.Data, for characteristic: CoreBluetooth.CBCharacteristic)
+  public func readCharacteristic(characteristic: CoreBluetooth.CBCharacteristic)
+  public func setNotifyValue(enabled: Swift.Bool, for characteristic: CoreBluetooth.CBCharacteristic)
+  public func getMTUSize(characteristicWriteType: CoreBluetooth.CBCharacteristicWriteType) -> Swift.Int
+  @objc deinit
+}
+extension AllegionBLECore.Peripheral : Swift.Equatable {
+  public static func == (lhs: AllegionBLECore.Peripheral, rhs: AllegionBLECore.Peripheral) -> Swift.Bool
+}
+public protocol PeripheralTrackable {
+  func didDiscoverServices(peripheral: AllegionBLECore.Peripheral, error: (any Swift.Error)?)
+  func didDiscoverCharacteristics(peripheral: AllegionBLECore.Peripheral, for service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  func didWriteValue(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  func didUpdateValue(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  func didUpdateNotificationState(peripheral: AllegionBLECore.Peripheral, for characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+public enum SapphireSecurityVersion : Swift.UInt8 {
+  case platinumV1
+  case platinumV2
+  case platinumV3
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum SapphireStatus : Swift.UInt8 {
+  case unconfigured
+  case RENRequired
+  case nearConnections
+  case anyConnections
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class SapphireVersion16Parser : AllegionBLECore.Version16Parser {
+  override public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  override public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class SapphireVersion2Parser : AllegionBLECore.Version2Parser {
+  override public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  override public init()
+  @objc deinit
+}
+public enum ScanError : AllegionBLECore.BLEError, Swift.Error {
+  case genericError
+  case handlerError
+  case invalidAdvertisementError
+  case managerNotSetError
+  case managerBusyError
+  case parserNotSetError
+  case unauthorizedError
+  case unsupportedError
+  public static func == (a: AllegionBLECore.ScanError, b: AllegionBLECore.ScanError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AllegionBLECore.ScanError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public struct ScanResponse {
+  public let advertisement: AllegionBLECore.Advertisement
+  public let peripheral: AllegionBLECore.Peripheral
+  public let rssi: Swift.Int
+  public init(advertisement: AllegionBLECore.Advertisement, peripheral: AllegionBLECore.Peripheral, rssi: Swift.Int)
+}
+public enum ScanResult {
+  case success(scanResults: [AllegionBLECore.ScanResponse])
+  case error(error: AllegionBLECore.ScanError)
+}
+public struct Service {
+  public let name: Swift.String?
+  public let uuid: Foundation.UUID
+  public let characteristics: [AllegionBLECore.Characteristic]
+}
+extension AllegionBLECore.Service : Swift.Equatable {
+  public static func == (lhs: AllegionBLECore.Service, rhs: AllegionBLECore.Service) -> Swift.Bool
+}
+public class Version16Parser : AllegionBLECore.Parsing {
+  public init()
+  public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  public func matchFingerprint(_ data: Foundation.Data) -> Swift.Bool
+  @objc deinit
+}
+public class Version2Parser : AllegionBLECore.Parsing {
+  public init()
+  public func parse(_ data: [Swift.String : Any], advertisement: inout AllegionBLECore.Advertisement) throws
+  public func matchFingerprint(_ data: Foundation.Data) -> Swift.Bool
+  @objc deinit
+}
+extension AllegionBLECore.Helios.Variant : Swift.Equatable {}
+extension AllegionBLECore.Helios.Variant : Swift.Hashable {}
+extension AllegionBLECore.Zion.Variant : Swift.Equatable {}
+extension AllegionBLECore.Zion.Variant : Swift.Hashable {}
+extension AllegionBLECore.Orion.Variant : Swift.Equatable {}
+extension AllegionBLECore.Orion.Variant : Swift.Hashable {}
+extension AllegionBLECore.CentralManagerState : Swift.Equatable {}
+extension AllegionBLECore.CentralManagerState : Swift.Hashable {}
+extension AllegionBLECore.ConnectionError : Swift.Equatable {}
+extension AllegionBLECore.ConnectionError : Swift.Hashable {}
+extension AllegionBLECore.EngageSecurityVersion : Swift.Equatable {}
+extension AllegionBLECore.EngageSecurityVersion : Swift.Hashable {}
+extension AllegionBLECore.EngageSecurityVersion : Swift.RawRepresentable {}
+extension AllegionBLECore.EngageStatus : Swift.Equatable {}
+extension AllegionBLECore.EngageStatus : Swift.Hashable {}
+extension AllegionBLECore.EngageStatus : Swift.RawRepresentable {}
+extension AllegionBLECore.HomeSecurityVersion : Swift.Equatable {}
+extension AllegionBLECore.HomeSecurityVersion : Swift.Hashable {}
+extension AllegionBLECore.HomeSecurityVersion : Swift.RawRepresentable {}
+extension AllegionBLECore.HomeStatus : Swift.Equatable {}
+extension AllegionBLECore.HomeStatus : Swift.Hashable {}
+extension AllegionBLECore.HomeStatus : Swift.RawRepresentable {}
+extension AllegionBLECore.IoTNativeSecurityVersion : Swift.Equatable {}
+extension AllegionBLECore.IoTNativeSecurityVersion : Swift.Hashable {}
+extension AllegionBLECore.IoTNativeSecurityVersion : Swift.RawRepresentable {}
+extension AllegionBLECore.IoTNativeStatus : Swift.Equatable {}
+extension AllegionBLECore.IoTNativeStatus : Swift.Hashable {}
+extension AllegionBLECore.IoTNativeStatus : Swift.RawRepresentable {}
+extension AllegionBLECore.SapphireSecurityVersion : Swift.Equatable {}
+extension AllegionBLECore.SapphireSecurityVersion : Swift.Hashable {}
+extension AllegionBLECore.SapphireSecurityVersion : Swift.RawRepresentable {}
+extension AllegionBLECore.SapphireStatus : Swift.Equatable {}
+extension AllegionBLECore.SapphireStatus : Swift.Hashable {}
+extension AllegionBLECore.SapphireStatus : Swift.RawRepresentable {}
+extension AllegionBLECore.ScanError : Swift.Equatable {}
+extension AllegionBLECore.ScanError : Swift.Hashable {}

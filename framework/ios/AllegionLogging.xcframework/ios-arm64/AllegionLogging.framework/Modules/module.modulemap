@@ -1,0 +1,11 @@
+framework module AllegionLogging {
+  umbrella header "AllegionLogging-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AllegionLogging.Swift {
+  header "AllegionLogging-Swift.h"
+  requires objc
+}
