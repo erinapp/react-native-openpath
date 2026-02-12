@@ -50,6 +50,8 @@ public enum BLEDeviceType : Swift.Equatable {
   case zion(AllegionBLECore.Zion.Variant)
   case helios(AllegionBLECore.Helios.Variant)
   case orion(AllegionBLECore.Orion.Variant)
+  case adx
+  case gainsboroughSeleneEntrance, gainsboroughSeleneSecure, schlageSeleneEntrance, schlageSeleneSecure
   case unknown
   public static func fromModelBytes(_ bytes: Swift.UInt16) -> AllegionBLECore.BLEDeviceType
   public var deviceType: Swift.String {
@@ -252,6 +254,8 @@ public class HomeVersion1Parser : AllegionBLECore.Parsing {
 }
 public enum IoTNativeSecurityVersion : Swift.UInt8 {
   case version1
+  case version2
+  case version3
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {

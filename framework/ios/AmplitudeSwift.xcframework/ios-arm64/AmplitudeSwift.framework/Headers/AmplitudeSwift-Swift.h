@@ -375,6 +375,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AMPAutocaptu
 + (AMPAutocaptureOptions * _Nonnull)elementInteractions SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AMPAutocaptureOptions * _Nonnull networkTracking;)
 + (AMPAutocaptureOptions * _Nonnull)networkTracking SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AMPAutocaptureOptions * _Nonnull frustrationInteractions;)
++ (AMPAutocaptureOptions * _Nonnull)frustrationInteractions SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AMPAutocaptureOptions * _Nonnull all;)
 + (AMPAutocaptureOptions * _Nonnull)all SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) AMPAutocaptureOptions * _Nonnull default_;)
@@ -464,6 +466,7 @@ SWIFT_CLASS_NAMED("ObjCCaptureRule")
 @class AMPDefaultTrackingOptions;
 @class NSNumber;
 @class AMPNetworkTrackingOptions;
+@class AMPInteractionsOptions;
 SWIFT_CLASS_NAMED("ObjCConfiguration")
 @interface AMPConfiguration : NSObject
 + (AMPConfiguration * _Nonnull)initWithApiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none) SWIFT_WARN_UNUSED_RESULT;
@@ -497,7 +500,16 @@ SWIFT_CLASS_NAMED("ObjCConfiguration")
 @property (nonatomic) BOOL migrateLegacyData;
 @property (nonatomic, strong) NSNumber * _Nullable offline;
 @property (nonatomic, strong) AMPNetworkTrackingOptions * _Nonnull networkTrackingOptions;
+@property (nonatomic, strong) AMPInteractionsOptions * _Nonnull interactionsOptions;
 @property (nonatomic, readonly) BOOL enableAutoCaptureRemoteConfig;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("ObjCDeadClickOptions")
+@interface AMPDeadClickOptions : NSObject
+- (nonnull instancetype)initWithEnabled:(BOOL)enabled;
+@property (nonatomic, readonly) BOOL enabled;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -550,6 +562,14 @@ SWIFT_CLASS_NAMED("ObjCIngestionMetadata")
 @property (nonatomic, copy) NSString * _Nullable sourceVersion;
 @end
 
+@class AMPRageClickOptions;
+SWIFT_CLASS_NAMED("ObjCInteractionsOptions")
+@interface AMPInteractionsOptions : NSObject
+- (nonnull instancetype)initWithRageClick:(AMPRageClickOptions * _Nonnull)rageClick deadClick:(AMPDeadClickOptions * _Nonnull)deadClick;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS_NAMED("ObjCNetworkConnectivityCheckerPlugin")
 @interface AMPNetworkConnectivityCheckerPlugin : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSNumber * _Nullable Disabled;)
@@ -597,6 +617,14 @@ SWIFT_CLASS_NAMED("ObjCProperties")
 - (id _Nullable)get:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (AMPProperties * _Nonnull)set:(NSString * _Nonnull)key value:(id _Nonnull)value;
 - (AMPProperties * _Nonnull)remove:(NSString * _Nonnull)key;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("ObjCRageClickOptions")
+@interface AMPRageClickOptions : NSObject
+- (nonnull instancetype)initWithEnabled:(BOOL)enabled;
+@property (nonatomic, readonly) BOOL enabled;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

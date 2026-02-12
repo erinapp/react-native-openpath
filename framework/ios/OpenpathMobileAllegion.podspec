@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'OpenpathMobileAllegion'
-  s.version = '0.5.0'
+  s.version = '0.6.0'
   s.summary = 'Allegion support for Openpath SDK.'
   s.description = 'Allegion support for Openpath SDK.'
   s.homepage = 'https://openpath.com'

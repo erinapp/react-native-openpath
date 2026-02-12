@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.authors      = package['author']
   s.homepage     = package['homepage']
 
-  s.platform     = :ios, '14.8.1'
+  s.platform     = :ios, '11.2'
 
   s.source       = { git: 'https://github.com/author/OpenpathReactNative.git', tag: 'master' }
 
@@ -23,8 +23,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'React-Core'
 
-  # Change this to 'OpenpathMobile/Core' to build without third-party support.
-  s.dependency 'OpenpathMobile'
+  s.dependency 'OpenpathMobile', '~> 0.5.0'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO'

@@ -2,7 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AmplitudeSwift
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
-@_exported import AmplitudeCore
+@_exported @_spi(Internal) import AmplitudeCore
 @_exported import AmplitudeSwift
 import AnalyticsConnector
 import Darwin.C
@@ -110,6 +110,7 @@ extension AmplitudeSwift.Amplitude : AmplitudeCore.AnalyticsClient {
   override public init()
   @objc deinit
 }
+@available(*, deprecated, message: "Atomic struct is not thread-safe when used as a class property. Use NSLock or OSAllocatedUnfairLock (iOS 16+) instead.")
 @propertyWrapper public struct Atomic<T> {
   public init(wrappedValue value: T)
   public var wrappedValue: T {
@@ -125,7 +126,7 @@ public struct AutocaptureOptions : Swift.OptionSet {
   public static let screenViews: AmplitudeSwift.AutocaptureOptions
   public static let elementInteractions: AmplitudeSwift.AutocaptureOptions
   public static let networkTracking: AmplitudeSwift.AutocaptureOptions
-  @_spi(Frustration) public static let frustrationInteractions: AmplitudeSwift.AutocaptureOptions
+  public static let frustrationInteractions: AmplitudeSwift.AutocaptureOptions
   public static let all: AmplitudeSwift.AutocaptureOptions
   public typealias ArrayLiteralElement = AmplitudeSwift.AutocaptureOptions
   public typealias Element = AmplitudeSwift.AutocaptureOptions
@@ -196,7 +197,8 @@ public class Configuration {
     public static let enableAutoCaptureRemoteConfig: Swift.Bool
     public static let trackingOptions: AmplitudeSwift.TrackingOptions
     public static let networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions
-    @_spi(Frustration) public static let interactionsOptions: AmplitudeSwift.InteractionsOptions
+    public static let interactionsOptions: AmplitudeSwift.InteractionsOptions
+    public static let enableDiagnostics: Swift.Bool
   }
   public var apiKey: Swift.String {
     get
@@ -245,11 +247,11 @@ public class Configuration {
   public var offline: Swift.Bool?
   public var maxQueuedEventCount: Swift.Int
   final public let enableAutoCaptureRemoteConfig: Swift.Bool
-  @_spi(Frustration) public var interactionsOptions: AmplitudeSwift.InteractionsOptions
+  public var interactionsOptions: AmplitudeSwift.InteractionsOptions
+  public var enableDiagnostics: Swift.Bool
   @available(*, deprecated, message: "Please use the `autocapture` parameter instead.")
   convenience public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, defaultTracking: AmplitudeSwift.DefaultTrackingOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions)
-  @_spi(Frustration) public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, autocapture: AmplitudeSwift.AutocaptureOptions = Defaults.autocaptureOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, maxQueuedEventCount: Swift.Int = Defaults.maxQueuedEventCount, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions, enableAutoCaptureRemoteConfig: Swift.Bool = Defaults.enableAutoCaptureRemoteConfig, interactionsOptions: AmplitudeSwift.InteractionsOptions = Defaults.interactionsOptions)
-  convenience public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, autocapture: AmplitudeSwift.AutocaptureOptions = Defaults.autocaptureOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, maxQueuedEventCount: Swift.Int = Defaults.maxQueuedEventCount, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions, enableAutoCaptureRemoteConfig: Swift.Bool = Defaults.enableAutoCaptureRemoteConfig)
+  public init(apiKey: Swift.String, flushQueueSize: Swift.Int = Defaults.flushQueueSize, flushIntervalMillis: Swift.Int = Defaults.flushIntervalMillis, instanceName: Swift.String = Defaults.instanceName, optOut: Swift.Bool = Defaults.optOut, storageProvider: (any AmplitudeSwift.Storage)? = nil, identifyStorageProvider: (any AmplitudeSwift.Storage)? = nil, logLevel: AmplitudeSwift.LogLevelEnum = Defaults.logLevel, loggerProvider: any AmplitudeSwift.Logger = ConsoleLogger(), minIdLength: Swift.Int? = nil, partnerId: Swift.String? = nil, callback: AmplitudeSwift.EventCallback? = nil, flushMaxRetries: Swift.Int = Defaults.flushMaxRetries, useBatch: Swift.Bool = Defaults.useBatch, serverZone: AmplitudeCore.ServerZone = Defaults.serverZone, serverUrl: Swift.String? = nil, plan: AmplitudeSwift.Plan? = nil, ingestionMetadata: AmplitudeSwift.IngestionMetadata? = nil, trackingOptions: AmplitudeSwift.TrackingOptions = Defaults.trackingOptions, enableCoppaControl: Swift.Bool = Defaults.enableCoppaControl, flushEventsOnClose: Swift.Bool = Defaults.flushEventsOnClose, minTimeBetweenSessionsMillis: Swift.Int = Defaults.minTimeBetweenSessionsMillis, autocapture: AmplitudeSwift.AutocaptureOptions = Defaults.autocaptureOptions, identifyBatchIntervalMillis: Swift.Int = Defaults.identifyBatchIntervalMillis, maxQueuedEventCount: Swift.Int = Defaults.maxQueuedEventCount, migrateLegacyData: Swift.Bool = Defaults.migrateLegacyData, offline: Swift.Bool? = false, networkTrackingOptions: AmplitudeSwift.NetworkTrackingOptions = Defaults.networkTrackingOptions, enableAutoCaptureRemoteConfig: Swift.Bool = Defaults.enableAutoCaptureRemoteConfig, interactionsOptions: AmplitudeSwift.InteractionsOptions = Defaults.interactionsOptions, enableDiagnostics: Swift.Bool = Defaults.enableDiagnostics)
   @objc deinit
 }
 @preconcurrency public class ConsoleLogger : AmplitudeSwift.Logger, @unchecked Swift.Sendable {
@@ -655,19 +657,19 @@ public struct Identity : AmplitudeCore.AnalyticsIdentity {
   public var deviceId: Swift.String?
   public var userProperties: [Swift.String : Any]
 }
-@_spi(Frustration) public class InteractionsOptions {
-  @_spi(Frustration) final public let rageClick: AmplitudeSwift.RageClickOptions
-  @_spi(Frustration) final public let deadClick: AmplitudeSwift.DeadClickOptions
-  @_spi(Frustration) public init(rageClick: AmplitudeSwift.RageClickOptions = RageClickOptions(), deadClick: AmplitudeSwift.DeadClickOptions = DeadClickOptions())
-  @_spi(Frustration) @objc deinit
+public class InteractionsOptions {
+  final public let rageClick: AmplitudeSwift.RageClickOptions
+  final public let deadClick: AmplitudeSwift.DeadClickOptions
+  public init(rageClick: AmplitudeSwift.RageClickOptions = RageClickOptions(), deadClick: AmplitudeSwift.DeadClickOptions = DeadClickOptions())
+  @objc deinit
 }
-@_spi(Frustration) public struct RageClickOptions {
-  @_spi(Frustration) public let enabled: Swift.Bool
-  @_spi(Frustration) public init(enabled: Swift.Bool = true)
+public struct RageClickOptions {
+  public let enabled: Swift.Bool
+  public init(enabled: Swift.Bool = true)
 }
-@_spi(Frustration) public struct DeadClickOptions {
-  @_spi(Frustration) public let enabled: Swift.Bool
-  @_spi(Frustration) public init(enabled: Swift.Bool = true)
+public struct DeadClickOptions {
+  public let enabled: Swift.Bool
+  public init(enabled: Swift.Bool = true)
 }
 public struct NetworkPath {
   public var status: Network.NWPath.Status
@@ -687,12 +689,41 @@ public struct NetworkPath {
 public protocol NetworkTaskListener : AnyObject {
   func onTaskResume(_ task: Foundation.URLSessionTask)
   func onTask(_ task: Foundation.URLSessionTask, setState state: Foundation.URLSessionTask.State)
+  func onDataTaskCompletion(_ task: Foundation.URLSessionDataTask, data: Foundation.Data?, response: Foundation.URLResponse?, error: (any Swift.Error)?)
 }
 public struct NetworkTrackingOptions {
-  public struct CaptureRule {
+  public enum URLPattern {
+    case exact(Swift.String)
+    case regex(Swift.String)
+  }
+  public struct CaptureHeader : Swift.Decodable {
+    public let allowlist: [Swift.String]
+    public let captureSafeHeaders: Swift.Bool
+    public init(allowlist: [Swift.String] = [], captureSafeHeaders: Swift.Bool = true)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct CaptureBody : Swift.Decodable {
+    public let allowlist: [Swift.String]
+    public let blocklist: [Swift.String]
+    public init(allowlist: [Swift.String], blocklist: [Swift.String] = [])
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct CaptureRule : Swift.Decodable {
     public var hosts: [Swift.String]
+    public var urls: [AmplitudeSwift.NetworkTrackingOptions.URLPattern] {
+      get
+    }
+    public var methods: [Swift.String] {
+      get
+    }
     public var statusCodeRange: Swift.String
+    public let requestHeaders: AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?
+    public let responseHeaders: AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?
+    public let requestBody: AmplitudeSwift.NetworkTrackingOptions.CaptureBody?
+    public let responseBody: AmplitudeSwift.NetworkTrackingOptions.CaptureBody?
+    public init(from decoder: any Swift.Decoder) throws
     public init(hosts: [Swift.String], statusCodeRange: Swift.String = "500-599")
+    @_spi(NetworkTracking) public init(urls: [AmplitudeSwift.NetworkTrackingOptions.URLPattern], methods: [Swift.String] = ["*"], statusCodeRange: Swift.String = "500-599", requestHeaders: AmplitudeSwift.NetworkTrackingOptions.CaptureHeader? = nil, responseHeaders: AmplitudeSwift.NetworkTrackingOptions.CaptureHeader? = nil, requestBody: AmplitudeSwift.NetworkTrackingOptions.CaptureBody? = nil, responseBody: AmplitudeSwift.NetworkTrackingOptions.CaptureBody? = nil)
   }
   public var captureRules: [AmplitudeSwift.NetworkTrackingOptions.CaptureRule]
   public var ignoreHosts: [Swift.String]
@@ -776,6 +807,7 @@ extension AmplitudeSwift.ObjCAmplitude : AmplitudeCore.PluginHost {
   @objc public static let screenViews: AmplitudeSwift.ObjCAutocaptureOptions
   @objc public static let elementInteractions: AmplitudeSwift.ObjCAutocaptureOptions
   @objc public static let networkTracking: AmplitudeSwift.ObjCAutocaptureOptions
+  @objc public static let frustrationInteractions: AmplitudeSwift.ObjCAutocaptureOptions
   @objc public static let all: AmplitudeSwift.ObjCAutocaptureOptions
   @objc public static var `default`: AmplitudeSwift.ObjCAutocaptureOptions {
     @objc get
@@ -920,6 +952,10 @@ extension AmplitudeSwift.ObjCAmplitude : AmplitudeCore.PluginHost {
     @objc set(value)
   }
   @objc public var networkTrackingOptions: AmplitudeSwift.ObjCNetworkTrackingOptions {
+    @objc get
+    @objc set(value)
+  }
+  @objc public var interactionsOptions: AmplitudeSwift.ObjCInteractionsOptions {
     @objc get
     @objc set(value)
   }
@@ -1156,6 +1192,24 @@ public typealias ObjCEventCallback = (AmplitudeSwift.ObjCBaseEvent, Swift.Int, S
   @objc public var sourceVersion: Swift.String? {
     @objc get
     @objc set(value)
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPInteractionsOptions) public class ObjCInteractionsOptions : ObjectiveC.NSObject {
+  @objc convenience public init(rageClick: AmplitudeSwift.ObjCRageClickOptions = .init(enabled: true), deadClick: AmplitudeSwift.ObjCDeadClickOptions = .init(enabled: true))
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPRageClickOptions) public class ObjCRageClickOptions : ObjectiveC.NSObject {
+  @objc convenience public init(enabled: Swift.Bool = true)
+  @objc public var enabled: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(AMPDeadClickOptions) public class ObjCDeadClickOptions : ObjectiveC.NSObject {
+  @objc convenience public init(enabled: Swift.Bool = true)
+  @objc public var enabled: Swift.Bool {
+    @objc get
   }
   @objc deinit
 }
