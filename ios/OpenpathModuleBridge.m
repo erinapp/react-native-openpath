@@ -14,8 +14,7 @@
 
 // Framework documented public methods
 RCT_EXTERN_METHOD(provision:(NSString*)setupMobileToken)
-RCT_EXTERN_METHOD(unprovision)
-RCT_EXTERN_METHOD(unprovision:(NSString*)userOpal)
+RCT_EXTERN_METHOD(unprovision:(nullable NSString *)userOpal)
 RCT_EXTERN_METHOD(switchUser:(NSString*)userOpal)
 RCT_EXTERN_METHOD(syncUser)
 RCT_EXTERN_METHOD(requestAuthorization:(NSString*)authType)
@@ -31,6 +30,7 @@ RCT_EXTERN_METHOD(getAuthorizationStatuses:(RCTPromiseResolveBlock)resolve rejec
 RCT_EXTERN_METHOD(getUserApiToken:(NSString*)userOpal resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 RCT_EXTERN_METHOD(getReadersInRange:(NSInteger*)rssiThreshold resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 RCT_EXTERN_METHOD(sendFeedback:(NSString*)subject message:(NSString*)message messageJson:(NSString*)messageJson)
+RCT_EXTERN_METHOD(getErrors:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
 // Notifications
 RCT_EXTERN_METHOD(enableErrorNotificationsForItem:(NSString*)itemType itemId:(NSInteger*)itemId)
@@ -43,5 +43,5 @@ RCT_EXTERN_METHOD(getReadersInRange:(NSInteger*)rssiThreshold resolve:(RCTPromis
 {
   return YES;
 }
-  
+
 @end

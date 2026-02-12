@@ -28,6 +28,7 @@
 #import "AWSMQTTEncoder.h"
 #import "AWSMQTTMessage.h"
 #import "AWSMQTTSession.h"
+#import "AWSMQTTTimerRing.h"
 #import "AWSMQttTxFlow.h"
 #import "AWSSRWebSocket.h"
 

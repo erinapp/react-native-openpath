@@ -15,6 +15,8 @@ export interface User {
     opal: string;
     name: string;
     pictureUrl?: string;
+    adminSupportContactEmails: string[];
+    adminSupportContactPhoneNumbers: string[];
   };
   pictureUrl?: string;
   startDate?: string;

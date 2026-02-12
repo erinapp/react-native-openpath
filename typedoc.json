@@ -29,6 +29,6 @@
     "ConstructorSignature",
     "IndexSignature",
     "GetSignature",
-    "SetSignature",
+    "SetSignature"
   ]
 }

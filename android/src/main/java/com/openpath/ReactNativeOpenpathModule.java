@@ -23,6 +23,7 @@ import com.openpath.mobileaccesscore.OpenpathAudioDeviceStatus;
 import com.openpath.mobileaccesscore.OpenpathAuthorizationStatus;
 import com.openpath.mobileaccesscore.OpenpathBluetoothStatus;
 import com.openpath.mobileaccesscore.OpenpathCamera;
+import com.openpath.mobileaccesscore.OpenpathError;
 import com.openpath.mobileaccesscore.OpenpathItem;
 import com.openpath.mobileaccesscore.OpenpathItemState;
 import com.openpath.mobileaccesscore.OpenpathLocationStatus;
@@ -35,6 +36,7 @@ import com.openpath.mobileaccesscore.OpenpathProvisionResponse;
 import com.openpath.mobileaccesscore.OpenpathReader;
 import com.openpath.mobileaccesscore.OpenpathRequestResponse;
 import com.openpath.mobileaccesscore.OpenpathResponse;
+import com.openpath.mobileaccesscore.OpenpathSdkVersion;
 import com.openpath.mobileaccesscore.OpenpathServiceException;
 import com.openpath.mobileaccesscore.OpenpathSoundStatus;
 import com.openpath.mobileaccesscore.OpenpathSwitchUserResponse;
@@ -137,8 +139,14 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
     public void getUserApiToken(String userOpal, Promise promise) {
         try {
             promise.resolve(OpenpathMobileAccessCore.getInstance().getUserApiToken(userOpal));
-        } catch (BadPaddingException | IllegalBlockSizeException | CertificateException | NoSuchAlgorithmException | NoSuchProviderException | KeyStoreException | IOException | UnrecoverableKeyException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | OpenpathServiceException e) {
-            promise.reject("error loading user api token", e);
+        } catch (BadPaddingException | IllegalBlockSizeException | CertificateException | NoSuchAlgorithmException | NoSuchProviderException | KeyStoreException | IOException | UnrecoverableKeyException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | OpenpathServiceException e ) {
+            if (e instanceof OpenpathServiceException openpathServiceException) {
+                OpenpathLogging.e("error loading user api token, service not available", e);
+                promise.reject(openpathServiceException.getErrorCode(), e);
+            } else {
+                OpenpathLogging.e("error loading user api token", e);
+                promise.reject("error loading user api token", e);
+            }
         }
     }
 
@@ -231,7 +239,7 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void provision(String setupMobileToken, Promise promise) {
-        OpenpathMobileAccessCore.getInstance().provision("Openpath Mobile Access", setupMobileToken);
+        OpenpathMobileAccessCore.getInstance().provision("Avigilon Alta", setupMobileToken);
         promise.resolve(null);
     }
 
@@ -270,6 +278,26 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
                 map.putInt("status", authorizationStatus.status);
                 result.pushMap(map);
             }
+        }
+        promise.resolve(result);
+    }
+
+    @ReactMethod
+    public void getSdkVersion(Promise promise) {
+        OpenpathSdkVersion version = OpenpathMobileAccessCore.getInstance().getSdkVersion();
+        promise.resolve(version.sdkVersion);
+    }
+
+    @ReactMethod
+    public void getErrors(Promise promise) {
+        ArrayList<OpenpathError> errors = OpenpathMobileAccessCore.getInstance().getErrors();
+        // TODO: Figure out the right format for this. Should match iOS's
+        WritableArray result = Arguments.createArray();
+        for (OpenpathError openpathError : errors) {
+            WritableMap map = Arguments.createMap();
+            map.putString("code", openpathError.code);
+            map.putString("message", openpathError.message);
+            map.putString("localizedMessage", openpathError.localizedMessage);
         }
         promise.resolve(result);
     }
@@ -335,6 +363,18 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
             org.putString("opal", user.org.opal);
             org.putString("name", user.org.name);
             org.putString("pictureUrl", user.org.pictureUrl);
+
+            WritableArray adminSupportContactEmailsArray = Arguments.createArray();
+            for (String email : user.org.adminSupportContactEmails) {
+                adminSupportContactEmailsArray.pushString(email);
+            }
+
+            WritableArray adminSupportContactPhoneNumbersArray = Arguments.createArray();
+            for (String phoneNumber : user.org.adminSupportContactPhoneNumbers) {
+                adminSupportContactPhoneNumbersArray.pushString(phoneNumber);
+            }
+            org.putArray("adminSupportContactEmails", adminSupportContactEmailsArray);
+            org.putArray("adminSupportContactPhoneNumbers", adminSupportContactPhoneNumbersArray);
             userJson.putMap("org", org);
             userJson.putString("status", user.status);
             userJson.putString("startDate", user.startDate != null ? parseDateToISOString(user.startDate) : null);
@@ -657,7 +697,7 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
 //      }
 //    }
 
-//        @Override
+        //        @Override
         public void onNotificationClicked(String itemType, int itemId) {
             WritableMap content = Arguments.createMap();
             content.putString("itemType", itemType);
@@ -721,7 +761,6 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
         }
 
 
-        @Override
         public void onAudioDeviceStatusChanged(OpenpathAudioDeviceStatus openpathAudioDeviceStatus) {
             try {
                 WritableMap content = convertJsonToMap(OpenpathAudioDeviceStatus.toJson(openpathAudioDeviceStatus));
