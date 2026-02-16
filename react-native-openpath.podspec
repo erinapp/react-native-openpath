@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'React-Core'
 
-  s.dependency 'OpenpathMobile', '~> 0.5.0'
+  s.dependency 'OpenpathMobile', '~> 0.6.0'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO'
