@@ -19,7 +19,6 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-import com.openpath.mobileaccesscore.OpenpathAudioDeviceStatus;
 import com.openpath.mobileaccesscore.OpenpathAuthorizationStatus;
 import com.openpath.mobileaccesscore.OpenpathBluetoothStatus;
 import com.openpath.mobileaccesscore.OpenpathCamera;
@@ -755,16 +754,6 @@ public class ReactNativeOpenpathModule extends ReactContextBaseJavaModule {
             try {
                 WritableMap content = convertJsonToMap(OpenpathNotificationStatus.toJson(notificationStatus));
                 sendData(content, "onNotificationStatusChanged");
-            } catch (JSONException e) {
-                OpenpathLogging.e("json exception", e);
-            }
-        }
-
-
-        public void onAudioDeviceStatusChanged(OpenpathAudioDeviceStatus openpathAudioDeviceStatus) {
-            try {
-                WritableMap content = convertJsonToMap(OpenpathAudioDeviceStatus.toJson(openpathAudioDeviceStatus));
-                sendData(content, "onAudioDeviceStatusChanged");
             } catch (JSONException e) {
                 OpenpathLogging.e("json exception", e);
             }
