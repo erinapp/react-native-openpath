@@ -11,7 +11,8 @@
         "declKind": "Import",
         "moduleName": "AmplitudeSwift",
         "declAttributes": [
-          "Exported"
+          "Exported",
+          "SPIAccessControl"
         ]
       },
       {
@@ -2083,7 +2084,11 @@
                 "moduleName": "AmplitudeSwift",
                 "genericSig": "<τ_0_0>",
                 "sugared_genericSig": "<T>",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -2095,9 +2100,11 @@
         "moduleName": "AmplitudeSwift",
         "genericSig": "<τ_0_0>",
         "sugared_genericSig": "<T>",
+        "deprecated": true,
         "declAttributes": [
           "AccessControl",
-          "PropertyWrapper"
+          "PropertyWrapper",
+          "Available"
         ],
         "conformances": [
           {
@@ -2115,6 +2122,23 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "AmplitudeCore",
+        "printedName": "AmplitudeCore",
+        "declKind": "Import",
+        "moduleName": "AmplitudeSwift",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "Import",
@@ -2456,11 +2480,7 @@
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
-              "SPIAccessControl",
               "RawDocComment"
-            ],
-            "spi_group_names": [
-              "Frustration"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -2483,9 +2503,6 @@
                 "moduleName": "AmplitudeSwift",
                 "static": true,
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
-                ],
                 "accessorKind": "get"
               }
             ]
@@ -2662,10 +2679,7 @@
         "name": "AmplitudeCore",
         "printedName": "AmplitudeCore",
         "declKind": "Import",
-        "moduleName": "AmplitudeSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "Import",
@@ -5693,6 +5707,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "AmplitudeCore",
+        "printedName": "AmplitudeCore",
+        "declKind": "Import",
+        "moduleName": "AmplitudeSwift",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "Configuration",
         "printedName": "Configuration",
@@ -6568,11 +6592,7 @@
                 "declAttributes": [
                   "HasInitialValue",
                   "HasStorage",
-                  "AccessControl",
-                  "SPIAccessControl"
-                ],
-                "spi_group_names": [
-                  "Frustration"
+                  "AccessControl"
                 ],
                 "isLet": true,
                 "hasStorage": true,
@@ -6595,9 +6615,53 @@
                     "moduleName": "AmplitudeSwift",
                     "static": true,
                     "implicit": true,
-                    "spi_group_names": [
-                      "Frustration"
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "enableDiagnostics",
+                "printedName": "enableDiagnostics",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift13ConfigurationC8DefaultsV17enableDiagnosticsSbvpZ",
+                "mangledName": "$s14AmplitudeSwift13ConfigurationC8DefaultsV17enableDiagnosticsSbvpZ",
+                "moduleName": "AmplitudeSwift",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
                     ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift13ConfigurationC8DefaultsV17enableDiagnosticsSbvgZ",
+                    "mangledName": "$s14AmplitudeSwift13ConfigurationC8DefaultsV17enableDiagnosticsSbvgZ",
+                    "moduleName": "AmplitudeSwift",
+                    "static": true,
+                    "implicit": true,
                     "accessorKind": "get"
                   }
                 ]
@@ -9153,11 +9217,7 @@
             "moduleName": "AmplitudeSwift",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "SPIAccessControl"
-            ],
-            "spi_group_names": [
-              "Frustration"
+              "AccessControl"
             ],
             "hasStorage": true,
             "accessors": [
@@ -9178,9 +9238,6 @@
                 "mangledName": "$s14AmplitudeSwift13ConfigurationC19interactionsOptionsAA012InteractionsE0Cvg",
                 "moduleName": "AmplitudeSwift",
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
-                ],
                 "accessorKind": "get"
               },
               {
@@ -9205,9 +9262,6 @@
                 "mangledName": "$s14AmplitudeSwift13ConfigurationC19interactionsOptionsAA012InteractionsE0Cvs",
                 "moduleName": "AmplitudeSwift",
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
-                ],
                 "accessorKind": "set"
               },
               {
@@ -9226,9 +9280,91 @@
                 "mangledName": "$s14AmplitudeSwift13ConfigurationC19interactionsOptionsAA012InteractionsE0CvM",
                 "moduleName": "AmplitudeSwift",
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableDiagnostics",
+            "printedName": "enableDiagnostics",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvp",
+            "mangledName": "$s14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvp",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
                 ],
+                "declKind": "Accessor",
+                "usr": "s:14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvg",
+                "mangledName": "$s14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvg",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvs",
+                "mangledName": "$s14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvs",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvM",
+                "mangledName": "$s14AmplitudeSwift13ConfigurationC17enableDiagnosticsSbvM",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -9550,7 +9686,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(apiKey:flushQueueSize:flushIntervalMillis:instanceName:optOut:storageProvider:identifyStorageProvider:logLevel:loggerProvider:minIdLength:partnerId:callback:flushMaxRetries:useBatch:serverZone:serverUrl:plan:ingestionMetadata:trackingOptions:enableCoppaControl:flushEventsOnClose:minTimeBetweenSessionsMillis:autocapture:identifyBatchIntervalMillis:maxQueuedEventCount:migrateLegacyData:offline:networkTrackingOptions:enableAutoCaptureRemoteConfig:interactionsOptions:)",
+            "printedName": "init(apiKey:flushQueueSize:flushIntervalMillis:instanceName:optOut:storageProvider:identifyStorageProvider:logLevel:loggerProvider:minIdLength:partnerId:callback:flushMaxRetries:useBatch:serverZone:serverUrl:plan:ingestionMetadata:trackingOptions:enableCoppaControl:flushEventsOnClose:minTimeBetweenSessionsMillis:autocapture:identifyBatchIntervalMillis:maxQueuedEventCount:migrateLegacyData:offline:networkTrackingOptions:enableAutoCaptureRemoteConfig:interactionsOptions:enableDiagnostics:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -9869,348 +10005,23 @@
                 "printedName": "AmplitudeSwift.InteractionsOptions",
                 "hasDefaultArg": true,
                 "usr": "s:14AmplitudeSwift19InteractionsOptionsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfig19interactionsOptionsACSS_S2iSSSbAA0R0_pSgA7_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA12_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbAA19InteractionsOptionsCtcfc",
-            "mangledName": "$s14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfig19interactionsOptionsACSS_S2iSSSbAA0R0_pSgA7_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA12_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbAA19InteractionsOptionsCtcfc",
+            "usr": "s:14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfig19interactionsOptions17enableDiagnosticsACSS_S2iSSSbAA0R0_pSgA8_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA13_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbAA19InteractionsOptionsCSbtcfc",
+            "mangledName": "$s14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfig19interactionsOptions17enableDiagnosticsACSS_S2iSSSbAA0R0_pSgA8_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA13_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbAA19InteractionsOptionsCSbtcfc",
             "moduleName": "AmplitudeSwift",
             "declAttributes": [
-              "AccessControl",
-              "SPIAccessControl"
-            ],
-            "spi_group_names": [
-              "Frustration"
+              "AccessControl"
             ],
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(apiKey:flushQueueSize:flushIntervalMillis:instanceName:optOut:storageProvider:identifyStorageProvider:logLevel:loggerProvider:minIdLength:partnerId:callback:flushMaxRetries:useBatch:serverZone:serverUrl:plan:ingestionMetadata:trackingOptions:enableCoppaControl:flushEventsOnClose:minTimeBetweenSessionsMillis:autocapture:identifyBatchIntervalMillis:maxQueuedEventCount:migrateLegacyData:offline:networkTrackingOptions:enableAutoCaptureRemoteConfig:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Configuration",
-                "printedName": "AmplitudeSwift.Configuration",
-                "usr": "s:14AmplitudeSwift13ConfigurationC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AmplitudeSwift.Storage)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Storage",
-                    "printedName": "any AmplitudeSwift.Storage",
-                    "usr": "s:14AmplitudeSwift7StorageP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AmplitudeSwift.Storage)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Storage",
-                    "printedName": "any AmplitudeSwift.Storage",
-                    "usr": "s:14AmplitudeSwift7StorageP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "LogLevelEnum",
-                "printedName": "AmplitudeSwift.LogLevelEnum",
-                "hasDefaultArg": true,
-                "usr": "c:@M@AmplitudeSwift@E@AMPLogLevel"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Logger",
-                "printedName": "any AmplitudeSwift.Logger",
-                "hasDefaultArg": true,
-                "usr": "s:14AmplitudeSwift6LoggerP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((AmplitudeSwift.BaseEvent, Swift.Int, Swift.String) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AmplitudeSwift.BaseEvent, Swift.Int, Swift.String) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(AmplitudeSwift.BaseEvent, Swift.Int, Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "BaseEvent",
-                            "printedName": "AmplitudeSwift.BaseEvent",
-                            "usr": "s:14AmplitudeSwift9BaseEventC"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Int",
-                            "printedName": "Swift.Int",
-                            "usr": "s:Si"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ServerZone",
-                "printedName": "AmplitudeCore.ServerZone",
-                "hasDefaultArg": true,
-                "usr": "c:@M@AmplitudeCore@E@AMPServerZone"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AmplitudeSwift.Plan?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Plan",
-                    "printedName": "AmplitudeSwift.Plan",
-                    "usr": "s:14AmplitudeSwift4PlanV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AmplitudeSwift.IngestionMetadata?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "IngestionMetadata",
-                    "printedName": "AmplitudeSwift.IngestionMetadata",
-                    "usr": "s:14AmplitudeSwift17IngestionMetadataV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TrackingOptions",
-                "printedName": "AmplitudeSwift.TrackingOptions",
-                "hasDefaultArg": true,
-                "usr": "s:14AmplitudeSwift15TrackingOptionsC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AutocaptureOptions",
-                "printedName": "AmplitudeSwift.AutocaptureOptions",
-                "hasDefaultArg": true,
-                "usr": "s:14AmplitudeSwift18AutocaptureOptionsV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NetworkTrackingOptions",
-                "printedName": "AmplitudeSwift.NetworkTrackingOptions",
-                "hasDefaultArg": true,
-                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfigACSS_S2iSSSbAA0R0_pSgA6_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA11_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbtcfc",
-            "mangledName": "$s14AmplitudeSwift13ConfigurationC6apiKey14flushQueueSize0F14IntervalMillis12instanceName6optOut15storageProvider015identifyStorageP08logLevel06loggerP011minIdLength07partnerW08callback0F10MaxRetries8useBatch10serverZone9serverUrl4plan17ingestionMetadata15trackingOptions18enableCoppaControl0F13EventsOnClose0v19TimeBetweenSessionsJ011autocapture0q5BatchiJ019maxQueuedEventCount17migrateLegacyData7offline22networkTrackingOptions29enableAutoCaptureRemoteConfigACSS_S2iSSSbAA0R0_pSgA6_AA03LogT4EnumOAA6Logger_pSiSgSSSgyAA9BaseEventC_SiSStcSgSiSb0A4Core10ServerZoneOA11_AA4PlanVSgAA17IngestionMetadataVSgAA15TrackingOptionsCS2bSiAA18AutocaptureOptionsVS2iS2bSgAA22NetworkTrackingOptionsVSbtcfc",
-            "moduleName": "AmplitudeSwift",
-            "declAttributes": [
-              "Convenience",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Convenience"
           }
         ],
         "declKind": "Class",
@@ -25775,10 +25586,7 @@
         "name": "AmplitudeCore",
         "printedName": "AmplitudeCore",
         "declKind": "Import",
-        "moduleName": "AmplitudeSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "TypeDecl",
@@ -26208,9 +26016,6 @@
               "HasStorage",
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "isLet": true,
             "hasStorage": true,
             "accessors": [
@@ -26233,9 +26038,6 @@
                 "implicit": true,
                 "declAttributes": [
                   "Final"
-                ],
-                "spi_group_names": [
-                  "Frustration"
                 ],
                 "accessorKind": "get"
               }
@@ -26262,9 +26064,6 @@
               "HasStorage",
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "isLet": true,
             "hasStorage": true,
             "accessors": [
@@ -26287,9 +26086,6 @@
                 "implicit": true,
                 "declAttributes": [
                   "Final"
-                ],
-                "spi_group_names": [
-                  "Frustration"
                 ],
                 "accessorKind": "get"
               }
@@ -26328,9 +26124,6 @@
             "declAttributes": [
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "init_kind": "Designated"
           }
         ],
@@ -26339,11 +26132,7 @@
         "mangledName": "$s14AmplitudeSwift19InteractionsOptionsC",
         "moduleName": "AmplitudeSwift",
         "declAttributes": [
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "Frustration"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -26387,9 +26176,6 @@
               "HasStorage",
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "isLet": true,
             "hasStorage": true,
             "accessors": [
@@ -26410,9 +26196,6 @@
                 "mangledName": "$s14AmplitudeSwift16RageClickOptionsV7enabledSbvg",
                 "moduleName": "AmplitudeSwift",
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
-                ],
                 "accessorKind": "get"
               }
             ]
@@ -26443,9 +26226,6 @@
             "declAttributes": [
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "init_kind": "Designated"
           }
         ],
@@ -26454,11 +26234,7 @@
         "mangledName": "$s14AmplitudeSwift16RageClickOptionsV",
         "moduleName": "AmplitudeSwift",
         "declAttributes": [
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "Frustration"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -26502,9 +26278,6 @@
               "HasStorage",
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "isLet": true,
             "hasStorage": true,
             "accessors": [
@@ -26525,9 +26298,6 @@
                 "mangledName": "$s14AmplitudeSwift16DeadClickOptionsV7enabledSbvg",
                 "moduleName": "AmplitudeSwift",
                 "implicit": true,
-                "spi_group_names": [
-                  "Frustration"
-                ],
                 "accessorKind": "get"
               }
             ]
@@ -26558,9 +26328,6 @@
             "declAttributes": [
               "AccessControl"
             ],
-            "spi_group_names": [
-              "Frustration"
-            ],
             "init_kind": "Designated"
           }
         ],
@@ -26569,11 +26336,7 @@
         "mangledName": "$s14AmplitudeSwift16DeadClickOptionsV",
         "moduleName": "AmplitudeSwift",
         "declAttributes": [
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "Frustration"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -26632,10 +26395,7 @@
         "name": "AmplitudeCore",
         "printedName": "AmplitudeCore",
         "declKind": "Import",
-        "moduleName": "AmplitudeSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "Import",
@@ -27957,6 +27717,75 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDataTaskCompletion",
+            "printedName": "onDataTaskCompletion(_:data:response:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionDataTask",
+                "printedName": "Foundation.URLSessionDataTask",
+                "usr": "c:objc(cs)NSURLSessionDataTask"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URLResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLResponse",
+                    "printedName": "Foundation.URLResponse",
+                    "usr": "c:objc(cs)NSURLResponse"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14AmplitudeSwift19NetworkTaskListenerP06onDataD10Completion_4data8response5errorySo012NSURLSessiongD0C_10Foundation0G0VSgSo13NSURLResponseCSgs5Error_pSgtF",
+            "mangledName": "$s14AmplitudeSwift19NetworkTaskListenerP06onDataD10Completion_4data8response5errorySo012NSURLSessiongD0C_10Foundation0G0VSgSo13NSURLResponseCSgs5Error_pSgtF",
+            "moduleName": "AmplitudeSwift",
+            "genericSig": "<τ_0_0 where τ_0_0 : AmplitudeSwift.NetworkTaskListener>",
+            "sugared_genericSig": "<Self where Self : AmplitudeSwift.NetworkTaskListener>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -28007,6 +27836,579 @@
         "name": "NetworkTrackingOptions",
         "printedName": "NetworkTrackingOptions",
         "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "URLPattern",
+            "printedName": "URLPattern",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "exact",
+                "printedName": "exact",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AmplitudeSwift.NetworkTrackingOptions.URLPattern.Type) -> (Swift.String) -> AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLPattern",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLPattern",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO5exactyAESScAEmF",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO5exactyAESScAEmF",
+                "moduleName": "AmplitudeSwift"
+              },
+              {
+                "kind": "Var",
+                "name": "regex",
+                "printedName": "regex",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AmplitudeSwift.NetworkTrackingOptions.URLPattern.Type) -> (Swift.String) -> AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLPattern",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLPattern",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO5regexyAESScAEmF",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO5regexyAESScAEmF",
+                "moduleName": "AmplitudeSwift"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO",
+            "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CaptureHeader",
+            "printedName": "CaptureHeader",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "allowlist",
+                "printedName": "allowlist",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlistSaySSGvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlistSaySSGvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlistSaySSGvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlistSaySSGvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "captureSafeHeaders",
+                "printedName": "captureSafeHeaders",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV18captureSafeHeadersSbvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV18captureSafeHeadersSbvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV18captureSafeHeadersSbvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV18captureSafeHeadersSbvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(allowlist:captureSafeHeaders:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureHeader",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "hasDefaultArg": true,
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlist18captureSafeHeadersAESaySSG_Sbtcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV9allowlist18captureSafeHeadersAESaySSG_Sbtcfc",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureHeader",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV",
+            "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CaptureBody",
+            "printedName": "CaptureBody",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "allowlist",
+                "printedName": "allowlist",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlistSaySSGvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlistSaySSGvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlistSaySSGvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlistSaySSGvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "blocklist",
+                "printedName": "blocklist",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9blocklistSaySSGvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9blocklistSaySSGvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9blocklistSaySSGvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9blocklistSaySSGvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(allowlist:blocklist:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureBody",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlist9blocklistAESaySSG_AHtcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV9allowlist9blocklistAESaySSG_AHtcfc",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureBody",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV",
+            "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          },
           {
             "kind": "TypeDecl",
             "name": "CaptureRule",
@@ -28123,6 +28525,126 @@
               },
               {
                 "kind": "Var",
+                "name": "urls",
+                "printedName": "urls",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AmplitudeSwift.NetworkTrackingOptions.URLPattern]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLPattern",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urlsSayAC10URLPatternOGvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urlsSayAC10URLPatternOGvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "SetterAccess",
+                  "AccessControl"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[AmplitudeSwift.NetworkTrackingOptions.URLPattern]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLPattern",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urlsSayAC10URLPatternOGvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urlsSayAC10URLPatternOGvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "methods",
+                "printedName": "methods",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV7methodsSaySSGvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV7methodsSaySSGvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "SetterAccess",
+                  "AccessControl"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV7methodsSaySSGvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV7methodsSaySSGvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
                 "name": "statusCodeRange",
                 "printedName": "statusCodeRange",
                 "children": [
@@ -28207,6 +28729,274 @@
                 ]
               },
               {
+                "kind": "Var",
+                "name": "requestHeaders",
+                "printedName": "requestHeaders",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureHeader",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV14requestHeadersAC0F6HeaderVSgvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV14requestHeadersAC0F6HeaderVSgvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureHeader",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV14requestHeadersAC0F6HeaderVSgvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV14requestHeadersAC0F6HeaderVSgvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "responseHeaders",
+                "printedName": "responseHeaders",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureHeader",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV15responseHeadersAC0F6HeaderVSgvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV15responseHeadersAC0F6HeaderVSgvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureHeader",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV15responseHeadersAC0F6HeaderVSgvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV15responseHeadersAC0F6HeaderVSgvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "requestBody",
+                "printedName": "requestBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureBody",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV11requestBodyAC0fI0VSgvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV11requestBodyAC0fI0VSgvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureBody",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV11requestBodyAC0fI0VSgvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV11requestBodyAC0fI0VSgvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "responseBody",
+                "printedName": "responseBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureBody",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV12responseBodyAC0fI0VSgvp",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV12responseBodyAC0fI0VSgvp",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureBody",
+                            "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                            "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV12responseBodyAC0fI0VSgvg",
+                    "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV12responseBodyAC0fI0VSgvg",
+                    "moduleName": "AmplitudeSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureRule",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureRule",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
                 "printedName": "init(hosts:statusCodeRange:)",
@@ -28247,6 +29037,127 @@
                   "AccessControl"
                 ],
                 "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(urls:methods:statusCodeRange:requestHeaders:responseHeaders:requestBody:responseBody:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureRule",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureRule",
+                    "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AmplitudeSwift.NetworkTrackingOptions.URLPattern]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLPattern",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.URLPattern",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV10URLPatternO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "hasDefaultArg": true,
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureHeader",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureHeader",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureHeader",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV13CaptureHeaderV"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureBody",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureBody",
+                        "printedName": "AmplitudeSwift.NetworkTrackingOptions.CaptureBody",
+                        "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureBodyV"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urls7methods15statusCodeRange14requestHeaders08responseN00M4Body0oP0AESayAC10URLPatternOG_SaySSGSSAC0F6HeaderVSgAsC0fP0VSgAVtcfc",
+                "mangledName": "$s14AmplitudeSwift22NetworkTrackingOptionsV11CaptureRuleV4urls7methods15statusCodeRange14requestHeaders08responseN00M4Body0oP0AESayAC10URLPatternOG_SaySSGSSAC0F6HeaderVSgAsC0fP0VSgAVtcfc",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "AccessControl",
+                  "SPIAccessControl"
+                ],
+                "spi_group_names": [
+                  "NetworkTracking"
+                ],
+                "init_kind": "Designated"
               }
             ],
             "declKind": "Struct",
@@ -28270,6 +29181,13 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
               }
             ]
           },
@@ -30519,6 +31437,59 @@
           },
           {
             "kind": "Var",
+            "name": "frustrationInteractions",
+            "printedName": "frustrationInteractions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCAutocaptureOptions",
+                "printedName": "AmplitudeSwift.ObjCAutocaptureOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPAutocaptureOptions"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPAutocaptureOptions(cpy)frustrationInteractions",
+            "mangledName": "$s14AmplitudeSwift22ObjCAutocaptureOptionsC23frustrationInteractionsACvpZ",
+            "moduleName": "AmplitudeSwift",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjCAutocaptureOptions",
+                    "printedName": "AmplitudeSwift.ObjCAutocaptureOptions",
+                    "usr": "c:@M@AmplitudeSwift@objc(cs)AMPAutocaptureOptions"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPAutocaptureOptions(cm)frustrationInteractions",
+                "mangledName": "$s14AmplitudeSwift22ObjCAutocaptureOptionsC23frustrationInteractionsACvgZ",
+                "moduleName": "AmplitudeSwift",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "all",
             "printedName": "all",
             "children": [
@@ -30539,8 +31510,7 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -34220,6 +35190,94 @@
           },
           {
             "kind": "Var",
+            "name": "interactionsOptions",
+            "printedName": "interactionsOptions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCInteractionsOptions",
+                "printedName": "AmplitudeSwift.ObjCInteractionsOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPConfiguration(py)interactionsOptions",
+            "mangledName": "$s14AmplitudeSwift17ObjCConfigurationC19interactionsOptionsAA0c13CInteractionsF0Cvp",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjCInteractionsOptions",
+                    "printedName": "AmplitudeSwift.ObjCInteractionsOptions",
+                    "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPConfiguration(im)interactionsOptions",
+                "mangledName": "$s14AmplitudeSwift17ObjCConfigurationC19interactionsOptionsAA0c13CInteractionsF0Cvg",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjCInteractionsOptions",
+                    "printedName": "AmplitudeSwift.ObjCInteractionsOptions",
+                    "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPConfiguration(im)setInteractionsOptions:",
+                "mangledName": "$s14AmplitudeSwift17ObjCConfigurationC19interactionsOptionsAA0c13CInteractionsF0Cvs",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14AmplitudeSwift17ObjCConfigurationC19interactionsOptionsAA0c13CInteractionsF0CvM",
+                "mangledName": "$s14AmplitudeSwift17ObjCConfigurationC19interactionsOptionsAA0c13CInteractionsF0CvM",
+                "moduleName": "AmplitudeSwift",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "enableAutoCaptureRemoteConfig",
             "printedName": "enableAutoCaptureRemoteConfig",
             "children": [
@@ -34236,8 +35294,7 @@
             "moduleName": "AmplitudeSwift",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
             ],
             "accessors": [
               {
@@ -40412,6 +41469,530 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ObjCInteractionsOptions",
+        "printedName": "ObjCInteractionsOptions",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rageClick:deadClick:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCInteractionsOptions",
+                "printedName": "AmplitudeSwift.ObjCInteractionsOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCRageClickOptions",
+                "printedName": "AmplitudeSwift.ObjCRageClickOptions",
+                "hasDefaultArg": true,
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCDeadClickOptions",
+                "printedName": "AmplitudeSwift.ObjCDeadClickOptions",
+                "hasDefaultArg": true,
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions(im)initWithRageClick:deadClick:",
+            "mangledName": "$s14AmplitudeSwift23ObjCInteractionsOptionsC9rageClick04deadG0AcA0c5CRagegE0C_AA0c5CDeadgE0Ctcfc",
+            "moduleName": "AmplitudeSwift",
+            "objc_name": "initWithRageClick:deadClick:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCInteractionsOptions",
+                "printedName": "AmplitudeSwift.ObjCInteractionsOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions(im)init",
+            "mangledName": "$s14AmplitudeSwift23ObjCInteractionsOptionsCACycfc",
+            "moduleName": "AmplitudeSwift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AmplitudeSwift@objc(cs)AMPInteractionsOptions",
+        "mangledName": "$s14AmplitudeSwift23ObjCInteractionsOptionsC",
+        "moduleName": "AmplitudeSwift",
+        "objc_name": "AMPInteractionsOptions",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ObjCRageClickOptions",
+        "printedName": "ObjCRageClickOptions",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCRageClickOptions",
+                "printedName": "AmplitudeSwift.ObjCRageClickOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions(im)initWithEnabled:",
+            "mangledName": "$s14AmplitudeSwift20ObjCRageClickOptionsC7enabledACSb_tcfc",
+            "moduleName": "AmplitudeSwift",
+            "objc_name": "initWithEnabled:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions(py)enabled",
+            "mangledName": "$s14AmplitudeSwift20ObjCRageClickOptionsC7enabledSbvp",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions(im)enabled",
+                "mangledName": "$s14AmplitudeSwift20ObjCRageClickOptionsC7enabledSbvg",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCRageClickOptions",
+                "printedName": "AmplitudeSwift.ObjCRageClickOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions(im)init",
+            "mangledName": "$s14AmplitudeSwift20ObjCRageClickOptionsCACycfc",
+            "moduleName": "AmplitudeSwift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AmplitudeSwift@objc(cs)AMPRageClickOptions",
+        "mangledName": "$s14AmplitudeSwift20ObjCRageClickOptionsC",
+        "moduleName": "AmplitudeSwift",
+        "objc_name": "AMPRageClickOptions",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ObjCDeadClickOptions",
+        "printedName": "ObjCDeadClickOptions",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCDeadClickOptions",
+                "printedName": "AmplitudeSwift.ObjCDeadClickOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions(im)initWithEnabled:",
+            "mangledName": "$s14AmplitudeSwift20ObjCDeadClickOptionsC7enabledACSb_tcfc",
+            "moduleName": "AmplitudeSwift",
+            "objc_name": "initWithEnabled:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions(py)enabled",
+            "mangledName": "$s14AmplitudeSwift20ObjCDeadClickOptionsC7enabledSbvp",
+            "moduleName": "AmplitudeSwift",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions(im)enabled",
+                "mangledName": "$s14AmplitudeSwift20ObjCDeadClickOptionsC7enabledSbvg",
+                "moduleName": "AmplitudeSwift",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ObjCDeadClickOptions",
+                "printedName": "AmplitudeSwift.ObjCDeadClickOptions",
+                "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions(im)init",
+            "mangledName": "$s14AmplitudeSwift20ObjCDeadClickOptionsCACycfc",
+            "moduleName": "AmplitudeSwift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AmplitudeSwift@objc(cs)AMPDeadClickOptions",
+        "mangledName": "$s14AmplitudeSwift20ObjCDeadClickOptionsC",
+        "moduleName": "AmplitudeSwift",
+        "objc_name": "AMPDeadClickOptions",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -45123,12 +46704,32 @@
       },
       {
         "kind": "Import",
+        "name": "AmplitudeCore",
+        "printedName": "AmplitudeCore",
+        "declKind": "Import",
+        "moduleName": "AmplitudeSwift",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AmplitudeSwift",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AmplitudeCore",
+        "printedName": "AmplitudeCore",
+        "declKind": "Import",
+        "moduleName": "AmplitudeSwift",
+        "declAttributes": [
+          "SPIAccessControl"
         ]
       },
       {
@@ -48359,10 +49960,7 @@
         "name": "AmplitudeCore",
         "printedName": "AmplitudeCore",
         "declKind": "Import",
-        "moduleName": "AmplitudeSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "Import",
@@ -49068,10 +50666,7 @@
         "name": "AmplitudeCore",
         "printedName": "AmplitudeCore",
         "declKind": "Import",
-        "moduleName": "AmplitudeSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AmplitudeSwift"
       },
       {
         "kind": "Import",
@@ -53260,21 +54855,21 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Amplitude.swift",
       "kind": "BooleanLiteral",
-      "offset": 165,
+      "offset": 278,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Amplitude.swift",
       "kind": "BooleanLiteral",
-      "offset": 623,
+      "offset": 736,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Amplitude.swift",
       "kind": "StringLiteral",
-      "offset": 3588,
+      "offset": 3701,
       "length": 25,
       "value": "\"com.amplitude.analytics\""
     },
@@ -53284,6 +54879,34 @@
       "offset": 132,
       "length": 11,
       "value": "\"$exposure\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/AutocaptureManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 463,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/AutocaptureManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 679,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/AutocaptureManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 727,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/AutocaptureManager.swift",
+      "kind": "Array",
+      "offset": 954,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/AutocaptureOptions.swift",
@@ -53358,259 +54981,259 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/AutocaptureOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 747,
+      "offset": 724,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/AutocaptureOptions.swift",
       "kind": "IntegerLiteral",
-      "offset": 752,
+      "offset": 729,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 451,
+      "offset": 520,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 495,
+      "offset": 564,
       "length": 18,
       "value": "\"event_properties\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 544,
+      "offset": 613,
       "length": 17,
       "value": "\"user_properties\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 613,
+      "offset": 682,
       "length": 18,
       "value": "\"group_properties\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 654,
+      "offset": 723,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 688,
+      "offset": 757,
       "length": 11,
       "value": "\"device_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 725,
+      "offset": 794,
       "length": 6,
       "value": "\"time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 755,
+      "offset": 824,
       "length": 10,
       "value": "\"event_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 791,
+      "offset": 860,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 828,
+      "offset": 897,
       "length": 11,
       "value": "\"insert_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 867,
+      "offset": 936,
       "length": 14,
       "value": "\"location_lat\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 909,
+      "offset": 978,
       "length": 14,
       "value": "\"location_lng\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 950,
+      "offset": 1019,
       "length": 13,
       "value": "\"app_version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 991,
+      "offset": 1060,
       "length": 14,
       "value": "\"version_name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1050,
+      "offset": 1119,
       "length": 9,
       "value": "\"os_name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1085,
+      "offset": 1154,
       "length": 12,
       "value": "\"os_version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1125,
+      "offset": 1194,
       "length": 14,
       "value": "\"device_brand\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1174,
+      "offset": 1243,
       "length": 21,
       "value": "\"device_manufacturer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1223,
+      "offset": 1292,
       "length": 14,
       "value": "\"device_model\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1499,
+      "offset": 1568,
       "length": 20,
       "value": "\"ingestion_metadata\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1676,
       "length": 12,
       "value": "\"product_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1647,
+      "offset": 1716,
       "length": 14,
       "value": "\"revenue_type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1755,
       "length": 10,
       "value": "\"currency\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Events\/BaseEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1722,
+      "offset": 1791,
       "length": 12,
       "value": "\"partner_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 868,
+      "offset": 991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 911,
+      "offset": 1034,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 964,
+      "offset": 1087,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1017,
+      "offset": 1140,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1070,
+      "offset": 1193,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1196,
+      "offset": 1319,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1259,
+      "offset": 1382,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1647,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "IntegerLiteral",
-      "offset": 3164,
+      "offset": 3311,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 4860,
+      "offset": 5114,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
       "kind": "BooleanLiteral",
-      "offset": 7750,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Configuration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11487,
+      "offset": 7981,
       "length": 5,
       "value": "false"
     },
@@ -53654,7 +55277,7 @@
       "kind": "StringLiteral",
       "offset": 327,
       "length": 8,
-      "value": "\"1.14.0\""
+      "value": "\"1.16.6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
@@ -54380,168 +56003,224 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5256,
+      "offset": 5268,
+      "length": 40,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5292,
+      "length": 7,
+      "value": "\"Request Headers\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5364,
+      "length": 41,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5388,
+      "length": 8,
+      "value": "\"Response Headers\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5457,
+      "length": 37,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5481,
+      "length": 7,
+      "value": "\"Request Body\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5547,
+      "length": 38,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5571,
+      "length": 8,
+      "value": "\"Response Body\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5628,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5280,
+      "offset": 5652,
       "length": 5,
       "value": "\"Begin Time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5331,
+      "offset": 5703,
       "length": 33,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5355,
+      "offset": 5727,
       "length": 3,
       "value": "\"End Time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5404,
+      "offset": 5776,
       "length": 33,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5428,
+      "offset": 5800,
       "length": 8,
       "value": "\"Duration\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5472,
+      "offset": 5844,
       "length": 26,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5496,
+      "offset": 5868,
       "length": 1,
       "value": "\"X\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5533,
+      "offset": 5905,
       "length": 26,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5557,
+      "offset": 5929,
       "length": 1,
       "value": "\"Y\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5597,
+      "offset": 5969,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5621,
+      "offset": 5993,
       "length": 6,
       "value": "\"Clicks\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5671,
+      "offset": 6043,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5695,
+      "offset": 6067,
       "length": 5,
       "value": "\"Click Count\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5793,
+      "offset": 6165,
       "length": 33,
       "value": "\"analyticsSDK.iosSDK.autocapture\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 5923,
+      "offset": 6295,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 5976,
+      "offset": 6348,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 5981,
+      "offset": 6353,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6039,
+      "offset": 6411,
       "length": 19,
       "value": "\"$default_instance\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6105,
+      "offset": 6477,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6168,
+      "offset": 6540,
       "length": 6,
       "value": "300000"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6234,
+      "offset": 6606,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6239,
+      "offset": 6611,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6330,
+      "offset": 6702,
       "length": 17,
       "value": "\"amplitude-swift\""
     },
@@ -54562,7 +56241,7 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/DefaultEventUtils.swift",
       "kind": "BooleanLiteral",
-      "offset": 2670,
+      "offset": 2751,
       "length": 5,
       "value": "false"
     },
@@ -54632,28 +56311,28 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/EventPipeline.swift",
       "kind": "IntegerLiteral",
-      "offset": 376,
+      "offset": 379,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/EventPipeline.swift",
       "kind": "StringLiteral",
-      "offset": 471,
+      "offset": 474,
       "length": 28,
       "value": "\"uploadsQueue.amplitude.com\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/EventPipeline.swift",
       "kind": "Array",
-      "offset": 551,
+      "offset": 554,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/EventPipeline.swift",
       "kind": "IntegerLiteral",
-      "offset": 2243,
+      "offset": 2263,
       "length": 1,
       "value": "0"
     },
@@ -54870,42 +56549,35 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Identity.swift",
       "kind": "Dictionary",
-      "offset": 271,
+      "offset": 340,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/InteractionsOptions.swift",
       "kind": "BooleanLiteral",
-      "offset": 565,
+      "offset": 527,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/InteractionsOptions.swift",
       "kind": "BooleanLiteral",
-      "offset": 727,
+      "offset": 670,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/iOS\/IOSLifecycleMonitor.swift",
       "kind": "BooleanLiteral",
-      "offset": 381,
+      "offset": 376,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/iOS\/IOSLifecycleMonitor.swift",
       "kind": "BooleanLiteral",
-      "offset": 474,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/iOS\/IOSLifecycleMonitor.swift",
-      "kind": "BooleanLiteral",
-      "offset": 528,
+      "offset": 431,
       "length": 5,
       "value": "false"
     },
@@ -54973,58 +56645,135 @@
       "value": "\"legacyDatabaseStorage.amplitude.com\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Mediator.swift",
+      "kind": "Dictionary",
+      "offset": 349,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/NetworkSwizzler.swift",
       "kind": "Array",
-      "offset": 403,
+      "offset": 852,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/NetworkSwizzler.swift",
       "kind": "BooleanLiteral",
-      "offset": 439,
+      "offset": 888,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "Array",
+      "offset": 170,
+      "length": 974,
+      "value": "[\"access-control-allow-origin\", \"access-control-allow-credentials\", \"access-control-expose-headers\", \"access-control-max-age\", \"access-control-allow-methods\", \"access-control-allow-headers\", \"accept-patch\", \"accept-ranges\", \"age\", \"allow\", \"alt-svc\", \"cache-control\", \"connection\", \"content-disposition\", \"content-encoding\", \"content-language\", \"content-length\", \"content-location\", \"content-md5\", \"content-range\", \"content-type\", \"date\", \"delta-base\", \"etag\", \"expires\", \"im\", \"last-modified\", \"link\", \"location\", \"permanent\", \"p3p\", \"pragma\", \"proxy-authenticate\", \"public-key-pins\", \"retry-after\", \"server\", \"status\", \"strict-transport-security\", \"trailer\", \"transfer-encoding\", \"tk\", \"upgrade\", \"vary\", \"via\", \"warning\", \"www-authenticate\", \"x-b3-traceid\", \"x-frame-options\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "Array",
+      "offset": 1174,
+      "length": 64,
+      "value": "[\"authorization\", \"cookie\", \"proxy-authorization\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "Array",
+      "offset": 1540,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1571,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "Array",
+      "offset": 1877,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 346,
+      "offset": 2073,
+      "length": 13,
+      "value": "\"excludelist\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 4398,
       "length": 9,
       "value": "\"500-599\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
       "kind": "Array",
-      "offset": 653,
+      "offset": 4823,
+      "length": 5,
+      "value": "[\"*\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 4876,
+      "length": 9,
+      "value": "\"500-599\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "Array",
+      "offset": 6760,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 689,
+      "offset": 6796,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7257,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
       "kind": "Dictionary",
-      "offset": 1186,
+      "offset": 7397,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1207,
-      "length": 4,
-      "value": "true"
+      "kind": "StringLiteral",
+      "offset": 7454,
+      "length": 41,
+      "value": "\"com.amplitude.analytics.networkTracking\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 4926,
+      "offset": 15136,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/NetworkTrackingPlugin.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15175,
       "length": 1,
       "value": "0"
     },
@@ -55071,6 +56820,34 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/ObjC\/ObjCInteractionsOptions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 321,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/ObjC\/ObjCInteractionsOptions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 405,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/ObjC\/ObjCInteractionsOptions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 786,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/ObjC\/ObjCInteractionsOptions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1193,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/ObjC\/ObjCNetworkTrackingOptions.swift",
       "kind": "StringLiteral",
       "offset": 716,
@@ -55099,6 +56876,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/ObjectFilter.swift",
+      "kind": "Array",
+      "offset": 256,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/ObjectFilter.swift",
+      "kind": "Array",
+      "offset": 282,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/OutputFileStream.swift",
       "kind": "BooleanLiteral",
       "offset": 2346,
@@ -55108,70 +56899,70 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 6990,
+      "offset": 7586,
       "length": 17,
       "value": "\"amplitude-swift\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 7044,
+      "offset": 7640,
       "length": 23,
       "value": "\"com.amplitude.storage\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "IntegerLiteral",
-      "offset": 7099,
+      "offset": 7695,
       "length": 6,
       "value": "975000"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 7153,
+      "offset": 7749,
       "length": 5,
       "value": "\"tmp\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 7185,
+      "offset": 7781,
       "length": 10,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 7229,
+      "offset": 7825,
       "length": 34,
       "value": "\"amplitude.events.storage.version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "StringLiteral",
-      "offset": 7299,
+      "offset": 7895,
       "length": 5,
       "value": "\"v2-\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "BooleanLiteral",
-      "offset": 8730,
+      "offset": 9326,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Storages\/PersistentStorage.swift",
       "kind": "BooleanLiteral",
-      "offset": 9832,
+      "offset": 10428,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Utilities\/QueueTimer.swift",
       "kind": "BooleanLiteral",
-      "offset": 401,
+      "offset": 404,
       "length": 5,
       "value": "false"
     },
@@ -55269,21 +57060,21 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Sessions.swift",
       "kind": "IntegerLiteral",
-      "offset": 357,
+      "offset": 478,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Sessions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1089,
+      "offset": 1210,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Sessions.swift",
       "kind": "IntegerLiteral",
-      "offset": 1503,
+      "offset": 1624,
       "length": 2,
       "value": "-1"
     },
@@ -55295,13 +57086,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Timeline.swift",
-      "kind": "Dictionary",
-      "offset": 243,
-      "length": 3,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/TrackingOptions.swift",
       "kind": "Array",
       "offset": 430,
@@ -55311,140 +57095,140 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 698,
+      "offset": 767,
       "length": 13,
       "value": "\"source_name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 741,
+      "offset": 810,
       "length": 16,
       "value": "\"source_version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2082,
+      "offset": 2151,
       "length": 15,
       "value": "\"last_event_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2129,
+      "offset": 2198,
       "length": 21,
       "value": "\"previous_session_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2178,
+      "offset": 2247,
       "length": 17,
       "value": "\"last_event_time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2215,
+      "offset": 2284,
       "length": 9,
       "value": "\"opt_out\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2243,
+      "offset": 2312,
       "length": 8,
       "value": "\"events\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2271,
+      "offset": 2340,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2302,
+      "offset": 2371,
       "length": 11,
       "value": "\"device_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2335,
+      "offset": 2404,
       "length": 11,
       "value": "\"app_build\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2370,
+      "offset": 2439,
       "length": 13,
       "value": "\"app_version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "StringLiteral",
-      "offset": 2624,
+      "offset": 2693,
       "length": 17,
       "value": "\"storage_version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 2871,
+      "offset": 2940,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 2966,
+      "offset": 3035,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 2993,
+      "offset": 3062,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 3125,
+      "offset": 3194,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 3340,
+      "offset": 3409,
       "length": 10,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 3360,
+      "offset": 3429,
       "length": 11,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 3381,
+      "offset": 3450,
       "length": 7,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Types.swift",
       "kind": "IntegerLiteral",
-      "offset": 3398,
+      "offset": 3467,
       "length": 7,
       "value": "4"
     },
@@ -55465,7 +57249,7 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AmplitudeSwift\/Sources\/Amplitude\/Plugins\/iOS\/UIKitElementInteractions.swift",
       "kind": "StringLiteral",
-      "offset": 11844,
+      "offset": 12314,
       "length": 7,
       "value": "\" → \""
     }

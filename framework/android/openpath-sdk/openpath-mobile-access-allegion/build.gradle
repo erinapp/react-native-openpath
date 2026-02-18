@@ -1,4 +1,4 @@
 
         configurations.maybeCreate("default")
-        artifacts.add("default", file('openpath-mobile-access-allegion-v0.5.0.aar'))
+        artifacts.add("default", file('openpath-mobile-access-allegion-v0.6.0.aar'))
         

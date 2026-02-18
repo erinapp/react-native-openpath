@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'OpenpathMobile'
-  s.version = '0.5.0'
+  s.version = '0.6.0'
   s.summary = 'Openpath SDK.'
   s.description = 'Openpath SDK library.'
   s.homepage = 'https://openpath.com'
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'OpenpathMobile.xcframework'
 
-  s.dependency 'AWSCore', '2.37.2'
-  s.dependency 'AWSIoT', '2.37.2'
-  s.dependency 'AWSLogs', '2.37.2'
+  s.dependency 'AWSCore', '2.41.0'
+  s.dependency 'AWSIoT', '2.41.0'
+  s.dependency 'AWSLogs', '2.41.0'
 
   s.dependency 'OpenSSL-Universal', '~> 1.1.2301'
 

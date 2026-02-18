@@ -3927,6 +3927,191 @@
           },
           {
             "kind": "Var",
+            "name": "adx",
+            "printedName": "adx",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.BLEDeviceType.Type) -> AllegionBLECore.BLEDeviceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEDeviceType",
+                    "printedName": "AllegionBLECore.BLEDeviceType",
+                    "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.BLEDeviceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEDeviceType",
+                        "printedName": "AllegionBLECore.BLEDeviceType",
+                        "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore13BLEDeviceTypeO3adxyA2CmF",
+            "mangledName": "$s15AllegionBLECore13BLEDeviceTypeO3adxyA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
+            "name": "gainsboroughSeleneEntrance",
+            "printedName": "gainsboroughSeleneEntrance",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.BLEDeviceType.Type) -> AllegionBLECore.BLEDeviceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEDeviceType",
+                    "printedName": "AllegionBLECore.BLEDeviceType",
+                    "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.BLEDeviceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEDeviceType",
+                        "printedName": "AllegionBLECore.BLEDeviceType",
+                        "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore13BLEDeviceTypeO26gainsboroughSeleneEntranceyA2CmF",
+            "mangledName": "$s15AllegionBLECore13BLEDeviceTypeO26gainsboroughSeleneEntranceyA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
+            "name": "gainsboroughSeleneSecure",
+            "printedName": "gainsboroughSeleneSecure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.BLEDeviceType.Type) -> AllegionBLECore.BLEDeviceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEDeviceType",
+                    "printedName": "AllegionBLECore.BLEDeviceType",
+                    "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.BLEDeviceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEDeviceType",
+                        "printedName": "AllegionBLECore.BLEDeviceType",
+                        "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore13BLEDeviceTypeO24gainsboroughSeleneSecureyA2CmF",
+            "mangledName": "$s15AllegionBLECore13BLEDeviceTypeO24gainsboroughSeleneSecureyA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
+            "name": "schlageSeleneEntrance",
+            "printedName": "schlageSeleneEntrance",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.BLEDeviceType.Type) -> AllegionBLECore.BLEDeviceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEDeviceType",
+                    "printedName": "AllegionBLECore.BLEDeviceType",
+                    "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.BLEDeviceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEDeviceType",
+                        "printedName": "AllegionBLECore.BLEDeviceType",
+                        "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore13BLEDeviceTypeO21schlageSeleneEntranceyA2CmF",
+            "mangledName": "$s15AllegionBLECore13BLEDeviceTypeO21schlageSeleneEntranceyA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
+            "name": "schlageSeleneSecure",
+            "printedName": "schlageSeleneSecure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.BLEDeviceType.Type) -> AllegionBLECore.BLEDeviceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BLEDeviceType",
+                    "printedName": "AllegionBLECore.BLEDeviceType",
+                    "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.BLEDeviceType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BLEDeviceType",
+                        "printedName": "AllegionBLECore.BLEDeviceType",
+                        "usr": "s:15AllegionBLECore13BLEDeviceTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore13BLEDeviceTypeO19schlageSeleneSecureyA2CmF",
+            "mangledName": "$s15AllegionBLECore13BLEDeviceTypeO19schlageSeleneSecureyA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
             "name": "unknown",
             "printedName": "unknown",
             "children": [
@@ -9440,6 +9625,80 @@
             "moduleName": "AllegionBLECore"
           },
           {
+            "kind": "Var",
+            "name": "version2",
+            "printedName": "version2",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.IoTNativeSecurityVersion.Type) -> AllegionBLECore.IoTNativeSecurityVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IoTNativeSecurityVersion",
+                    "printedName": "AllegionBLECore.IoTNativeSecurityVersion",
+                    "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.IoTNativeSecurityVersion.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IoTNativeSecurityVersion",
+                        "printedName": "AllegionBLECore.IoTNativeSecurityVersion",
+                        "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO8version2yA2CmF",
+            "mangledName": "$s15AllegionBLECore24IoTNativeSecurityVersionO8version2yA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
+            "kind": "Var",
+            "name": "version3",
+            "printedName": "version3",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AllegionBLECore.IoTNativeSecurityVersion.Type) -> AllegionBLECore.IoTNativeSecurityVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IoTNativeSecurityVersion",
+                    "printedName": "AllegionBLECore.IoTNativeSecurityVersion",
+                    "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AllegionBLECore.IoTNativeSecurityVersion.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IoTNativeSecurityVersion",
+                        "printedName": "AllegionBLECore.IoTNativeSecurityVersion",
+                        "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15AllegionBLECore24IoTNativeSecurityVersionO8version3yA2CmF",
+            "mangledName": "$s15AllegionBLECore24IoTNativeSecurityVersionO8version3yA2CmF",
+            "moduleName": "AllegionBLECore"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -14470,9 +14729,23 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionBLECore\/Sources\/AllegionBLECore\/Enums\/Advertisement Enums\/IoTNativeSecurityVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 355,
+      "offset": 538,
       "length": 1,
       "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionBLECore\/Sources\/AllegionBLECore\/Enums\/Advertisement Enums\/IoTNativeSecurityVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 560,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionBLECore\/Sources\/AllegionBLECore\/Enums\/Advertisement Enums\/IoTNativeSecurityVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 582,
+      "length": 1,
+      "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/Example\/Pods\/AllegionBLECore\/Sources\/AllegionBLECore\/Enums\/Advertisement Enums\/IoTNativeStatus.swift",

@@ -12,10 +12,10 @@ public class ReactNativeOpenpath: RCTEventEmitter, OpenpathMobileAccessCoreDeleg
 
     /**
      Wrap this around calls to the OpenpathMobileAccessCore SDK.
-     
+
      This ensures that the first time we reference `OpenpathMobileAccessCore.shared` it happens on the main queue,
      as required and documented.
-     
+
      Subsequent calls stay on the calling thread, which will be within the React Native JavaScript Bridge.
      */
     private func apiCall(_ callback: @escaping (OpenpathMobileAccessCore) -> Void) {
@@ -86,18 +86,9 @@ public class ReactNativeOpenpath: RCTEventEmitter, OpenpathMobileAccessCoreDeleg
     // IMPORTANT: Seems like eventhoug react don't call this function when it calls to
     //  unprovision with nil/null/NULL it espect to have this api definded as well.
     @objc
-    func unprovision() {
+    func unprovision(_ userOpal: String?) {
         apiCall { openpath in
-            openpath.unprovision(userOpal: nil)
-        }
-    }
-
-    // IMPORTANT: Seem like when react sends Null ios gets an empty string instead of nil or null, thats why
-    // the check size on the userOpal string.
-    @objc
-    func unprovision(_ userOpal: String) {
-        apiCall { openpath in
-            openpath.unprovision(userOpal: userOpal.count == 0 ? nil : userOpal)
+            openpath.unprovision(userOpal: userOpal)
         }
     }
 
@@ -141,6 +132,8 @@ public class ReactNativeOpenpath: RCTEventEmitter, OpenpathMobileAccessCoreDeleg
     @objc
     func getSdkVersion(_ resolve: @escaping RCTPromiseResolveBlock, reject _: RCTPromiseRejectBlock) {
         apiCall { openpath in
+            // This code takes the untyped dictionary that `getSdkVersion` returns and extracts
+            // value["data"]["sdkVersion"], which will be just a string.
             let result = ResultMessage(message: openpath.getSdkVersion())?.successResult ?? ""
             resolve(result)
         }
@@ -149,6 +142,14 @@ public class ReactNativeOpenpath: RCTEventEmitter, OpenpathMobileAccessCoreDeleg
     @objc
     func getAuthorizationStatuses(_ resolve: @escaping RCTPromiseResolveBlock, reject _: RCTPromiseRejectBlock) {
         apiCall { openpath in
+            // This code takes the untyped dictionary that `getAuthorizationStatuses` returns and extracts
+            // value["data"]["authorizationStatuses"], which will be an array like:
+            // [
+            //   {
+            //     "authType": String,
+            //     "status": Int,
+            //   }
+            // ]
             let result = ResultMessage(message: openpath.getAuthorizationStatuses())?.successResult ?? []
             resolve(result)
         }
@@ -207,6 +208,22 @@ public class ReactNativeOpenpath: RCTEventEmitter, OpenpathMobileAccessCoreDeleg
     func refreshUserSettings() {
         apiCall { openpath in
             openpath.refreshUserSettings()
+        }
+    }
+
+    @objc
+    func getErrors(_ resolve: @escaping RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        apiCall { openpath in
+            // This code takes the untyped dictionary that `getErrors` returns and extracts
+            // value["data"]["errors"], which will be an array like:
+            // [
+            //   {
+            //     "code": String,
+            //     "message": String,
+            //   }
+            // ]
+            let result = ResultMessage(message: openpath.getErrors())?.successResult ?? []
+            resolve(result)
         }
     }
 
