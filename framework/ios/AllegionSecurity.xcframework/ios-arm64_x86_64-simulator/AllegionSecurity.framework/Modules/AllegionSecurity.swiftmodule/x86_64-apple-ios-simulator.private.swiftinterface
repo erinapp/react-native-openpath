@@ -6,6 +6,7 @@ import AllegionExtensions
 import AllegionLogging
 @_exported import AllegionSecurity
 import CommonCrypto
+import CryptoKit
 import CryptoSwift
 import Foundation
 import IOSSecuritySuite
@@ -121,6 +122,11 @@ public enum KeyType : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+@_hasMissingDesignatedInitializers public class Obfuscation {
+  public static func obfuscate(password: Swift.String, input: Swift.String) -> ([Swift.UInt8], [Swift.UInt8]?)?
+  public static func deobfuscate(password: [Swift.UInt8], input: [Swift.UInt8]) -> Swift.String?
+  @objc deinit
 }
 public enum PaddingType {
   case noPadding

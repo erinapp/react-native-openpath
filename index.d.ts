@@ -14,8 +14,8 @@
 
  ## For iOS, change these settings in your `ios/Podfile`:
 
- * Disable Flipper
- * Enable `use_frameworks!`
+ * Disable Flipper (if applicable)
+ * Enable dynamic frameworks. (The exact method to do so depends on your React Native version and installation.)
 
  ## Usage
 
@@ -65,7 +65,7 @@
 
  ## Building the Sample App
 
- The `reactNativeSampleApp` uses React Native version 0.73.4, which requires Node.js version 18 or higher. We recommend using [nodenv](https://github.com/nodenv/nodenv) to manage multiple Node.js versions. You may need to run `npm install -g yarn` after installing the required Node.js version.
+ The `reactNativeSampleApp` uses React Native version 0.79.2, which requires Node.js version 18 or higher. We recommend using [nodenv](https://github.com/nodenv/nodenv) to manage multiple Node.js versions. You may need to run `npm install -g yarn` after installing the required Node.js version.
 
  For both platforms:
 
@@ -75,22 +75,20 @@
 
  ### iOS
 
- * Update `ios/Podfile` to point to the directory where "OpenpathMobile.podspec" is located
- * Ensure you have Ruby version 2.6.10 or greater. We recommend using [rbenv](https://github.com/rbenv/rbenv) to manage multiple Ruby versions.
+ * Update `ios/Podfile` to point to the directory where "OpenpathMobile.podspec" (and "OpenpathMobileAllegion.podspec" if you want AllegionSupport) is located
+ * Ensure you have Ruby version 3.3.5 or greater. We recommend using [rbenv](https://github.com/rbenv/rbenv) to manage multiple Ruby versions.
  * Run `bundle install` in the root directory
  * Run `bundle exec pod install` in the `ios` directory.
- * NOTE: This Podfile uses [cocoapods-patch](https://github.com/doublesymmetry/cocoapods-patch) to work around an incompatibility between the version of AWS libraries that Openpath uses, and the latest version of React Native. This requirement will be removed in the future. If you follow these instructions the patch will be applied automatically.
- * Open the workspace in Xcode and run the app
 
  ### Android
 
- * Copy openpath-mobile-access-core.aar into the `reactNativeSample/android/openpath-mobile-access-core` directory.
- *
-
+ * Copy `openpath-sdk` directory from the Native Android SDK release directory into the `reactNativeSample/android` directory.
 
  ***
  # Release Notes
 
+ [[include: react-native-release-v1.1.4.md]]
+ [[include: react-native-release-v1.1.3.md]]
  [[include: react-native-release-v1.1.2.md]]
  [[include: react-native-release-v1.1.1.md]]
  [[include: react-native-release-v1.1.0.md]]
@@ -116,6 +114,7 @@ import {SendFeedbackResponse} from "./types/Events/SendFeedbackResponse";
 import {MotionStatusChanged} from "./types/Events/MotionStatusChanged";
 import {UserSettingsSet} from "./types/Events/UserSettingsSet";
 import {OpenpathError} from "./types/Events/OpenpathError";
+import {AuthorizationStatusType} from "./types/Models/AuthorizationStatus";
 
 declare module 'react-native-openpath';
 
@@ -138,14 +137,12 @@ export * from "./types/Models/AuthorizationStatus"
 export * from "./types/Models/Camera";
 export * from "./types/Models/Credential"
 export * from "./types/Models/CredentialMobile"
-export * from "./types/Models/GetAuthorizationStatusesResponse";
 export * from "./types/Models/GetErrorsResponse";
 export * from "./types/Models/InData";
 export * from "./types/Models/Item";
 export * from "./types/Models/ItemType";
 export * from "./types/Models/ReadersInRangeResponse";
 export * from "./types/Models/User";
-
 
 /**
  * Initializes the SDK. Call this once at startup
@@ -231,13 +228,15 @@ export function softRefresh(): void;
 
 export type AuthType = 'location' | 'motion' | 'bluetooth' | 'notification' | 'background_location';
 
+export type GetAuthorizationStatusesResponse = Array<{
+    authType: AuthType,
+    status: AuthorizationStatusType
+}>;
+
 /**
  * Get a list of statuses for authorization permissions.
  */
-export function getAuthorizationStatuses(): Promise<Array<{
-    authType: AuthType,
-    status: number
-}>>;
+export function getAuthorizationStatuses(): Promise<GetAuthorizationStatusesResponse>;
 
 /**
  * Requests permission for a system service.
@@ -278,19 +277,17 @@ export function unlock(itemType: ItemType, itemId: number, requestId: number, ti
 /**
  * Retrieve the current SDK version.
  */
-export function getSdkVersion(): Promise<{ data: { sdkVersion: string } }>;
+export function getSdkVersion(): Promise<string>;
 
 /**
  * Get a collection of possible SDK errors, including the error code and message.
  */
-export function getErrors(): Promise<{
-    data: {
-        errors: Array<{
-            code: string,
-            message: string
-        }>
-    }
-}>;
+export function getErrors(): Promise<
+    Array<{
+        code: string,
+        message: string
+    }>
+>;
 
 /**
  * Sends feedback and SDK logs via email to Openpath. This can be implemented if you need support from Openpath to help

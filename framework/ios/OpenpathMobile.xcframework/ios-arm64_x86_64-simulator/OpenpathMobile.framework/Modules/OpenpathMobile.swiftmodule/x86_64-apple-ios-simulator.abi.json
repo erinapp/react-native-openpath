@@ -6567,30 +6567,6 @@
       },
       {
         "kind": "Import",
-        "name": "AWSCore",
-        "printedName": "AWSCore",
-        "declKind": "Import",
-        "moduleName": "OpenpathMobile",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AWSLogs",
-        "printedName": "AWSLogs",
-        "declKind": "Import",
-        "moduleName": "OpenpathMobile"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpenpathMobile"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -26467,23 +26443,6 @@
       },
       {
         "kind": "Import",
-        "name": "AWSLogs",
-        "printedName": "AWSLogs",
-        "declKind": "Import",
-        "moduleName": "OpenpathMobile",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpenpathMobile"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -39765,16 +39724,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "OpenpathMobile",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "OpenpathMobile"
       },
       {
@@ -44151,6 +44100,393 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UInt64",
+        "printedName": "UInt64",
+        "declKind": "Struct",
+        "usr": "s:s6UInt64V",
+        "mangledName": "$ss6UInt64V",
+        "moduleName": "Swift",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "FixedWidthInteger",
+            "printedName": "FixedWidthInteger",
+            "usr": "s:s17FixedWidthIntegerP",
+            "mangledName": "$ss17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UnsignedInteger",
+            "printedName": "UnsignedInteger",
+            "usr": "s:SU",
+            "mangledName": "$sSU"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinIntegerLiteral",
+            "printedName": "_ExpressibleByBuiltinIntegerLiteral",
+            "usr": "s:s35_ExpressibleByBuiltinIntegerLiteralP",
+            "mangledName": "$ss35_ExpressibleByBuiltinIntegerLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BinaryInteger",
+            "printedName": "BinaryInteger",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Words",
+                "printedName": "Words",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Words",
+                    "printedName": "Swift.UInt64.Words",
+                    "usr": "s:s6UInt64V5WordsV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sz",
+            "mangledName": "$sSz"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LosslessStringConvertible",
+            "printedName": "LosslessStringConvertible",
+            "usr": "s:s25LosslessStringConvertibleP",
+            "mangledName": "$ss25LosslessStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Numeric",
+            "printedName": "Numeric",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Magnitude",
+                "printedName": "Magnitude",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sj",
+            "mangledName": "$sSj"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Strideable",
+            "printedName": "Strideable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Stride",
+                "printedName": "Stride",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sx",
+            "mangledName": "$sSx"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AdditiveArithmetic",
+            "printedName": "AdditiveArithmetic",
+            "usr": "s:s18AdditiveArithmeticP",
+            "mangledName": "$ss18AdditiveArithmeticP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByIntegerLiteral",
+            "printedName": "ExpressibleByIntegerLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "IntegerLiteralType",
+                "printedName": "IntegerLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByIntegerLiteralP",
+            "mangledName": "$ss27ExpressibleByIntegerLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CVarArgAligned",
+            "printedName": "_CVarArgAligned",
+            "usr": "s:s15_CVarArgAlignedP",
+            "mangledName": "$ss15_CVarArgAlignedP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SIMDScalar",
+            "printedName": "SIMDScalar",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SIMDMaskScalar",
+                "printedName": "SIMDMaskScalar",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD2Storage",
+                "printedName": "SIMD2Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2Storage",
+                    "printedName": "Swift.UInt64.SIMD2Storage",
+                    "usr": "s:s6UInt64V12SIMD2StorageV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD4Storage",
+                "printedName": "SIMD4Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD4Storage",
+                    "printedName": "Swift.UInt64.SIMD4Storage",
+                    "usr": "s:s6UInt64V12SIMD4StorageV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD8Storage",
+                "printedName": "SIMD8Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD8Storage",
+                    "printedName": "Swift.UInt64.SIMD8Storage",
+                    "usr": "s:s6UInt64V12SIMD8StorageV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD16Storage",
+                "printedName": "SIMD16Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD16Storage",
+                    "printedName": "Swift.UInt64.SIMD16Storage",
+                    "usr": "s:s6UInt64V13SIMD16StorageV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD32Storage",
+                "printedName": "SIMD32Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD32Storage",
+                    "printedName": "Swift.UInt64.SIMD32Storage",
+                    "usr": "s:s6UInt64V13SIMD32StorageV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SIMD64Storage",
+                "printedName": "SIMD64Storage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD64Storage",
+                    "printedName": "Swift.UInt64.SIMD64Storage",
+                    "usr": "s:s6UInt64V13SIMD64StorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s10SIMDScalarP",
+            "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation18_FormatSpecifiableP",
+            "mangledName": "$s10Foundation18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "SecKey",
         "printedName": "SecKey",
         "children": [
@@ -45949,393 +46285,6 @@
             "mangledName": "$ss21_ObjectiveCBridgeableP"
           }
         ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UInt64",
-        "printedName": "UInt64",
-        "declKind": "Struct",
-        "usr": "s:s6UInt64V",
-        "mangledName": "$ss6UInt64V",
-        "moduleName": "Swift",
-        "declAttributes": [
-          "Frozen"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "FixedWidthInteger",
-            "printedName": "FixedWidthInteger",
-            "usr": "s:s17FixedWidthIntegerP",
-            "mangledName": "$ss17FixedWidthIntegerP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "UnsignedInteger",
-            "printedName": "UnsignedInteger",
-            "usr": "s:SU",
-            "mangledName": "$sSU"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByBuiltinIntegerLiteral",
-            "printedName": "_ExpressibleByBuiltinIntegerLiteral",
-            "usr": "s:s35_ExpressibleByBuiltinIntegerLiteralP",
-            "mangledName": "$ss35_ExpressibleByBuiltinIntegerLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BinaryInteger",
-            "printedName": "BinaryInteger",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Words",
-                "printedName": "Words",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Words",
-                    "printedName": "Swift.UInt64.Words",
-                    "usr": "s:s6UInt64V5WordsV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sz",
-            "mangledName": "$sSz"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LosslessStringConvertible",
-            "printedName": "LosslessStringConvertible",
-            "usr": "s:s25LosslessStringConvertibleP",
-            "mangledName": "$ss25LosslessStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Numeric",
-            "printedName": "Numeric",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Magnitude",
-                "printedName": "Magnitude",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UInt64",
-                    "printedName": "Swift.UInt64",
-                    "usr": "s:s6UInt64V"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sj",
-            "mangledName": "$sSj"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Strideable",
-            "printedName": "Strideable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Stride",
-                "printedName": "Stride",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sx",
-            "mangledName": "$sSx"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AdditiveArithmetic",
-            "printedName": "AdditiveArithmetic",
-            "usr": "s:s18AdditiveArithmeticP",
-            "mangledName": "$ss18AdditiveArithmeticP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByIntegerLiteral",
-            "printedName": "ExpressibleByIntegerLiteral",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "IntegerLiteralType",
-                "printedName": "IntegerLiteralType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UInt64",
-                    "printedName": "Swift.UInt64",
-                    "usr": "s:s6UInt64V"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s27ExpressibleByIntegerLiteralP",
-            "mangledName": "$ss27ExpressibleByIntegerLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Comparable",
-            "printedName": "Comparable",
-            "usr": "s:SL",
-            "mangledName": "$sSL"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_CustomPlaygroundQuickLookable",
-            "printedName": "_CustomPlaygroundQuickLookable",
-            "usr": "s:s30_CustomPlaygroundQuickLookableP",
-            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_CVarArgAligned",
-            "printedName": "_CVarArgAligned",
-            "usr": "s:s15_CVarArgAlignedP",
-            "mangledName": "$ss15_CVarArgAlignedP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_HasCustomAnyHashableRepresentation",
-            "printedName": "_HasCustomAnyHashableRepresentation",
-            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
-            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SIMDScalar",
-            "printedName": "SIMDScalar",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "SIMDMaskScalar",
-                "printedName": "SIMDMaskScalar",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int64",
-                    "printedName": "Swift.Int64",
-                    "usr": "s:s5Int64V"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD2Storage",
-                "printedName": "SIMD2Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD2Storage",
-                    "printedName": "Swift.UInt64.SIMD2Storage",
-                    "usr": "s:s6UInt64V12SIMD2StorageV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD4Storage",
-                "printedName": "SIMD4Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD4Storage",
-                    "printedName": "Swift.UInt64.SIMD4Storage",
-                    "usr": "s:s6UInt64V12SIMD4StorageV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD8Storage",
-                "printedName": "SIMD8Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD8Storage",
-                    "printedName": "Swift.UInt64.SIMD8Storage",
-                    "usr": "s:s6UInt64V12SIMD8StorageV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD16Storage",
-                "printedName": "SIMD16Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD16Storage",
-                    "printedName": "Swift.UInt64.SIMD16Storage",
-                    "usr": "s:s6UInt64V13SIMD16StorageV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD32Storage",
-                "printedName": "SIMD32Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD32Storage",
-                    "printedName": "Swift.UInt64.SIMD32Storage",
-                    "usr": "s:s6UInt64V13SIMD32StorageV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SIMD64Storage",
-                "printedName": "SIMD64Storage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SIMD64Storage",
-                    "printedName": "Swift.UInt64.SIMD64Storage",
-                    "usr": "s:s6UInt64V13SIMD64StorageV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s10SIMDScalarP",
-            "mangledName": "$ss10SIMDScalarP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BitwiseCopyable",
-            "printedName": "BitwiseCopyable",
-            "usr": "s:s15BitwiseCopyableP",
-            "mangledName": "$ss15BitwiseCopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_FormatSpecifiable",
-            "printedName": "_FormatSpecifiable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_Arg",
-                "printedName": "_Arg",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UInt64",
-                    "printedName": "Swift.UInt64",
-                    "usr": "s:s6UInt64V"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation18_FormatSpecifiableP",
-            "mangledName": "$s10Foundation18_FormatSpecifiableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
@@ -46344,63 +46293,63 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "Dictionary",
-      "offset": 7297,
+      "offset": 7321,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7384,
+      "offset": 7408,
       "length": 46,
       "value": "\"entry id \""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7407,
+      "offset": 7431,
       "length": 2,
       "value": "\" is not a valid string\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7508,
+      "offset": 7532,
       "length": 10,
       "value": "\"schedule\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7586,
+      "offset": 7610,
       "length": 19,
       "value": "\"currentEntryState\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7647,
+      "offset": 7671,
       "length": 15,
       "value": "\"current_state\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7724,
+      "offset": 7748,
       "length": 15,
       "value": "\"current_state\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7785,
+      "offset": 7809,
       "length": 22,
       "value": "\"waiting_first_unlock\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Model\/Acu.swift",
       "kind": "StringLiteral",
-      "offset": 7821,
+      "offset": 7845,
       "length": 22,
       "value": "\"waiting_first_unlock\""
     },
@@ -56319,51 +56268,16 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 1024,
+      "offset": 1032,
+      "length": 9,
+      "value": "\"network\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 1072,
       "length": 5,
       "value": "\"aws\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2804,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2866,
-      "length": 4,
-      "value": "5000"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2938,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3137,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 3380,
-      "length": 38,
-      "value": "\"LoggerAWSDestination: Serial & Async\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerAWSDestination.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4467,
-      "length": 1,
-      "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Logger\/LoggerConsoleDestination.swift",
@@ -57166,119 +57080,119 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 8520,
+      "offset": 8512,
       "length": 5,
       "value": "\"ble\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 8549,
+      "offset": 8541,
       "length": 6,
       "value": "\"wifi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 8580,
+      "offset": 8572,
       "length": 7,
       "value": "\"cloud\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 8612,
+      "offset": 8604,
       "length": 7,
       "value": "\"batch\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12306,
+      "offset": 12298,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12310,
+      "offset": 12302,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 12370,
+      "offset": 12362,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12514,
+      "offset": 12506,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12556,
+      "offset": 12548,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12612,
+      "offset": 12604,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 12687,
+      "offset": 12679,
       "length": 4,
       "value": "8000"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 13461,
+      "offset": 13453,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 13521,
+      "offset": 13513,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 13560,
+      "offset": 13552,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 13644,
+      "offset": 13636,
       "length": 7,
       "value": "\"entry\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "StringLiteral",
-      "offset": 13687,
+      "offset": 13679,
       "length": 8,
       "value": "\"reader\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/OpenpathMobileAccessCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 30399,
+      "offset": 30678,
       "length": 5,
       "value": "false"
     },
@@ -57334,49 +57248,49 @@
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 2085,
+      "offset": 2038,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 2416,
+      "offset": 2369,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 2744,
+      "offset": 2697,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 3074,
+      "offset": 3027,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 3405,
+      "offset": 3358,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "Dictionary",
-      "offset": 3735,
+      "offset": 3688,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Extensions\/OpenpathMobileAccessCore+Ext.swift",
       "kind": "IntegerLiteral",
-      "offset": 8242,
+      "offset": 8191,
       "length": 1,
       "value": "0"
     },
@@ -58296,13 +58210,6 @@
       "offset": 703,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeBuffer.swift",
-      "kind": "StringLiteral",
-      "offset": 704,
-      "length": 39,
-      "value": "\"ThreadSafeBuffer: Serial and blocking\""
     },
     {
       "filePath": "\/Users\/runner\/work\/Titanium\/Titanium\/OpenpathMobileAccessCore\/ios\/OpenpathMobileAccessCore\/Utils\/ThreadSafeItem.swift",
