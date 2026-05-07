@@ -44,3 +44,8 @@ buck-out/
 \.buckd/
 *.keystore
       
+
+# env files
+.env*
+!.env.example
+!.env.sample
