@@ -9,11 +9,11 @@
   "main": "index.js",
   "name": "react-native-openpath",
   "peerDependencies": {
-    "react-native": "^0.67.4"
+    "react-native": ">=0.67.4 <0.86.0"
   },
-  "version": "1.3.0",
+  "version": "1.3.2",
   "devDependencies": {
-    "@types/react-native": "^0.67.4",
+    "@types/react-native": "^0.73.0",
     "typedoc": "0.23.24",
     "typescript": "4.8.4"
   },
